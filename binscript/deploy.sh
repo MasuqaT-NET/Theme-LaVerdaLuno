@@ -11,4 +11,4 @@ cd ../../ # to workspace
 COMMIT_MESSAGE=$(git log --format="%s" -n 1 $CIRCLE_SHA1)
 git add -A
 git commit -m "Update from CircleCI build No.${CIRCLE_BUILD_NUM} -- ${COMMIT_MESSAGE}"
-git push --quiet "https://${GH_TOKEN}@github.com/${CIRCLE_PROJECT_USERNAME}/${CIRCLE_PROJECT_REPONAME}.git" dist 2> /dev/null
+git push --quiet "https://${GH_TOKEN}@github.com/${CIRCLE_PROJECT_USERNAME}/${CIRCLE_PROJECT_REPONAME}.git" master:dist 2> /dev/null
