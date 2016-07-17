@@ -1,15 +1,19 @@
+machine:
+  ruby:
+    version: 2.3.1
+
 general:
-    branches:
-        ignore:
-            - dist
+  branches:
+    ignore:
+      - dist
 
 dependencies:
-    pre:
-        - gem install breakpoint
-        - gem install compass
+  pre:
+    - gem install breakpoint
+    - gem install compass
 
 deployment:
-    deploy:
-        branch: master
-        commands:
-            - bash ./binscript/deploy.sh
+  deploy:
+    branch: master
+    commands:
+      - bash ./binscript/deploy.sh
