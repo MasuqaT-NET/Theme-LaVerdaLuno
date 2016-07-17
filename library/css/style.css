@@ -1538,14 +1538,14 @@ LINK STYLES
 *********************/
 /* line 82, ../scss/breakpoints/_base.scss */
 a, a:visited {
-  color: #000000;
+  color: #f01d4f;
   /* on hover */
   /* on click */
   /* mobile tap color */
 }
 /* line 86, ../scss/breakpoints/_base.scss */
 a:hover, a:focus, a:visited:hover, a:visited:focus {
-  color: black;
+  color: #d10e3c;
 }
 /* line 96, ../scss/breakpoints/_base.scss */
 a:link, a:visited:link {
