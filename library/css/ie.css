@@ -431,9 +431,14 @@ This is the desktop size. It's larger than an iPad so it will only
 be seen on the Desktop.
 
 ******************************************************************/
-/* line 12, ../scss/breakpoints/_1030up.scss */
+/* line 12, ../scss/breakpoints/_1100up.scss */
 .wrap {
-  width: 1040px;
+  width: 1100px;
+}
+
+/* line 16, ../scss/breakpoints/_1100up.scss */
+#main {
+  width: 772px;
 }
 
 /*

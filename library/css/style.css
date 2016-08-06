@@ -871,7 +871,7 @@ them however you see fit.
   }
 }
 /* Landscape to small desktop */
-@media (min-width: 1030px) {
+@media (min-width: 1100px) {
   /* line 142, ../scss/partials/_grid.scss */
   .d-all {
     float: left;
@@ -2433,7 +2433,7 @@ This is the average viewing window. So Desktops, Laptops, and
 in general anyone not viewing on a mobile device. Here's where
 you can add resource intensive styles.
 *********************/
-@media only screen and (min-width: 1030px) {
+@media only screen and (min-width: 1100px) {
   /******************************************************************
   Site Name:
   Author:
@@ -2444,9 +2444,14 @@ you can add resource intensive styles.
   be seen on the Desktop.
   
   ******************************************************************/
-  /* line 12, ../scss/breakpoints/_1030up.scss */
+  /* line 12, ../scss/breakpoints/_1100up.scss */
   .wrap {
-    width: 1040px;
+    width: 1100px;
+  }
+
+  /* line 16, ../scss/breakpoints/_1100up.scss */
+  #main {
+    width: 772px;
   }
 }
 /*********************
