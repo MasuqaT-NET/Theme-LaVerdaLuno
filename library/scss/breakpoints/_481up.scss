@@ -22,6 +22,67 @@ anymore, so just be aware that if you drop
 them in here, they won't work.
 */
 
+/*********************
+HEADER STYLES
+*********************/
+
+.header {}
+
+	#logo {}
+
+	.menu-toggle,
+	.menu-text {
+		display: none;
+	}
+
+	.menu-bar {
+		height: auto!important;
+	}
+	.menu-bar ul {
+		font-size: 0;
+	}
+	.menu-bar ul ul {
+		display: none;
+		position: absolute;
+		top: 50px;
+		left: 0;
+		width: 180px;
+		background: #ffffff;
+		border: none;
+		-webkit-transform: translateZ(0);
+		-webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, .15);
+		   -moz-box-shadow: 0 2px 2px rgba(0, 0, 0, .15);
+				box-shadow: 0 2px 2px rgba(0, 0, 0, .15);
+	}
+	.menu-bar ul ul ul {
+		position: absolute;
+		top: 0;
+		left: 180px;
+	}
+	.menu-bar ul li:hover > ul {
+		display: block;
+	}
+	.menu-bar > ul > li {
+		display: inline-block;
+	}
+	.menu-bar ul ul li {
+		display: block;
+		padding: 0;
+		border-right: none;
+	}
+	.menu-bar ul > li > a:hover, 
+	.menu-bar ul > li:hover > a {
+		background-color: rgba(0, 0, 0, .15);
+	}
+	.menu-bar ul li > a:hover, 
+	.menu-bar ul li:hover > a, 
+	.menu-bar ul li.current_page_item > a, 
+	.menu-bar ul li.current-menu-item > a,
+	.menu-bar ul li.current-menu-ancestor > a,
+	.menu-bar ul li.current_page_ancestor > a,
+	.menu-bar ul li.current-post-parent > a {
+		color: #333;
+	}
 
 /*********************
 NAVIGATION STYLES
