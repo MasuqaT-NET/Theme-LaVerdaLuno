@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /******************************************************************
 Site Name:
 Author:
@@ -253,10 +254,6 @@ body#tinymce.wp-editor {
   I've edited it a bit, but it's a nice starting point.
   */
   /*
-   i imported this one in the functions file so bones would look sweet.
-   don't forget to remove it for your site.
-  */
-  /*
   some nice typographical defaults
   more here: http://www.newnet-soft.com/blog/csstypography
   */
@@ -348,7 +345,7 @@ body#tinymce.wp-editor {
   /* NOTE: value of "padding-box" is only supported in Gecko. So
   probably best not to use it. I mean, were you going to anyway? */
   width: 731px;
-  font-family: "Yu Gothic Medium", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: YuGothicSet, sans-serif;
   font-size: 100%;
   line-height: 1.5;
   color: #5c6b80;
@@ -664,7 +661,25 @@ body#tinymce.wp-editor span.amp {
   font-family: Baskerville,'Goudy Old Style',Palatino,'Book Antiqua',serif !important;
   font-style: italic;
 }
-/* line 65, ../scss/partials/_typography.scss */
+@font-face {
+  /* line 17, ../scss/editor-style.scss */
+  body#tinymce.wp-editor {
+    font-family: "YuGothicSet";
+    font-weight: 500;
+    font-style: normal;
+    src: local("Yu Gothic Medium"), local("YuGothic Medium"), local("Yu Gothic"), local("YuGothic"), local("游ゴシック"), local("游ゴシック体");
+  }
+}
+@font-face {
+  /* line 17, ../scss/editor-style.scss */
+  body#tinymce.wp-editor {
+    font-family: "YuGothicSet";
+    font-weight: 700;
+    font-style: normal;
+    src: local("Yu Gothic Bold"), local("YuGothic Bold"), local("Yu Gothic"), local("YuGothic"), local("游ゴシック"), local("游ゴシック体");
+  }
+}
+/* line 75, ../scss/partials/_typography.scss */
 body#tinymce.wp-editor p {
   -ms-word-wrap: break-word;
   word-break: break-word;

@@ -47,16 +47,26 @@ https://github.com/devinhunt/typebase.css
 I've edited it a bit, but it's a nice starting point.
 */
 
+@font-face {
+  font-family: "YuGothicSet";
+  font-weight: 500;
+  font-style: normal;
+  src:  local("Yu Gothic Medium"), local("YuGothic Medium"),
+        local("Yu Gothic"), local("YuGothic"),
+        local("游ゴシック"), local("游ゴシック体");
+}
+@font-face {
+  font-family: "YuGothicSet";
+  font-weight: 700;
+  font-style: normal;
+  src:  local("Yu Gothic Bold"), local("YuGothic Bold"),
+        local("Yu Gothic"), local("YuGothic"),
+        local("游ゴシック"), local("游ゴシック体");
+}
 
 // font stacks
-$sans-serif:        "Yu Gothic Medium", "Helvetica Neue", Helvetica, Arial, sans-serif;
-$serif:             "Yu Mincho Medium", "Georgia", Cambria, Times New Roman, Times, serif;
-
-/*
- i imported this one in the functions file so bones would look sweet.
- don't forget to remove it for your site.
-*/
-$lato:              'Lato', $sans-serif;
+$sans-serif:        YuGothicSet, sans-serif;
+$serif:             serif;
 
 /*
 some nice typographical defaults
