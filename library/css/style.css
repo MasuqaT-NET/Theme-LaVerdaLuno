@@ -620,7 +620,7 @@ I've edited it a bit, but it's a nice starting point.
 some nice typographical defaults
 more here: http://www.newnet-soft.com/blog/csstypography
 */
-/* line 75, ../scss/partials/_typography.scss */
+/* line 77, ../scss/partials/_typography.scss */
 p {
   -ms-word-wrap: break-word;
   word-break: break-word;
@@ -1619,27 +1619,13 @@ h5, .h5 {
 /*********************
 HEADER STYLES
 *********************/
-/* line 155, ../scss/breakpoints/_base.scss */
-.header {
-  background-color: #bed4df;
-}
-
-/* line 165, ../scss/breakpoints/_base.scss */
-#logo {
-  margin: 0.75em 0;
-}
-/* line 168, ../scss/breakpoints/_base.scss */
-#logo a {
-  color: #fff;
-}
-
-/* line 173, ../scss/breakpoints/_base.scss */
+/* line 159, ../scss/breakpoints/_base.scss */
 .site-menu {
   position: relative;
   z-index: 99;
 }
 
-/* line 177, ../scss/breakpoints/_base.scss */
+/* line 163, ../scss/breakpoints/_base.scss */
 .menu-toggle {
   display: none;
   width: 60px;
@@ -1650,20 +1636,20 @@ HEADER STYLES
   text-align: center;
 }
 
-/* line 186, ../scss/breakpoints/_base.scss */
+/* line 172, ../scss/breakpoints/_base.scss */
 .menu-toggle:hover,
 .menu-toggle.active {
   color: #fff;
   background: rgba(0, 0, 0, 0.15);
 }
 
-/* line 191, ../scss/breakpoints/_base.scss */
+/* line 177, ../scss/breakpoints/_base.scss */
 .menu-toggle i {
   padding: 10px 0;
   font-size: 28px;
 }
 
-/* line 195, ../scss/breakpoints/_base.scss */
+/* line 181, ../scss/breakpoints/_base.scss */
 .menu-text {
   display: none;
   float: right;
@@ -1672,19 +1658,19 @@ HEADER STYLES
   line-height: 24px;
 }
 
-/* line 202, ../scss/breakpoints/_base.scss */
+/* line 188, ../scss/breakpoints/_base.scss */
 .menu-bar ul {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-/* line 207, ../scss/breakpoints/_base.scss */
+/* line 193, ../scss/breakpoints/_base.scss */
 .menu-bar ul li {
   position: relative;
 }
 
-/* line 210, ../scss/breakpoints/_base.scss */
+/* line 196, ../scss/breakpoints/_base.scss */
 .menu-bar ul li a {
   display: block;
   padding: 0 20px;
@@ -1699,19 +1685,19 @@ HEADER STYLES
   transition: background-color .1s linear;
 }
 
-/* line 223, ../scss/breakpoints/_base.scss */
+/* line 209, ../scss/breakpoints/_base.scss */
 .menu-bar ul ul li a {
   padding: 8px 20px;
   font-size: 14px;
   line-height: 20px;
 }
 
-/* line 228, ../scss/breakpoints/_base.scss */
+/* line 214, ../scss/breakpoints/_base.scss */
 .menu-bar ul li a:after {
   font-family: FontAwesome;
 }
 
-/* line 231, ../scss/breakpoints/_base.scss */
+/* line 217, ../scss/breakpoints/_base.scss */
 .menu-bar ul li a:after {
   content: "\f0d7";
   float: none;
@@ -1719,36 +1705,36 @@ HEADER STYLES
   opacity: 0.5;
 }
 
-/* line 237, ../scss/breakpoints/_base.scss */
+/* line 223, ../scss/breakpoints/_base.scss */
 .menu-bar ul ul li a:after {
   content: "\f0da";
   float: right;
   margin-left: 0;
 }
 
-/* line 242, ../scss/breakpoints/_base.scss */
+/* line 228, ../scss/breakpoints/_base.scss */
 .menu-bar ul li a:only-child:after {
   content: "";
   margin: 0;
 }
 
-/* line 250, ../scss/breakpoints/_base.scss */
+/* line 236, ../scss/breakpoints/_base.scss */
 .menu-bar ul {
   font-weight: 400;
 }
 
-/* line 253, ../scss/breakpoints/_base.scss */
+/* line 239, ../scss/breakpoints/_base.scss */
 .site-menu {
   overflow: hidden;
 }
 
-/* line 256, ../scss/breakpoints/_base.scss */
+/* line 242, ../scss/breakpoints/_base.scss */
 .menu-toggle,
 .menu-text {
   display: block;
 }
 
-/* line 260, ../scss/breakpoints/_base.scss */
+/* line 246, ../scss/breakpoints/_base.scss */
 .menu-bar {
   position: relative;
   float: left;
@@ -1758,7 +1744,7 @@ HEADER STYLES
   overflow: hidden;
 }
 
-/* line 268, ../scss/breakpoints/_base.scss */
+/* line 254, ../scss/breakpoints/_base.scss */
 .menu-bar.transition {
   -webkit-transition: height 0.35s ease;
   -moz-transition: height 0.35s ease;
@@ -1766,31 +1752,31 @@ HEADER STYLES
   transition: height 0.35s ease;
 }
 
-/* line 274, ../scss/breakpoints/_base.scss */
+/* line 260, ../scss/breakpoints/_base.scss */
 .menu-expand > ul {
   height: auto;
 }
 
-/* line 277, ../scss/breakpoints/_base.scss */
+/* line 263, ../scss/breakpoints/_base.scss */
 .menu-bar ul {
   float: left;
   width: 100%;
   border-top: 1px solid #cccccc;
 }
 
-/* line 282, ../scss/breakpoints/_base.scss */
+/* line 268, ../scss/breakpoints/_base.scss */
 .menu-bar ul ul {
   float: none;
   display: block !important;
   margin-left: 20px;
 }
 
-/* line 287, ../scss/breakpoints/_base.scss */
+/* line 273, ../scss/breakpoints/_base.scss */
 .menu-bar ul li {
   border-bottom: 1px solid #cccccc;
 }
 
-/* line 290, ../scss/breakpoints/_base.scss */
+/* line 276, ../scss/breakpoints/_base.scss */
 .menu-bar ul li:last-child {
   border: none;
   -webkit-box-shadow: none;
@@ -1798,18 +1784,18 @@ HEADER STYLES
   box-shadow: none;
 }
 
-/* line 296, ../scss/breakpoints/_base.scss */
+/* line 282, ../scss/breakpoints/_base.scss */
 .menu-bar ul li a {
   padding: 8px 15px;
   line-height: 20px;
 }
 
-/* line 300, ../scss/breakpoints/_base.scss */
+/* line 286, ../scss/breakpoints/_base.scss */
 .menu-bar ul > li > a:hover {
   background-color: rgba(0, 0, 0, 0.15);
 }
 
-/* line 303, ../scss/breakpoints/_base.scss */
+/* line 289, ../scss/breakpoints/_base.scss */
 .menu-bar ul > li > a:hover,
 .menu-bar ul li:hover > a,
 .menu-bar ul li.current_page_item > a,
@@ -1820,17 +1806,33 @@ HEADER STYLES
   color: #222;
 }
 
-/* line 312, ../scss/breakpoints/_base.scss */
+/* line 298, ../scss/breakpoints/_base.scss */
 .menu-bar ul ul li a {
   padding-top: 6px;
   padding-bottom: 6px;
 }
 
-/* line 316, ../scss/breakpoints/_base.scss */
+/* line 302, ../scss/breakpoints/_base.scss */
 .menu-bar ul ul li a:after {
   content: '\f0d7';
   float: none;
   margin-left: 6px;
+}
+
+/* line 308, ../scss/breakpoints/_base.scss */
+.header {
+  background-color: #bed4df;
+}
+
+/* line 312, ../scss/breakpoints/_base.scss */
+#logo {
+  margin: 0 0;
+  font-family: "Exo", cursive;
+  font-size: 72px;
+}
+/* line 317, ../scss/breakpoints/_base.scss */
+#logo a {
+  color: #fff;
 }
 
 /*********************

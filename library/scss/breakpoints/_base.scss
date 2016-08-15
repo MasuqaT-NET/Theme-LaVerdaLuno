@@ -152,17 +152,9 @@ h5, .h5 {
 HEADER STYLES
 *********************/
 
-.header {
-	background-color: $site-header;
+.site-top {
+
 }
-
-	#logo {
-		margin: 0.75em 0;
-
-		a {
-			color: $white;
-		}
-	}
 
 	.site-menu {
 		position: relative;
@@ -311,6 +303,20 @@ HEADER STYLES
 		content: '\f0d7';
 		float: none;
 		margin-left: 6px;
+	}
+
+.header {
+	background-color: $header-bg;
+}
+
+	#logo {
+		margin: 0 0;
+		font-family: $logo-font;
+		font-size: 72px;
+
+		a {
+			color: $white;
+		}
 	}
 
 /*********************
