@@ -155,7 +155,10 @@ function bones_scripts_and_styles() {
 		*/
 		wp_enqueue_script( 'jquery' );
 		wp_enqueue_script( 'bones-js' );
-
+		
+		// FontAwesome
+		wp_register_script( 'font-awesome', 'https://use.fontawesome.com/e919dbe040.js', false);
+		wp_enqueue_script( 'font-awesome' );
 	}
 }
 
