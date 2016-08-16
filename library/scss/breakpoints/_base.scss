@@ -80,11 +80,11 @@ LINK STYLES
 *********************/
 
 a, a:visited {
-	color: $link-color;
+	color: $link-c;
 
 	/* on hover */
 	&:hover, &:focus {
-		color: $link-hover;
+		color: $link-hover_c;
 	}
 
 	/* on click */
@@ -153,7 +153,11 @@ HEADER STYLES
 *********************/
 
 .site-top {
+	background-color: $top_bg;
 
+	& > div.wrap {
+		position: relative;
+	}
 }
 
 	.site-menu {
@@ -166,13 +170,13 @@ HEADER STYLES
 		height: 50px;
 		float: right;
 		cursor: pointer;
-		color: #999;
+		color: $top-active_c;
 		text-align: center;
 	}
 	.menu-toggle:hover,
 	.menu-toggle.active {
-		color: #fff;
-		background: rgba(0, 0, 0, .15);
+		color: $top-active_c;
+		background: $top-active_bg;
 		}
 	.menu-toggle i {
 		padding: 10px 0;
@@ -196,7 +200,7 @@ HEADER STYLES
 	.menu-bar ul li a {
 		display: block;
 		padding: 0 20px;
-		color: #333;
+		color: $top_c;
 		font-size: 15px;
 		text-decoration: none;
 		line-height: 50px;
@@ -205,6 +209,10 @@ HEADER STYLES
 			-ms-transition: background-color .1s linear;
 			-o-transition: background-color .1s linear;
 				transition: background-color .1s linear;
+		
+		&:hover {
+			text-decoration: none;
+		}
 	}
 	.menu-bar ul ul li a {
 		padding: 8px 20px;
@@ -230,83 +238,82 @@ HEADER STYLES
 		margin: 0;
 	}
 
-	
-
-
-	.menu-bar ul {
-		font-weight: 400;
-	}
-	.site-menu {
-		overflow: hidden;
-	}
 	.menu-toggle,
-	.menu-text {
-		display: block;
-	}
-	.menu-bar {
-		position: relative;
-		float: left;
-		width: 100%;
-		height: 0;
-		padding: 0;
-		overflow: hidden;
-	}
-	.menu-bar.transition {
-	-webkit-transition: height 0.35s ease;
-	   -moz-transition: height 0.35s ease;
-		 -o-transition: height 0.35s ease;
-			transition: height 0.35s ease;
-	}
-	.menu-expand > ul {
-		height: auto;
-	}
-	.menu-bar ul {
-		float: left;
-		width: 100%;
-		border-top: 1px solid #cccccc;
-	}
-	.menu-bar ul ul {
-		float: none;
-		display: block!important;
-		margin-left: 20px;
-	}
-	.menu-bar ul li {
-		border-bottom: 1px solid #cccccc;
-	}
-	.menu-bar ul li:last-child {
-		border: none;
-		-webkit-box-shadow: none;
-		   -moz-box-shadow: none;
-				box-shadow: none;
-	}
 	.menu-bar ul li a {
-		padding: 8px 15px;
-		line-height: 20px;
+		color: $top_c;
 	}
-	.menu-bar ul > li > a:hover {
-		background-color: rgba(0, 0, 0, .15);
-	}
-	.menu-bar ul > li > a:hover,
+	.menu-bar ul li > a:hover, 
 	.menu-bar ul li:hover > a, 
 	.menu-bar ul li.current_page_item > a, 
 	.menu-bar ul li.current-menu-item > a,
 	.menu-bar ul li.current-menu-ancestor > a,
 	.menu-bar ul li.current_page_ancestor > a,
 	.menu-bar ul li.current-post-parent > a {
-		color: #222;
+		color: $top-active_c;
 	}
-	.menu-bar ul ul li a {
-		padding-top: 6px;
-		padding-bottom: 6px;
+
+// top-bar search
+.site-search {}
+
+	.search-toggle {
+		position: absolute;
+		top: 0;
+		right: 15px;
+		display: block;
+		padding: 0 20px;
+		cursor: pointer;
+		color: $top_c;
+		font-size: 18px;
+		text-decoration: none;
+		line-height: 50px;
+		background: $top-button_bg;
+		z-index: 999;
 	}
-	.menu-bar ul ul li a:after {
-		content: '\f0d7';
-		float: none;
-		margin-left: 6px;
+	.search-toggle:hover,
+	.search-toggle.active {
+		background: $top-active_bg;
+	}
+	.search-expand {
+		position: absolute;
+		top: 50px;
+		right: 15px;
+		width: 330px;
+		display: none;
+		background: $top-bg;
+		z-index: 999;
+		-webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, .01);
+		-moz-box-shadow: 0 1px 0 rgba(255, 255, 255, .01);
+				box-shadow: 0 1px 0 rgba(255, 255, 255, .01);
+	}
+	.search-expand-inner {
+		padding: 15px;
+		background: $top-active_bg;
+	}
+	.site-search .search-form .search-submit {
+	}
+	.site-search .search-form .search-submit:hover,
+	.site-search .search-form .search-submit:focus {
+	}
+
+	.search-form {
+		padding-right: 53px;
+		position: relative;
+	}
+	.search-form .form-group {
+		margin: 0;
+	}
+	.search-form .form-submit {
+		top: 0;
+		right: 0;
+		position: absolute;
+	}
+	.search-form .fa-search {
+		font-size: 18px;
+		line-height: 1;
 	}
 
 .header {
-	background-color: $header-bg;
+	background-color: $header_bg;
 }
 
 	#logo {
@@ -315,7 +322,7 @@ HEADER STYLES
 		font-size: 72px;
 
 		a {
-			color: $white;
+			color: $logo_c;
 		}
 	}
 
@@ -332,16 +339,16 @@ and more scalable.
 */
 
 .nav {
-	border-bottom: 0;
-	margin: 0;
+	// border-bottom: 0;
+	// margin: 0;
 
 	li {
 
 		a {
-			display: block;
-			color: $white;
-			text-decoration: none;
-			padding: 0.75em;
+			// display: block;
+			// color: $white;
+			// text-decoration: none;
+			// padding: 0.75em;
 
 			/*
 			remember this is for mobile ONLY, so there's no need
@@ -371,7 +378,7 @@ and more scalable.
 			li {
 
 				a {
-					padding-left: 30px;
+					// padding-left: 30px;
 
 					&:hover,
 					&:focus {}
@@ -414,7 +421,7 @@ POSTS & CONTENT STYLES
 			background-color: $white;
 			border-radius: 3px;
 			margin-bottom: 1.5em;
-			border: 1px solid $border-color;
+			border: 1px solid $border_c;
 
 			header {
 				border-bottom: 1px solid $light-gray;
@@ -1006,7 +1013,7 @@ SIDEBARS & ASIDES
 		background-color: $white;
 		padding: 1.5em;
 		text-align: center;
-		border: 1px solid $border-color;
+		border: 1px solid $border_c;
 		border-radius: 2px;
 		margin-bottom: 1.5em;
 	}
@@ -1042,3 +1049,93 @@ FOOTER STYLES
 
 
 	.copyright {}
+
+/***
+FORMS
+***/
+select,
+textarea,
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"],
+.form-control {
+	height: 45px;
+	border-color: $border_c;
+	border-width: 2px;
+	border-radius: 0;
+	-webkit-box-shadow: none;
+	   -moz-box-shadow: none;
+			box-shadow: none;
+}
+select {
+	height: 45px;
+	padding: 10px;
+}
+select:focus,
+textarea:focus,
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="time"]:focus,
+input[type="week"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="color"]:focus,
+.form-control:focus {
+	border-color: $border-active_c;
+	-webkit-box-shadow: none;
+	   -moz-box-shadow: none;
+			box-shadow: none;
+}
+.btn,
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+	height: 45px;
+	padding: 7px 17px 5px;
+	color: $top-active_c;
+	font-size: 13px;
+	font-weight: 700;
+	font-family: $sans-serif;
+	text-decoration: none;
+	letter-spacing: 2px;
+	border-radius: 0;
+	background: $top-button_bg;
+}
+input[type="reset"] {
+	color: #333;
+	background: #eee;
+}
+.btn:hover,
+.btn:focus,
+button:hover,
+button:focus,
+input[type="button"]:hover,
+input[type="button"]:focus,
+input[type="submit"]:hover,
+input[type="submit"]:focus {
+	color: $top-active_c;
+}
+input[type="reset"]:hover,
+input[type="reset"]:focus {
+	color: #333;
+	background: #e5e5e5;
+}

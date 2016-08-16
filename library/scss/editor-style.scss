@@ -43,11 +43,11 @@ body#tinymce.wp-editor {
 	*********************/
 
 	a, a:visited {
-		color: $link-color;
+		color: $link-c;
 
 		/* on hover */
 		&:hover, &:focus {
-			color: $link-hover;
+			color: $link-hover_c;
 		}
 
 		/* on click */

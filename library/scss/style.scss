@@ -68,6 +68,13 @@ the other stylesheets. Remember, keep it light: Speed is Important.
 // styles in base.scss
 @import "breakpoints/base";
 
+@media only screen and (max-width: 480px) {
+	
+	// styles in mini.scss
+	@import "breakpoints/mini";
+
+} // end of media query
+
 /*********************
 LARGER MOBILE DEVICES
 This is for devices like the Galaxy Note or something that's
