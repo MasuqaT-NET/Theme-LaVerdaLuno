@@ -21,7 +21,7 @@
 
 									<?php the_post_thumbnail( 'bones-thumb-300' ); ?>
 
-									<?php the_excerpt(); ?>
+									<?php the_content('Continue Reading'); ?>
 
 								</section>
 

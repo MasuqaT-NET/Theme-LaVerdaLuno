@@ -678,6 +678,23 @@ POSTS & CONTENT STYLES
 		.size-medium {}
 		.size-thumbnail {}
 
+		a.more-link {
+			display: inline-block;
+			color: $continue-reading_c;
+			background-color: $continue-reading_bg;
+			margin: 1em 0;
+			padding: 1em 2em;
+			font-family: $ui-font;
+			text-decoration: none;
+			font-size: 90%;
+
+			&:after {
+				content: '\f178';
+				font-family: 'FontAwesome';
+				margin-left: 0.5em;
+			}
+		}
+
 	// the tag output
 	.tags {
 		margin: 0;

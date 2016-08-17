@@ -13,7 +13,7 @@
 								<?php get_template_part('list', 'header'); ?>
 
 								<section class="entry-content cf">
-									<?php the_content(); ?>
+									<?php the_content('Continue Reading'); ?>
 								</section>
 
 								<?php get_template_part('list', 'footer'); ?>

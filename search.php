@@ -14,8 +14,7 @@
 								<?php get_template_part('list', 'header'); ?>
 
 								<section class="entry-content">
-										<?php the_excerpt( '<span class="read-more">' . __( 'Read more &raquo;', 'bonestheme' ) . '</span>' ); ?>
-
+									<?php the_content('Continue Reading'); ?>
 								</section>
 
 								<?php get_template_part('list', 'footer'); ?>
