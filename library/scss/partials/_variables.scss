@@ -46,7 +46,10 @@ $border-active_c:	darken($border_c, 10%);
 $article-meta_c:	$sub;
 $article-meta-active_c:	$sub2;
 
+$list-title_c:		lighten($sub2, 30%);
 $article-title_c:	lighten($sub2, 10%);
+
+$text_c:			$black;
 
 $post-nav_bg:		$main2;
 $post-nav_c:		$sub2;
@@ -61,7 +64,7 @@ $white:             #fff;
 
 $light-gray:        #f8f9fa;
 $gray:              #eaedf2;
-$text-color:        #5c6b80;
+// $text-color:        #5c6b80;
 $meta-gray:         #9fa6b4;
 
 $tan:               #eceee5;

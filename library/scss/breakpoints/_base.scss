@@ -19,7 +19,7 @@ body {
 	font-family: $sans-serif;
 	font-size: 100%;
 	line-height: 1.5;
-	color: $text-color;
+	color: $text_c;
 	background-color: $gray;
   	-webkit-font-smoothing: antialiased;
   	-moz-osx-font-smoothing: grayscale;
@@ -468,19 +468,20 @@ POSTS & CONTENT STYLES
 		.entry-title {
 			font-weight: bold;
 			margin: 0;
-			a {
-				color: $article-title_c;
-			}
 		}
 
 		.single-title {}
 
 		.page-title {
 			margin: 0 0 0.5em 0.5em;
+			color: $list-title_c;
+			opacity: 0.5;
 		}
 
 		.entry-title {
-			
+			a {
+				color: $article-title_c;
+			}
 		}
 
 		.archive-title {}
@@ -762,11 +763,11 @@ PAGE NAVI STYLES
 
     .current{
     	cursor: default;
-    	color: $text-color;
+    	color: $text_c;
 
     	&:hover, &:focus {
     		background-color: $white;
-    		color: $text-color;
+    		color: $text_c;
     	}
     }
 
@@ -999,7 +1000,7 @@ COMMENT FORM STYLES
 		margin: 0;
 
 		a {
-			color: $text-color;
+			color: $text_c;
 		}
 	}
 
