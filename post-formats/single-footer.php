@@ -1,0 +1,1 @@
+<footer class="article-footer"></footer>

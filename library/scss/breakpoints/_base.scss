@@ -413,6 +413,24 @@ and more scalable.
 POSTS & CONTENT STYLES
 *********************/
 
+.entry-meta {
+	font-size: 80%;
+	color: $article-meta_c;
+
+	& a {
+		color: $article-meta_c;
+		text-decoration: none;
+	}
+
+	& .fa {
+		margin-right: 0.5em;
+	}
+
+	& span {
+		margin-right: 1.5em;
+	}
+}
+
 #content {
 	margin-top: 1.5em;
 }
