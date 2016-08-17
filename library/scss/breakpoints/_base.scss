@@ -672,6 +672,36 @@ POSTS & CONTENT STYLES
 		margin: 0;
 	}
 
+#nav-below {
+	background-color: $post-nav_bg;
+
+	.nav-previous {
+		width: 50%;
+		float: left;
+		text-align: left;
+	}
+
+	.nav-next {
+		width: 50%;
+		float: right;
+		text-align: right;
+	}
+
+	a {
+		padding: 1.5em 2em;
+		display: block;
+		line-height: 1.5;
+		text-decoration: none;
+	}
+
+	.meta-nav {
+		display: block;
+		font-size: 90%;
+		margin-bottom: 0.5em;
+		color: $post-nav_c;
+	}
+}
+
 /******************************************************************
 PAGE NAVI STYLES
 ******************************************************************/
