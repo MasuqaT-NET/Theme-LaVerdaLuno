@@ -417,16 +417,20 @@ POSTS & CONTENT STYLES
 	font-size: 80%;
 	color: $article-meta_c;
 
-	& a {
+	a {
 		color: $article-meta_c;
 		text-decoration: none;
+
+		&:hover {
+			color: $article-meta-active_c;
+		}
 	}
 
-	& .fa {
+	.fa {
 		margin-right: 0.5em;
 	}
 
-	& span {
+	span {
 		margin-right: 1.5em;
 	}
 }
