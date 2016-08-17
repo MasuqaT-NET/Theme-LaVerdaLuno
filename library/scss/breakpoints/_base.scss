@@ -465,7 +465,8 @@ POSTS & CONTENT STYLES
 
 		.single-title,
 		.page-title,
-		.entry-title {
+		.entry-title,
+		.archive-title {
 			font-weight: bold;
 			margin: 0;
 		}
@@ -475,7 +476,6 @@ POSTS & CONTENT STYLES
 		.page-title {
 			margin: 0 0 0.5em 0.5em;
 			color: $list-title_c;
-			opacity: 0.5;
 		}
 
 		.entry-title {
@@ -484,7 +484,10 @@ POSTS & CONTENT STYLES
 			}
 		}
 
-		.archive-title {}
+		.archive-title {
+			margin: 0 0 0.5em 0.5em;
+			color: $list-title_c;
+		}
 
 		/* want to style individual post classes? Booya! */
 		.post-id {}         /* post by id (i.e. post-3) */
