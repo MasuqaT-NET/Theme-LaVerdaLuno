@@ -11,7 +11,7 @@ if ( post_password_required() ) {
 ?>
 
 <?php // You can start editing here. ?>
-
+<div id="comments">
   <?php if ( have_comments() ) : ?>
 
     <h3 id="comments-title" class="h2"><?php comments_number( __( '<span>No</span> Comments', 'bonestheme' ), __( '<span>One</span> Comment', 'bonestheme' ), __( '<span>%</span> Comments', 'bonestheme' ) );?></h3>
@@ -47,4 +47,4 @@ if ( post_password_required() ) {
   <?php endif; ?>
 
   <?php comment_form(); ?>
-
+</div>
