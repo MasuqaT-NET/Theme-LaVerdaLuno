@@ -1157,3 +1157,21 @@ input[type="reset"]:focus {
 	color: #333;
 	background: #e5e5e5;
 }
+
+/***
+NINJA omatome button
+***/
+.ninja_onebutton_output_responsive {
+	div, a {
+		opacity: 0.25;
+		-webkit-transition: opacity .1s linear;
+		-moz-transition: opacity .1s linear;
+			-ms-transition: opacity .1s linear;
+			-o-transition: opacity .1s linear;
+				transition: opacity .1s linear;
+
+		&:hover {
+			opacity: 1.0;
+		}
+	}
+}

@@ -2610,6 +2610,23 @@ input[type="reset"]:focus {
   background: #e5e5e5;
 }
 
+/***
+NINJA omatome button
+***/
+/* line 1165, ../scss/breakpoints/_base.scss */
+.ninja_onebutton_output_responsive div, .ninja_onebutton_output_responsive a {
+  opacity: 0.25;
+  -webkit-transition: opacity .1s linear;
+  -moz-transition: opacity .1s linear;
+  -ms-transition: opacity .1s linear;
+  -o-transition: opacity .1s linear;
+  transition: opacity .1s linear;
+}
+/* line 1173, ../scss/breakpoints/_base.scss */
+.ninja_onebutton_output_responsive div:hover, .ninja_onebutton_output_responsive a:hover {
+  opacity: 1.0;
+}
+
 @media only screen and (max-width: 480px) {
   /******************************************************************
   Site Name:
