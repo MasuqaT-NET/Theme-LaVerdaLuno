@@ -161,6 +161,7 @@ HEADER STYLES
 }
 
 	.site-menu {
+		font-family: $ui-font;
 		position: relative;
 		z-index: 99;
 	}
@@ -414,6 +415,7 @@ POSTS & CONTENT STYLES
 *********************/
 
 .entry-meta {
+	font-family: $ui-font;
 	font-size: 80%;
 	color: $article-meta_c;
 
@@ -464,14 +466,22 @@ POSTS & CONTENT STYLES
 		.single-title,
 		.page-title,
 		.entry-title {
+			font-weight: bold;
 			margin: 0;
+			a {
+				color: $article-title_c;
+			}
 		}
 
 		.single-title {}
 
-		.page-title {}
+		.page-title {
+			margin: 0 0 0.5em 0.5em;
+		}
 
-		.entry-title {}
+		.entry-title {
+			
+		}
 
 		.archive-title {}
 
@@ -695,6 +705,7 @@ POSTS & CONTENT STYLES
 	}
 
 	.meta-nav {
+		font-family: $ui-font;
 		display: block;
 		font-size: 90%;
 		margin-bottom: 0.5em;
