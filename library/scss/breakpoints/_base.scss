@@ -187,8 +187,8 @@ HEADER STYLES
 		display: none;
 		float: right;
 		padding: 13px 20px;
-		font-size: 16px;
-		line-height: 24px;
+		font-size: $font-size;
+		line-height: 1.5em;
 	}
 	.menu-bar ul {
 		margin: 0;
@@ -202,7 +202,7 @@ HEADER STYLES
 		display: block;
 		padding: 0 20px;
 		color: $top_c;
-		font-size: 15px;
+		font-size: $font-size;
 		text-decoration: none;
 		line-height: 50px;
 		-webkit-transition: background-color .1s linear;
@@ -217,11 +217,11 @@ HEADER STYLES
 	}
 	.menu-bar ul ul li a {
 		padding: 8px 20px;
-		font-size: 14px;
+		font-size: 90%;
 		line-height: 20px;
 	}
 	.menu-bar ul li a:after {
-		font-family: FontAwesome;
+		font-family: 'FontAwesome';
 	}
 	.menu-bar ul li a:after {
 		content: "\f0d7";
@@ -475,7 +475,9 @@ POSTS & CONTENT STYLES
 			margin: 0;
 		}
 
-		.single-title {}
+		.single-title {
+			color: $article-title_c;
+		}
 
 		.page-title {
 			margin: 0 ($padding-size * 3);
@@ -1229,8 +1231,8 @@ FOOTER STYLES
 
 .footer {
 	clear: both;
-	background-color: $black;
-	color: $light-gray;
+	color: $footer_c;
+	background-color: $footer_bg;
 }
 
 	/*
@@ -1242,18 +1244,149 @@ FOOTER STYLES
 	override these styles for the desktop
 	view.
 	*/
+	.footer-links ul {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+	.footer-links ul li {
+		position: relative;
+		}
+	.footer-links ul li a {
+		display: block;
+		padding: 0 20px;
+		color: $top_c;
+		font-size: $font-size;
+		text-decoration: none;
+		line-height: 50px;
+		-webkit-transition: background-color .1s linear;
+		-moz-transition: background-color .1s linear;
+			-ms-transition: background-color .1s linear;
+			-o-transition: background-color .1s linear;
+				transition: background-color .1s linear;
+		
+		&:hover {
+			text-decoration: none;
+		}
+	}
+	.footer-links ul ul li a {
+		padding: 8px 20px;
+		font-size: 90%;
+		line-height: 20px;
+	}
+	.footer-links ul li a:after {
+		font-family: 'FontAwesome';
+	}
+	.footer-links ul li a:after {
+		content: "\f0d7";
+		float: none;
+		margin-left: 6px;
+		opacity: 0.5;
+	}
+	.footer-links ul ul li a:after {
+		content: "\f0da";
+		float: right;
+		margin-left: 0;
+	}
+	.footer-links ul li a:only-child:after {
+		content: "";
+		margin: 0;
+	}
+
+	.menu-toggle,
+	.footer-links ul li a {
+		color: $top_c;
+	}
+	.footer-links ul li > a:hover, 
+	.footer-links ul li:hover > a, 
+	.footer-links ul li.current_page_item > a, 
+	.footer-links ul li.current-menu-item > a,
+	.footer-links ul li.current-menu-ancestor > a,
+	.footer-links ul li.current_page_ancestor > a,
+	.footer-links ul li.current-post-parent > a {
+		color: $top-active_c;
+	}
+	/*
 	.footer-links {
 
+		font-family: $ui-font;
+		position: relative;
+		z-index: 99;
+
 		ul {
+			margin: 0;
+			padding: 0;
+			list-style: none;
 
-			li {}
+			li {
+				position: relative;
 
+				a {
+					display: block;
+					padding: 0 20px;
+					color: $footer_c;
+					font-size: $font-size;
+					text-decoration: none;
+					line-height: 50px;
+					-webkit-transition: background-color .1s linear;
+					-moz-transition: background-color .1s linear;
+						-ms-transition: background-color .1s linear;
+						-o-transition: background-color .1s linear;
+							transition: background-color .1s linear;
+					
+					&:hover {
+						text-decoration: none;
+					}
+
+					&:after {
+						font-family: 'FontAwesome';
+						content: "\f0d7";
+						float: none;
+						margin-left: 6px;
+						opacity: 0.5;
+					}
+
+					&:only-child:after {
+						content: "";
+						margin: 0;
+					}
+				}
+
+				& > a:hover, 
+				&:hover > a, 
+				&.current_page_item > a, 
+				&.current-menu-item > a,
+				&.current-menu-ancestor > a,
+				&.current_page_ancestor > a,
+				&.current-post-parent > a {
+					color: $footer-active_c;
+				}
+			}
+
+			ul {
+				li {
+					a {
+						padding: 8px 20px;
+						font-size: 90%;
+						line-height: 20px;
+
+						&:after {
+							font-family: 'FontAwesome';
+							content: "\f0da";
+							float: right;
+							margin-left: 0;
+						}
+					}
+				}
+			}
 		}
 
-	} /* end .footer-links */
+	} */ /* end .footer-links */
 
-
-	.copyright {}
+	.copyright {
+		font-family: $ui-font;
+		text-align: center;
+	}
 
 /***
 FORMS
