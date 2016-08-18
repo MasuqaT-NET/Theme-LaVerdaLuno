@@ -175,6 +175,7 @@ function bones_theme_support() {
 	// default thumb size
 	set_post_thumbnail_size(125, 125, true);
 
+	/*
 	// wp custom background (thx to @bransonwerner for update)
 	add_theme_support( 'custom-background',
 	    array(
@@ -185,6 +186,7 @@ function bones_theme_support() {
 	    'admin-preview-callback' => ''
 	    )
 	);
+	*/
 
 	// rss thingy
 	add_theme_support('automatic-feed-links');
