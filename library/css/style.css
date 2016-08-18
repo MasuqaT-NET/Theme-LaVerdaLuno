@@ -1626,7 +1626,7 @@ GENERAL STYLES
 /* line 18, ../scss/breakpoints/_base.scss */
 body {
   font-family: YuGothicSet, sans-serif;
-  font-size: 100%;
+  font-size: 16px;
   line-height: 1.5;
   color: #323944;
   background-color: #ffffff;
@@ -2085,13 +2085,13 @@ POSTS & CONTENT STYLES
 
 /* line 491, ../scss/breakpoints/_base.scss */
 .archive-title {
-  margin: 0 10px;
+  margin: 0 15px;
   color: #7389a6;
 }
 
 /* line 496, ../scss/breakpoints/_base.scss */
 .taxonomy-description {
-  margin: 0px 10px;
+  margin: 0px 20px;
 }
 /* line 499, ../scss/breakpoints/_base.scss */
 .taxonomy-description p {
@@ -2498,7 +2498,7 @@ SIDEBARS & ASIDES
 }
 /* line 1021, ../scss/breakpoints/_base.scss */
 .widget .widgettitle {
-  font-size: 24px;
+  font-size: 1.5em;
   margin: 0 0 16px 0;
   padding-bottom: 5px;
   font-family: "Open Sans", sans-serif;

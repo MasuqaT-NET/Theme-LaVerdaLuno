@@ -17,7 +17,7 @@ GENERAL STYLES
 
 body {
 	font-family: $sans-serif;
-	font-size: 100%;
+	font-size: $font-size;
 	line-height: 1.5;
 	color: $text_c;
 	background-color: $main;
@@ -442,7 +442,7 @@ POSTS & CONTENT STYLES
 }
 
 		.hentry {
-			padding: 2.5em 5px;
+			padding: 2.5em $padding-size;
 			border-bottom: 2px solid $border_c;
 
 			header {}
@@ -478,7 +478,7 @@ POSTS & CONTENT STYLES
 		.single-title {}
 
 		.page-title {
-			margin: 0 15px;
+			margin: 0 ($padding-size * 3);
 			color: $list-title_c;
 		}
 
@@ -489,12 +489,12 @@ POSTS & CONTENT STYLES
 		}
 
 		.archive-title {
-			margin: 0 10px;
+			margin: 0 ($padding-size * 3);
 			color: $list-title_c;
 		}
 
 		.taxonomy-description {
-			margin: 0px 10px;
+			margin: 0px ($padding-size * 4);
 
 			p {
 				margin: 0;
@@ -522,7 +522,7 @@ POSTS & CONTENT STYLES
 
 		/* entry content */
 		.entry-content {
-			padding: 1em 5px; 
+			padding: 1em $padding-size; 
 
 			p {
 				margin: 0 0 1.5em;
@@ -1019,9 +1019,9 @@ SIDEBARS & ASIDES
 		margin-bottom: 20px;
 
 		.widgettitle {
-			font-size: 24px;
+			font-size: 1.5em;
 			margin: 0 0 16px 0;
-			padding-bottom: 5px;
+			padding-bottom: $padding-size;
 			font-family: $ui-font;
 			border-bottom: 3px solid $border_c;
 		}
@@ -1031,7 +1031,7 @@ SIDEBARS & ASIDES
 		}
 
 		& > *:last-child {
-			margin: 0 5px;
+			margin: 0 $padding-size;
 		}
 
 		ul {
@@ -1180,7 +1180,7 @@ SIDEBARS & ASIDES
 			}
 
 			.children {
-				margin-top: 5px;
+				margin-top: $padding-size;
 			}
 		}
 	}
