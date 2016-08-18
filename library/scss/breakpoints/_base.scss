@@ -454,7 +454,7 @@ POSTS & CONTENT STYLES
 			}
 
 			&:first-of-type {
-				margin: -2.5em 0 0 0;
+				margin: -1em 0 0 0;
 			}
 
 			&:first-child {			// when on index, single etc...
@@ -478,7 +478,7 @@ POSTS & CONTENT STYLES
 		.single-title {}
 
 		.page-title {
-			margin: 0 0 0.5em 0.5em;
+			margin: 0 15px;
 			color: $list-title_c;
 		}
 
@@ -489,8 +489,16 @@ POSTS & CONTENT STYLES
 		}
 
 		.archive-title {
-			margin: 0 0 0.5em 0.5em;
+			margin: 0 10px;
 			color: $list-title_c;
+		}
+
+		.taxonomy-description {
+			margin: 0px 10px;
+
+			p {
+				margin: 0;
+			}
 		}
 
 		/* want to style individual post classes? Booya! */
