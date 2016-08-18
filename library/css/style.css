@@ -2259,18 +2259,16 @@ a.more-link:after {
   margin: 0;
 }
 
-/* line 718, ../scss/breakpoints/_base.scss */
-#nav-below {
-  background-color: #F7F7F7;
-}
-/* line 721, ../scss/breakpoints/_base.scss */
+/* line 719, ../scss/breakpoints/_base.scss */
 #nav-below .nav-previous {
+  background-color: #F7F7F7;
   width: 50%;
   float: left;
   text-align: left;
 }
-/* line 727, ../scss/breakpoints/_base.scss */
+/* line 726, ../scss/breakpoints/_base.scss */
 #nav-below .nav-next {
+  background-color: #F7F7F7;
   width: 50%;
   float: right;
   text-align: right;

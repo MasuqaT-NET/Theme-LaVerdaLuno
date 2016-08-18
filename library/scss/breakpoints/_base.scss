@@ -716,15 +716,15 @@ POSTS & CONTENT STYLES
 	}
 
 #nav-below {
-	background-color: $post-nav_bg;
-
 	.nav-previous {
+		background-color: $post-nav_bg;
 		width: 50%;
 		float: left;
 		text-align: left;
 	}
 
 	.nav-next {
+		background-color: $post-nav_bg;
 		width: 50%;
 		float: right;
 		text-align: right;
