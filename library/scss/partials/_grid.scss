@@ -81,7 +81,7 @@ them however you see fit.
 
 
 /* Portrait tablet to landscape */
-@media (min-width: 768px) and (max-width: 1029px) {
+@media (min-width: 768px) and (max-width: 1199px) {
 
   .t-all {
     @include grid-col;
@@ -137,7 +137,7 @@ them however you see fit.
 } // end tablet
 
 /* Landscape to small desktop */
-@media (min-width: 1100px) {
+@media (min-width: 1200px) {
 
   .d-all  {
     @include grid-col;

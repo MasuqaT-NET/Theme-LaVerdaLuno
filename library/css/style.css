@@ -807,7 +807,7 @@ them however you see fit.
   }
 }
 /* Portrait tablet to landscape */
-@media (min-width: 768px) and (max-width: 1029px) {
+@media (min-width: 768px) and (max-width: 1199px) {
   /* line 86, ../scss/partials/_grid.scss */
   .t-all {
     float: left;
@@ -880,7 +880,7 @@ them however you see fit.
   }
 }
 /* Landscape to small desktop */
-@media (min-width: 1100px) {
+@media (min-width: 1200px) {
   /* line 142, ../scss/partials/_grid.scss */
   .d-all {
     float: left;
@@ -2485,12 +2485,48 @@ COMMENT FORM STYLES
 /*********************
 SIDEBARS & ASIDES
 *********************/
-/* line 1020, ../scss/breakpoints/_base.scss */
-.widget ul li {
-  /* deep nesting */
+/* line 1012, ../scss/breakpoints/_base.scss */
+.sidebar {
+  margin: 40px 0 20px 0;
 }
 
-/* line 1037, ../scss/breakpoints/_base.scss */
+/* line 1016, ../scss/breakpoints/_base.scss */
+.widget {
+  background-color: #F7F7F7;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+/* line 1021, ../scss/breakpoints/_base.scss */
+.widget .widgettitle {
+  font-size: 24px;
+  margin: 0 0 16px 0;
+  padding-bottom: 5px;
+  font-family: "Open Sans", sans-serif;
+  border-bottom: 3px solid #ccc;
+}
+/* line 1029, ../scss/breakpoints/_base.scss */
+.widget a {
+  text-decoration: none;
+}
+/* line 1033, ../scss/breakpoints/_base.scss */
+.widget > *:last-child {
+  margin: 0 5px;
+}
+/* line 1038, ../scss/breakpoints/_base.scss */
+.widget ul li {
+  margin: 0.5em 0;
+  /* deep nesting */
+}
+/* line 1041, ../scss/breakpoints/_base.scss */
+.widget ul li:first-child {
+  margin-top: 0;
+}
+/* line 1045, ../scss/breakpoints/_base.scss */
+.widget ul li:last-child {
+  margin-bottom: 0;
+}
+
+/* line 1060, ../scss/breakpoints/_base.scss */
 .no-widgets {
   background-color: #fff;
   padding: 1.5em;
@@ -2500,10 +2536,154 @@ SIDEBARS & ASIDES
   margin-bottom: 1.5em;
 }
 
+/* line 1071, ../scss/breakpoints/_base.scss */
+.widget_recent_entries ul li {
+  margin-left: 27px;
+}
+/* line 1074, ../scss/breakpoints/_base.scss */
+.widget_recent_entries ul li:before {
+  content: '\f0f6';
+  font-family: 'FontAwesome';
+  margin-left: -27px;
+  margin-right: 8px;
+  font-size: 80%;
+  color: #9cbdce;
+}
+/* line 1083, ../scss/breakpoints/_base.scss */
+.widget_recent_entries ul li .post-date {
+  color: #9cbdce;
+  display: block;
+  font-size: 80%;
+}
+
+/* line 1093, ../scss/breakpoints/_base.scss */
+.widget_archive a.year-opener {
+  font-family: "Open Sans", sans-serif;
+  cursor: pointer;
+  color: #323944;
+}
+/* line 1098, ../scss/breakpoints/_base.scss */
+.widget_archive a.year-opener:after {
+  content: '\f066';
+  font-family: 'FontAwesome';
+  color: #9cbdce;
+  padding: 0.5em;
+}
+/* line 1105, ../scss/breakpoints/_base.scss */
+.widget_archive a.year-opener.closed:after {
+  content: '\f065';
+}
+/* line 1111, ../scss/breakpoints/_base.scss */
+.widget_archive ul.years li {
+  margin-bottom: 0;
+  margin-left: 27px;
+}
+/* line 1115, ../scss/breakpoints/_base.scss */
+.widget_archive ul.years li:before {
+  content: '\f073';
+  font-family: 'FontAwesome';
+  margin-left: -27px;
+  margin-right: 8px;
+  font-size: 80%;
+  color: #9cbdce;
+}
+/* line 1125, ../scss/breakpoints/_base.scss */
+.widget_archive ul.years ul.month {
+  -webkit-transition: opacity .1s linear;
+  -moz-transition: opacity .1s linear;
+  -ms-transition: opacity .1s linear;
+  -o-transition: opacity .1s linear;
+  transition: opacity .1s linear;
+  margin: 0.25em 0 1em 1em;
+}
+/* line 1134, ../scss/breakpoints/_base.scss */
+.widget_archive ul.years ul.month li {
+  font-family: "Open Sans", sans-serif;
+  margin-left: 10px;
+}
+/* line 1138, ../scss/breakpoints/_base.scss */
+.widget_archive ul.years ul.month li a {
+  font-family: YuGothicSet, sans-serif;
+}
+/* line 1142, ../scss/breakpoints/_base.scss */
+.widget_archive ul.years ul.month li:before {
+  content: '\f133';
+  font-family: 'FontAwesome';
+  margin-left: -27px;
+  margin-right: 8px;
+  font-size: 80%;
+  color: #9cbdce;
+}
+/* line 1152, ../scss/breakpoints/_base.scss */
+.widget_archive ul.years ul.month.hide {
+  margin: 0;
+  height: 0;
+  opacity: 0;
+  visibility: hidden;
+}
+
+/* line 1164, ../scss/breakpoints/_base.scss */
+.widget_categories ul li {
+  font-family: "Open Sans", sans-serif;
+  margin-left: 27px;
+}
+/* line 1168, ../scss/breakpoints/_base.scss */
+.widget_categories ul li a {
+  font-family: YuGothicSet, sans-serif;
+}
+/* line 1172, ../scss/breakpoints/_base.scss */
+.widget_categories ul li:before {
+  content: '\f114';
+  font-family: 'FontAwesome';
+  margin-left: -27px;
+  margin-right: 8px;
+  font-size: 80%;
+  color: #9cbdce;
+}
+/* line 1182, ../scss/breakpoints/_base.scss */
+.widget_categories ul .children {
+  margin-top: 5px;
+}
+
+/* line 1189, ../scss/breakpoints/_base.scss */
+.widget_tag_cloud li {
+  margin-left: 27px;
+}
+/* line 1192, ../scss/breakpoints/_base.scss */
+.widget_tag_cloud li:before {
+  content: '\f097';
+  font-family: 'FontAwesome';
+  margin-left: -27px;
+  margin-right: 8px;
+  font-size: 80%;
+  color: #9cbdce;
+}
+
+/* line 1205, ../scss/breakpoints/_base.scss */
+.widget_recent_comments li:before {
+  content: '\f0f6';
+  font-family: 'FontAwesome';
+  margin-right: 5px;
+  font-size: 80%;
+  color: #9cbdce;
+}
+/* line 1213, ../scss/breakpoints/_base.scss */
+.widget_recent_comments li .comment-author-link {
+  margin-left: 10px;
+}
+/* line 1215, ../scss/breakpoints/_base.scss */
+.widget_recent_comments li .comment-author-link:before {
+  content: '\f007';
+  font-family: 'FontAwesome';
+  margin-right: 5px;
+  font-size: 80%;
+  color: #9cbdce;
+}
+
 /*********************
 FOOTER STYLES
 *********************/
-/* line 1050, ../scss/breakpoints/_base.scss */
+/* line 1230, ../scss/breakpoints/_base.scss */
 .footer {
   clear: both;
   background-color: #323944;
@@ -2523,7 +2703,7 @@ view.
 /***
 FORMS
 ***/
-/* line 1081, ../scss/breakpoints/_base.scss */
+/* line 1261, ../scss/breakpoints/_base.scss */
 select,
 textarea,
 input[type="text"],
@@ -2545,18 +2725,19 @@ input[type="color"],
   border-color: #ccc;
   border-width: 2px;
   border-radius: 0;
+  max-width: none;
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none;
 }
 
-/* line 1106, ../scss/breakpoints/_base.scss */
+/* line 1287, ../scss/breakpoints/_base.scss */
 select {
   height: 45px;
   padding: 10px;
 }
 
-/* line 1110, ../scss/breakpoints/_base.scss */
+/* line 1291, ../scss/breakpoints/_base.scss */
 select:focus,
 textarea:focus,
 input[type="text"]:focus,
@@ -2580,7 +2761,7 @@ input[type="color"]:focus,
   box-shadow: none;
 }
 
-/* line 1132, ../scss/breakpoints/_base.scss */
+/* line 1313, ../scss/breakpoints/_base.scss */
 .btn,
 button,
 input[type="button"],
@@ -2598,13 +2779,13 @@ input[type="submit"] {
   background: #de3a31;
 }
 
-/* line 1148, ../scss/breakpoints/_base.scss */
+/* line 1329, ../scss/breakpoints/_base.scss */
 input[type="reset"] {
   color: #333;
   background: #eee;
 }
 
-/* line 1152, ../scss/breakpoints/_base.scss */
+/* line 1333, ../scss/breakpoints/_base.scss */
 .btn:hover,
 .btn:focus,
 button:hover,
@@ -2616,7 +2797,7 @@ input[type="submit"]:focus {
   color: #ffffff;
 }
 
-/* line 1162, ../scss/breakpoints/_base.scss */
+/* line 1343, ../scss/breakpoints/_base.scss */
 input[type="reset"]:hover,
 input[type="reset"]:focus {
   color: #333;
@@ -2626,7 +2807,7 @@ input[type="reset"]:focus {
 /***
 NINJA omatome button
 ***/
-/* line 1172, ../scss/breakpoints/_base.scss */
+/* line 1353, ../scss/breakpoints/_base.scss */
 .ninja_onebutton_output_responsive div, .ninja_onebutton_output_responsive a {
   opacity: 0.25;
   -webkit-transition: opacity .1s linear;
@@ -2635,7 +2816,7 @@ NINJA omatome button
   -o-transition: opacity .1s linear;
   transition: opacity .1s linear;
 }
-/* line 1180, ../scss/breakpoints/_base.scss */
+/* line 1361, ../scss/breakpoints/_base.scss */
 .ninja_onebutton_output_responsive div:hover, .ninja_onebutton_output_responsive a:hover {
   opacity: 1.0;
 }
@@ -3087,31 +3268,9 @@ you can add resource intensive styles.
   /*********************
   SIDEBARS & ASIDES
   *********************/
-  /* line 144, ../scss/breakpoints/_768up.scss */
-  .sidebar {
-    margin-top: 2.2em;
-  }
-
-  /* line 148, ../scss/breakpoints/_768up.scss */
-  .widgettitle {
-    border-bottom: 2px solid #444;
-    margin-bottom: 0.75em;
-  }
-
-  /* line 153, ../scss/breakpoints/_768up.scss */
-  .widget {
-    padding: 0 10px;
-    margin: 2.2em 0;
-  }
-  /* line 158, ../scss/breakpoints/_768up.scss */
+  /* line 156, ../scss/breakpoints/_768up.scss */
   .widget ul li {
-    margin-bottom: 0.75em;
     /* deep nesting */
-  }
-  /* line 166, ../scss/breakpoints/_768up.scss */
-  .widget ul li ul {
-    margin-top: 0.75em;
-    padding-left: 1em;
   }
 
   /* links widget */
@@ -3133,7 +3292,7 @@ you can add resource intensive styles.
   of overriding here if you styled them for
   mobile. Make sure to double check these!
   */
-  /* line 274, ../scss/breakpoints/_768up.scss */
+  /* line 272, ../scss/breakpoints/_768up.scss */
   .footer-links ul li {
     /*
     be careful with the depth of your menus.
@@ -3150,7 +3309,7 @@ This is the average viewing window. So Desktops, Laptops, and
 in general anyone not viewing on a mobile device. Here's where
 you can add resource intensive styles.
 *********************/
-@media only screen and (min-width: 1100px) {
+@media only screen and (min-width: 1200px) {
   /******************************************************************
   Site Name:
   Author:
@@ -3161,14 +3320,41 @@ you can add resource intensive styles.
   be seen on the Desktop.
   
   ******************************************************************/
-  /* line 12, ../scss/breakpoints/_1100up.scss */
+  /* line 12, ../scss/breakpoints/_1200up.scss */
   .wrap {
-    width: 1100px;
+    width: 1200px;
   }
 
-  /* line 16, ../scss/breakpoints/_1100up.scss */
+  /* line 16, ../scss/breakpoints/_1200up.scss */
   #main {
-    width: 772px;
+    width: 760px;
+    padding-right: 0px;
+    margin: 0 30px 40px 20px;
+  }
+
+  /* line 22, ../scss/breakpoints/_1200up.scss */
+  #sidebar1 {
+    width: 360px;
+  }
+
+  /* line 26, ../scss/breakpoints/_1200up.scss */
+  .site-top > * {
+    padding-left: 30px;
+  }
+
+  /* line 30, ../scss/breakpoints/_1200up.scss */
+  .header > * {
+    padding-left: 30px;
+  }
+
+  /* line 34, ../scss/breakpoints/_1200up.scss */
+  .footer > * {
+    padding-left: 30px;
+  }
+
+  /* line 38, ../scss/breakpoints/_1200up.scss */
+  .search-toggle, .search-expand {
+    right: 35px;
   }
 }
 /*********************
@@ -3186,6 +3372,15 @@ This is for the larger monitors and possibly full screen viewers.
   on larger screens.
   
   ******************************************************************/
+  /* line 12, ../scss/breakpoints/_1240up.scss */
+  #main {
+    margin-right: 50px;
+  }
+
+  /* line 16, ../scss/breakpoints/_1240up.scss */
+  .search-toggle, .search-expand {
+    right: 15px;
+  }
 }
 /*********************
 RETINA (2x RESOLUTION DEVICES)

@@ -1009,19 +1009,42 @@ COMMENT FORM STYLES
 SIDEBARS & ASIDES
 *********************/
 
-.sidebar {}
-
-	.widgettitle {}
+.sidebar {
+	margin: 40px 0 20px 0;
+}
 
 	.widget {
+		background-color: $sidebar-bg;
+		padding: 20px;
+		margin-bottom: 20px;
+
+		.widgettitle {
+			font-size: 24px;
+			margin: 0 0 16px 0;
+			padding-bottom: 5px;
+			font-family: $ui-font;
+			border-bottom: 3px solid $border_c;
+		}
+
+		a {
+			text-decoration: none;
+		}
+
+		& > *:last-child {
+			margin: 0 5px;
+		}
 
 		ul {
-
 			li {
+				margin: 0.5em 0;
 
-				&:first-child {}
+				&:first-child {
+					margin-top: 0;
+				}
 
-				&:last-child {}
+				&:last-child {
+					margin-bottom: 0;
+				}
 
 				a {}
 
@@ -1041,6 +1064,163 @@ SIDEBARS & ASIDES
 		border: 1px solid $border_c;
 		border-radius: 2px;
 		margin-bottom: 1.5em;
+	}
+
+	.widget_recent_entries {
+		ul {
+			li {
+				margin-left: 27px;
+
+				&:before {
+					content: '\f0f6';
+					font-family: 'FontAwesome';
+					margin-left: -27px;
+					margin-right: 8px;
+					font-size: 80%;
+					color: $sidebar-ui_c;
+				}
+
+				.post-date {
+					color: $sidebar-ui_c;
+					display: block;
+					font-size: 80%;
+				}
+			}
+		}
+	}
+
+	.widget_archive {
+		a.year-opener {
+			font-family: $ui-font;
+			cursor: pointer;
+			color: $text_c;
+
+			&:after {
+				content: '\f066';
+				font-family: 'FontAwesome';
+				color: $sidebar-ui_c;
+				padding: 0.5em;
+			}
+
+			&.closed:after {
+				content: '\f065';
+			}
+		}
+		
+		ul.years {
+			li {
+				margin-bottom: 0;
+				margin-left: 27px;
+
+				&:before {
+					content: '\f073';
+					font-family: 'FontAwesome';
+					margin-left: -27px;
+					margin-right: 8px;
+					font-size: 80%;
+					color: $sidebar-ui_c;
+				}
+			}
+			
+			ul.month {
+				-webkit-transition: opacity .1s linear;
+				-moz-transition: opacity .1s linear;
+					-ms-transition: opacity .1s linear;
+					-o-transition: opacity .1s linear;
+						transition: opacity .1s linear;
+				
+				margin: 0.25em 0 1em 1em;
+
+				li {
+					font-family: $ui-font;
+					margin-left: 10px;
+
+					a {
+						font-family: $sans-serif;
+					}
+
+					&:before {
+						content: '\f133';
+						font-family: 'FontAwesome';
+						margin-left: -27px;
+						margin-right: 8px;
+						font-size: 80%;
+						color: $sidebar-ui_c;
+					}
+				}
+
+				&.hide {
+					margin: 0;
+					height: 0;
+					opacity: 0;
+					visibility: hidden;
+				}
+			}
+		}
+	}
+
+	.widget_categories {
+		ul {
+			li {
+				font-family: $ui-font;
+				margin-left: 27px;
+
+				a {
+					font-family: $sans-serif;
+				}
+
+				&:before {
+					content: '\f114';
+					font-family: 'FontAwesome';
+					margin-left: -27px;
+					margin-right: 8px;
+					font-size: 80%;
+					color: $sidebar-ui_c;
+				}
+			}
+
+			.children {
+				margin-top: 5px;
+			}
+		}
+	}
+
+	.widget_tag_cloud {
+		li {
+			margin-left: 27px;
+
+			&:before {
+				content: '\f097';
+				font-family: 'FontAwesome';
+				margin-left: -27px;
+				margin-right: 8px;
+				font-size: 80%;
+				color: $sidebar-ui_c;
+			}
+		}
+	}
+
+	.widget_recent_comments {
+		li {
+			&:before {
+				content: '\f0f6';
+				font-family: 'FontAwesome';
+				margin-right: 5px;
+				font-size: 80%;
+				color: $sidebar-ui_c;
+			}
+
+			.comment-author-link {
+				margin-left: 10px;
+				&:before {
+					content: '\f007';
+					font-family: 'FontAwesome';
+					margin-right: 5px;
+					font-size: 80%;
+					color: $sidebar-ui_c;
+				}
+			}
+		}
 	}
 
 /*********************
@@ -1099,6 +1279,7 @@ input[type="color"],
 	border-color: $border_c;
 	border-width: 2px;
 	border-radius: 0;
+	max-width: none;
 	-webkit-box-shadow: none;
 	   -moz-box-shadow: none;
 			box-shadow: none;

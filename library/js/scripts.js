@@ -174,3 +174,114 @@ jQuery(document).ready(function ($) {
     }, 300);
 	});
 });
+
+/////////////////////////////////
+// 折り畳み式アーカイブウィジェット
+// http://nelog.jp/folding-archive-widget をいろいろ改造
+/////////////////////////////////
+(function($) {
+  $(function() {
+    var wgts = $(".widget_archive");//アーカイブウィジェット全てを取得
+    //アーカイブウィジェットを1つずつ処理する
+    wgts.each(function(i, el) {
+      wgt = $(el);
+
+      //日付表示＋投稿数か
+      var has_date_count = wgt.text().match(/\d+年\d+月\s\(\d+\)/);
+      //日付表示だけか
+      var has_date_only = wgt.text().match(/\d+年\d+月/) && !has_date_count;
+
+      //日付表示されているとき（ドロップダウン表示でない時）
+      if ( has_date_count || has_date_only ) {
+        var
+          clone = wgt.clone(),//アーカイブウィジェットの複製を作成
+          year_buf = [];
+        //クローンはウィジェットが後にに挿入。クローンはcssで非表示
+        wgt.after(clone);
+        clone.attr("class", "archive_clone").addClass('hide');
+
+        var
+          acv = wgt; //ウィジェット
+          acvLi = acv.find("li"); //ウィジェット内のli全て
+        //ul.yearsをアーカイブウィジェット直下に追加してそのDOMを取得
+        var acv_years =  acv.append('<ul class="years"></ul>').find("ul.years");
+
+        //liのテキストから年がどこからあるかを調べる
+        acvLi.each(function(i) {
+          var reg = /(\d+)年(\d+)月\s\((\d+)\)/;
+          var dt = $(this).text().match(reg);
+          year_buf.push([parseInt(dt[1]), parseInt(dt[3])]);
+        });
+		
+        var yr = year_buf.reduce( function (prev, item) { 
+			if ( item[0] in prev ) {
+				prev[item[0]] = prev[item[0]] + item[1]; 
+			} else {
+				prev[item[0]] = item[1]; 
+			}
+			return prev; 
+		}, {} );
+
+		// [[2014, 2], [2015, 5], [2016, 2]]
+		var years = Object.keys(yr).map(function (key) {return [parseInt(key), yr[key]]; }).reverse();
+
+        acvLi.unwrap(); //liの親のulを解除
+		
+		var lb = $($(acvLi[0]).children()[0]).attr('href');
+		var yearUrlBase = lb.replace(/\d+\/\d+\/$/g, '');
+
+        //投稿年があるだけ中にブロックを作る
+		for(var i = 0; i < years.length; i++) {
+			acv_years.append("<li class='year_" + years[i][0] + "'><a class='year' href='" + yearUrlBase + years[i][0] + "/'>" + years[i][0] + "年</a> <a class='year-opener'>(" + years[i][1] + ")</a><ul class='month'></ul></li>");
+		}
+
+        //作ったブロック内のulに内容を整形して移動
+        //オリジナルのクローンは順番に削除
+        var j = 0;
+        acvLi.each(function(i, el) {
+          var reg = /(\d+)年(\d+)月/;
+          //日付表示＋投稿数か
+          if ( has_date_count ) {
+            reg = /(\d+)年(\d+)月\s\((\d+)\)/;
+          }
+          var
+            dt = $(this).text().match(reg),
+            href = $(this).find("a").attr("href");
+
+          //月の追加
+          var rTxt = "<li><a href='" + href + "'>" + "" + dt[2] + "月</a>";
+          //日付表示＋投稿数か
+          if ( has_date_count ) {
+            rTxt += " (" + dt[3] + ")" + "</li>"; //投稿数の追加
+          }
+
+          //作成した月のHTMLを追加、不要なものは削除
+          if (years[j][0] === parseInt(dt[1])) {
+            acv_years.find(".year_" + years[j][0] + " ul").append(rTxt);
+            $(this).remove();
+          } else {
+            j++;
+            acv_years.find(".year_" + years[j][0] + " ul").append(rTxt);
+            $(this).remove();
+          }
+        });
+
+        //クローン要素を削除
+        clone.remove();
+
+        //直近の年の最初以外は.hide
+		var recentUl = acv.find("ul.years ul:not(:first)");
+		recentUl.prev().addClass("closed");
+        recentUl.addClass("hide");
+
+        //年をクリックでトグルshow
+        acv.find("a.year-opener").on("click", function() {
+			$(this).toggleClass("closed");
+        	$(this).next().toggleClass("hide");
+        });
+      }//if has_date_count || has_date_only
+    });//wgts.each
+
+  });
+
+})(jQuery);
