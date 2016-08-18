@@ -1386,6 +1386,11 @@ FOOTER STYLES
 	.copyright {
 		font-family: $ui-font;
 		text-align: center;
+		
+		a {
+			color: $footer-active_c;
+			text-decoration: none;
+		}
 	}
 
 /***

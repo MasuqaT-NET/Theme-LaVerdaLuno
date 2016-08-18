@@ -2867,11 +2867,16 @@ view.
   font-family: "Open Sans", sans-serif;
   text-align: center;
 }
+/* line 1390, ../scss/breakpoints/_base.scss */
+.copyright a {
+  color: #ffffff;
+  text-decoration: none;
+}
 
 /***
 FORMS
 ***/
-/* line 1394, ../scss/breakpoints/_base.scss */
+/* line 1399, ../scss/breakpoints/_base.scss */
 select,
 textarea,
 input[type="text"],
@@ -2899,13 +2904,13 @@ input[type="color"],
   box-shadow: none;
 }
 
-/* line 1420, ../scss/breakpoints/_base.scss */
+/* line 1425, ../scss/breakpoints/_base.scss */
 select {
   height: 45px;
   padding: 10px;
 }
 
-/* line 1424, ../scss/breakpoints/_base.scss */
+/* line 1429, ../scss/breakpoints/_base.scss */
 select:focus,
 textarea:focus,
 input[type="text"]:focus,
@@ -2929,7 +2934,7 @@ input[type="color"]:focus,
   box-shadow: none;
 }
 
-/* line 1446, ../scss/breakpoints/_base.scss */
+/* line 1451, ../scss/breakpoints/_base.scss */
 .btn,
 button,
 input[type="button"],
@@ -2947,13 +2952,13 @@ input[type="submit"] {
   background: #de3a31;
 }
 
-/* line 1462, ../scss/breakpoints/_base.scss */
+/* line 1467, ../scss/breakpoints/_base.scss */
 input[type="reset"] {
   color: #333;
   background: #eee;
 }
 
-/* line 1466, ../scss/breakpoints/_base.scss */
+/* line 1471, ../scss/breakpoints/_base.scss */
 .btn:hover,
 .btn:focus,
 button:hover,
@@ -2965,7 +2970,7 @@ input[type="submit"]:focus {
   color: #ffffff;
 }
 
-/* line 1476, ../scss/breakpoints/_base.scss */
+/* line 1481, ../scss/breakpoints/_base.scss */
 input[type="reset"]:hover,
 input[type="reset"]:focus {
   color: #333;
@@ -2975,7 +2980,7 @@ input[type="reset"]:focus {
 /***
 NINJA omatome button
 ***/
-/* line 1486, ../scss/breakpoints/_base.scss */
+/* line 1491, ../scss/breakpoints/_base.scss */
 .ninja_onebutton_output_responsive div, .ninja_onebutton_output_responsive a {
   opacity: 0.25;
   -webkit-transition: opacity .1s linear;
@@ -2984,7 +2989,7 @@ NINJA omatome button
   -o-transition: opacity .1s linear;
   transition: opacity .1s linear;
 }
-/* line 1494, ../scss/breakpoints/_base.scss */
+/* line 1499, ../scss/breakpoints/_base.scss */
 .ninja_onebutton_output_responsive div:hover, .ninja_onebutton_output_responsive a:hover {
   opacity: 1.0;
 }
