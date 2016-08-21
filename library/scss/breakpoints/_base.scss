@@ -704,6 +704,16 @@ POSTS & CONTENT STYLES
 			font-family: $ui-font;
 			text-decoration: none;
 			font-size: 90%;
+			-webkit-transition: background-color .1s linear;
+				-moz-transition: background-color .1s linear;
+					-ms-transition: background-color .1s linear;
+					-o-transition: background-color .1s linear;
+						transition: background-color .1s linear;
+
+			&:hover {
+				color: $continue-reading_bg;
+				background-color: $link-hover_c;
+			}
 
 			&:after {
 				content: '\f178';
@@ -721,16 +731,17 @@ POSTS & CONTENT STYLES
 PAGE NAVI STYLES
 ******************************************************************/
 #nav-below {
-	.nav-previous {
+	& > div {
 		background-color: $post-nav_bg;
 		width: 50%;
+	}
+
+	.nav-previous {
 		float: left;
 		text-align: left;
 	}
 
 	.nav-next {
-		background-color: $post-nav_bg;
-		width: 50%;
 		float: right;
 		text-align: right;
 	}
@@ -740,6 +751,16 @@ PAGE NAVI STYLES
 		display: block;
 		line-height: 1.5;
 		text-decoration: none;
+		-webkit-transition: background-color .1s linear;
+		-moz-transition: background-color .1s linear;
+			-ms-transition: background-color .1s linear;
+			-o-transition: background-color .1s linear;
+				transition: background-color .1s linear;
+		
+		&:hover {
+			color: $continue-reading_bg;
+			background-color: $link-hover_c;
+		}
 	}
 
 	.meta-nav {
