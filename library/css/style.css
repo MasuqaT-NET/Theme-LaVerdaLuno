@@ -1828,11 +1828,11 @@ HEADER STYLES
   font-size: 16px;
   text-decoration: none;
   line-height: 50px;
-  -webkit-transition: background-color .1s linear;
-  -moz-transition: background-color .1s linear;
-  -ms-transition: background-color .1s linear;
-  -o-transition: background-color .1s linear;
-  transition: background-color .1s linear;
+  -webkit-transition: color .1s linear, background-color .1s linear;
+  -moz-transition: color .1s linear, background-color .1s linear;
+  -ms-transition: color .1s linear, background-color .1s linear;
+  -o-transition: color .1s linear, background-color .1s linear;
+  transition: color .1s linear, background-color .1s linear;
 }
 /* line 214, ../scss/breakpoints/_base.scss */
 .menu-bar ul li a:hover {
@@ -2251,11 +2251,11 @@ a.more-link {
   font-family: "Open Sans", sans-serif;
   text-decoration: none;
   font-size: 90%;
-  -webkit-transition: background-color .1s linear;
-  -moz-transition: background-color .1s linear;
-  -ms-transition: background-color .1s linear;
-  -o-transition: background-color .1s linear;
-  transition: background-color .1s linear;
+  -webkit-transition: color .1s linear, background-color .1s linear;
+  -moz-transition: color .1s linear, background-color .1s linear;
+  -ms-transition: color .1s linear, background-color .1s linear;
+  -o-transition: color .1s linear, background-color .1s linear;
+  transition: color .1s linear, background-color .1s linear;
 }
 /* line 713, ../scss/breakpoints/_base.scss */
 a.more-link:hover {
@@ -2298,11 +2298,11 @@ PAGE NAVI STYLES
   display: block;
   line-height: 1.5;
   text-decoration: none;
-  -webkit-transition: background-color .1s linear;
-  -moz-transition: background-color .1s linear;
-  -ms-transition: background-color .1s linear;
-  -o-transition: background-color .1s linear;
-  transition: background-color .1s linear;
+  -webkit-transition: color .1s linear, background-color .1s linear;
+  -moz-transition: color .1s linear, background-color .1s linear;
+  -ms-transition: color .1s linear, background-color .1s linear;
+  -o-transition: color .1s linear, background-color .1s linear;
+  transition: color .1s linear, background-color .1s linear;
 }
 /* line 760, ../scss/breakpoints/_base.scss */
 #nav-below a:hover {
@@ -2745,11 +2745,11 @@ view.
   font-size: 16px;
   text-decoration: none;
   line-height: 50px;
-  -webkit-transition: background-color .1s linear;
-  -moz-transition: background-color .1s linear;
-  -ms-transition: background-color .1s linear;
-  -o-transition: background-color .1s linear;
-  transition: background-color .1s linear;
+  -webkit-transition: color .1s linear, background-color .1s linear;
+  -moz-transition: color .1s linear, background-color .1s linear;
+  -ms-transition: color .1s linear, background-color .1s linear;
+  -o-transition: color .1s linear, background-color .1s linear;
+  transition: color .1s linear, background-color .1s linear;
 }
 /* line 1289, ../scss/breakpoints/_base.scss */
 .footer-links ul li a:hover {

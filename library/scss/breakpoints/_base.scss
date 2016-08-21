@@ -205,11 +205,11 @@ HEADER STYLES
 		font-size: $font-size;
 		text-decoration: none;
 		line-height: 50px;
-		-webkit-transition: background-color .1s linear;
-		-moz-transition: background-color .1s linear;
-			-ms-transition: background-color .1s linear;
-			-o-transition: background-color .1s linear;
-				transition: background-color .1s linear;
+		-webkit-transition: color .1s linear, background-color .1s linear;
+		-moz-transition: color .1s linear, background-color .1s linear;
+			-ms-transition: color .1s linear, background-color .1s linear;
+			-o-transition: color .1s linear, background-color .1s linear;
+				transition: color .1s linear, background-color .1s linear;
 		
 		&:hover {
 			text-decoration: none;
@@ -704,11 +704,11 @@ POSTS & CONTENT STYLES
 			font-family: $ui-font;
 			text-decoration: none;
 			font-size: 90%;
-			-webkit-transition: background-color .1s linear;
-				-moz-transition: background-color .1s linear;
-					-ms-transition: background-color .1s linear;
-					-o-transition: background-color .1s linear;
-						transition: background-color .1s linear;
+			-webkit-transition: color .1s linear, background-color .1s linear;
+			-moz-transition: color .1s linear, background-color .1s linear;
+				-ms-transition: color .1s linear, background-color .1s linear;
+				-o-transition: color .1s linear, background-color .1s linear;
+					transition: color .1s linear, background-color .1s linear;
 
 			&:hover {
 				color: $continue-reading_bg;
@@ -751,11 +751,11 @@ PAGE NAVI STYLES
 		display: block;
 		line-height: 1.5;
 		text-decoration: none;
-		-webkit-transition: background-color .1s linear;
-		-moz-transition: background-color .1s linear;
-			-ms-transition: background-color .1s linear;
-			-o-transition: background-color .1s linear;
-				transition: background-color .1s linear;
+		-webkit-transition: color .1s linear, background-color .1s linear;
+		-moz-transition: color .1s linear, background-color .1s linear;
+			-ms-transition: color .1s linear, background-color .1s linear;
+			-o-transition: color .1s linear, background-color .1s linear;
+				transition: color .1s linear, background-color .1s linear;
 		
 		&:hover {
 			color: $continue-reading_bg;
@@ -1280,11 +1280,11 @@ FOOTER STYLES
 		font-size: $font-size;
 		text-decoration: none;
 		line-height: 50px;
-		-webkit-transition: background-color .1s linear;
-		-moz-transition: background-color .1s linear;
-			-ms-transition: background-color .1s linear;
-			-o-transition: background-color .1s linear;
-				transition: background-color .1s linear;
+		-webkit-transition: color .1s linear, background-color .1s linear;
+		-moz-transition: color .1s linear, background-color .1s linear;
+			-ms-transition: color .1s linear, background-color .1s linear;
+			-o-transition: color .1s linear, background-color .1s linear;
+				transition: color .1s linear, background-color .1s linear;
 		
 		&:hover {
 			text-decoration: none;
