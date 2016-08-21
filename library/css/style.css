@@ -2806,98 +2806,25 @@ view.
   color: #ffffff;
 }
 
-	/*
-	.footer-links {
-
-		font-family: $ui-font;
-		position: relative;
-		z-index: 99;
-
-		ul {
-			margin: 0;
-			padding: 0;
-			list-style: none;
-
-			li {
-				position: relative;
-
-				a {
-					display: block;
-					padding: 0 20px;
-					color: $footer_c;
-					font-size: $font-size;
-					text-decoration: none;
-					line-height: 50px;
-					-webkit-transition: background-color .1s linear;
-					-moz-transition: background-color .1s linear;
-						-ms-transition: background-color .1s linear;
-						-o-transition: background-color .1s linear;
-							transition: background-color .1s linear;
-					
-					&:hover {
-						text-decoration: none;
-					}
-
-					&:after {
-						font-family: 'FontAwesome';
-						content: "\f0d7";
-						float: none;
-						margin-left: 6px;
-						opacity: 0.5;
-					}
-
-					&:only-child:after {
-						content: "";
-						margin: 0;
-					}
-				}
-
-				& > a:hover, 
-				&:hover > a, 
-				&.current_page_item > a, 
-				&.current-menu-item > a,
-				&.current-menu-ancestor > a,
-				&.current_page_ancestor > a,
-				&.current-post-parent > a {
-					color: $footer-active_c;
-				}
-			}
-
-			ul {
-				li {
-					a {
-						padding: 8px 20px;
-						font-size: 90%;
-						line-height: 20px;
-
-						&:after {
-							font-family: 'FontAwesome';
-							content: "\f0da";
-							float: right;
-							margin-left: 0;
-						}
-					}
-				}
-			}
-		}
-
-	} */
-/* end .footer-links */
-/* line 1407, ../scss/breakpoints/_base.scss */
+/* line 1331, ../scss/breakpoints/_base.scss */
 .copyright {
   font-family: "Open Sans", sans-serif;
   text-align: center;
 }
-/* line 1411, ../scss/breakpoints/_base.scss */
+/* line 1335, ../scss/breakpoints/_base.scss */
 .copyright a {
-  color: #ffffff;
+  color: #d9d9d9;
   text-decoration: none;
+}
+/* line 1339, ../scss/breakpoints/_base.scss */
+.copyright a:hover {
+  color: #ffffff;
 }
 
 /***
 FORMS
 ***/
-/* line 1420, ../scss/breakpoints/_base.scss */
+/* line 1348, ../scss/breakpoints/_base.scss */
 select,
 textarea,
 input[type="text"],
@@ -2925,13 +2852,13 @@ input[type="color"],
   box-shadow: none;
 }
 
-/* line 1446, ../scss/breakpoints/_base.scss */
+/* line 1374, ../scss/breakpoints/_base.scss */
 select {
   height: 45px;
   padding: 10px;
 }
 
-/* line 1450, ../scss/breakpoints/_base.scss */
+/* line 1378, ../scss/breakpoints/_base.scss */
 select:focus,
 textarea:focus,
 input[type="text"]:focus,
@@ -2955,7 +2882,7 @@ input[type="color"]:focus,
   box-shadow: none;
 }
 
-/* line 1472, ../scss/breakpoints/_base.scss */
+/* line 1400, ../scss/breakpoints/_base.scss */
 .btn,
 button,
 input[type="button"],
@@ -2973,13 +2900,13 @@ input[type="submit"] {
   background: #de3a31;
 }
 
-/* line 1488, ../scss/breakpoints/_base.scss */
+/* line 1416, ../scss/breakpoints/_base.scss */
 input[type="reset"] {
   color: #333;
   background: #eee;
 }
 
-/* line 1492, ../scss/breakpoints/_base.scss */
+/* line 1420, ../scss/breakpoints/_base.scss */
 .btn:hover,
 .btn:focus,
 button:hover,
@@ -2991,7 +2918,7 @@ input[type="submit"]:focus {
   color: #ffffff;
 }
 
-/* line 1502, ../scss/breakpoints/_base.scss */
+/* line 1430, ../scss/breakpoints/_base.scss */
 input[type="reset"]:hover,
 input[type="reset"]:focus {
   color: #333;
@@ -3001,7 +2928,7 @@ input[type="reset"]:focus {
 /***
 NINJA omatome button
 ***/
-/* line 1512, ../scss/breakpoints/_base.scss */
+/* line 1440, ../scss/breakpoints/_base.scss */
 .ninja_onebutton_output_responsive div, .ninja_onebutton_output_responsive a {
   opacity: 0.25;
   -webkit-transition: opacity .1s linear;
@@ -3010,7 +2937,7 @@ NINJA omatome button
   -o-transition: opacity .1s linear;
   transition: opacity .1s linear;
 }
-/* line 1520, ../scss/breakpoints/_base.scss */
+/* line 1448, ../scss/breakpoints/_base.scss */
 .ninja_onebutton_output_responsive div:hover, .ninja_onebutton_output_responsive a:hover {
   opacity: 1.0;
 }

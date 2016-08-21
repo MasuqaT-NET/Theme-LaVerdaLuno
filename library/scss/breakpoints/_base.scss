@@ -1276,7 +1276,7 @@ FOOTER STYLES
 	.footer-links ul li a {
 		display: block;
 		padding: 0 20px;
-		color: $top_c;
+		color: $footer_c;
 		font-size: $font-size;
 		text-decoration: none;
 		line-height: 50px;
@@ -1316,7 +1316,7 @@ FOOTER STYLES
 
 	.menu-toggle,
 	.footer-links ul li a {
-		color: $top_c;
+		color: $footer_c;
 	}
 	.footer-links ul li > a:hover, 
 	.footer-links ul li:hover > a, 
@@ -1325,92 +1325,20 @@ FOOTER STYLES
 	.footer-links ul li.current-menu-ancestor > a,
 	.footer-links ul li.current_page_ancestor > a,
 	.footer-links ul li.current-post-parent > a {
-		color: $top-active_c;
+		color: $footer-active_c;
 	}
-	/*
-	.footer-links {
-
-		font-family: $ui-font;
-		position: relative;
-		z-index: 99;
-
-		ul {
-			margin: 0;
-			padding: 0;
-			list-style: none;
-
-			li {
-				position: relative;
-
-				a {
-					display: block;
-					padding: 0 20px;
-					color: $footer_c;
-					font-size: $font-size;
-					text-decoration: none;
-					line-height: 50px;
-					-webkit-transition: background-color .1s linear;
-					-moz-transition: background-color .1s linear;
-						-ms-transition: background-color .1s linear;
-						-o-transition: background-color .1s linear;
-							transition: background-color .1s linear;
-					
-					&:hover {
-						text-decoration: none;
-					}
-
-					&:after {
-						font-family: 'FontAwesome';
-						content: "\f0d7";
-						float: none;
-						margin-left: 6px;
-						opacity: 0.5;
-					}
-
-					&:only-child:after {
-						content: "";
-						margin: 0;
-					}
-				}
-
-				& > a:hover, 
-				&:hover > a, 
-				&.current_page_item > a, 
-				&.current-menu-item > a,
-				&.current-menu-ancestor > a,
-				&.current_page_ancestor > a,
-				&.current-post-parent > a {
-					color: $footer-active_c;
-				}
-			}
-
-			ul {
-				li {
-					a {
-						padding: 8px 20px;
-						font-size: 90%;
-						line-height: 20px;
-
-						&:after {
-							font-family: 'FontAwesome';
-							content: "\f0da";
-							float: right;
-							margin-left: 0;
-						}
-					}
-				}
-			}
-		}
-
-	} */ /* end .footer-links */
 
 	.copyright {
 		font-family: $ui-font;
 		text-align: center;
 		
 		a {
-			color: $footer-active_c;
+			color: $footer_c;
 			text-decoration: none;
+
+			&:hover {
+				color: $footer-active_c;
+			}
 		}
 	}
 
