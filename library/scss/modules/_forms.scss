@@ -58,7 +58,7 @@ textarea,
   // a focused input (or hovered on)
   &:focus,
   &:active {
-    background-color: lighten($gray, 4%);
+    background-color: $form-active_bg;
     outline: none; 
   } // end hover or focus
 
@@ -156,7 +156,7 @@ input[type="color"],
 	font-size: 14px;
 	line-height: 1.428571429;
 	vertical-align: middle;
-	background-color: $top-active_c;
+	background-color: $form_bg;
 	background-image: none;
 	border: 1px solid $border_c;
 	border-radius: 3px;

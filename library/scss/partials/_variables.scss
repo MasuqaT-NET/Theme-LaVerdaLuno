@@ -29,6 +29,7 @@ $sub2:				#323e4e;
 $accent:			#de3a31;
 $accent2:			$accent;
 
+$white:             #fff;
 $black:             #323944;
 
 // parts color
@@ -61,6 +62,16 @@ $continue-reading_c:	$sub2;
 $post-nav_bg:		$main2;
 $post-nav_c:		$sub2;
 
+$comment-odd_bg:	$main;
+$comment-even_bg:	$main2;
+$comment-meta-odd_c:	$sub;
+$comment-meta-even_c:	darken($sub, 10%);
+$comment-meta-active_c:	$sub2;
+
+$form_bg:			$white;
+$form-active_bg:	darken($white, 5%);
+$submit-button_bg:	$accent;
+
 $sidebar-bg:		$main2;
 $sidebar-ui_c:		darken($sub, 10%);
 
@@ -75,7 +86,6 @@ $alert-red:         #fbe3e4;
 $alert-green:       #e6efc2;
 $alert-blue:        #d5edf8;
 
-$white:             #fff;
 
 $light-gray:        #f8f9fa;
 $gray:              #eaedf2;
