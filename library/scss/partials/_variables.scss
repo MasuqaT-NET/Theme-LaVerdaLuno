@@ -56,6 +56,17 @@ $article-title_c:	lighten($sub2, 10%);
 
 $text_c:			$black;
 
+$table-cell-head_bg:	mix($main2, $sub, 60%);
+$table-cell-odd_bg:		$main;
+$table-cell-even_bg:	$main2;
+$table-cell-border_c:	lighten($border_c, 10%);
+
+$code_c:			darken(saturate($sub, 40%), 50%);
+$code_bg:			$sub;
+
+$pict-caption_bg:	$main2;
+$pict-caption-border_c:	$sub;
+
 $continue-reading_bg:	$main2;
 $continue-reading_c:	$sub2;
 
@@ -67,6 +78,8 @@ $comment-even_bg:	$main2;
 $comment-meta-odd_c:	$sub;
 $comment-meta-even_c:	darken($sub, 10%);
 $comment-meta-active_c:	$sub2;
+
+$quote_bg:			$main2;
 
 $form_bg:			$white;
 $form-active_bg:	darken($white, 5%);

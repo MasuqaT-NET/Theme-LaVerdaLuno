@@ -302,6 +302,9 @@ body#tinymce.wp-editor {
   both compile to:
   width: 65%;
   *********************/
+  /***
+  To Unicode
+  ***/
   /******************************************************************
   Site Name:
   Author:
@@ -679,7 +682,7 @@ body#tinymce.wp-editor span.amp {
     src: local("Yu Gothic Bold"), local("YuGothic Bold"), local("Yu Gothic"), local("YuGothic"), local("游ゴシック"), local("游ゴシック体");
   }
 }
-/* line 78, ../scss/partials/_typography.scss */
+/* line 79, ../scss/partials/_typography.scss */
 body#tinymce.wp-editor p {
   -ms-word-wrap: break-word;
   word-break: break-word;

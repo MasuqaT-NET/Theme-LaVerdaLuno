@@ -620,7 +620,7 @@ I've edited it a bit, but it's a nice starting point.
 some nice typographical defaults
 more here: http://www.newnet-soft.com/blog/csstypography
 */
-/* line 78, ../scss/partials/_typography.scss */
+/* line 79, ../scss/partials/_typography.scss */
 p {
   -ms-word-wrap: break-word;
   word-break: break-word;
@@ -683,6 +683,9 @@ width: calc-percent(650px, 1000px);
 both compile to:
 width: 65%;
 *********************/
+/***
+To Unicode
+***/
 /******************************************************************
 Site Name:
 Author:
@@ -2123,7 +2126,8 @@ POSTS & CONTENT STYLES
 /* entry content */
 /* line 527, ../scss/breakpoints/_base.scss */
 .entry-content {
-  padding: 1em 5px;
+  padding: 16px 5px;
+  /* f(x)=ae^bx, f(0)=40px, f(7)=16px */
   /*
   image alignment on a screen this size may be
   a bit difficult. It's set to start aligning
@@ -2132,72 +2136,629 @@ POSTS & CONTENT STYLES
   */
 }
 /* line 530, ../scss/breakpoints/_base.scss */
+.entry-content span[id|="more"] {
+  display: block;
+  margin: 1em 0em;
+  border-top: 2px dotted #ccc;
+}
+/* line 536, ../scss/breakpoints/_base.scss */
 .entry-content p {
-  margin: 0 0 1.5em;
+  margin: 0 0 16px 0;
 }
-/* line 555, ../scss/breakpoints/_base.scss */
-.entry-content table {
-  width: 100%;
-  border: 1px solid #eaedf2;
-  margin-bottom: 1.5em;
+/* line 540, ../scss/breakpoints/_base.scss */
+.entry-content em {
+  font-style: normal;
+  background-color: #F7F7F7;
 }
-/* line 560, ../scss/breakpoints/_base.scss */
-.entry-content table caption {
-  margin: 0 0 7px;
-  font-size: 0.75em;
-  color: #9fa6b4;
-  text-transform: uppercase;
+/* line 545, ../scss/breakpoints/_base.scss */
+.entry-content strong {
+  font-weight: bold;
+}
+/* line 549, ../scss/breakpoints/_base.scss */
+.entry-content a {
+  color: #de3a31;
+  text-decoration: none;
+}
+/* line 553, ../scss/breakpoints/_base.scss */
+.entry-content a:hover {
+  color: #c2281f;
+}
+/* line 558, ../scss/breakpoints/_base.scss */
+.entry-content h1, .entry-content h2, .entry-content h3, .entry-content h4, .entry-content h5, .entry-content h6 {
+  font-weight: normal;
+  margin: 1.25em 0 0.75em 0;
+  text-transform: none;
+  letter-spacing: normal;
+  line-height: 1em;
+}
+/* line 567, ../scss/breakpoints/_base.scss */
+.entry-content h1 {
+  font-size: 35px;
+}
+/* line 571, ../scss/breakpoints/_base.scss */
+.entry-content h2 {
+  font-size: 31px;
+}
+/* line 575, ../scss/breakpoints/_base.scss */
+.entry-content h3 {
+  font-size: 27px;
+}
+/* line 579, ../scss/breakpoints/_base.scss */
+.entry-content h4 {
+  font-size: 24px;
+}
+/* line 583, ../scss/breakpoints/_base.scss */
+.entry-content h5 {
+  font-size: 21px;
+}
+/* line 587, ../scss/breakpoints/_base.scss */
+.entry-content h6 {
+  font-size: 18px;
+}
+/* line 593, ../scss/breakpoints/_base.scss */
+.entry-content ul, .entry-content ol, .entry-content dl {
+  margin: 0 0 16px 0;
+}
+/* line 597, ../scss/breakpoints/_base.scss */
+.entry-content ul li ul, .entry-content ul li ol, .entry-content ul li dl, .entry-content ul dd ul, .entry-content ul dd ol, .entry-content ul dd dl, .entry-content ol li ul, .entry-content ol li ol, .entry-content ol li dl, .entry-content ol dd ul, .entry-content ol dd ol, .entry-content ol dd dl, .entry-content dl li ul, .entry-content dl li ol, .entry-content dl li dl, .entry-content dl dd ul, .entry-content dl dd ol, .entry-content dl dd dl {
+  margin: 0 0 0 1em;
+}
+/* line 600, ../scss/breakpoints/_base.scss */
+.entry-content ul li ul dt, .entry-content ul li ol dt, .entry-content ul li dl dt, .entry-content ul dd ul dt, .entry-content ul dd ol dt, .entry-content ul dd dl dt, .entry-content ol li ul dt, .entry-content ol li ol dt, .entry-content ol li dl dt, .entry-content ol dd ul dt, .entry-content ol dd ol dt, .entry-content ol dd dl dt, .entry-content dl li ul dt, .entry-content dl li ol dt, .entry-content dl li dl dt, .entry-content dl dd ul dt, .entry-content dl dd ol dt, .entry-content dl dd dl dt {
+  font-size: 15px;
+}
+/* line 604, ../scss/breakpoints/_base.scss */
+.entry-content ul li ul li, .entry-content ul li ul dd, .entry-content ul li ol li, .entry-content ul li ol dd, .entry-content ul li dl li, .entry-content ul li dl dd, .entry-content ul dd ul li, .entry-content ul dd ul dd, .entry-content ul dd ol li, .entry-content ul dd ol dd, .entry-content ul dd dl li, .entry-content ul dd dl dd, .entry-content ol li ul li, .entry-content ol li ul dd, .entry-content ol li ol li, .entry-content ol li ol dd, .entry-content ol li dl li, .entry-content ol li dl dd, .entry-content ol dd ul li, .entry-content ol dd ul dd, .entry-content ol dd ol li, .entry-content ol dd ol dd, .entry-content ol dd dl li, .entry-content ol dd dl dd, .entry-content dl li ul li, .entry-content dl li ul dd, .entry-content dl li ol li, .entry-content dl li ol dd, .entry-content dl li dl li, .entry-content dl li dl dd, .entry-content dl dd ul li, .entry-content dl dd ul dd, .entry-content dl dd ol li, .entry-content dl dd ol dd, .entry-content dl dd dl li, .entry-content dl dd dl dd {
+  font-size: 15px;
+}
+/* line 607, ../scss/breakpoints/_base.scss */
+.entry-content ul li ul li ul, .entry-content ul li ul li ol, .entry-content ul li ul li dl, .entry-content ul li ul dd ul, .entry-content ul li ul dd ol, .entry-content ul li ul dd dl, .entry-content ul li ol li ul, .entry-content ul li ol li ol, .entry-content ul li ol li dl, .entry-content ul li ol dd ul, .entry-content ul li ol dd ol, .entry-content ul li ol dd dl, .entry-content ul li dl li ul, .entry-content ul li dl li ol, .entry-content ul li dl li dl, .entry-content ul li dl dd ul, .entry-content ul li dl dd ol, .entry-content ul li dl dd dl, .entry-content ul dd ul li ul, .entry-content ul dd ul li ol, .entry-content ul dd ul li dl, .entry-content ul dd ul dd ul, .entry-content ul dd ul dd ol, .entry-content ul dd ul dd dl, .entry-content ul dd ol li ul, .entry-content ul dd ol li ol, .entry-content ul dd ol li dl, .entry-content ul dd ol dd ul, .entry-content ul dd ol dd ol, .entry-content ul dd ol dd dl, .entry-content ul dd dl li ul, .entry-content ul dd dl li ol, .entry-content ul dd dl li dl, .entry-content ul dd dl dd ul, .entry-content ul dd dl dd ol, .entry-content ul dd dl dd dl, .entry-content ol li ul li ul, .entry-content ol li ul li ol, .entry-content ol li ul li dl, .entry-content ol li ul dd ul, .entry-content ol li ul dd ol, .entry-content ol li ul dd dl, .entry-content ol li ol li ul, .entry-content ol li ol li ol, .entry-content ol li ol li dl, .entry-content ol li ol dd ul, .entry-content ol li ol dd ol, .entry-content ol li ol dd dl, .entry-content ol li dl li ul, .entry-content ol li dl li ol, .entry-content ol li dl li dl, .entry-content ol li dl dd ul, .entry-content ol li dl dd ol, .entry-content ol li dl dd dl, .entry-content ol dd ul li ul, .entry-content ol dd ul li ol, .entry-content ol dd ul li dl, .entry-content ol dd ul dd ul, .entry-content ol dd ul dd ol, .entry-content ol dd ul dd dl, .entry-content ol dd ol li ul, .entry-content ol dd ol li ol, .entry-content ol dd ol li dl, .entry-content ol dd ol dd ul, .entry-content ol dd ol dd ol, .entry-content ol dd ol dd dl, .entry-content ol dd dl li ul, .entry-content ol dd dl li ol, .entry-content ol dd dl li dl, .entry-content ol dd dl dd ul, .entry-content ol dd dl dd ol, .entry-content ol dd dl dd dl, .entry-content dl li ul li ul, .entry-content dl li ul li ol, .entry-content dl li ul li dl, .entry-content dl li ul dd ul, .entry-content dl li ul dd ol, .entry-content dl li ul dd dl, .entry-content dl li ol li ul, .entry-content dl li ol li ol, .entry-content dl li ol li dl, .entry-content dl li ol dd ul, .entry-content dl li ol dd ol, .entry-content dl li ol dd dl, .entry-content dl li dl li ul, .entry-content dl li dl li ol, .entry-content dl li dl li dl, .entry-content dl li dl dd ul, .entry-content dl li dl dd ol, .entry-content dl li dl dd dl, .entry-content dl dd ul li ul, .entry-content dl dd ul li ol, .entry-content dl dd ul li dl, .entry-content dl dd ul dd ul, .entry-content dl dd ul dd ol, .entry-content dl dd ul dd dl, .entry-content dl dd ol li ul, .entry-content dl dd ol li ol, .entry-content dl dd ol li dl, .entry-content dl dd ol dd ul, .entry-content dl dd ol dd ol, .entry-content dl dd ol dd dl, .entry-content dl dd dl li ul, .entry-content dl dd dl li ol, .entry-content dl dd dl li dl, .entry-content dl dd dl dd ul, .entry-content dl dd dl dd ol, .entry-content dl dd dl dd dl {
+  margin: 0 0 0 1em;
+}
+/* line 610, ../scss/breakpoints/_base.scss */
+.entry-content ul li ul li ul dt, .entry-content ul li ul li ol dt, .entry-content ul li ul li dl dt, .entry-content ul li ul dd ul dt, .entry-content ul li ul dd ol dt, .entry-content ul li ul dd dl dt, .entry-content ul li ol li ul dt, .entry-content ul li ol li ol dt, .entry-content ul li ol li dl dt, .entry-content ul li ol dd ul dt, .entry-content ul li ol dd ol dt, .entry-content ul li ol dd dl dt, .entry-content ul li dl li ul dt, .entry-content ul li dl li ol dt, .entry-content ul li dl li dl dt, .entry-content ul li dl dd ul dt, .entry-content ul li dl dd ol dt, .entry-content ul li dl dd dl dt, .entry-content ul dd ul li ul dt, .entry-content ul dd ul li ol dt, .entry-content ul dd ul li dl dt, .entry-content ul dd ul dd ul dt, .entry-content ul dd ul dd ol dt, .entry-content ul dd ul dd dl dt, .entry-content ul dd ol li ul dt, .entry-content ul dd ol li ol dt, .entry-content ul dd ol li dl dt, .entry-content ul dd ol dd ul dt, .entry-content ul dd ol dd ol dt, .entry-content ul dd ol dd dl dt, .entry-content ul dd dl li ul dt, .entry-content ul dd dl li ol dt, .entry-content ul dd dl li dl dt, .entry-content ul dd dl dd ul dt, .entry-content ul dd dl dd ol dt, .entry-content ul dd dl dd dl dt, .entry-content ol li ul li ul dt, .entry-content ol li ul li ol dt, .entry-content ol li ul li dl dt, .entry-content ol li ul dd ul dt, .entry-content ol li ul dd ol dt, .entry-content ol li ul dd dl dt, .entry-content ol li ol li ul dt, .entry-content ol li ol li ol dt, .entry-content ol li ol li dl dt, .entry-content ol li ol dd ul dt, .entry-content ol li ol dd ol dt, .entry-content ol li ol dd dl dt, .entry-content ol li dl li ul dt, .entry-content ol li dl li ol dt, .entry-content ol li dl li dl dt, .entry-content ol li dl dd ul dt, .entry-content ol li dl dd ol dt, .entry-content ol li dl dd dl dt, .entry-content ol dd ul li ul dt, .entry-content ol dd ul li ol dt, .entry-content ol dd ul li dl dt, .entry-content ol dd ul dd ul dt, .entry-content ol dd ul dd ol dt, .entry-content ol dd ul dd dl dt, .entry-content ol dd ol li ul dt, .entry-content ol dd ol li ol dt, .entry-content ol dd ol li dl dt, .entry-content ol dd ol dd ul dt, .entry-content ol dd ol dd ol dt, .entry-content ol dd ol dd dl dt, .entry-content ol dd dl li ul dt, .entry-content ol dd dl li ol dt, .entry-content ol dd dl li dl dt, .entry-content ol dd dl dd ul dt, .entry-content ol dd dl dd ol dt, .entry-content ol dd dl dd dl dt, .entry-content dl li ul li ul dt, .entry-content dl li ul li ol dt, .entry-content dl li ul li dl dt, .entry-content dl li ul dd ul dt, .entry-content dl li ul dd ol dt, .entry-content dl li ul dd dl dt, .entry-content dl li ol li ul dt, .entry-content dl li ol li ol dt, .entry-content dl li ol li dl dt, .entry-content dl li ol dd ul dt, .entry-content dl li ol dd ol dt, .entry-content dl li ol dd dl dt, .entry-content dl li dl li ul dt, .entry-content dl li dl li ol dt, .entry-content dl li dl li dl dt, .entry-content dl li dl dd ul dt, .entry-content dl li dl dd ol dt, .entry-content dl li dl dd dl dt, .entry-content dl dd ul li ul dt, .entry-content dl dd ul li ol dt, .entry-content dl dd ul li dl dt, .entry-content dl dd ul dd ul dt, .entry-content dl dd ul dd ol dt, .entry-content dl dd ul dd dl dt, .entry-content dl dd ol li ul dt, .entry-content dl dd ol li ol dt, .entry-content dl dd ol li dl dt, .entry-content dl dd ol dd ul dt, .entry-content dl dd ol dd ol dt, .entry-content dl dd ol dd dl dt, .entry-content dl dd dl li ul dt, .entry-content dl dd dl li ol dt, .entry-content dl dd dl li dl dt, .entry-content dl dd dl dd ul dt, .entry-content dl dd dl dd ol dt, .entry-content dl dd dl dd dl dt {
+  font-size: 14px;
+}
+/* line 614, ../scss/breakpoints/_base.scss */
+.entry-content ul li ul li ul li, .entry-content ul li ul li ul dd, .entry-content ul li ul li ol li, .entry-content ul li ul li ol dd, .entry-content ul li ul li dl li, .entry-content ul li ul li dl dd, .entry-content ul li ul dd ul li, .entry-content ul li ul dd ul dd, .entry-content ul li ul dd ol li, .entry-content ul li ul dd ol dd, .entry-content ul li ul dd dl li, .entry-content ul li ul dd dl dd, .entry-content ul li ol li ul li, .entry-content ul li ol li ul dd, .entry-content ul li ol li ol li, .entry-content ul li ol li ol dd, .entry-content ul li ol li dl li, .entry-content ul li ol li dl dd, .entry-content ul li ol dd ul li, .entry-content ul li ol dd ul dd, .entry-content ul li ol dd ol li, .entry-content ul li ol dd ol dd, .entry-content ul li ol dd dl li, .entry-content ul li ol dd dl dd, .entry-content ul li dl li ul li, .entry-content ul li dl li ul dd, .entry-content ul li dl li ol li, .entry-content ul li dl li ol dd, .entry-content ul li dl li dl li, .entry-content ul li dl li dl dd, .entry-content ul li dl dd ul li, .entry-content ul li dl dd ul dd, .entry-content ul li dl dd ol li, .entry-content ul li dl dd ol dd, .entry-content ul li dl dd dl li, .entry-content ul li dl dd dl dd, .entry-content ul dd ul li ul li, .entry-content ul dd ul li ul dd, .entry-content ul dd ul li ol li, .entry-content ul dd ul li ol dd, .entry-content ul dd ul li dl li, .entry-content ul dd ul li dl dd, .entry-content ul dd ul dd ul li, .entry-content ul dd ul dd ul dd, .entry-content ul dd ul dd ol li, .entry-content ul dd ul dd ol dd, .entry-content ul dd ul dd dl li, .entry-content ul dd ul dd dl dd, .entry-content ul dd ol li ul li, .entry-content ul dd ol li ul dd, .entry-content ul dd ol li ol li, .entry-content ul dd ol li ol dd, .entry-content ul dd ol li dl li, .entry-content ul dd ol li dl dd, .entry-content ul dd ol dd ul li, .entry-content ul dd ol dd ul dd, .entry-content ul dd ol dd ol li, .entry-content ul dd ol dd ol dd, .entry-content ul dd ol dd dl li, .entry-content ul dd ol dd dl dd, .entry-content ul dd dl li ul li, .entry-content ul dd dl li ul dd, .entry-content ul dd dl li ol li, .entry-content ul dd dl li ol dd, .entry-content ul dd dl li dl li, .entry-content ul dd dl li dl dd, .entry-content ul dd dl dd ul li, .entry-content ul dd dl dd ul dd, .entry-content ul dd dl dd ol li, .entry-content ul dd dl dd ol dd, .entry-content ul dd dl dd dl li, .entry-content ul dd dl dd dl dd, .entry-content ol li ul li ul li, .entry-content ol li ul li ul dd, .entry-content ol li ul li ol li, .entry-content ol li ul li ol dd, .entry-content ol li ul li dl li, .entry-content ol li ul li dl dd, .entry-content ol li ul dd ul li, .entry-content ol li ul dd ul dd, .entry-content ol li ul dd ol li, .entry-content ol li ul dd ol dd, .entry-content ol li ul dd dl li, .entry-content ol li ul dd dl dd, .entry-content ol li ol li ul li, .entry-content ol li ol li ul dd, .entry-content ol li ol li ol li, .entry-content ol li ol li ol dd, .entry-content ol li ol li dl li, .entry-content ol li ol li dl dd, .entry-content ol li ol dd ul li, .entry-content ol li ol dd ul dd, .entry-content ol li ol dd ol li, .entry-content ol li ol dd ol dd, .entry-content ol li ol dd dl li, .entry-content ol li ol dd dl dd, .entry-content ol li dl li ul li, .entry-content ol li dl li ul dd, .entry-content ol li dl li ol li, .entry-content ol li dl li ol dd, .entry-content ol li dl li dl li, .entry-content ol li dl li dl dd, .entry-content ol li dl dd ul li, .entry-content ol li dl dd ul dd, .entry-content ol li dl dd ol li, .entry-content ol li dl dd ol dd, .entry-content ol li dl dd dl li, .entry-content ol li dl dd dl dd, .entry-content ol dd ul li ul li, .entry-content ol dd ul li ul dd, .entry-content ol dd ul li ol li, .entry-content ol dd ul li ol dd, .entry-content ol dd ul li dl li, .entry-content ol dd ul li dl dd, .entry-content ol dd ul dd ul li, .entry-content ol dd ul dd ul dd, .entry-content ol dd ul dd ol li, .entry-content ol dd ul dd ol dd, .entry-content ol dd ul dd dl li, .entry-content ol dd ul dd dl dd, .entry-content ol dd ol li ul li, .entry-content ol dd ol li ul dd, .entry-content ol dd ol li ol li, .entry-content ol dd ol li ol dd, .entry-content ol dd ol li dl li, .entry-content ol dd ol li dl dd, .entry-content ol dd ol dd ul li, .entry-content ol dd ol dd ul dd, .entry-content ol dd ol dd ol li, .entry-content ol dd ol dd ol dd, .entry-content ol dd ol dd dl li, .entry-content ol dd ol dd dl dd, .entry-content ol dd dl li ul li, .entry-content ol dd dl li ul dd, .entry-content ol dd dl li ol li, .entry-content ol dd dl li ol dd, .entry-content ol dd dl li dl li, .entry-content ol dd dl li dl dd, .entry-content ol dd dl dd ul li, .entry-content ol dd dl dd ul dd, .entry-content ol dd dl dd ol li, .entry-content ol dd dl dd ol dd, .entry-content ol dd dl dd dl li, .entry-content ol dd dl dd dl dd, .entry-content dl li ul li ul li, .entry-content dl li ul li ul dd, .entry-content dl li ul li ol li, .entry-content dl li ul li ol dd, .entry-content dl li ul li dl li, .entry-content dl li ul li dl dd, .entry-content dl li ul dd ul li, .entry-content dl li ul dd ul dd, .entry-content dl li ul dd ol li, .entry-content dl li ul dd ol dd, .entry-content dl li ul dd dl li, .entry-content dl li ul dd dl dd, .entry-content dl li ol li ul li, .entry-content dl li ol li ul dd, .entry-content dl li ol li ol li, .entry-content dl li ol li ol dd, .entry-content dl li ol li dl li, .entry-content dl li ol li dl dd, .entry-content dl li ol dd ul li, .entry-content dl li ol dd ul dd, .entry-content dl li ol dd ol li, .entry-content dl li ol dd ol dd, .entry-content dl li ol dd dl li, .entry-content dl li ol dd dl dd, .entry-content dl li dl li ul li, .entry-content dl li dl li ul dd, .entry-content dl li dl li ol li, .entry-content dl li dl li ol dd, .entry-content dl li dl li dl li, .entry-content dl li dl li dl dd, .entry-content dl li dl dd ul li, .entry-content dl li dl dd ul dd, .entry-content dl li dl dd ol li, .entry-content dl li dl dd ol dd, .entry-content dl li dl dd dl li, .entry-content dl li dl dd dl dd, .entry-content dl dd ul li ul li, .entry-content dl dd ul li ul dd, .entry-content dl dd ul li ol li, .entry-content dl dd ul li ol dd, .entry-content dl dd ul li dl li, .entry-content dl dd ul li dl dd, .entry-content dl dd ul dd ul li, .entry-content dl dd ul dd ul dd, .entry-content dl dd ul dd ol li, .entry-content dl dd ul dd ol dd, .entry-content dl dd ul dd dl li, .entry-content dl dd ul dd dl dd, .entry-content dl dd ol li ul li, .entry-content dl dd ol li ul dd, .entry-content dl dd ol li ol li, .entry-content dl dd ol li ol dd, .entry-content dl dd ol li dl li, .entry-content dl dd ol li dl dd, .entry-content dl dd ol dd ul li, .entry-content dl dd ol dd ul dd, .entry-content dl dd ol dd ol li, .entry-content dl dd ol dd ol dd, .entry-content dl dd ol dd dl li, .entry-content dl dd ol dd dl dd, .entry-content dl dd dl li ul li, .entry-content dl dd dl li ul dd, .entry-content dl dd dl li ol li, .entry-content dl dd dl li ol dd, .entry-content dl dd dl li dl li, .entry-content dl dd dl li dl dd, .entry-content dl dd dl dd ul li, .entry-content dl dd dl dd ul dd, .entry-content dl dd dl dd ol li, .entry-content dl dd dl dd ol dd, .entry-content dl dd dl dd dl li, .entry-content dl dd dl dd dl dd {
+  font-size: 14px;
+}
+/* line 630, ../scss/breakpoints/_base.scss */
+.entry-content ul > li {
+  list-style-position: outside;
+  text-indent: -0.75em;
+  margin-left: 1.5em;
+}
+/* line 635, ../scss/breakpoints/_base.scss */
+.entry-content ul > li:not(:first-of-type) {
+  margin-top: 0.5em;
+}
+/* line 639, ../scss/breakpoints/_base.scss */
+.entry-content ul > li:before {
+  content: "\2b25";
+  display: inline-block;
+  width: 0.75em;
+}
+/* line 648, ../scss/breakpoints/_base.scss */
+.entry-content ul > li ul > li {
+  list-style-position: outside;
+  text-indent: -0.75em;
+  margin-left: 1.5em;
+}
+/* line 653, ../scss/breakpoints/_base.scss */
+.entry-content ul > li ul > li:not(:first-of-type) {
+  margin-top: 0.5em;
+}
+/* line 657, ../scss/breakpoints/_base.scss */
+.entry-content ul > li ul > li:before {
+  content: "\2b26";
+  display: inline-block;
+  width: 0.75em;
+}
+/* line 666, ../scss/breakpoints/_base.scss */
+.entry-content ul > li ul > li ul > li {
+  list-style-position: outside;
+  text-indent: -0.75em;
+  margin-left: 1.5em;
+}
+/* line 671, ../scss/breakpoints/_base.scss */
+.entry-content ul > li ul > li ul > li:not(:first-of-type) {
+  margin-top: 0.5em;
+}
+/* line 675, ../scss/breakpoints/_base.scss */
+.entry-content ul > li ul > li ul > li:before {
+  content: "\2b2a";
+  display: inline-block;
+  width: 0.75em;
+}
+/* line 693, ../scss/breakpoints/_base.scss */
+.entry-content ol > li {
+  list-style-position: outside;
+  text-indent: -0.75em;
+  margin-left: 1.5em;
+}
+/* line 699, ../scss/breakpoints/_base.scss */
+.entry-content ol > li:not(:first-of-type) {
+  margin-top: 0.5em;
+}
+/* line 703, ../scss/breakpoints/_base.scss */
+.entry-content ol > li:before {
+  display: inline-block;
+  width: 0.75em;
+}
+/* line 711, ../scss/breakpoints/_base.scss */
+.entry-content ol > li:nth-of-type(1):before {
+  content: "\2474";
+}
+/* line 711, ../scss/breakpoints/_base.scss */
+.entry-content ol > li:nth-of-type(2):before {
+  content: "\2475";
+}
+/* line 711, ../scss/breakpoints/_base.scss */
+.entry-content ol > li:nth-of-type(3):before {
+  content: "\2476";
+}
+/* line 711, ../scss/breakpoints/_base.scss */
+.entry-content ol > li:nth-of-type(4):before {
+  content: "\2477";
+}
+/* line 711, ../scss/breakpoints/_base.scss */
+.entry-content ol > li:nth-of-type(5):before {
+  content: "\2478";
+}
+/* line 711, ../scss/breakpoints/_base.scss */
+.entry-content ol > li:nth-of-type(6):before {
+  content: "\2479";
+}
+/* line 711, ../scss/breakpoints/_base.scss */
+.entry-content ol > li:nth-of-type(7):before {
+  content: "\247a";
+}
+/* line 711, ../scss/breakpoints/_base.scss */
+.entry-content ol > li:nth-of-type(8):before {
+  content: "\247b";
+}
+/* line 711, ../scss/breakpoints/_base.scss */
+.entry-content ol > li:nth-of-type(9):before {
+  content: "\247c";
+}
+/* line 711, ../scss/breakpoints/_base.scss */
+.entry-content ol > li:nth-of-type(10):before {
+  content: "\247d";
+}
+/* line 711, ../scss/breakpoints/_base.scss */
+.entry-content ol > li:nth-of-type(11):before {
+  content: "\247e";
+}
+/* line 711, ../scss/breakpoints/_base.scss */
+.entry-content ol > li:nth-of-type(12):before {
+  content: "\247f";
+}
+/* line 711, ../scss/breakpoints/_base.scss */
+.entry-content ol > li:nth-of-type(13):before {
+  content: "\2480";
+}
+/* line 711, ../scss/breakpoints/_base.scss */
+.entry-content ol > li:nth-of-type(14):before {
+  content: "\2481";
+}
+/* line 711, ../scss/breakpoints/_base.scss */
+.entry-content ol > li:nth-of-type(15):before {
+  content: "\2482";
+}
+/* line 711, ../scss/breakpoints/_base.scss */
+.entry-content ol > li:nth-of-type(16):before {
+  content: "\2483";
+}
+/* line 711, ../scss/breakpoints/_base.scss */
+.entry-content ol > li:nth-of-type(17):before {
+  content: "\2484";
+}
+/* line 711, ../scss/breakpoints/_base.scss */
+.entry-content ol > li:nth-of-type(18):before {
+  content: "\2485";
+}
+/* line 711, ../scss/breakpoints/_base.scss */
+.entry-content ol > li:nth-of-type(19):before {
+  content: "\2486";
+}
+/* line 711, ../scss/breakpoints/_base.scss */
+.entry-content ol > li:nth-of-type(20):before {
+  content: "\2487";
+}
+/* line 721, ../scss/breakpoints/_base.scss */
+.entry-content ol > li ol > li {
+  list-style-position: outside;
+  text-indent: -0.75em;
+  margin-left: 1.5em;
+}
+/* line 727, ../scss/breakpoints/_base.scss */
+.entry-content ol > li ol > li:not(:first-of-type) {
+  margin-top: 0.5em;
+}
+/* line 731, ../scss/breakpoints/_base.scss */
+.entry-content ol > li ol > li:before {
+  display: inline-block;
+  width: 0.75em;
+}
+/* line 739, ../scss/breakpoints/_base.scss */
+.entry-content ol > li ol > li:nth-of-type(1):before {
+  content: "\249c";
+}
+/* line 739, ../scss/breakpoints/_base.scss */
+.entry-content ol > li ol > li:nth-of-type(2):before {
+  content: "\249d";
+}
+/* line 739, ../scss/breakpoints/_base.scss */
+.entry-content ol > li ol > li:nth-of-type(3):before {
+  content: "\249e";
+}
+/* line 739, ../scss/breakpoints/_base.scss */
+.entry-content ol > li ol > li:nth-of-type(4):before {
+  content: "\249f";
+}
+/* line 739, ../scss/breakpoints/_base.scss */
+.entry-content ol > li ol > li:nth-of-type(5):before {
+  content: "\24a0";
+}
+/* line 739, ../scss/breakpoints/_base.scss */
+.entry-content ol > li ol > li:nth-of-type(6):before {
+  content: "\24a1";
+}
+/* line 739, ../scss/breakpoints/_base.scss */
+.entry-content ol > li ol > li:nth-of-type(7):before {
+  content: "\24a2";
+}
+/* line 739, ../scss/breakpoints/_base.scss */
+.entry-content ol > li ol > li:nth-of-type(8):before {
+  content: "\24a3";
+}
+/* line 739, ../scss/breakpoints/_base.scss */
+.entry-content ol > li ol > li:nth-of-type(9):before {
+  content: "\24a4";
+}
+/* line 739, ../scss/breakpoints/_base.scss */
+.entry-content ol > li ol > li:nth-of-type(10):before {
+  content: "\24a5";
+}
+/* line 739, ../scss/breakpoints/_base.scss */
+.entry-content ol > li ol > li:nth-of-type(11):before {
+  content: "\24a6";
+}
+/* line 739, ../scss/breakpoints/_base.scss */
+.entry-content ol > li ol > li:nth-of-type(12):before {
+  content: "\24a7";
+}
+/* line 739, ../scss/breakpoints/_base.scss */
+.entry-content ol > li ol > li:nth-of-type(13):before {
+  content: "\24a8";
+}
+/* line 739, ../scss/breakpoints/_base.scss */
+.entry-content ol > li ol > li:nth-of-type(14):before {
+  content: "\24a9";
+}
+/* line 739, ../scss/breakpoints/_base.scss */
+.entry-content ol > li ol > li:nth-of-type(15):before {
+  content: "\24aa";
+}
+/* line 739, ../scss/breakpoints/_base.scss */
+.entry-content ol > li ol > li:nth-of-type(16):before {
+  content: "\24ab";
+}
+/* line 739, ../scss/breakpoints/_base.scss */
+.entry-content ol > li ol > li:nth-of-type(17):before {
+  content: "\24ac";
+}
+/* line 739, ../scss/breakpoints/_base.scss */
+.entry-content ol > li ol > li:nth-of-type(18):before {
+  content: "\24ad";
+}
+/* line 739, ../scss/breakpoints/_base.scss */
+.entry-content ol > li ol > li:nth-of-type(19):before {
+  content: "\24ae";
+}
+/* line 739, ../scss/breakpoints/_base.scss */
+.entry-content ol > li ol > li:nth-of-type(20):before {
+  content: "\24af";
+}
+/* line 739, ../scss/breakpoints/_base.scss */
+.entry-content ol > li ol > li:nth-of-type(21):before {
+  content: "\24b0";
+}
+/* line 739, ../scss/breakpoints/_base.scss */
+.entry-content ol > li ol > li:nth-of-type(22):before {
+  content: "\24b1";
+}
+/* line 739, ../scss/breakpoints/_base.scss */
+.entry-content ol > li ol > li:nth-of-type(23):before {
+  content: "\24b2";
+}
+/* line 739, ../scss/breakpoints/_base.scss */
+.entry-content ol > li ol > li:nth-of-type(24):before {
+  content: "\24b3";
+}
+/* line 739, ../scss/breakpoints/_base.scss */
+.entry-content ol > li ol > li:nth-of-type(25):before {
+  content: "\24b4";
+}
+/* line 739, ../scss/breakpoints/_base.scss */
+.entry-content ol > li ol > li:nth-of-type(26):before {
+  content: "\24b5";
+}
+/* line 739, ../scss/breakpoints/_base.scss */
+.entry-content ol > li ol > li:nth-of-type(27):before {
+  content: "\24b6";
+}
+/* line 746, ../scss/breakpoints/_base.scss */
+.entry-content ol > li ol > li ol > li {
+  list-style-position: outside;
+  text-indent: -0.75em;
+  margin-left: 1.5em;
+}
+/* line 752, ../scss/breakpoints/_base.scss */
+.entry-content ol > li ol > li ol > li:not(:first-of-type) {
+  margin-top: 0.5em;
+}
+/* line 756, ../scss/breakpoints/_base.scss */
+.entry-content ol > li ol > li ol > li:before {
+  display: inline-block;
+  width: 0.75em;
+}
+/* line 764, ../scss/breakpoints/_base.scss */
+.entry-content ol > li ol > li ol > li:nth-of-type(1):before {
+  content: "\3220";
+}
+/* line 764, ../scss/breakpoints/_base.scss */
+.entry-content ol > li ol > li ol > li:nth-of-type(2):before {
+  content: "\3221";
+}
+/* line 764, ../scss/breakpoints/_base.scss */
+.entry-content ol > li ol > li ol > li:nth-of-type(3):before {
+  content: "\3222";
+}
+/* line 764, ../scss/breakpoints/_base.scss */
+.entry-content ol > li ol > li ol > li:nth-of-type(4):before {
+  content: "\3223";
+}
+/* line 764, ../scss/breakpoints/_base.scss */
+.entry-content ol > li ol > li ol > li:nth-of-type(5):before {
+  content: "\3224";
+}
+/* line 764, ../scss/breakpoints/_base.scss */
+.entry-content ol > li ol > li ol > li:nth-of-type(6):before {
+  content: "\3225";
+}
+/* line 764, ../scss/breakpoints/_base.scss */
+.entry-content ol > li ol > li ol > li:nth-of-type(7):before {
+  content: "\3226";
+}
+/* line 764, ../scss/breakpoints/_base.scss */
+.entry-content ol > li ol > li ol > li:nth-of-type(8):before {
+  content: "\3227";
+}
+/* line 764, ../scss/breakpoints/_base.scss */
+.entry-content ol > li ol > li ol > li:nth-of-type(9):before {
+  content: "\3228";
+}
+/* line 764, ../scss/breakpoints/_base.scss */
+.entry-content ol > li ol > li ol > li:nth-of-type(10):before {
+  content: "\3229";
+}
+/* line 777, ../scss/breakpoints/_base.scss */
+.entry-content dl {
+  text-indent: 0;
+  margin: 0 0 16px 0;
+}
+/* line 782, ../scss/breakpoints/_base.scss */
+.entry-content dl dt {
   letter-spacing: 1px;
 }
-/* line 569, ../scss/breakpoints/_base.scss */
-.entry-content tr {
-  border-bottom: 1px solid #eaedf2;
+/* line 785, ../scss/breakpoints/_base.scss */
+.entry-content dl dt:not(:first-of-type) {
+  margin-top: 16px;
 }
-/* line 572, ../scss/breakpoints/_base.scss */
-.entry-content tr:nth-child(even) {
-  background-color: #f8f9fa;
+/* line 790, ../scss/breakpoints/_base.scss */
+.entry-content dl dd {
+  margin-left: 1.5em;
 }
-/* line 577, ../scss/breakpoints/_base.scss */
-.entry-content td {
-  padding: 7px;
-  border-right: 1px solid #eaedf2;
+/* line 803, ../scss/breakpoints/_base.scss */
+.entry-content table {
+  width: 100%;
+  border: 1px solid #ccc;
+  margin: 0 0 16px 0;
+  border-collapse: collapse;
 }
-/* line 581, ../scss/breakpoints/_base.scss */
-.entry-content td:last-child {
-  border-right: 0;
+/* line 809, ../scss/breakpoints/_base.scss */
+.entry-content table caption {
+  margin-bottom: 0.25em;
+  letter-spacing: 1px;
+  font-size: 14px;
 }
-/* line 586, ../scss/breakpoints/_base.scss */
-.entry-content th {
-  background-color: #f8f9fa;
-  border-bottom: 1px solid #eaedf2;
-  border-right: 1px solid #eaedf2;
+/* line 815, ../scss/breakpoints/_base.scss */
+.entry-content table tr {
+  border-top: 1px solid #e6e6e6;
 }
-/* line 591, ../scss/breakpoints/_base.scss */
-.entry-content th:last-child {
-  border-right: 0;
+/* line 818, ../scss/breakpoints/_base.scss */
+.entry-content table tr:first-child {
+  border-top: none;
 }
-/* line 596, ../scss/breakpoints/_base.scss */
+/* line 822, ../scss/breakpoints/_base.scss */
+.entry-content table tr:nth-child(odd) {
+  background-color: #ffffff;
+}
+/* line 826, ../scss/breakpoints/_base.scss */
+.entry-content table tr:nth-child(even) {
+  background-color: #F7F7F7;
+}
+/* line 831, ../scss/breakpoints/_base.scss */
+.entry-content table td {
+  text-align: center;
+  padding: 0.5em;
+  font-size: 15px;
+}
+/* line 843, ../scss/breakpoints/_base.scss */
+.entry-content table th {
+  padding: 0.25em 0.5em;
+  background-color: #e0e9ed;
+  font-weight: normal;
+  text-align: center;
+  font-size: 15px;
+}
+/* line 857, ../scss/breakpoints/_base.scss */
+.entry-content table colgroup {
+  border: 1px solid #e6e6e6;
+}
+/* line 861, ../scss/breakpoints/_base.scss */
+.entry-content table thead, .entry-content table tbody, .entry-content table tfoot {
+  border: 1px solid #ccc;
+}
+/* line 866, ../scss/breakpoints/_base.scss */
 .entry-content blockquote {
-  margin: 0 0 1.5em 0.75em;
-  padding: 0 0 0 0.75em;
-  border-left: 3px solid #2980b9;
-  font-style: italic;
-  color: #9fa6b4;
+  margin: 0 0 16px 0;
+  padding: 1em 2em;
+  background-color: #F7F7F7;
+  position: relative;
+  font-size: 15px;
 }
-/* line 611, ../scss/breakpoints/_base.scss */
-.entry-content dd {
-  margin-left: 0;
-  font-size: 0.9em;
-  color: #787878;
-  margin-bottom: 1.5em;
+/* line 874, ../scss/breakpoints/_base.scss */
+.entry-content blockquote:before {
+  content: "\f10d";
+  font-family: "FontAwesome";
+  position: absolute;
+  left: 0.5em;
+  top: 0;
+  color: #323944;
+  font-size: 20px;
+  opacity: 0.5;
 }
-/* line 618, ../scss/breakpoints/_base.scss */
+/* line 885, ../scss/breakpoints/_base.scss */
+.entry-content blockquote:after {
+  content: "\f10e";
+  font-family: "FontAwesome";
+  position: absolute;
+  right: 0.5em;
+  bottom: 0;
+  color: #323944;
+  font-size: 20px;
+  opacity: 0.5;
+}
+/* line 897, ../scss/breakpoints/_base.scss */
+.entry-content blockquote p:last-child {
+  margin-bottom: 0;
+}
+/* line 903, ../scss/breakpoints/_base.scss */
+.entry-content q {
+  background-color: #F7F7F7;
+  font-size: 15px;
+}
+/* line 907, ../scss/breakpoints/_base.scss */
+.entry-content q:before {
+  content: "\f10d";
+  font-family: "FontAwesome";
+  position: relative;
+  bottom: 1em;
+  font-size: 8px;
+  padding: 0.5em 0.5em 0.5em 1em;
+  opacity: 0.5;
+}
+/* line 917, ../scss/breakpoints/_base.scss */
+.entry-content q:after {
+  content: "\f10e";
+  font-family: "FontAwesome";
+  position: relative;
+  bottom: 1em;
+  font-size: 8px;
+  padding: 0.5em 1em 0.5em 0.5em;
+  opacity: 0.5;
+}
+/* line 928, ../scss/breakpoints/_base.scss */
+.entry-content cite {
+  font-style: normal;
+  text-decoration: underline;
+}
+/* line 934, ../scss/breakpoints/_base.scss */
+.entry-content sup[id|="fnref"] > a {
+  margin-right: 5px;
+  font-size: 8px;
+}
+/* line 938, ../scss/breakpoints/_base.scss */
+.entry-content sup[id|="fnref"] > a:before {
+  content: "[";
+}
+/* line 942, ../scss/breakpoints/_base.scss */
+.entry-content sup[id|="fnref"] > a:after {
+  content: "]";
+}
+/* line 948, ../scss/breakpoints/_base.scss */
+.entry-content sup[id|="fnref"]:target a {
+  background-color: #bed4df;
+}
+/* line 954, ../scss/breakpoints/_base.scss */
+.entry-content div.footnotes {
+  font-size: 14px;
+}
+/* line 958, ../scss/breakpoints/_base.scss */
+.entry-content div.footnotes a[href|="#fnref"] > img:only-child {
+  display: none !important;
+}
+/* line 961, ../scss/breakpoints/_base.scss */
+.entry-content div.footnotes a[href|="#fnref"]:after {
+  content: "\f148";
+  font-family: "FontAwesome";
+  position: relative;
+  bottom: 2px;
+  right: 4px;
+}
+/* line 971, ../scss/breakpoints/_base.scss */
+.entry-content abbr {
+  border: none;
+  margin-right: 5px;
+}
+/* line 975, ../scss/breakpoints/_base.scss */
+.entry-content abbr:after {
+  content: "\f150";
+  font-family: "FontAwesome";
+  font-size: 8px;
+  opacity: 0.5;
+}
+/* line 983, ../scss/breakpoints/_base.scss */
+.entry-content pre {
+  font-family: Monaco, "Consolas", "Bitstream Vera Sans Mono", "Courier New", Courier, monospace;
+  font-size: 14px;
+  padding: 11px;
+  margin: 0 0 16px 0;
+  border: 5px solid #bed4df;
+  background-color: #F7F7F7;
+}
+/* line 991, ../scss/breakpoints/_base.scss */
+.entry-content pre > code {
+  font-family: Monaco, "Consolas", "Bitstream Vera Sans Mono", "Courier New", Courier, monospace;
+  font-size: 14px;
+}
+/* line 997, ../scss/breakpoints/_base.scss */
+.entry-content *:not(pre) > code {
+  font-family: Monaco, "Consolas", "Bitstream Vera Sans Mono", "Courier New", Courier, monospace;
+  font-size: 14px;
+  background-color: #bed4df;
+  color: #156289;
+  position: relative;
+  bottom: 1px;
+  padding: 0 5px 1px 5px;
+  margin: 0 2.5px;
+}
+/* line 1008, ../scss/breakpoints/_base.scss */
+.entry-content hr {
+  border: none;
+  border-bottom: 2px dashed #ccc;
+  margin: 1.5em 0;
+}
+/* line 1014, ../scss/breakpoints/_base.scss */
 .entry-content img {
-  margin: 0 0 1.5em 0;
+  margin: 0 0 16px 0;
   max-width: 100%;
   height: auto;
 }
-/* line 634, ../scss/breakpoints/_base.scss */
+/* line 1030, ../scss/breakpoints/_base.scss */
 .entry-content .size-auto,
 .entry-content .size-full,
 .entry-content .size-large,
@@ -2206,42 +2767,74 @@ POSTS & CONTENT STYLES
   max-width: 100%;
   height: auto;
 }
-/* line 643, ../scss/breakpoints/_base.scss */
-.entry-content pre {
-  background: #323944;
-  color: #f8f9fa;
-  font-size: 0.9em;
-  padding: 1.5em;
-  margin: 0 0 1.5em;
-  border-radius: 3px;
-}
 
 /* end .entry-content */
-/* line 654, ../scss/breakpoints/_base.scss */
+/* line 1040, ../scss/breakpoints/_base.scss */
+#fancybox-title {
+  font-family: YuGothicSet, sans-serif;
+  font-weight: bold;
+}
+
+/* line 1045, ../scss/breakpoints/_base.scss */
 .wp-caption {
   max-width: 100%;
-  background: #eee;
-  padding: 5px;
+  background: #F7F7F7;
+  padding: 10px;
+  margin: 0 0 16px 0;
+  border: 5px solid #bed4df;
   /* images inside wp-caption */
 }
-/* line 660, ../scss/breakpoints/_base.scss */
+/* line 1053, ../scss/breakpoints/_base.scss */
 .wp-caption img {
   max-width: 100%;
   margin-bottom: 0;
   width: 100%;
 }
-/* line 666, ../scss/breakpoints/_base.scss */
+/* line 1059, ../scss/breakpoints/_base.scss */
 .wp-caption p.wp-caption-text {
-  font-size: 0.85em;
-  margin: 4px 0 7px;
+  font-size: 1em;
+  margin: 5px 0;
   text-align: center;
+  font-size: 14px;
 }
 
 /* end .wp-caption */
 /* image gallery styles */
+/* line 1069, ../scss/breakpoints/_base.scss */
+.gallery {
+  max-width: 100%;
+  background: #F7F7F7;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  align-content: space-around;
+  border: 5px solid #bed4df;
+}
+/* line 1080, ../scss/breakpoints/_base.scss */
+.gallery dl {
+  margin-bottom: 0;
+  padding: 10px;
+}
+/* line 1085, ../scss/breakpoints/_base.scss */
+.gallery dl a img {
+  margin-bottom: 0;
+}
+/* line 1092, ../scss/breakpoints/_base.scss */
+.gallery dl dd {
+  margin: 0;
+  text-align: center;
+  font-size: 14px;
+}
+/* line 1099, ../scss/breakpoints/_base.scss */
+.gallery > br {
+  display: none;
+}
+
 /* end .gallery */
 /* gallery caption styles */
-/* line 699, ../scss/breakpoints/_base.scss */
+/* line 1112, ../scss/breakpoints/_base.scss */
 a.more-link {
   display: inline-block;
   color: #323e4e;
@@ -2257,19 +2850,19 @@ a.more-link {
   -o-transition: color .1s linear, background-color .1s linear;
   transition: color .1s linear, background-color .1s linear;
 }
-/* line 714, ../scss/breakpoints/_base.scss */
+/* line 1127, ../scss/breakpoints/_base.scss */
 a.more-link:hover {
   color: #F7F7F7;
   background-color: #c2281f;
 }
-/* line 719, ../scss/breakpoints/_base.scss */
+/* line 1132, ../scss/breakpoints/_base.scss */
 a.more-link:after {
   content: '\f178';
   font-family: 'FontAwesome';
   margin-left: 0.5em;
 }
 
-/* line 727, ../scss/breakpoints/_base.scss */
+/* line 1140, ../scss/breakpoints/_base.scss */
 .tags {
   margin: 0;
 }
@@ -2277,23 +2870,23 @@ a.more-link:after {
 /******************************************************************
 PAGE NAVI STYLES
 ******************************************************************/
-/* line 734, ../scss/breakpoints/_base.scss */
+/* line 1147, ../scss/breakpoints/_base.scss */
 #nav-below {
   margin-top: 40px;
 }
-/* line 737, ../scss/breakpoints/_base.scss */
+/* line 1150, ../scss/breakpoints/_base.scss */
 #nav-below .nav-previous {
   width: 50%;
   float: left;
   text-align: left;
 }
-/* line 743, ../scss/breakpoints/_base.scss */
+/* line 1156, ../scss/breakpoints/_base.scss */
 #nav-below .nav-next {
   width: 50%;
   float: right;
   text-align: right;
 }
-/* line 749, ../scss/breakpoints/_base.scss */
+/* line 1162, ../scss/breakpoints/_base.scss */
 #nav-below a {
   background-color: #F7F7F7;
   padding: 1.5em 2em;
@@ -2306,12 +2899,12 @@ PAGE NAVI STYLES
   -o-transition: color .1s linear, background-color .1s linear;
   transition: color .1s linear, background-color .1s linear;
 }
-/* line 761, ../scss/breakpoints/_base.scss */
+/* line 1174, ../scss/breakpoints/_base.scss */
 #nav-below a:hover {
   color: #F7F7F7;
   background-color: #c2281f;
 }
-/* line 767, ../scss/breakpoints/_base.scss */
+/* line 1180, ../scss/breakpoints/_base.scss */
 #nav-below .meta-nav {
   font-family: "Open Sans", sans-serif;
   display: block;
@@ -2324,7 +2917,7 @@ PAGE NAVI STYLES
 COMMENT STYLES
 ******************************************************************/
 /* h3 comment title */
-/* line 781, ../scss/breakpoints/_base.scss */
+/* line 1194, ../scss/breakpoints/_base.scss */
 #comments-title {
   padding: 0 5px;
   margin: 40px 0 20px 0;
@@ -2332,13 +2925,13 @@ COMMENT STYLES
   /* number of comments span */
 }
 
-/* line 801, ../scss/breakpoints/_base.scss */
+/* line 1214, ../scss/breakpoints/_base.scss */
 .commentlist {
   margin: 0 0 40px 0;
   list-style-type: none;
 }
 
-/* line 806, ../scss/breakpoints/_base.scss */
+/* line 1219, ../scss/breakpoints/_base.scss */
 .comment {
   position: relative;
   clear: both;
@@ -2353,127 +2946,127 @@ COMMENT STYLES
   /* end children */
   /* general comment classes */
 }
-/* line 816, ../scss/breakpoints/_base.scss */
+/* line 1229, ../scss/breakpoints/_base.scss */
 .comment article {
   padding: 10px 0 0 10px;
 }
-/* line 820, ../scss/breakpoints/_base.scss */
+/* line 1233, ../scss/breakpoints/_base.scss */
 .comment .comment-author {
   border: 0;
 }
-/* line 826, ../scss/breakpoints/_base.scss */
+/* line 1239, ../scss/breakpoints/_base.scss */
 .comment .vcard {
   margin-left: 50px;
 }
-/* line 829, ../scss/breakpoints/_base.scss */
+/* line 1242, ../scss/breakpoints/_base.scss */
 .comment .vcard b.fn {
   font-style: normal;
   font-weight: normal;
 }
-/* line 833, ../scss/breakpoints/_base.scss */
+/* line 1246, ../scss/breakpoints/_base.scss */
 .comment .vcard b.fn a.url {
   text-decoration: none;
 }
-/* line 841, ../scss/breakpoints/_base.scss */
+/* line 1254, ../scss/breakpoints/_base.scss */
 .comment .vcard .avatar {
   position: absolute;
   left: 10px;
 }
-/* line 848, ../scss/breakpoints/_base.scss */
+/* line 1261, ../scss/breakpoints/_base.scss */
 .comment .comment-metadata {
   margin-left: 50px;
 }
-/* line 851, ../scss/breakpoints/_base.scss */
+/* line 1264, ../scss/breakpoints/_base.scss */
 .comment .comment-metadata a {
   display: block;
   font-size: 80%;
   text-decoration: none;
 }
-/* line 858, ../scss/breakpoints/_base.scss */
+/* line 1271, ../scss/breakpoints/_base.scss */
 .comment:last-child {
   margin-bottom: 0;
 }
-/* line 862, ../scss/breakpoints/_base.scss */
+/* line 1275, ../scss/breakpoints/_base.scss */
 .comment .children {
   margin: 0;
   /* variations */
   /* change number for different depth */
 }
-/* line 884, ../scss/breakpoints/_base.scss */
+/* line 1297, ../scss/breakpoints/_base.scss */
 .comment.depth-1 {
   border-bottom-width: 1px;
 }
-/* line 887, ../scss/breakpoints/_base.scss */
+/* line 1300, ../scss/breakpoints/_base.scss */
 .comment.depth-1:first-of-type {
   margin-top: 10px;
 }
-/* line 891, ../scss/breakpoints/_base.scss */
+/* line 1304, ../scss/breakpoints/_base.scss */
 .comment.depth-1:last-child {
   border-bottom-width: 0px;
 }
-/* line 896, ../scss/breakpoints/_base.scss */
+/* line 1309, ../scss/breakpoints/_base.scss */
 .comment:not(.depth-1) {
   margin-left: 10px;
   border-top-width: 1px;
   border-left-width: 1px;
 }
-/* line 901, ../scss/breakpoints/_base.scss */
+/* line 1314, ../scss/breakpoints/_base.scss */
 .comment:not(.depth-1):last-child {
   border-bottom-width: 1px;
 }
-/* line 913, ../scss/breakpoints/_base.scss */
+/* line 1326, ../scss/breakpoints/_base.scss */
 .comment.odd {
   background-color: #ffffff;
 }
-/* line 917, ../scss/breakpoints/_base.scss */
+/* line 1330, ../scss/breakpoints/_base.scss */
 .comment.odd > article > .comment-meta > .comment-metadata > a {
   color: #bed4df;
 }
-/* line 920, ../scss/breakpoints/_base.scss */
+/* line 1333, ../scss/breakpoints/_base.scss */
 .comment.odd > article > .comment-meta > .comment-metadata > a:hover {
   color: #323e4e;
 }
-/* line 925, ../scss/breakpoints/_base.scss */
+/* line 1338, ../scss/breakpoints/_base.scss */
 .comment.odd > article > .comment-meta > .comment-awaiting-moderation {
   background-color: #bed4df;
 }
-/* line 930, ../scss/breakpoints/_base.scss */
+/* line 1343, ../scss/breakpoints/_base.scss */
 .comment.even {
   background: #F7F7F7;
 }
-/* line 934, ../scss/breakpoints/_base.scss */
+/* line 1347, ../scss/breakpoints/_base.scss */
 .comment.even > article > .comment-meta > .comment-metadata > a {
   color: #9cbdce;
 }
-/* line 937, ../scss/breakpoints/_base.scss */
+/* line 1350, ../scss/breakpoints/_base.scss */
 .comment.even > article > .comment-meta > .comment-metadata > a:hover {
   color: #323e4e;
 }
-/* line 942, ../scss/breakpoints/_base.scss */
+/* line 1355, ../scss/breakpoints/_base.scss */
 .comment.even > article > .comment-meta > .comment-awaiting-moderation {
   background-color: #9cbdce;
 }
-/* line 947, ../scss/breakpoints/_base.scss */
+/* line 1360, ../scss/breakpoints/_base.scss */
 .comment.parent {
   padding-bottom: 10px;
 }
 
 /* comment meta */
-/* line 974, ../scss/breakpoints/_base.scss */
+/* line 1387, ../scss/breakpoints/_base.scss */
 .comment-meta .comment-awaiting-moderation {
   padding: 5px;
   margin: 5px;
 }
 
 /* comment content */
-/* line 980, ../scss/breakpoints/_base.scss */
+/* line 1393, ../scss/breakpoints/_base.scss */
 .comment-content {
   margin: 0 5px;
 }
 
 /* end .commentlist .comment_content */
 /* comment reply link */
-/* line 989, ../scss/breakpoints/_base.scss */
+/* line 1402, ../scss/breakpoints/_base.scss */
 .comment-reply-link {
   font-size: 1em;
   float: right;
@@ -2482,29 +3075,29 @@ COMMENT STYLES
 
 /* end .commentlist .comment-reply-link */
 /* edit comment link */
-/* line 1002, ../scss/breakpoints/_base.scss */
+/* line 1415, ../scss/breakpoints/_base.scss */
 .comment-edit-link {
   font-style: italic;
   text-decoration: none;
 }
 
-/* line 1009, ../scss/breakpoints/_base.scss */
+/* line 1422, ../scss/breakpoints/_base.scss */
 .comment-navigation {
   margin-bottom: 20px;
 }
-/* line 1012, ../scss/breakpoints/_base.scss */
+/* line 1425, ../scss/breakpoints/_base.scss */
 .comment-navigation .comment-nav-prev {
   width: 50%;
   float: left;
   text-align: left;
 }
-/* line 1018, ../scss/breakpoints/_base.scss */
+/* line 1431, ../scss/breakpoints/_base.scss */
 .comment-navigation .comment-nav-next {
   width: 50%;
   float: right;
   text-align: right;
 }
-/* line 1024, ../scss/breakpoints/_base.scss */
+/* line 1437, ../scss/breakpoints/_base.scss */
 .comment-navigation a {
   background-color: #F7F7F7;
   padding: 1.5em 2em;
@@ -2517,12 +3110,12 @@ COMMENT STYLES
   -o-transition: color .1s linear, background-color .1s linear;
   transition: color .1s linear, background-color .1s linear;
 }
-/* line 1036, ../scss/breakpoints/_base.scss */
+/* line 1449, ../scss/breakpoints/_base.scss */
 .comment-navigation a:hover {
   color: #F7F7F7;
   background-color: #c2281f;
 }
-/* line 1042, ../scss/breakpoints/_base.scss */
+/* line 1455, ../scss/breakpoints/_base.scss */
 .comment-navigation .meta-nav {
   font-family: "Open Sans", sans-serif;
   display: block;
@@ -2534,41 +3127,41 @@ COMMENT STYLES
 /******************************************************************
 COMMENT FORM STYLES
 ******************************************************************/
-/* line 1057, ../scss/breakpoints/_base.scss */
+/* line 1470, ../scss/breakpoints/_base.scss */
 .comment-respond {
   padding: 0 5px;
   margin-top: 20px;
   clear: both;
 }
-/* line 1063, ../scss/breakpoints/_base.scss */
+/* line 1476, ../scss/breakpoints/_base.scss */
 .comment-body + .comment-respond {
   border-top: 1px dashed #ccc;
   padding: 15px;
 }
 
-/* line 1069, ../scss/breakpoints/_base.scss */
+/* line 1482, ../scss/breakpoints/_base.scss */
 #reply-title {
   margin: 0;
   font-size: 1.5em;
 }
 
-/* line 1074, ../scss/breakpoints/_base.scss */
+/* line 1487, ../scss/breakpoints/_base.scss */
 .logged-in-as {
   color: #9fa6b4;
   font-style: italic;
   margin: 0;
 }
-/* line 1079, ../scss/breakpoints/_base.scss */
+/* line 1492, ../scss/breakpoints/_base.scss */
 .logged-in-as a {
   color: #323944;
 }
 
-/* line 1084, ../scss/breakpoints/_base.scss */
+/* line 1497, ../scss/breakpoints/_base.scss */
 .comment-form-comment {
   margin: 1.5em 0 0.75em;
 }
 
-/* line 1088, ../scss/breakpoints/_base.scss */
+/* line 1501, ../scss/breakpoints/_base.scss */
 .form-allowed-tags {
   padding: 1.5em;
   background-color: #f8f9fa;
@@ -2576,14 +3169,14 @@ COMMENT FORM STYLES
 }
 
 /* comment submit button */
-/* line 1095, ../scss/breakpoints/_base.scss */
+/* line 1508, ../scss/breakpoints/_base.scss */
 #submit {
   float: right;
   font-size: 1em;
 }
 
 /* comment form title */
-/* line 1102, ../scss/breakpoints/_base.scss */
+/* line 1515, ../scss/breakpoints/_base.scss */
 #comment-form-title {
   margin: 0 0 1.1em;
 }
@@ -2591,13 +3184,13 @@ COMMENT FORM STYLES
 /* cancel comment reply link */
 /* logged in comments */
 /* allowed tags */
-/* line 1115, ../scss/breakpoints/_base.scss */
+/* line 1528, ../scss/breakpoints/_base.scss */
 #allowed_tags {
   margin: 1.5em 10px 0.7335em 0;
 }
 
 /* no comments */
-/* line 1120, ../scss/breakpoints/_base.scss */
+/* line 1533, ../scss/breakpoints/_base.scss */
 .nocomments {
   margin: 0 20px 1.1em;
 }
@@ -2605,18 +3198,18 @@ COMMENT FORM STYLES
 /*********************
 SIDEBARS & ASIDES
 *********************/
-/* line 1128, ../scss/breakpoints/_base.scss */
+/* line 1541, ../scss/breakpoints/_base.scss */
 .sidebar {
   margin: 40px 0 20px 0;
 }
 
-/* line 1132, ../scss/breakpoints/_base.scss */
+/* line 1545, ../scss/breakpoints/_base.scss */
 .widget {
   background-color: #F7F7F7;
   padding: 20px;
   margin-bottom: 20px;
 }
-/* line 1137, ../scss/breakpoints/_base.scss */
+/* line 1550, ../scss/breakpoints/_base.scss */
 .widget .widgettitle {
   font-size: 1.5em;
   margin: 0 0 16px 0;
@@ -2624,29 +3217,29 @@ SIDEBARS & ASIDES
   font-family: "Open Sans", sans-serif;
   border-bottom: 3px solid #ccc;
 }
-/* line 1145, ../scss/breakpoints/_base.scss */
+/* line 1558, ../scss/breakpoints/_base.scss */
 .widget a {
   text-decoration: none;
 }
-/* line 1149, ../scss/breakpoints/_base.scss */
+/* line 1562, ../scss/breakpoints/_base.scss */
 .widget > *:last-child {
   margin: 0 5px;
 }
-/* line 1154, ../scss/breakpoints/_base.scss */
+/* line 1567, ../scss/breakpoints/_base.scss */
 .widget ul li {
   margin: 0.5em 0;
   /* deep nesting */
 }
-/* line 1157, ../scss/breakpoints/_base.scss */
+/* line 1570, ../scss/breakpoints/_base.scss */
 .widget ul li:first-child {
   margin-top: 0;
 }
-/* line 1161, ../scss/breakpoints/_base.scss */
+/* line 1574, ../scss/breakpoints/_base.scss */
 .widget ul li:last-child {
   margin-bottom: 0;
 }
 
-/* line 1176, ../scss/breakpoints/_base.scss */
+/* line 1589, ../scss/breakpoints/_base.scss */
 .no-widgets {
   background-color: #fff;
   padding: 1.5em;
@@ -2656,11 +3249,11 @@ SIDEBARS & ASIDES
   margin-bottom: 1.5em;
 }
 
-/* line 1187, ../scss/breakpoints/_base.scss */
+/* line 1600, ../scss/breakpoints/_base.scss */
 .widget_recent_entries ul li {
   margin-left: 27px;
 }
-/* line 1190, ../scss/breakpoints/_base.scss */
+/* line 1603, ../scss/breakpoints/_base.scss */
 .widget_recent_entries ul li:before {
   content: '\f0f6';
   font-family: 'FontAwesome';
@@ -2669,36 +3262,36 @@ SIDEBARS & ASIDES
   font-size: 80%;
   color: #9cbdce;
 }
-/* line 1199, ../scss/breakpoints/_base.scss */
+/* line 1612, ../scss/breakpoints/_base.scss */
 .widget_recent_entries ul li .post-date {
   color: #9cbdce;
   display: block;
   font-size: 80%;
 }
 
-/* line 1209, ../scss/breakpoints/_base.scss */
+/* line 1622, ../scss/breakpoints/_base.scss */
 .widget_archive a.year-opener {
   font-family: "Open Sans", sans-serif;
   cursor: pointer;
   color: #323944;
 }
-/* line 1214, ../scss/breakpoints/_base.scss */
+/* line 1627, ../scss/breakpoints/_base.scss */
 .widget_archive a.year-opener:after {
   content: '\f066';
   font-family: 'FontAwesome';
   color: #9cbdce;
   padding: 0.5em;
 }
-/* line 1221, ../scss/breakpoints/_base.scss */
+/* line 1634, ../scss/breakpoints/_base.scss */
 .widget_archive a.year-opener.closed:after {
   content: '\f065';
 }
-/* line 1227, ../scss/breakpoints/_base.scss */
+/* line 1640, ../scss/breakpoints/_base.scss */
 .widget_archive ul.years li {
   margin-bottom: 0;
   margin-left: 27px;
 }
-/* line 1231, ../scss/breakpoints/_base.scss */
+/* line 1644, ../scss/breakpoints/_base.scss */
 .widget_archive ul.years li:before {
   content: '\f073';
   font-family: 'FontAwesome';
@@ -2707,7 +3300,7 @@ SIDEBARS & ASIDES
   font-size: 80%;
   color: #9cbdce;
 }
-/* line 1241, ../scss/breakpoints/_base.scss */
+/* line 1654, ../scss/breakpoints/_base.scss */
 .widget_archive ul.years ul.month {
   -webkit-transition: opacity .1s linear;
   -moz-transition: opacity .1s linear;
@@ -2716,16 +3309,16 @@ SIDEBARS & ASIDES
   transition: opacity .1s linear;
   margin: 0.25em 0 1em 1em;
 }
-/* line 1250, ../scss/breakpoints/_base.scss */
+/* line 1663, ../scss/breakpoints/_base.scss */
 .widget_archive ul.years ul.month li {
   font-family: "Open Sans", sans-serif;
   margin-left: 10px;
 }
-/* line 1254, ../scss/breakpoints/_base.scss */
+/* line 1667, ../scss/breakpoints/_base.scss */
 .widget_archive ul.years ul.month li a {
   font-family: YuGothicSet, sans-serif;
 }
-/* line 1258, ../scss/breakpoints/_base.scss */
+/* line 1671, ../scss/breakpoints/_base.scss */
 .widget_archive ul.years ul.month li:before {
   content: '\f133';
   font-family: 'FontAwesome';
@@ -2734,7 +3327,7 @@ SIDEBARS & ASIDES
   font-size: 80%;
   color: #9cbdce;
 }
-/* line 1268, ../scss/breakpoints/_base.scss */
+/* line 1681, ../scss/breakpoints/_base.scss */
 .widget_archive ul.years ul.month.hide {
   margin: 0;
   height: 0;
@@ -2742,16 +3335,16 @@ SIDEBARS & ASIDES
   visibility: hidden;
 }
 
-/* line 1280, ../scss/breakpoints/_base.scss */
+/* line 1693, ../scss/breakpoints/_base.scss */
 .widget_categories ul li {
   font-family: "Open Sans", sans-serif;
   margin-left: 27px;
 }
-/* line 1284, ../scss/breakpoints/_base.scss */
+/* line 1697, ../scss/breakpoints/_base.scss */
 .widget_categories ul li a {
   font-family: YuGothicSet, sans-serif;
 }
-/* line 1288, ../scss/breakpoints/_base.scss */
+/* line 1701, ../scss/breakpoints/_base.scss */
 .widget_categories ul li:before {
   content: '\f114';
   font-family: 'FontAwesome';
@@ -2760,16 +3353,16 @@ SIDEBARS & ASIDES
   font-size: 80%;
   color: #9cbdce;
 }
-/* line 1298, ../scss/breakpoints/_base.scss */
+/* line 1711, ../scss/breakpoints/_base.scss */
 .widget_categories ul .children {
   margin-top: 5px;
 }
 
-/* line 1305, ../scss/breakpoints/_base.scss */
+/* line 1718, ../scss/breakpoints/_base.scss */
 .widget_tag_cloud li {
   margin-left: 27px;
 }
-/* line 1308, ../scss/breakpoints/_base.scss */
+/* line 1721, ../scss/breakpoints/_base.scss */
 .widget_tag_cloud li:before {
   content: '\f097';
   font-family: 'FontAwesome';
@@ -2779,7 +3372,7 @@ SIDEBARS & ASIDES
   color: #9cbdce;
 }
 
-/* line 1321, ../scss/breakpoints/_base.scss */
+/* line 1734, ../scss/breakpoints/_base.scss */
 .widget_recent_comments li:before {
   content: '\f0f6';
   font-family: 'FontAwesome';
@@ -2787,11 +3380,11 @@ SIDEBARS & ASIDES
   font-size: 80%;
   color: #9cbdce;
 }
-/* line 1329, ../scss/breakpoints/_base.scss */
+/* line 1742, ../scss/breakpoints/_base.scss */
 .widget_recent_comments li .comment-author-link {
   margin-left: 10px;
 }
-/* line 1331, ../scss/breakpoints/_base.scss */
+/* line 1744, ../scss/breakpoints/_base.scss */
 .widget_recent_comments li .comment-author-link:before {
   content: '\f007';
   font-family: 'FontAwesome';
@@ -2803,31 +3396,31 @@ SIDEBARS & ASIDES
 /*********************
 FOOTER STYLES
 *********************/
-/* line 1346, ../scss/breakpoints/_base.scss */
+/* line 1759, ../scss/breakpoints/_base.scss */
 .footer {
   clear: both;
   color: #d9d9d9;
   background-color: #323e4e;
 }
 
-/* line 1352, ../scss/breakpoints/_base.scss */
+/* line 1765, ../scss/breakpoints/_base.scss */
 .footer-nav {
   font-family: "Open Sans", sans-serif;
 }
 
-/* line 1356, ../scss/breakpoints/_base.scss */
+/* line 1769, ../scss/breakpoints/_base.scss */
 .footer-links ul {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-/* line 1361, ../scss/breakpoints/_base.scss */
+/* line 1774, ../scss/breakpoints/_base.scss */
 .footer-links ul li {
   position: relative;
 }
 
-/* line 1364, ../scss/breakpoints/_base.scss */
+/* line 1777, ../scss/breakpoints/_base.scss */
 .footer-links ul li a {
   display: block;
   padding: 0 20px;
@@ -2841,24 +3434,24 @@ FOOTER STYLES
   -o-transition: color .1s linear, background-color .1s linear;
   transition: color .1s linear, background-color .1s linear;
 }
-/* line 1377, ../scss/breakpoints/_base.scss */
+/* line 1790, ../scss/breakpoints/_base.scss */
 .footer-links ul li a:hover {
   text-decoration: none;
 }
 
-/* line 1381, ../scss/breakpoints/_base.scss */
+/* line 1794, ../scss/breakpoints/_base.scss */
 .footer-links ul ul li a {
   padding: 8px 20px;
   font-size: 90%;
   line-height: 20px;
 }
 
-/* line 1386, ../scss/breakpoints/_base.scss */
+/* line 1799, ../scss/breakpoints/_base.scss */
 .footer-links ul li a:after {
   font-family: 'FontAwesome';
 }
 
-/* line 1389, ../scss/breakpoints/_base.scss */
+/* line 1802, ../scss/breakpoints/_base.scss */
 .footer-links ul li a:after {
   content: "\f0d7";
   float: none;
@@ -2866,26 +3459,26 @@ FOOTER STYLES
   opacity: 0.5;
 }
 
-/* line 1395, ../scss/breakpoints/_base.scss */
+/* line 1808, ../scss/breakpoints/_base.scss */
 .footer-links ul ul li a:after {
   content: "\f0da";
   float: right;
   margin-left: 0;
 }
 
-/* line 1400, ../scss/breakpoints/_base.scss */
+/* line 1813, ../scss/breakpoints/_base.scss */
 .footer-links ul li a:only-child:after {
   content: "";
   margin: 0;
 }
 
-/* line 1405, ../scss/breakpoints/_base.scss */
+/* line 1818, ../scss/breakpoints/_base.scss */
 .menu-toggle,
 .footer-links ul li a {
   color: #d9d9d9;
 }
 
-/* line 1409, ../scss/breakpoints/_base.scss */
+/* line 1822, ../scss/breakpoints/_base.scss */
 .footer-links ul li > a:hover,
 .footer-links ul li:hover > a,
 .footer-links ul li.current_page_item > a,
@@ -2896,17 +3489,17 @@ FOOTER STYLES
   color: #ffffff;
 }
 
-/* line 1419, ../scss/breakpoints/_base.scss */
+/* line 1832, ../scss/breakpoints/_base.scss */
 .copyright {
   font-family: "Open Sans", sans-serif;
   text-align: center;
 }
-/* line 1423, ../scss/breakpoints/_base.scss */
+/* line 1836, ../scss/breakpoints/_base.scss */
 .copyright a {
   color: #d9d9d9;
   text-decoration: none;
 }
-/* line 1427, ../scss/breakpoints/_base.scss */
+/* line 1840, ../scss/breakpoints/_base.scss */
 .copyright a:hover {
   color: #ffffff;
 }
@@ -2914,7 +3507,7 @@ FOOTER STYLES
 /***
 FORMS
 ***/
-/* line 1436, ../scss/breakpoints/_base.scss */
+/* line 1849, ../scss/breakpoints/_base.scss */
 select,
 textarea,
 input[type="text"],
@@ -2942,13 +3535,13 @@ input[type="color"],
   box-shadow: none;
 }
 
-/* line 1462, ../scss/breakpoints/_base.scss */
+/* line 1875, ../scss/breakpoints/_base.scss */
 select {
   height: 45px;
   padding: 10px;
 }
 
-/* line 1466, ../scss/breakpoints/_base.scss */
+/* line 1879, ../scss/breakpoints/_base.scss */
 select:focus,
 textarea:focus,
 input[type="text"]:focus,
@@ -2972,7 +3565,7 @@ input[type="color"]:focus,
   box-shadow: none;
 }
 
-/* line 1488, ../scss/breakpoints/_base.scss */
+/* line 1901, ../scss/breakpoints/_base.scss */
 .btn,
 button,
 input[type="button"],
@@ -2990,13 +3583,13 @@ input[type="submit"] {
   background: #de3a31;
 }
 
-/* line 1504, ../scss/breakpoints/_base.scss */
+/* line 1917, ../scss/breakpoints/_base.scss */
 input[type="reset"] {
   color: #333;
   background: #eee;
 }
 
-/* line 1508, ../scss/breakpoints/_base.scss */
+/* line 1921, ../scss/breakpoints/_base.scss */
 .btn:hover,
 .btn:focus,
 button:hover,
@@ -3008,7 +3601,7 @@ input[type="submit"]:focus {
   color: #ffffff;
 }
 
-/* line 1518, ../scss/breakpoints/_base.scss */
+/* line 1931, ../scss/breakpoints/_base.scss */
 input[type="reset"]:hover,
 input[type="reset"]:focus {
   color: #333;
@@ -3018,7 +3611,7 @@ input[type="reset"]:focus {
 /***
 NINJA omatome button
 ***/
-/* line 1528, ../scss/breakpoints/_base.scss */
+/* line 1941, ../scss/breakpoints/_base.scss */
 .ninja_onebutton_output_responsive div, .ninja_onebutton_output_responsive a {
   opacity: 0.25;
   -webkit-transition: opacity .1s linear;
@@ -3027,7 +3620,7 @@ NINJA omatome button
   -o-transition: opacity .1s linear;
   transition: opacity .1s linear;
 }
-/* line 1536, ../scss/breakpoints/_base.scss */
+/* line 1949, ../scss/breakpoints/_base.scss */
 .ninja_onebutton_output_responsive div:hover, .ninja_onebutton_output_responsive a:hover {
   opacity: 1.0;
 }

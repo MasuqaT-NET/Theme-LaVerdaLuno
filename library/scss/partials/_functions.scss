@@ -64,3 +64,38 @@ width: 65%;
 @function cp($target, $container) {
   @return calc-percent($target, $container);
 }
+
+
+/***
+To Unicode
+***/
+@function to-hexchar($number) {
+  @if($number <= 9) {
+    @return inspect($number);
+  }
+  @if($number == 10){
+    @return "a";
+  }
+  @if($number == 11){
+    @return "b";
+  }
+  @if($number == 12){
+    @return "c";
+  }
+  @if($number == 13){
+    @return "d";
+  }
+  @if($number == 14){
+    @return "e";
+  }
+  @if($number == 15){
+    @return "f";
+  }
+}
+@function to-unicode($number) {
+  $d3: floor(floor(floor($number / 16) / 16) / 16) % 16; 
+  $d2: floor(floor($number / 16) / 16) % 16; 
+  $d1: floor($number / 16) % 16;
+  $d0: $number % 16;
+  @return unquote("\"")+unquote("\\")+to-hexchar($d3)+to-hexchar($d2)+to-hexchar($d1)+to-hexchar($d0)+unquote("\"");
+}

@@ -525,98 +525,494 @@ POSTS & CONTENT STYLES
 
 		/* entry content */
 		.entry-content {
-			padding: 1em $padding-size; 
+			padding: $font-size $padding-size; 
 
-			p {
-				margin: 0 0 1.5em;
+			span[id|="more"] {
+				display: block;
+				margin: 1em 0em;
+				border-top: 2px dotted $border_c;
 			}
 
+			p {
+				margin: 0 0 $font-size 0;
+			}
+
+			em {
+				font-style: normal;
+				background-color: $main2;
+			}
+
+			strong {
+				font-weight: bold;
+			}
+			
+			a {
+				color: $link_c;
+				text-decoration: none;
+
+				&:hover {
+					color: $link-hover_c;
+				}
+			}
+
+			h1, h2, h3, h4, h5, h6 {
+				font-weight: normal;
+				margin: 1.25em 0 0.75em 0;
+				text-transform: none;
+				letter-spacing: normal;
+				line-height: 1em;
+			}
+
+			/* f(x)=ae^bx, f(0)=40px, f(7)=16px */
+			h1 {
+				font-size: 35px;
+			}
+
+			h2 {
+				font-size: 31px;
+			}
+
+			h3 {
+				font-size: 27px;
+			}
+
+			h4 {
+				font-size: 24px;
+			}
+
+			h5 {
+				font-size: 21px;
+			}
+
+			h6 {
+				font-size: 18px;
+			}
 
 			ul, ol, table, dl {}
 
-			ul, ol {
+			ul, ol, dl {
+				margin: 0 0 $font-size 0;
 
-				li {}
+				li, dd {
+					ul, ol, dl {
+						margin: 0 0 0 1em;
+
+						dt {
+							font-size: ($font-size - 1);
+						}
+
+						li, dd {
+							font-size: ($font-size - 1);
+
+							ul, ol, dl {
+								margin: 0 0 0 1em;
+
+								dt {
+									font-size: ($font-size - 2);
+								}
+
+								li, dd {
+									font-size: ($font-size - 2);
+
+									
+								}
+							}
+						}
+					}
+				}
 
 			}
 
 			ul {
+				// 「その他記号と矢印」 U+2B00
+				// list-style: "⬥" outside;
 
-				li {}
+				& > li {
+					list-style-position: outside;
+					text-indent: -0.75em;
+					margin-left: 1.5em;
+
+					&:not(:first-of-type) {
+						margin-top: 0.5em;
+					}
+					
+					&:before {
+						content: "\2b25";
+						display: inline-block;
+						width: 0.75em;
+					}
+
+					ul {
+						// list-style: "⬦" outside;
+
+						& > li {
+							list-style-position: outside;
+							text-indent: -0.75em;
+							margin-left: 1.5em;
+
+							&:not(:first-of-type) {
+								margin-top: 0.5em;
+							}
+							
+							&:before {
+								content: "\2b26";
+								display: inline-block;
+								width: 0.75em;
+							}
+
+							ul {
+								// list-style: "⬦" outside;
+
+								& > li {
+									list-style-position: outside;
+									text-indent: -0.75em;
+									margin-left: 1.5em;
+
+									&:not(:first-of-type) {
+										margin-top: 0.5em;
+									}
+									
+									&:before {
+										content: "\2b2a";
+										display: inline-block;
+										width: 0.75em;
+									}
+								}
+							}
+						}
+					}
+				}
 
 			}
 
 			ol {
+				// 「囲み英数字」 U+2460
+				// list-style: symbols("⑴" "⑵" "⑶" "⑷" "⑸" "⑹" "⑺" "⑻" "⑼" "⑽" "⑾" "⑿" "⒀" "⒁" "⒂" "⒃" "⒄" "⒅" "⒆" "⒇") outside;
+				// counter-reset: ordList;
 
-				li {}
+				& > li {
+					list-style-position: outside;
+					// counter-increment: ordList;
+					text-indent: -0.75em;
+					margin-left: 1.5em;
 
+					&:not(:first-of-type) {
+						margin-top: 0.5em;
+					}
+
+					&:before {
+						// content: counter(ordList) ".";
+						display: inline-block;
+						width: 0.75em;
+					}
+
+					@for $i from 1 through 20 {
+						&:nth-of-type(#{$i}) {
+							&:before {
+								content: to-unicode($i - 1 + 9332); // 0x2474=>"⑴"
+							}
+						}
+					}
+
+					ol {
+						// list-style: symbols("⒜" "⒝" "⒞" "⒟" "⒠" "⒡" "⒢" "⒣" "⒤" "⒥" "⒦" "⒧" "⒨" "⒩" "⒪" "⒫" "⒬" "⒭" "⒮" "⒯" "⒰" "⒱" "⒲" "⒳" "⒴" "⒵") outside;
+						// counter-reset: ordList;
+
+						& > li {
+							list-style-position: outside;
+							// counter-increment: ordList;
+							text-indent: -0.75em;
+							margin-left: 1.5em;
+
+							&:not(:first-of-type) {
+								margin-top: 0.5em;
+							}
+							
+							&:before {
+								// content: counter(ordList) "?";
+								display: inline-block;
+								width: 0.75em;
+							}
+
+							@for $i from 1 through 27 {
+								&:nth-of-type(#{$i}) {
+									&:before {
+										content: to-unicode($i - 1 + 9372); // 0x249c=>"⒜"
+									}
+								}
+							}
+
+							ol {
+								& > li {
+									list-style-position: outside;
+									// counter-increment: ordList;
+									text-indent: -0.75em;
+									margin-left: 1.5em;
+
+									&:not(:first-of-type) {
+										margin-top: 0.5em;
+									}
+									
+									&:before {
+										// content: counter(ordList) "?";
+										display: inline-block;
+										width: 0.75em;
+									}
+
+									@for $i from 1 through 10 {
+										&:nth-of-type(#{$i}) {
+											&:before {
+												content: to-unicode($i - 1 + 12832); // 0x3220=>"㈠"
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+
+			}
+
+			dl {
+				text-indent: 0;
+
+				margin: 0 0 $font-size 0;
+
+				dt {
+					letter-spacing: 1px;
+
+					&:not(:first-of-type) {
+						margin-top: $font-size;
+					}
+				}
+
+				dd {
+					margin-left: 1.5em;
+				}
+
+				dl {
+					dt {}
+
+					dd {
+						// margin-left: 0;
+					}
+				}
 			}
 
 			table {
 				width: 100%;
-				border: 1px solid $gray;
-				margin-bottom: 1.5em;
+				border: 1px solid $border_c;
+				margin: 0 0 $font-size 0;
+				border-collapse: collapse;
 
 				caption {
-					margin: 0 0 7px;
-					font-size: 0.75em;
-					color: $meta-gray;
-					text-transform: uppercase;
+					margin-bottom: 0.25em;
 					letter-spacing: 1px;
+					font-size: ($font-size - 2);
 				}
-			}
 
-			tr {
-				border-bottom: 1px solid $gray;
+				tr {
+					border-top: 1px solid $table-cell-border_c;
 
-				&:nth-child(even) {
-					background-color: $light-gray;
+					&:first-child {
+						border-top: none;
+					}
+
+					&:nth-child(odd) {
+						background-color: $table-cell-odd_bg;
+					}
+
+					&:nth-child(even) {
+						background-color: $table-cell-even_bg;
+					}
 				}
-			}
 
-			td {
-				padding: 7px;
-				border-right: 1px solid $gray;
+				td {
+					text-align: center;
+					padding: 0.5em;
+					font-size: ($font-size - 1);
+					
+					// border-right: 1px solid $gray;
 
-				&:last-child {
-					border-right: 0;
+					&:last-child {
+						// border-right: 0;
+					}
 				}
-			}
 
-			th {
-				background-color: $light-gray;
-				border-bottom: 1px solid $gray;
-				border-right: 1px solid $gray;
+				th {
+					padding: 0.25em 0.5em;
+					background-color: $table-cell-head_bg;
+					font-weight: normal;
+					text-align: center;
+					font-size: ($font-size - 1);
+					// border-bottom: 1px solid $gray;
+					// border-right: 1px solid $gray;
 
-				&:last-child {
-					border-right: 0;
+					&:last-child {
+						// border-right: 0;
+					}
+				}
+
+				colgroup {
+					border: 1px solid $table-cell-border_c;
+				}
+
+				thead, tbody, tfoot {
+					border: 1px solid $border_c;
 				}
 			}
 
 			blockquote {
-				margin: 0 0 1.5em 0.75em;
-				padding: 0 0 0 0.75em;
-				border-left: 3px solid $blue;
-				font-style: italic;
-				color: $meta-gray;
+				margin: 0 0 $font-size 0;
+				padding: 1em 2em;
+				// border-left: 3px solid ;
+				background-color: $quote_bg;
+				position: relative;
+				font-size: ($font-size - 1);
 
-				&:before {}
+				&:before {
+					content: "\f10d";
+					font-family: "FontAwesome";
+					position: absolute;
+					left: 0.5em;
+					top: 0;
+					color: $text_c;
+					font-size: ($font-size * 1.25);
+					opacity: 0.5;
+				}
+				
+				&:after {
+					content: "\f10e";
+					font-family: "FontAwesome";
+					position: absolute;
+					right: 0.5em;
+					bottom: 0;
+					color: $text_c;
+					font-size: ($font-size * 1.25);
+					opacity: 0.5;
+				}
 
+				p {
+					&:last-child {
+						margin-bottom: 0;
+					}
+				}
 			}
 
-			dl {}
+			q {
+				background-color: $quote_bg;
+				font-size: ($font-size - 1);
 
-			dt {}
+				&:before {
+					content: "\f10d";
+					font-family: "FontAwesome";
+					position: relative;
+					bottom: 1em;
+					font-size: ($font-size / 2);
+					padding: 0.5em 0.5em 0.5em 1em;
+					opacity: 0.5;
+				}
+				
+				&:after {
+					content: "\f10e";
+					font-family: "FontAwesome";
+					position: relative;
+					bottom: 1em;
+					font-size: ($font-size / 2);
+					padding: 0.5em 1em 0.5em 0.5em;
+					opacity: 0.5;
+				}
+			}
 
-			dd {
-				margin-left: 0;
-				font-size: 0.9em;
-				color: #787878;
-				margin-bottom: 1.5em;
+			cite {
+				font-style: normal;
+				text-decoration: underline;
+			}
+
+			sup[id|="fnref"] {
+				& > a {
+					margin-right: $padding-size;
+					font-size: ($font-size / 2);
+
+					&:before {
+						content: "[";
+					}
+
+					&:after {
+						content: "]";
+					}
+				}
+
+				&:target {
+					a {
+						background-color: $sub;
+					}
+				}
+			}
+
+			div.footnotes {
+				font-size: ($font-size - 2);
+
+				a[href|="#fnref"]{
+					& > img:only-child {
+						display: none !important;
+					}
+					&:after {
+						content: "\f148";
+						font-family: "FontAwesome";
+						position: relative;
+						bottom: 2px;
+						right: 4px;
+					}
+				}
+			}
+
+			abbr {
+				border: none;
+				margin-right: $padding-size;
+
+				&:after {
+					content: "\f150";
+					font-family: "FontAwesome";
+					font-size: ($font-size / 2);
+					opacity: 0.5;
+				}
+			}
+
+			pre {
+				font-family: $monospace;
+				font-size: ($font-size - 2);
+				padding: ($font-size - $padding-size);
+				margin: 0 0 $font-size 0;
+				border: 5px solid $code_bg;
+				background-color: $main2;
+
+				& > code {
+					font-family: $monospace;
+					font-size: ($font-size - 2);
+				}
+			}
+
+			*:not(pre) > code {
+				font-family: $monospace;
+				font-size: ($font-size - 2);
+				background-color: $code_bg;
+				color: $code_c;
+				position: relative;
+				bottom: 1px;
+				padding: 0 $padding-size 1px $padding-size;
+				margin: 0 2.5px;
+			}
+
+			hr {
+				border: none;
+				border-bottom: 2px dashed $border_c;
+				margin: 1.5em 0;
 			}
 
 			img {
-				margin: 0 0 1.5em 0;
+				margin: 0 0 $font-size 0;
 				max-width: 100%;
 				height: auto;
 			}
@@ -639,22 +1035,19 @@ POSTS & CONTENT STYLES
 				max-width: 100%;
 				height: auto;
 			}
-
-			pre {
-				background: $black;
-				color: $light-gray;
-				font-size: 0.9em;
-				padding: 1.5em;
-				margin: 0 0 1.5em;
-				border-radius: 3px;
-			}
-
 		} /* end .entry-content */
+
+		#fancybox-title {
+			font-family: $sans-serif;
+			font-weight: bold;
+		}
 
 		.wp-caption {
 			max-width: 100%;
-			background: #eee;
-			padding: 5px;
+			background: $pict-caption_bg;
+			padding: ($padding-size * 2);
+			margin: 0 0 $font-size 0;
+			border: 5px solid $pict-caption-border_c;
 
 			/* images inside wp-caption */
 			img {
@@ -664,28 +1057,48 @@ POSTS & CONTENT STYLES
 			}
 
 			p.wp-caption-text {
-				font-size: 0.85em;
-				margin: 4px 0 7px;
+				font-size: 1em;
+				margin: 5px 0;
 				text-align: center;
+				font-size: ($font-size - 2);
 			}
 
 		} /* end .wp-caption */
 
 		/* image gallery styles */
 		.gallery {
+			max-width: 100%;
+			background: $pict-caption_bg;
+			display: flex;
+			flex-wrap: wrap;
+			flex-direction: row;
+			justify-content: space-around;
+			align-items: center;
+			align-content: space-around;
+			border: 5px solid $pict-caption-border_c;
 
 			dl {
+				margin-bottom: 0;
+				padding: ($padding-size * 2);
 
-				a {}
+				a {
+					img {
+						margin-bottom: 0;
+					}
+				}
 
-				img {}
+				dt {}
 
+				dd {
+					margin: 0;
+					text-align: center;
+					font-size: ($font-size - 2);
+				}
 			}
 
-			dt {}
-
-			dd {}
-
+			& > br {
+				display: none;
+			}
 		} /* end .gallery */
 
 		/* gallery caption styles */

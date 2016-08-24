@@ -242,11 +242,13 @@ function bones_fonts() {
 
 add_action('wp_enqueue_scripts', 'bones_fonts');
 
+
 function register_jquery() {
   if (!is_admin() && $GLOBALS['pagenow'] != 'wp-login.php') {
     // comment out the next two lines to load the local copy of jQuery
     wp_deregister_script('jquery');
-    wp_register_script('jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js', false);
+    // Easy FancyBox doesn't work on jQuery 3...
+    wp_register_script('jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js', false);
     wp_enqueue_script('jquery');
   }
 }
