@@ -14,6 +14,8 @@
 								<?php get_template_part('list', 'header'); ?>
 
 								<section class="entry-content">
+									<?php get_template_part('list', 'eyecatch'); ?>
+
 									<?php the_content('Continue Reading'); ?>
 								</section>
 

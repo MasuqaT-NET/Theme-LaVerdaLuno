@@ -13,6 +13,8 @@
 								<?php get_template_part('list', 'header'); ?>
 
 								<section class="entry-content cf">
+									<?php get_template_part('list', 'eyecatch'); ?>
+
 									<?php the_content('Continue Reading'); ?>
 								</section>
 
@@ -27,7 +29,7 @@
 							<?php else : ?>
 
 									<article id="post-not-found" class="hentry cf">
-											<header class="article-header">
+										<header class="article-header">
 												<h1><?php _e( 'Oops, Post Not Found!', 'bonestheme' ); ?></h1>
 										</header>
 											<section class="entry-content">

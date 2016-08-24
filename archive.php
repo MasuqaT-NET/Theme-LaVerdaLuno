@@ -18,8 +18,7 @@
 								<?php get_template_part('list', 'header'); ?>
 
 								<section class="entry-content cf">
-
-									<?php the_post_thumbnail( 'bones-thumb-300' ); ?>
+									<?php get_template_part('list', 'eyecatch'); ?>
 
 									<?php the_content('Continue Reading'); ?>
 
