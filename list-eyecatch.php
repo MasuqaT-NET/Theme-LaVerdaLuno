@@ -9,7 +9,7 @@ else :
 	if (file_exists($eyecatch_png_dir)) {
 		$eyecatch_url = $dir['baseurl'] . '/categories/' . $category[0]->slug . '.png';
 	} else {
-		$eyecatch_url = get_template_directory_uri() . '/library/images/nothumb.gif';
+		$eyecatch_url = get_template_directory_uri() . '/library/images/nothumb.png';
 	}
 	echo '<img src="' . $eyecatch_url . '" width="150" height="150" class="alignright wp-post-image" alt="default" />';
 endif;
