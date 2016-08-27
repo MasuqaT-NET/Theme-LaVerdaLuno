@@ -22,8 +22,9 @@
 		<link rel="apple-touch-icon" sizes="180x180" href="<?php echo get_template_directory_uri(); ?>/library/images/apple-touch-icon.png">
 		<link rel="icon" type="image/png" href="<?php echo get_template_directory_uri(); ?>/library/images/favicon-32x32.png" sizes="32x32">
 		<link rel="icon" type="image/png" href="<?php echo get_template_directory_uri(); ?>/library/images/favicon-16x16.png" sizes="16x16">
+		<link rel="icon" href="<?php echo get_template_directory_uri(); ?>/library/images/favicon.ico">
 		<link rel="manifest" href="<?php echo get_template_directory_uri(); ?>/library/images/manifest.json">
-		<link rel="mask-icon" href="<?php echo get_template_directory_uri(); ?>/library/images/safari-pinned-tab.svg" color="#AEF05A">
+		<link rel="mask-icon" href="<?php echo get_template_directory_uri(); ?>/library/images/safari-pinned-tab.svg" color="#81D813">
 		<meta name="apple-mobile-web-app-title" content="La Verda Luno">
 		<meta name="application-name" content="La Verda Luno">
 		<meta name="theme-color" content="#AEF05A">
@@ -33,6 +34,7 @@
 		<?php // or, set /favicon.ico for IE10 win ?>
 		<meta name="msapplication-TileColor" content="#2C3E50">
 		<meta name="msapplication-TileImage" content="<?php echo get_template_directory_uri(); ?>/library/images/win8-tile-icon.png">
+		<meta name="msapplication-config" content="<?php echo get_template_directory_uri(); ?>/library/images/browserconfig.xml" />
 
 		<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
 
