@@ -544,6 +544,7 @@ POSTS & CONTENT STYLES
 
 			p {
 				margin: 0 0 $font-size 0;
+				overflow: hidden;
 			}
 
 			em {
@@ -879,6 +880,7 @@ POSTS & CONTENT STYLES
 				background-color: $quote_bg;
 				position: relative;
 				font-size: ($font-size - 1);
+				overflow: hidden;
 
 				&:before {
 					content: "\f10d";
@@ -996,6 +998,7 @@ POSTS & CONTENT STYLES
 				margin: 0 0 $font-size 0;
 				border: 5px solid $code_bg;
 				background-color: $main2;
+				overflow: hidden;
 
 				& > code {
 					font-family: $monospace;
@@ -1089,6 +1092,7 @@ POSTS & CONTENT STYLES
 			align-items: center;
 			align-content: space-around;
 			border: 5px solid $pict-caption-border_c;
+			margin-bottom: $font-size;
 
 			dl {
 				margin-bottom: 0;
@@ -1123,6 +1127,15 @@ POSTS & CONTENT STYLES
 		.size-large {}
 		.size-medium {}
 		.size-thumbnail {}
+
+		.wp-video {
+			margin: 0 auto $font-size auto;
+
+		}
+
+		.wp-audio-shortcode {
+			margin-bottom: $font-size;
+		}
 
 		a.more-link {
 			display: inline-block;
