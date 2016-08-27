@@ -2,7 +2,10 @@
 <browserconfig>
   <msapplication>
     <tile>
-      <square150x150logo src="/wp-content/themes/Theme-LaVerdaLuno/library/images/mstile-150x150.png"/>
+      <square70x70logo src="/wp-content/themes/Theme-LaVerdaLuno/library/images/mstile-small.png"/>
+      <square150x150logo src="/wp-content/themes/Theme-LaVerdaLuno/library/images/mstile-medium.png"/>
+      <wide310x150logo src="/wp-content/themes/Theme-LaVerdaLuno/library/images/mstile-wide.png"/>
+      <square310x310logo src="/wp-content/themes/Theme-LaVerdaLuno/library/images/mstile-large.png"/>
       <TileColor>#2c3e50</TileColor>
     </tile>
   </msapplication>

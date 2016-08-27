@@ -29,11 +29,9 @@
 		<meta name="application-name" content="La Verda Luno">
 		<meta name="theme-color" content="#AEF05A">
 		<!--[if IE]>
-			<link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/favicon.ico">
+			<link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/library/images/favicon.ico">
 		<![endif]-->
 		<?php // or, set /favicon.ico for IE10 win ?>
-		<meta name="msapplication-TileColor" content="#2C3E50">
-		<meta name="msapplication-TileImage" content="<?php echo get_template_directory_uri(); ?>/library/images/win8-tile-icon.png">
 		<meta name="msapplication-config" content="<?php echo get_template_directory_uri(); ?>/library/images/browserconfig.xml" />
 
 		<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
