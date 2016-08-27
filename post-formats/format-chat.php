@@ -30,8 +30,6 @@
                   ?>
                 </section> <?php // end article section ?>
 
-                <?php get_template_part('post-formats/single', 'footer'); ?>
-
-                <?php comments_template(); ?>
-
+              <?php get_template_part('post-formats/single', 'footer'); ?>
+              
               </article> <?php // end article ?>

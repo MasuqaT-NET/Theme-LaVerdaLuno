@@ -11,10 +11,4 @@
 	//]]>
 	</script><span class="ninja_onebutton_hidden" style="display:none;"><?php the_permalink(); ?></span><span style="display:none;" class="ninja_onebutton_hidden"><?php the_title(); ?></span>
 	</div>
-	<?php if(is_single()) { ?>
-		<nav id="nav-below" class="cf post-navigation" role="navigation">
-			<?php previous_post_link('<div class="nav-previous">%link</div>', '<span class="meta-nav"><i class="fa fa-chevron-left"></i> Previous Article</span> %title'); ?>
-			<?php next_post_link('<div class="nav-next">%link</div>', '<span class="meta-nav">Next Article <i class="fa fa-chevron-right"></i></span> %title'); ?>
-		</nav>
-	<?php } ?>
 </footer>

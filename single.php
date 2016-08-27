@@ -25,6 +25,15 @@
 								get_template_part( 'post-formats/format', get_post_format() );
 							?>
 
+							<?php if(is_single()) { ?>
+								<nav id="nav-below" class="cf post-navigation" role="navigation">
+									<?php previous_post_link('<div class="nav-previous">%link</div>', '<span class="meta-nav"><i class="fa fa-chevron-left"></i> Previous Article</span> %title'); ?>
+									<?php next_post_link('<div class="nav-next">%link</div>', '<span class="meta-nav">Next Article <i class="fa fa-chevron-right"></i></span> %title'); ?>
+								</nav>
+							<?php } ?>
+
+							<?php comments_template(); ?>
+
 						<?php endwhile; ?>
 
 						<?php else : ?>

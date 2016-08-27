@@ -27,6 +27,18 @@ be seen on the Desktop.
   padding-left: 30px;
 }
 
+.hentry {
+  &:first-child {
+    margin-top: 40px;
+  }
+}
+
+.format-aside {
+  &:first-child {
+    border-top: 1px dashed $border_c;
+  }
+}
+
 .header > * {
   padding-left: 30px;
 }

@@ -1,64 +1,634 @@
+@charset "UTF-8";
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: IE Stylesheet
+
+So instead of using the respond.js file to add media query support
+to IE, we're going to use SASS to create an easily readable css file.
+Here, we import all the styles the standard stylesheet gets, only
+without the media queries. No need to worry about editing anything!
+
+******************************************************************/
+/******************************************************************
+IMPORTS & DEPENDENCIES
+Remember, all the BASE styles are called already since IE can
+read those. Below, we need to import only the stuff IE can't
+understand (what's inside the media queries). We also need to
+import the mixins file so SASS can understand the variables.
+******************************************************************/
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Variables
+
+Here is where we declare all our variables like colors, fonts,
+base values, and defaults. We want to make sure this file ONLY
+contains variables that way our files don't get all messy.
+No one likes a mess.
+
+******************************************************************/
+/*********************
+COLORS
+Need help w/ choosing your colors? Try this site out:
+http://0to255.com/
+*********************/
 /*
-Error: File to import not found or unreadable: breakpoints/1100up.
-       Load paths:
-         Compass::SpriteImporter
-         C:/Users/TakahiroOkada/Documents/masuqat.net/blog/InstantWP_4.5/iwpserver/htdocs/wordpress/wp-content/themes/Theme-LaVerdaLuno/library/scss
-         C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets
-        on line 31 of C:/Users/TakahiroOkada/Documents/masuqat.net/blog/InstantWP_4.5/iwpserver/htdocs/wordpress/wp-content/themes/Theme-LaVerdaLuno/library/scss/./ie.scss
-
-26: @import "partials/ie_grid"; // import grid
-27: 
-28: // import everything inside media queries
-29: @import "breakpoints/481up";
-30: @import "breakpoints/768up";
-31: @import "breakpoints/1100up";
-32: 
-33: /*
-34: you can call the larger styles if you want, but there's really no need
-35: *\/
-36: 
-
-Backtrace:
-C:/Users/TakahiroOkada/Documents/masuqat.net/blog/InstantWP_4.5/iwpserver/htdocs/wordpress/wp-content/themes/Theme-LaVerdaLuno/library/scss/./ie.scss:31
-C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/tree/import_node.rb:67:in `rescue in import'
-C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/tree/import_node.rb:45:in `import'
-C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/tree/import_node.rb:28:in `imported_file'
-C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/tree/import_node.rb:37:in `css_import?'
-C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/tree/visitors/perform.rb:311:in `visit_import'
-C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/tree/visitors/base.rb:36:in `visit'
-C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
-C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/stack.rb:79:in `block in with_base'
-C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/stack.rb:115:in `with_frame'
-C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/stack.rb:79:in `with_base'
-C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/tree/visitors/perform.rb:158:in `visit'
-C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
-C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/tree/visitors/base.rb:52:in `map'
-C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/tree/visitors/base.rb:52:in `visit_children'
-C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/tree/visitors/perform.rb:167:in `block in visit_children'
-C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
-C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/tree/visitors/perform.rb:166:in `visit_children'
-C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/tree/visitors/base.rb:36:in `block in visit'
-C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/tree/visitors/perform.rb:186:in `visit_root'
-C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/tree/visitors/base.rb:36:in `visit'
-C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/tree/visitors/perform.rb:157:in `visit'
-C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/tree/visitors/perform.rb:8:in `visit'
-C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/tree/root_node.rb:36:in `css_tree'
-C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/tree/root_node.rb:20:in `render'
-C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/engine.rb:278:in `render'
-C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/plugin/compiler.rb:492:in `update_stylesheet'
-C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
-C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/plugin/compiler.rb:209:in `each'
-C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
-C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/plugin/compiler.rb:471:in `on_file_changed'
-C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/sass-3.4.21/lib/sass/plugin/compiler.rb:328:in `block in watch'
-C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/sass-3.4.21/vendor/listen/lib/listen/listener.rb:252:in `call'
-C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/sass-3.4.21/vendor/listen/lib/listen/listener.rb:252:in `on_change'
-C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/sass-3.4.21/vendor/listen/lib/listen/listener.rb:290:in `block in initialize_adapter'
-C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/sass-3.4.21/vendor/listen/lib/listen/adapters/polling.rb:48:in `call'
-C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/sass-3.4.21/vendor/listen/lib/listen/adapters/polling.rb:48:in `poll_changed_directories'
-C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/sass-3.4.21/vendor/listen/lib/listen/adapter.rb:299:in `block in start_poller'
+Here's a great tutorial on how to
+use color variables properly:
+http://sachagreif.com/sass-color-variables/
 */
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Error: File to import not found or unreadable: breakpoints/1100up.\A        Load paths:\A          Compass::SpriteImporter\A          C:/Users/TakahiroOkada/Documents/masuqat.net/blog/InstantWP_4.5/iwpserver/htdocs/wordpress/wp-content/themes/Theme-LaVerdaLuno/library/scss\A          C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets\A         on line 31 of C:/Users/TakahiroOkada/Documents/masuqat.net/blog/InstantWP_4.5/iwpserver/htdocs/wordpress/wp-content/themes/Theme-LaVerdaLuno/library/scss/./ie.scss\A \A 26: @import \"partials/ie_grid\"; // import grid\A 27: \A 28: // import everything inside media queries\A 29: @import \"breakpoints/481up\";\A 30: @import \"breakpoints/768up\";\A 31: @import \"breakpoints/1100up\";\A 32: \A 33: /*\A 34: you can call the larger styles if you want, but there's really no need\A 35: */\A 36: "; }
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Typography
+
+Need to import a font or set of icons for your site? Drop them in
+here or just use this to establish your typographical grid. Or not.
+Do whatever you want to...GOSH!
+
+Helpful Articles:
+http://trentwalton.com/2012/06/19/fluid-type/
+http://ia.net/blog/responsive-typography-the-basics/
+http://alistapart.com/column/responsive-typography-is-a-physical-discipline
+
+******************************************************************/
+/*********************
+FONT FACE (IN YOUR FACE)
+*********************/
+/*  To embed your own fonts, use this syntax
+  and place your fonts inside the
+  library/fonts folder. For more information
+  on embedding fonts, go to:
+  http://www.fontsquirrel.com/
+  Be sure to remove the comment brackets.
+*/
+/*  @font-face {
+      font-family: 'Font Name';
+      src: url('library/fonts/font-name.eot');
+      src: url('library/fonts/font-name.eot?#iefix') format('embedded-opentype'),
+             url('library/fonts/font-name.woff') format('woff'),
+             url('library/fonts/font-name.ttf') format('truetype'),
+             url('library/fonts/font-name.svg#font-name') format('svg');
+      font-weight: normal;
+      font-style: normal;
+  }
+*/
+/*
+The following is based of Typebase:
+https://github.com/devinhunt/typebase.css
+I've edited it a bit, but it's a nice starting point.
+*/
+@font-face {
+  font-family: "YuGothicSet";
+  font-weight: 500;
+  font-style: normal;
+  src: local("Yu Gothic Medium"), local("YuGothic Medium"), local("Yu Gothic"), local("YuGothic"), local("游ゴシック"), local("游ゴシック体");
+}
+@font-face {
+  font-family: "YuGothicSet";
+  font-weight: 700;
+  font-style: normal;
+  src: local("Yu Gothic Bold"), local("YuGothic Bold"), local("Yu Gothic"), local("YuGothic"), local("游ゴシック"), local("游ゴシック体");
+}
+/*
+some nice typographical defaults
+more here: http://www.newnet-soft.com/blog/csstypography
+*/
+/* line 79, ../scss/partials/_typography.scss */
+p {
+  -ms-word-wrap: break-word;
+  word-break: break-word;
+  word-wrap: break-word;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  hyphens: auto;
+  -webkit-hyphenate-before: 2;
+  -webkit-hyphenate-after: 3;
+  hyphenate-lines: 3;
+  -webkit-font-feature-settings: "liga";
+  -moz-font-feature-settings: "liga=1";
+  -ms-font-feature-settings: "liga";
+  -o-font-feature-settings: "liga";
+  font-feature-settings: "liga";
+}
+
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Mixins Stylesheet
+
+This is where you can take advantage of Sass' great features: Mixins.
+I won't go in-depth on how they work exactly,
+there are a few articles below that will help do that. What I will
+tell you is that this will help speed up simple changes like
+changing a color or adding CSS3 techniques gradients.
+
+A WORD OF WARNING: It's very easy to overdo it here. Be careful and
+remember less is more.
+
+Helpful:
+http://sachagreif.com/useful-sass-mixins/
+http://thesassway.com/intermediate/leveraging-sass-mixins-for-cleaner-code
+http://web-design-weekly.com/blog/2013/05/12/handy-sass-mixins/
+
+******************************************************************/
+/*********************
+TRANSITION
+*********************/
+/*
+I totally rewrote this to be cleaner and easier to use.
+You'll need to be using Sass 3.2+ for these to work.
+Thanks to @anthonyshort for the inspiration on these.
+USAGE: @include transition(all 0.2s ease-in-out);
+*/
+/*********************
+CSS3 GRADIENTS
+Be careful with these since they can
+really slow down your CSS. Don't overdo it.
+*********************/
+/* @include css-gradient(#dfdfdf,#f8f8f8); */
+/*********************
+BOX SIZING
+*********************/
+/* @include box-sizing(border-box); */
+/* NOTE: value of "padding-box" is only supported in Gecko. So
+probably best not to use it. I mean, were you going to anyway? */
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: IE Grid Styles
+
+Since the example grid is based on media queries, so rather than
+setup some js library that would make IE8 and below understand
+media queries, let's just add some styles that serves a fixed grid.
+
+Again, if you want to roll your own, just remove this junk and put
+whatever you use in here.
+
+******************************************************************/
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: 481px and Up Stylesheet
+
+This stylesheet is loaded for larger devices. It's set to
+481px because at 480px it would load on a landscaped iPhone.
+This isn't ideal because then you would be loading all those
+extra styles on that same mobile connection.
+
+A word of warning. This size COULD be a larger mobile device,
+so you still want to keep it pretty light and simply expand
+upon your base.scss styles.
+
+******************************************************************/
+/*
+IMPORTANT NOTE ABOUT SASS 3.3 & UP
+You can't use @extend within media queries
+anymore, so just be aware that if you drop
+them in here, they won't work.
+*/
+/*********************
+HEADER STYLES
+*********************/
+/* line 33, ../scss/breakpoints/_481up.scss */
+.menu-bar {
+  height: auto !important;
+}
+
+/* line 36, ../scss/breakpoints/_481up.scss */
+.menu-bar ul {
+  font-size: 0;
+}
+
+/* line 39, ../scss/breakpoints/_481up.scss */
+.menu-bar ul ul {
+  display: none;
+  position: absolute;
+  top: 50px;
+  left: 0;
+  width: 180px;
+  background: #ffffff;
+  border: none;
+  -webkit-transform: translateZ(0);
+  -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.15);
+}
+
+/* line 52, ../scss/breakpoints/_481up.scss */
+.menu-bar ul ul ul {
+  position: absolute;
+  top: 0;
+  left: 180px;
+}
+
+/* line 57, ../scss/breakpoints/_481up.scss */
+.menu-bar ul li:hover > ul {
+  display: block;
+}
+
+/* line 60, ../scss/breakpoints/_481up.scss */
+.menu-bar > ul > li {
+  display: inline-block;
+}
+
+/* line 63, ../scss/breakpoints/_481up.scss */
+.menu-bar ul ul li {
+  display: block;
+  padding: 0;
+  border-right: none;
+}
+
+/* line 68, ../scss/breakpoints/_481up.scss */
+.menu-bar ul > li > a:hover,
+.menu-bar ul > li:hover > a {
+  background-color: #28323e;
+}
+
+/* line 72, ../scss/breakpoints/_481up.scss */
+.menu-bar ul li > a:hover,
+.menu-bar ul li:hover > a,
+.menu-bar ul li.current_page_item > a,
+.menu-bar ul li.current-menu-item > a,
+.menu-bar ul li.current-menu-ancestor > a,
+.menu-bar ul li.current_page_ancestor > a,
+.menu-bar ul li.current-post-parent > a {
+  color: #ffffff;
+}
+
+/* line 83, ../scss/breakpoints/_481up.scss */
+.menu-bar ul ul li a {
+  padding: 10px 20px;
+  color: #28323e;
+  font-size: 13px;
+}
+
+/* line 88, ../scss/breakpoints/_481up.scss */
+.menu-bar ul ul li > a:hover,
+.menu-bar ul ul li:hover > a {
+  color: #de3a31;
+  background-color: #ffffff;
+}
+
+/* line 93, ../scss/breakpoints/_481up.scss */
+.menu-bar ul ul li:hover > a,
+.menu-bar ul ul li.current_page_item > a,
+.menu-bar ul ul li.current-menu-item > a,
+.menu-bar ul ul li.current-menu-ancestor > a,
+.menu-bar ul ul li.current_page_ancestor > a,
+.menu-bar ul ul li.current-post-parent > a {
+  color: #de3a31;
+}
+
+/*********************
+NAVIGATION STYLES
+*********************/
+/* .menu is clearfixed inside mixins.scss */
+/* line 109, ../scss/breakpoints/_481up.scss */
+.menu {
+  /* end .menu ul */
+}
+/* line 110, ../scss/breakpoints/_481up.scss */
+.menu ul {
+  /* end .menu ul li */
+  /* highlight current page */
+  /* end current highlighters */
+}
+/* line 111, ../scss/breakpoints/_481up.scss */
+.menu ul li {
+  /*
+  plan your menus and drop-downs wisely.
+  */
+}
+/* line 112, ../scss/breakpoints/_481up.scss */
+.menu ul li a {
+  /*
+  you can use hover styles here even though this size
+  has the possibility of being a mobile device.
+  */
+}
+
+/* end .menu */
+/*********************
+POSTS & CONTENT STYLES
+*********************/
+/* entry content */
+/* line 157, ../scss/breakpoints/_481up.scss */
+.entry-content {
+  /* at this larger size, we can start to align images */
+}
+/* line 161, ../scss/breakpoints/_481up.scss */
+.entry-content .alignleft, .entry-content img.alignleft {
+  margin-right: 1.5em;
+  display: inline;
+  float: left;
+}
+/* line 166, ../scss/breakpoints/_481up.scss */
+.entry-content .alignright, .entry-content img.alignright {
+  margin-left: 1.5em;
+  display: inline;
+  float: right;
+}
+/* line 171, ../scss/breakpoints/_481up.scss */
+.entry-content .aligncenter, .entry-content img.aligncenter {
+  margin-right: auto;
+  margin-left: auto;
+  display: block;
+  clear: both;
+}
+
+/* end .entry-content */
+/*********************
+FOOTER STYLES
+*********************/
+/*
+check your menus here. do they look good?
+do they need tweaking?
+*/
+/* line 188, ../scss/breakpoints/_481up.scss */
+.footer-links {
+  height: auto !important;
+}
+
+/* line 191, ../scss/breakpoints/_481up.scss */
+.footer-links ul {
+  font-size: 0;
+}
+
+/* line 194, ../scss/breakpoints/_481up.scss */
+.footer-links ul ul {
+  display: none;
+  position: absolute;
+  bottom: 50px;
+  left: 0;
+  width: 180px;
+  background: #ffffff;
+  border: none;
+  -webkit-transform: translateZ(0);
+  -webkit-box-shadow: 0 -2px 2px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0 -2px 2px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 -2px 2px rgba(0, 0, 0, 0.15);
+}
+
+/* line 207, ../scss/breakpoints/_481up.scss */
+.footer-links ul ul ul {
+  position: absolute;
+  bottom: 0;
+  left: 180px;
+  background: #ffffff;
+}
+
+/* line 213, ../scss/breakpoints/_481up.scss */
+.footer-links ul li:hover > ul {
+  display: block;
+}
+
+/* line 216, ../scss/breakpoints/_481up.scss */
+.footer-links > ul > li {
+  display: inline-block;
+}
+
+/* line 219, ../scss/breakpoints/_481up.scss */
+.footer-links ul ul li {
+  display: block;
+  padding: 0;
+  border-right: none;
+}
+
+/* line 224, ../scss/breakpoints/_481up.scss */
+.footer-links ul > li > a:hover,
+.footer-links ul > li:hover > a {
+  background-color: #28323e;
+}
+
+/* line 228, ../scss/breakpoints/_481up.scss */
+.footer-links ul li > a:hover,
+.footer-links ul li:hover > a,
+.footer-links ul li.current_page_item > a,
+.footer-links ul li.current-menu-item > a,
+.footer-links ul li.current-menu-ancestor > a,
+.footer-links ul li.current_page_ancestor > a,
+.footer-links ul li.current-post-parent > a {
+  color: #ffffff;
+}
+
+/* line 239, ../scss/breakpoints/_481up.scss */
+.footer-links ul ul li a {
+  padding: 10px 20px;
+  color: #28323e;
+  font-size: 13px;
+}
+
+/* line 244, ../scss/breakpoints/_481up.scss */
+.footer-links ul ul li > a:hover,
+.footer-links ul ul li:hover > a {
+  color: #de3a31;
+  background-color: #ffffff;
+}
+
+/* line 249, ../scss/breakpoints/_481up.scss */
+.footer-links ul ul li:hover > a,
+.footer-links ul ul li.current_page_item > a,
+.footer-links ul ul li.current-menu-item > a,
+.footer-links ul ul li.current-menu-ancestor > a,
+.footer-links ul ul li.current_page_ancestor > a,
+.footer-links ul ul li.current-post-parent > a {
+  color: #de3a31;
+}
+
+/* line 258, ../scss/breakpoints/_481up.scss */
+.footer-links ul li a:after {
+  content: "\f0d8";
+}
+
+/* end .footer-links */
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Tablet & Small Desktop Stylesheet
+
+Here's where you can start getting into the good stuff.
+This size will work on iPads, other tablets, and desktops.
+So you can start working with more styles, background images,
+and other resources. You'll also notice the grid starts to
+come into play. Have fun!
+
+******************************************************************/
+/*********************
+GENERAL STYLES
+*********************/
+/*********************
+LAYOUT & GRID STYLES
+*********************/
+/* line 26, ../scss/breakpoints/_768up.scss */
+.wrap {
+  width: 760px;
+}
+
+/*********************
+HEADER STYLES
+*********************/
+/*********************
+NAVIGATION STYLES
+*********************/
+/* line 42, ../scss/breakpoints/_768up.scss */
+.nav {
+  /* end .menu ul li */
+  /* highlight current page */
+  /* end current highlighters */
+}
+/* line 48, ../scss/breakpoints/_768up.scss */
+.nav li {
+  /*
+  plan your menus and drop-downs wisely.
+  */
+  /* showing sub-menus */
+}
+/* line 52, ../scss/breakpoints/_768up.scss */
+.nav li a {
+  /*
+  you can use hover styles here even though this size
+  has the possibility of being a mobile device.
+  */
+}
+/* line 71, ../scss/breakpoints/_768up.scss */
+.nav li ul.sub-menu,
+.nav li ul.children {
+  /* highlight sub-menu current page */
+}
+/* line 80, ../scss/breakpoints/_768up.scss */
+.nav li ul.sub-menu li,
+.nav li ul.children li {
+  /*
+  if you need to go deeper, go nuts
+  just remember deeper menus suck
+  for usability. k, bai.
+  */
+}
+
+/* end .nav */
+/*********************
+SIDEBARS & ASIDES
+*********************/
+/* line 156, ../scss/breakpoints/_768up.scss */
+.widget ul li {
+  /* deep nesting */
+}
+
+/* links widget */
+/* meta widget */
+/* pages widget */
+/* recent-posts widget */
+/* archives widget */
+/* tag-cloud widget */
+/* calendar widget */
+/* category widget */
+/* recent-comments widget */
+/* search widget */
+/* text widget */
+/*********************
+FOOTER STYLES
+*********************/
+/*
+you'll probably need to do quite a bit
+of overriding here if you styled them for
+mobile. Make sure to double check these!
+*/
+/* line 272, ../scss/breakpoints/_768up.scss */
+.footer-links ul li {
+  /*
+  be careful with the depth of your menus.
+  it's very rare to have multi-depth menus in
+  the footer.
+  */
+}
+
+/* end .footer-links */
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Desktop Stylsheet
+
+This is the desktop size. It's larger than an iPad so it will only
+be seen on the Desktop.
+
+******************************************************************/
+/* line 12, ../scss/breakpoints/_1200up.scss */
+.wrap {
+  width: 1200px;
+}
+
+/* line 16, ../scss/breakpoints/_1200up.scss */
+#main {
+  width: 760px;
+  padding-right: 0px;
+  margin: 0 30px 40px 20px;
+}
+
+/* line 22, ../scss/breakpoints/_1200up.scss */
+#sidebar1 {
+  width: 360px;
+}
+
+/* line 26, ../scss/breakpoints/_1200up.scss */
+.site-top > * {
+  padding-left: 30px;
+}
+
+/* line 31, ../scss/breakpoints/_1200up.scss */
+.hentry:first-child {
+  margin-top: 40px;
+}
+
+/* line 37, ../scss/breakpoints/_1200up.scss */
+.format-aside:first-child {
+  border-top: 1px dashed #ccc;
+}
+
+/* line 42, ../scss/breakpoints/_1200up.scss */
+.header > * {
+  padding-left: 30px;
+}
+
+/* line 46, ../scss/breakpoints/_1200up.scss */
+.footer > * {
+  padding-left: 30px;
+}
+
+/* line 50, ../scss/breakpoints/_1200up.scss */
+.search-toggle, .search-expand {
+  right: 35px;
+}
+
+/*
+you can call the larger styles if you want, but there's really no need
+*/
+/******************************************************************
+ADDITIONAL IE FIXES
+These fixes are now ONLY seen by IE, so you don't have to worry
+about using prefixes, although it's best practice. For more info
+on using Modernizr classes, check out this link:
+http://www.modernizr.com/docs/
+******************************************************************/
+/*
+For example, you can use something like:
+
+.no-textshadow .class { ... }
+
+You can also target specific versions by using the classes applied to
+the html element. These can sometimes change, so take a look inside the
+header.php file to see what they are:
+
+
+.lt-ie8 .class { ... }
+
+*/

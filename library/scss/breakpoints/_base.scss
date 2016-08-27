@@ -427,6 +427,8 @@ POSTS & CONTENT STYLES
 	font-family: $ui-font;
 	font-size: 80%;
 	color: $article-meta_c;
+	margin: 0.75em 0 0 0.25em;
+
 
 	a {
 		color: $article-meta_c;
@@ -447,35 +449,87 @@ POSTS & CONTENT STYLES
 }
 
 #content {
-	margin-top: 1.5em;
+	// margin-top: 1.5em;
 }
 
 		.hentry {
-			padding: 2.5em $padding-size;
+			padding: 0;
 			border-bottom: 2px solid $border_c;
 
-			header {}
+			header {
+				border-bottom: 1px dashed $border_c;
+				padding: ($font-size * 2) $padding-size;
+			}
 
 			footer {
+				border-top: 1px dashed $border_c;
+				padding: ($font-size * 2) $padding-size;
+				// margin-top: -$font-size;
+
 				p {
 					margin: 0;
 				}
 			}
 
 			&:first-of-type {
-				margin: -1em 0 0 0;
+				// margin: -1em 0 0 0;
+				&:not(:first-child) {
+					border-top: 2px solid $border_c;
+				}
 			}
 
 			&:first-child {			// when on index, single etc...
-				margin: -2.0em 0 0 0;
+				// margin: -2.0em 0 0 0;
 			}
 
 			&:last-of-type {
+				// border-bottom: none;
+				// padding-bottom: 0;
+			}
+
+			&:only-of-type {
 				border-bottom: none;
-				padding-bottom: 0;
 			}
 
 		} /* end .hentry */
+
+		/* formats */
+		.format-standard {
+
+		}
+
+		.format-status {
+			background-color: $main2;
+		}
+
+		.format-aside {
+			background-color: $main2;
+			border-left: 1px dashed $border_c;
+			border-right: 1px dashed $border_c;
+			padding: inherit ($padding-size * 2 - 1);
+
+			header, footer {
+				background-color: $main2;
+			}
+
+			section {
+				background-color: $main;
+				border: inherit ($padding-size * 2 - 1);
+
+				& > *:last-child {
+					margin-bottom: 0;
+				}
+			}
+			
+			#nav-below, #comments {
+				background-color: $main;
+			}
+
+			&:only-of-type {
+				border-bottom: 1px dashed $border_c;
+			}
+		}
+		/* formats */
 
 		.single-title,
 		.page-title,
@@ -490,7 +544,7 @@ POSTS & CONTENT STYLES
 		}
 
 		.page-title {
-			margin: 0 ($padding-size * 3);
+			margin: $font-size ($padding-size * 3);
 			color: $list-title_c;
 		}
 
@@ -501,7 +555,7 @@ POSTS & CONTENT STYLES
 		}
 
 		.archive-title {
-			margin: 0 ($padding-size * 3);
+			margin: $font-size ($padding-size * 3);
 			color: $list-title_c;
 		}
 
@@ -534,12 +588,14 @@ POSTS & CONTENT STYLES
 
 		/* entry content */
 		.entry-content {
-			padding: $font-size $padding-size;
+			padding: $font-size ($padding-size * 2);
 
 			span[id|="more"] {
 				display: block;
 				margin: 1em 0em;
-				border-top: 2px dotted $border_c;
+				height: 3px;
+				background-image: repeating-linear-gradient(to right, $border_c 0%, $border_c (20%/7), transparent (20%/7), transparent (40%/7));
+				border: none;
 			}
 
 			p {
@@ -1019,8 +1075,11 @@ POSTS & CONTENT STYLES
 
 			hr {
 				border: none;
-				border-bottom: 2px dashed $border_c;
+				height: 2px;
 				margin: 1.5em 0;
+				border-top: 1px solid $border_c;
+				border-bottom: 1px solid $border_c;
+				background-image: repeating-linear-gradient(to right, $border_c 0%, $border_c 4%, transparent 4%, transparent 7%, $border_c 7%, $border_c 9%, transparent 9%, transparent 12%);
 			}
 
 			img {
@@ -1967,6 +2026,10 @@ input[type="reset"]:focus {
 /***
 NINJA omatome button
 ***/
+.ninja_onebutton {
+	min-height: 29.0938px;
+}
+
 .ninja_onebutton_output_responsive {
 	div, a {
 		opacity: 0.25;
