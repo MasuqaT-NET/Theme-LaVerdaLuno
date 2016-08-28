@@ -21,7 +21,14 @@ http://0to255.com/
 $font-size:			16px;
 $padding-size:		5px;
 
+/*
 
+color making rule
++ hover or focus -> darken 10% or lighten 10%
++ don't mix color, make new color
++ remove color definition without color scheme
+
+*/
 //
 // color scheme
 //
@@ -52,6 +59,14 @@ $latent-deep:				#7f6830;
 $latent-light:				#ffe7ac;
 $latent-dark:				#7f7456;
 $latent-dim:				#cca74d;
+
+// icon color
+$icon-base:					#AEF05A;
+$icon-pattern:				#81D813;
+$icon-background:			#2C3E50;
+
+// new color
+
 //
 // end of color scheme
 //
