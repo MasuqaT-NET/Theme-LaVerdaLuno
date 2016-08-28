@@ -179,36 +179,59 @@ HSB
 
     @return rgb($r-rgb, $g-rgb, $b-rgb);
 }
-
-@function calc-color-hue($baseColor, $num) {
-    $hsb: rgb-to-hsb($baseColor);
-    @return hsb-to-rgb(nth($hsb, 1) + $num, nth($hsb, 2), nth($hsb, 3));
-}
  
-@function calc-color-saturation($baseColor, $num) {
+@function adjust-saturation($baseColor, $num) {
     $hsb: rgb-to-hsb($baseColor);
-    @return hsb-to-rgb(nth($hsb, 1), nth($hsb, 2) + $num, nth($hsb, 3));
+    $s:   nth($hsb, 2) + $num;
+    @if ($s > 100) {
+      $s: 100;
+    } @else if ($s < 0) {
+      $s: 0;
+    }
+    @return hsb-to-rgb(nth($hsb, 1), $s, nth($hsb, 3));
 }
 
-@function calc-color-bright($baseColor, $num) {
+@function adjust-bright($baseColor, $num) {
     $hsb: rgb-to-hsb($baseColor);
-    @return hsb-to-rgb(nth($hsb, 1), nth($hsb, 2), nth($hsb, 3) + $num);
-}
-
-@function brighten($baseColor, $percentage: 10%) {
-    $hsb: rgb-to-hsb($baseColor);
-    $b:   nth($hsb, 3) + $percentage / 1%;
+    $b:   nth($hsb, 3) + $num;
     @if ($b > 100) {
       $b: 100;
-    }
-    @return hsb-to-rgb(nth($hsb, 1), nth($hsb, 2), $b);
-}
-
-@function dullen($baseColor, $percentage: 10%) {
-    $hsb: rgb-to-hsb($baseColor);
-    $b:   nth($hsb, 3) - $percentage / 1%;
-    @if ($b < 0) {
+    } @else if ($b < 0) {
       $b: 0;
     }
     @return hsb-to-rgb(nth($hsb, 1), nth($hsb, 2), $b);
+}
+
+@function change-hue($baseColor, $num) {
+    @return change-color($baseColor, $hue: $num);
+}
+ 
+@function change-saturation($baseColor, $num) {
+    $hsb: rgb-to-hsb($baseColor);
+    $s:   $num;
+    @if ($s > 100) {
+      $s: 100;
+    } @else if ($s < 0) {
+      $s: 0;
+    }
+    @return hsb-to-rgb(nth($hsb, 1), $s, nth($hsb, 3));
+}
+
+@function change-bright($baseColor, $num) {
+    $hsb: rgb-to-hsb($baseColor);
+    $b:   $num;
+    @if ($b > 100) {
+      $b: 100;
+    } @else if ($b < 0) {
+      $b: 0;
+    }
+    @return hsb-to-rgb(nth($hsb, 1), nth($hsb, 2), $b);
+}
+
+@function brighten($baseColor, $percentage: 10%) {
+    @return adjust-bright($baseColor, $percentage / 1%);
+}
+
+@function dullen($baseColor, $percentage: 10%) {
+    @return adjust-bright($baseColor, -$percentage / 1%);
 }

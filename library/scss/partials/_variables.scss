@@ -40,18 +40,24 @@ $mono-gray:					#7f7f7f;
 $mono-dark:					#404040;
 
 // sub
-$sub-base:					#7393f2;
-$sub-deep:					#364672;
-$sub-light:					#bdcbf4;
-$sub-dark:					#595f72;
-$sub-dim:					#5b74bf;
+$sub-origin:				#7393f2;
+$sub:					 	hsb(hue($sub-origin), 100, 100);
+
+$sub-normal:				hsb(hue($sub), 72, 74);
+$sub-deep:					change-bright($sub-normal, 24);
+$sub-dark:					change-saturation($sub-deep, 42);
+$sub-light:					change-bright($sub-dark, 78);
+$sub-dim:					change-bright($sub-normal, 54);
 
 // accent
-$accent-base:				#bd5034;
-$accent-deep:				#3d1a11;
-$accent-light:				#c88473;
-$accent-dark:				#3d2973;
-$accent-dim:				#8a3a26;
+$accent-origin:				#bd5034;
+$accent:					hsb(hue($accent-origin), 100, 100);
+
+$accent-normal:				hsb(hue($accent), 72, 74);
+$accent-deep:				change-bright($accent-normal, 24);
+$accent-dark:				change-saturation($accent-deep, 42);
+$accent-light:				change-bright($accent-dark, 78);
+$accent-dim:				change-bright($accent-normal, 54);
 
 // icon color
 $icon-base:					#AEF05A;
@@ -59,7 +65,10 @@ $icon-pattern:				#81D813;
 $icon-background:			#2C3E50;
 
 // new color
-
+$text-color:				$mono-dark;
+$link-color:				$accent-normal;
+$link-hover-color:			dullen($link-color, 10%);
+$border-color:				$mono-silver;
 //
 // end of color scheme
 //
@@ -67,9 +76,9 @@ $icon-background:			#2C3E50;
 // color code
 $main:				#ffffff;
 $main2:				#F7F7F7;
-$sub:				#bed4df;
+$sub_:				#bed4df;
 $sub2:				#323e4e;
-$accent:			#de3a31;
+$accent_:			#de3a31;
 $accent2:			#60C4B0;
 
 $white:             #fff;
@@ -80,18 +89,18 @@ $top_bg:			$sub2;
 $top_c:				darken($main, 15%);
 $top-active_bg:		darken($top_bg, 5%);
 $top-active_c:		$main;
-$top-button_bg:		$accent;
+$top-button_bg:		$accent_;
 
-$header_bg:			$sub;
+$header_bg:			$sub_;
 $logo_c:			$main;	
 
-$link_c:	        $accent;
+$link_c:	        $accent_;
 $link-hover_c:		darken($link_c, 9%);
 
 $border_c:		    #ccc;
 $border-active_c:	darken($border_c, 10%);
 
-$article-meta_c:	$sub;
+$article-meta_c:	$sub_;
 $article-meta-active_c:	$sub2;
 
 $list-title_c:		lighten($sub2, 30%);
@@ -99,16 +108,16 @@ $article-title_c:	lighten($sub2, 10%);
 
 $text_c:			$black;
 
-$table-cell-head_bg:	mix($main2, $sub, 60%);
+$table-cell-head_bg:	mix($main2, $sub_, 60%);
 $table-cell-odd_bg:		$main;
 $table-cell-even_bg:	$main2;
 $table-cell-border_c:	lighten($border_c, 10%);
 
-$code_c:			darken(saturate($sub, 40%), 50%);
-$code_bg:			$sub;
+$code_c:			darken(saturate($sub_, 40%), 50%);
+$code_bg:			$sub_;
 
 $pict-caption_bg:	$main2;
-$pict-caption-border_c:	$sub;
+$pict-caption-border_c:	$sub_;
 
 $continue-reading_bg:	$main2;
 $continue-reading_c:	$sub2;
@@ -118,18 +127,18 @@ $post-nav_c:		$sub2;
 
 $comment-odd_bg:	$main;
 $comment-even_bg:	$main2;
-$comment-meta-odd_c:	$sub;
-$comment-meta-even_c:	darken($sub, 10%);
+$comment-meta-odd_c:	$sub_;
+$comment-meta-even_c:	darken($sub_, 10%);
 $comment-meta-active_c:	$sub2;
 
 $quote_bg:			$main2;
 
 $form_bg:			$white;
 $form-active_bg:	darken($white, 5%);
-$submit-button_bg:	$accent;
+$submit-button_bg:	$accent_;
 
 $sidebar-bg:		$main2;
-$sidebar-ui_c:		darken($sub, 10%);
+$sidebar-ui_c:		darken($sub_, 10%);
 
 $footer_bg:			$sub2;
 $footer_c:			darken($main, 15%);
