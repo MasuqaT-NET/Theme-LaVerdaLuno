@@ -233,9 +233,7 @@ HSB
 }
 
 @function brighten($baseColor, $percentage: 10%) {
-    $hsb: rgb-to-hsb($baseColor);
-    $b:   nth($hsb, 3) * (1.0 + $percentage / 100%);
-    @return change-bright($baseColor, $b);
+    @return adjust-bright($baseColor, $percentage / 1%);
 }
 
 @function dullen($baseColor, $percentage: 10%) {
