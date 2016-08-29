@@ -44,21 +44,21 @@ $mono-dark:					hsb(0, 0, 25);
 $sub-origin:				#7393f2;
 $sub:					 	hsb(hue($sub-origin), 100, 100);
 
-$sub-normal:				hsb(hue($sub), 72, 74);
-$sub-deep:					change-bright($sub-normal, 24);
-$sub-dark:					change-saturation($sub-deep, 42);
-$sub-light:					change-bright($sub-dark, 78);
-$sub-dim:					change-bright($sub-normal, 54);
+$sub-normal:				hsb(hue($sub), 52, 95);
+$sub-deep:					hsb(hue($sub), 52, 45);
+$sub-light:					hsb(hue($sub), 22, 99);
+$sub-dark:					hsb(hue($sub), 22, 35);
+$sub-dim:					hsb(hue($sub), 52, 75);
 
 // accent
 $accent-origin:				#bd5034;
 $accent:					hsb(hue($accent-origin), 100, 100);
 
-$accent-normal:				hsb(hue($accent), 72, 74);
-$accent-deep:				change-bright($accent-normal, 24);
-$accent-dark:				change-saturation($accent-deep, 42);
-$accent-light:				change-bright($accent-dark, 78);
-$accent-dim:				change-bright($accent-normal, 54);
+$accent-normal:				hsb(hue($accent), 52, 95);
+$accent-deep:				hsb(hue($accent), 52, 45);
+$accent-light:				hsb(hue($accent), 22, 96);
+$accent-dark:				hsb(hue($accent), 22, 45);
+$accent-dim:				hsb(hue($accent), 52, 75);
 
 // icon color
 $icon-base:					#AEF05A;
