@@ -33,11 +33,12 @@ color making rule
 // color scheme
 //
 // mono
-$mono-white:				#ffffff;
-$mono-mist:					#e5e5e5;
-$mono-silver:				#bfbfbf;
-$mono-gray:					#7f7f7f;
-$mono-dark:					#404040;
+$mono-white:				hsb(0, 0, 100);
+$mono-smoke:				hsb(0, 0, 95);
+$mono-frosty:				hsb(0, 0, 90);
+$mono-silver:				hsb(0, 0, 75);
+$mono-gray:					hsb(0, 0, 50);
+$mono-dark:					hsb(0, 0, 25);
 
 // sub
 $sub-origin:				#7393f2;
