@@ -285,3 +285,110 @@ jQuery(document).ready(function ($) {
   });
 
 })(jQuery);
+
+/////////////////////////////////
+// TabIndex設定用
+/////////////////////////////////
+
+function targetize(element) {
+  element.attr("tabIndex", "0");
+  element.focus(function() {
+    element.on('keydown', function(e) {
+      if(!(!e) && e.keyCode === 13) { // Enter key
+        element.click();
+      }
+    });
+  });
+  element.blur(function() {
+    element.off('keydown');
+  });
+}
+
+function targetize_navbar(selector) {
+    // navigation
+    $(selector).find("li > a").each(function() {
+      $(this).attr("tabIndex", "0");
+      if($(this).next().length > 0) { // has sub-menu;
+        $(this).focus(function() {
+          $(this).parent().addClass("jqhover");
+        });
+      }
+    });
+    $(window).on('keydown keyup', function(e) {
+      if(!(!e) && e.keyCode === 9) {
+        console.debug("Tab pressed.");
+        $(selector).find("li").filter(function(index){ return $(this).children("ul").length > 0; }).each(function() {
+          if($(this).find(":focus").length == 0) {
+            $(this).removeClass("jqhover");
+          }
+        });
+      }
+    });
+}
+
+function navbar_event() {
+  if($(window).width() > 480) {
+    $(".search-toggle").attr("tabIndex", "0");
+    $(".menu-toggle").attr("tabIndex", "0");
+    targetize_navbar(".menu-bar, .footer-links");
+  } else {
+    $(".menu-bar").find("a").attr("tabIndex", "-1");
+    $(".search-toggle").attr("tabIndex", "2");
+    $(".menu-toggle").attr("tabIndex", "3");
+
+    $(".menu-toggle").focus(function() {
+      if($(this).hasClass("active")) {
+        $(this).on('keydown', function(e) {
+          if(!(!e) && e.keyCode === 13) { // Enter key
+            $(".menu-bar").find("a").each(function() {
+              $(this).attr("tabIndex", "-1");
+            });
+          }
+        });
+      } else {
+        $(this).on('keydown', function(e) {
+          if(!(!e) && e.keyCode === 13) { // Enter key
+            $(".menu-bar").find("a").each(function() {
+              $(this).attr("tabIndex", "0");
+            });
+          }
+        });
+      }
+    }).blur(function() {
+      element.off('keydown');
+    });
+  }
+}
+
+$(function() {
+  $(window).on("load", function() {
+    console.debug("loaded");
+
+    // 忍者おまとめボタン
+    $(".ninja_onebutton_output_responsive").children().each(function() {
+      targetize($(this));
+    });
+
+    // archives
+    $(".year-opener").each(function() {
+      targetize($(this));
+    });
+
+    // navigation toggle
+    targetize($(".menu-toggle"));
+
+    // search toggle
+    targetize($(".search-toggle"));
+
+    navbar_event();
+
+    var timer = false;
+    $(window).resize(function() {
+      if (timer !== false) {
+        clearTimeout(timer);
+      }
+      timer = setTimeout(navbar_event, 200);
+    });
+  }); // end of on 'load''
+});
+

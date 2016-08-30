@@ -109,6 +109,10 @@ HEADER STYLES
 	.menu-bar ul ul li.current-post-parent > a {
 		color: $accent-dim;
 	}
+	
+	.menu-bar li.jqhover > ul {
+		display: block;
+	}
 
 /*********************
 POSTS & CONTENT STYLES
@@ -214,7 +218,9 @@ do they need tweaking?
 		font-size: 13px;
 	}
 	.footer-links ul ul li > a:hover, 
-	.footer-links ul ul li:hover > a {
+	.footer-links ul ul li:hover > a,
+	.footer-links ul ul li > a:focus, 
+	.footer-links ul ul li:focus > a {
 		color: dullen($mono-gray);
 		background-color: dullen($mono-white);
 	}
@@ -228,5 +234,9 @@ do they need tweaking?
 
 	.footer-links ul li a:after {
 		content: "\f0d8";
+	}
+		
+	.footer-links li.jqhover > ul {
+		display: block;
 	}
 /* end .footer-links */

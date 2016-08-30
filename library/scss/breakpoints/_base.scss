@@ -342,6 +342,7 @@ HEADER STYLES
 
 		a {
 			color: $mono-white;
+			display: inline-block;
 		}
 	}
 
@@ -1627,6 +1628,15 @@ SIDEBARS & ASIDES
 				font-family: $icon-font;
 				color: $mono-silver;
 				padding: 0.5em;
+			}
+
+			&:focus {
+				outline: none;
+
+				&:after {
+					outline: 2px solid $icon-base;
+					outline-offset: -0.25em;
+				}
 			}
 
 			&.closed:after {

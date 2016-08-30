@@ -354,27 +354,32 @@ HEADER STYLES
   color: #bf705c;
 }
 
+/* line 113, ../scss/breakpoints/_481up.scss */
+.menu-bar li.jqhover > ul {
+  display: block;
+}
+
 /*********************
 POSTS & CONTENT STYLES
 *********************/
 /* entry content */
-/* line 118, ../scss/breakpoints/_481up.scss */
+/* line 122, ../scss/breakpoints/_481up.scss */
 .entry-content {
   /* at this larger size, we can start to align images */
 }
-/* line 122, ../scss/breakpoints/_481up.scss */
+/* line 126, ../scss/breakpoints/_481up.scss */
 .entry-content .alignleft, .entry-content img.alignleft {
   margin-right: 1.5em;
   display: inline;
   float: left;
 }
-/* line 127, ../scss/breakpoints/_481up.scss */
+/* line 131, ../scss/breakpoints/_481up.scss */
 .entry-content .alignright, .entry-content img.alignright {
   margin-left: 1.5em;
   display: inline;
   float: right;
 }
-/* line 132, ../scss/breakpoints/_481up.scss */
+/* line 136, ../scss/breakpoints/_481up.scss */
 .entry-content .aligncenter, .entry-content img.aligncenter {
   margin-right: auto;
   margin-left: auto;
@@ -390,17 +395,17 @@ FOOTER STYLES
 check your menus here. do they look good?
 do they need tweaking?
 */
-/* line 149, ../scss/breakpoints/_481up.scss */
+/* line 153, ../scss/breakpoints/_481up.scss */
 .footer-links {
   height: auto !important;
 }
 
-/* line 152, ../scss/breakpoints/_481up.scss */
+/* line 156, ../scss/breakpoints/_481up.scss */
 .footer-links ul {
   font-size: 0;
 }
 
-/* line 155, ../scss/breakpoints/_481up.scss */
+/* line 159, ../scss/breakpoints/_481up.scss */
 .footer-links ul ul {
   display: none;
   position: absolute;
@@ -414,13 +419,13 @@ do they need tweaking?
   -moz-box-shadow: 0 -2px 2px rgba(0, 0, 0, 0.15);
   box-shadow: 0 -2px 2px rgba(0, 0, 0, 0.15);
 }
-/* line 168, ../scss/breakpoints/_481up.scss */
+/* line 172, ../scss/breakpoints/_481up.scss */
 .footer-links ul ul ::selection {
   background-color: rgba(174, 240, 90, 0.5);
   color: #2C3E50;
 }
 
-/* line 173, ../scss/breakpoints/_481up.scss */
+/* line 177, ../scss/breakpoints/_481up.scss */
 .footer-links ul ul ul {
   position: absolute;
   bottom: 0;
@@ -428,31 +433,31 @@ do they need tweaking?
   background: white;
 }
 
-/* line 179, ../scss/breakpoints/_481up.scss */
+/* line 183, ../scss/breakpoints/_481up.scss */
 .footer-links ul li:hover > ul {
   display: block;
 }
 
-/* line 182, ../scss/breakpoints/_481up.scss */
+/* line 186, ../scss/breakpoints/_481up.scss */
 .footer-links > ul > li {
   display: inline-block;
 }
 
-/* line 185, ../scss/breakpoints/_481up.scss */
+/* line 189, ../scss/breakpoints/_481up.scss */
 .footer-links ul ul li {
   display: block;
   padding: 0;
   border-right: none;
 }
 
-/* line 190, ../scss/breakpoints/_481up.scss */
+/* line 194, ../scss/breakpoints/_481up.scss */
 .footer-links ul > li > a:hover,
 .footer-links ul > li:hover > a {
   color: white;
   background-color: #323640;
 }
 
-/* line 195, ../scss/breakpoints/_481up.scss */
+/* line 199, ../scss/breakpoints/_481up.scss */
 .footer-links ul li > a:hover,
 .footer-links ul li:hover > a,
 .footer-links ul li.current_page_item > a,
@@ -463,12 +468,12 @@ do they need tweaking?
   color: white;
 }
 
-/* line 206, ../scss/breakpoints/_481up.scss */
+/* line 210, ../scss/breakpoints/_481up.scss */
 .footer-links ul > li > a {
   letter-spacing: 0.02em;
 }
 
-/* line 210, ../scss/breakpoints/_481up.scss */
+/* line 214, ../scss/breakpoints/_481up.scss */
 .footer-links ul ul li a {
   padding: 10px 20px;
   color: gray;
@@ -476,14 +481,16 @@ do they need tweaking?
   font-size: 13px;
 }
 
-/* line 216, ../scss/breakpoints/_481up.scss */
+/* line 220, ../scss/breakpoints/_481up.scss */
 .footer-links ul ul li > a:hover,
-.footer-links ul ul li:hover > a {
+.footer-links ul ul li:hover > a,
+.footer-links ul ul li > a:focus,
+.footer-links ul ul li:focus > a {
   color: #676767;
   background-color: #e6e6e6;
 }
 
-/* line 221, ../scss/breakpoints/_481up.scss */
+/* line 227, ../scss/breakpoints/_481up.scss */
 .footer-links ul ul li.current_page_item > a,
 .footer-links ul ul li.current-menu-item > a,
 .footer-links ul ul li.current-menu-ancestor > a,
@@ -492,9 +499,14 @@ do they need tweaking?
   color: #bf705c;
 }
 
-/* line 229, ../scss/breakpoints/_481up.scss */
+/* line 235, ../scss/breakpoints/_481up.scss */
 .footer-links ul li a:after {
   content: "\f0d8";
+}
+
+/* line 239, ../scss/breakpoints/_481up.scss */
+.footer-links li.jqhover > ul {
+  display: block;
 }
 
 /* end .footer-links */
