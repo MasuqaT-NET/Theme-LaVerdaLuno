@@ -19,8 +19,8 @@ body {
 	font-family: $sans-serif;
 	font-size: $font-size;
 	line-height: 1.5;
-	color: $text_c;
-	background-color: $main;
+	color: $text-color;
+	background-color: $mono-white;
   	-webkit-font-smoothing: antialiased;
   	-moz-osx-font-smoothing: grayscale;
 }
@@ -76,9 +76,17 @@ LAYOUT & GRID STYLES
 }
 
 ::selection {
-	background-color: rgba($accent2, 0.5);
-	color: $main2;
-	// opacity: 0.0;
+	background-color: rgba(dullen($icon-base), 0.5);
+	color: $mono-white;
+}
+
+#inner-content ::selection {
+	background-color: rgba($icon-base, 0.5);
+	color: $icon-background;	
+}
+
+:focus {
+	outline: 2px solid $icon-base;
 }
 
 /*********************
@@ -86,16 +94,19 @@ LINK STYLES
 *********************/
 
 a, a:visited {
-	color: $link-c;
+	color: $link-color;
 
 	/* on hover */
 	&:hover, &:focus {
-		color: $link-hover_c;
+		color: $link-hover-color;
+	}
+
+	&:focus {
+		outline: 2px solid $icon-base;
 	}
 
 	/* on click */
 	&:active {
-
 	}
 
 	/* mobile tap color */
@@ -150,8 +161,6 @@ h4, .h4 {
 h5, .h5 {
 	font-size: 0.846em;
 	line-height: 2.09em;
-	text-transform: uppercase;
-	letter-spacing: 2px;
 }
 
 /*********************
@@ -159,7 +168,7 @@ HEADER STYLES
 *********************/
 
 .site-top {
-	background-color: $top_bg;
+	background-color: $sub-dark;
 
 	& > div.wrap {
 		position: relative;
@@ -177,13 +186,13 @@ HEADER STYLES
 		height: 50px;
 		float: right;
 		cursor: pointer;
-		color: $top-active_c;
+		color: brighten($mono-frosty);
 		text-align: center;
 	}
 	.menu-toggle:hover,
 	.menu-toggle.active {
-		color: $top-active_c;
-		background: $top-active_bg;
+		color: brighten($mono-frosty);
+		background: dullen($sub-dark);
 		}
 	.menu-toggle i {
 		padding: 10px 0;
@@ -207,7 +216,7 @@ HEADER STYLES
 	.menu-bar ul li a {
 		display: block;
 		padding: 0 20px;
-		color: $top_c;
+		color: $mono-frosty;
 		font-size: $font-size;
 		text-decoration: none;
 		line-height: 50px;
@@ -227,7 +236,7 @@ HEADER STYLES
 		line-height: 20px;
 	}
 	.menu-bar ul li a:after {
-		font-family: 'FontAwesome';
+		font-family: $icon-font;
 	}
 	.menu-bar ul li a:after {
 		content: "\f0d7";
@@ -247,7 +256,7 @@ HEADER STYLES
 
 	.menu-toggle,
 	.menu-bar ul li a {
-		color: $top_c;
+		color: $mono-frosty;
 	}
 	.menu-bar ul li > a:hover, 
 	.menu-bar ul li:hover > a, 
@@ -258,7 +267,7 @@ HEADER STYLES
 	.menu-bar ul li.current-menu-ancestor > a,
 	.menu-bar ul li.current_page_ancestor > a,
 	.menu-bar ul li.current-post-parent > a {
-		color: $top-active_c;
+		color: brighten($mono-frosty);
 	}
 
 // top-bar search
@@ -271,17 +280,17 @@ HEADER STYLES
 		display: block;
 		padding: 0 20px;
 		cursor: pointer;
-		color: $top_c;
+		color: $mono-frosty;
 		font-size: 18px;
 		text-decoration: none;
 		line-height: 50px;
-		background: $top-button_bg;
+		background: $accent-dim;
 		z-index: 999;
 	}
 	.search-toggle:hover,
 	.search-toggle:focus,
 	.search-toggle.active {
-		background: $top-active_bg;
+		background: dullen($sub-dark);
 	}
 	.search-expand {
 		position: absolute;
@@ -289,7 +298,7 @@ HEADER STYLES
 		right: 15px;
 		width: 330px;
 		display: none;
-		background: $top-bg;
+		background: $sub-dark;
 		z-index: 999;
 		-webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, .01);
 		-moz-box-shadow: 0 1px 0 rgba(255, 255, 255, .01);
@@ -297,7 +306,7 @@ HEADER STYLES
 	}
 	.search-expand-inner {
 		padding: 15px;
-		background: $top-active_bg;
+		background: dullen($sub-dark);
 	}
 	.site-search .search-form .search-submit {
 	}
@@ -323,7 +332,7 @@ HEADER STYLES
 	}
 
 .header {
-	background-color: $header_bg;
+	background-color: $sub-light;
 }
 
 	#logo {
@@ -332,92 +341,9 @@ HEADER STYLES
 		font-size: 72px;
 
 		a {
-			color: $logo_c;
+			color: $mono-white;
 		}
 	}
-
-/*********************
-NAVIGATION STYLES
-*********************/
-
-/*
-all navs have a .nav class applied via
-the wp_menu function; this is so we can
-easily write one group of styles for
-the navs on the site so our css is cleaner
-and more scalable.
-*/
-
-.nav {
-	// border-bottom: 0;
-	// margin: 0;
-
-	li {
-
-		a {
-			// display: block;
-			// color: $white;
-			// text-decoration: none;
-			// padding: 0.75em;
-
-			/*
-			remember this is for mobile ONLY, so there's no need
-			to even declare hover styles here, you can do it in
-			the style.scss file where it's relevant. We want to
-			keep this file as small as possible!
-			*/
-			&:hover, &:focus {
-
-			}
-		}
-
-		&:first-child {}
-
-		&:last-child {}
-
-		/*
-		so you really have to rethink your dropdowns for mobile.
-		you don't want to have it expand too much because the
-		screen is so small. How you manage your menu should
-		depend on the project. Here's some great info on it:
-		http://www.alistapart.com/articles/organizing-mobile/
-		*/
-		ul.sub-menu,
-		ul.children {
-
-			li {
-
-				a {
-					// padding-left: 30px;
-
-					&:hover,
-					&:focus {}
-
-					&:link {}
-
-				}
-
-				&:first-child {}
-
-				&:last-child {}
-
-			}
-
-		}
-
-	} /* end .menu li */
-
-	/* highlight current page */
-	li.current-menu-item,
-	li.current_page_item,
-	li.current_page_ancestor {
-
-		a {}
-
-	}  /* end current highlighters */
-
-} /* end .nav */
-
 
 /*********************
 POSTS & CONTENT STYLES
@@ -426,16 +352,16 @@ POSTS & CONTENT STYLES
 .entry-meta {
 	font-family: $ui-font;
 	font-size: 80%;
-	color: $article-meta_c;
+	color: $mono-silver;
 	margin: 0.75em 0 0 0.25em;
 
 
 	a {
-		color: $article-meta_c;
+		color: $mono-silver;
 		text-decoration: none;
 
 		&:hover, &:focus {
-			color: $article-meta-active_c;
+			color: dullen($mono-silver);
 		}
 	}
 
@@ -454,15 +380,15 @@ POSTS & CONTENT STYLES
 
 		.hentry {
 			padding: 0;
-			border-bottom: 2px solid $border_c;
+			border-bottom: 2px solid $border-color;
 
 			header {
-				border-bottom: 1px dashed $border_c;
+				border-bottom: 1px dashed $border-color;
 				padding: ($font-size * 2) $padding-size;
 			}
 
 			footer {
-				border-top: 1px dashed $border_c;
+				border-top: 1px dashed $border-color;
 				padding: ($font-size * 2) $padding-size;
 				// margin-top: -$font-size;
 
@@ -474,7 +400,7 @@ POSTS & CONTENT STYLES
 			&:first-of-type {
 				// margin: -1em 0 0 0;
 				&:not(:first-child) {
-					border-top: 2px solid $border_c;
+					border-top: 2px solid $border-color;
 				}
 			}
 
@@ -499,21 +425,21 @@ POSTS & CONTENT STYLES
 		}
 
 		.format-status {
-			background-color: $main2;
+			background-color: $mono-smoke;
 		}
 
 		.format-aside {
-			background-color: $main2;
-			border-left: 1px dashed $border_c;
-			border-right: 1px dashed $border_c;
+			background-color: $mono-smoke;
+			border-left: 1px dashed $border-color;
+			border-right: 1px dashed $border-color;
 			padding: inherit ($padding-size * 2 - 1);
 
 			header, footer {
-				background-color: $main2;
+				background-color: $mono-smoke;
 			}
 
 			section {
-				background-color: $main;
+				background-color: $mono-white;
 				border: inherit ($padding-size * 2 - 1);
 
 				& > *:last-child {
@@ -522,11 +448,11 @@ POSTS & CONTENT STYLES
 			}
 			
 			#nav-below, #comments {
-				background-color: $main;
+				background-color: $mono-white;
 			}
 
 			&:only-of-type {
-				border-bottom: 1px dashed $border_c;
+				border-bottom: 1px dashed $border-color;
 			}
 		}
 		/* formats */
@@ -540,27 +466,27 @@ POSTS & CONTENT STYLES
 		}
 
 		.single-title {
-			color: $article-title_c;
+			color: $sub-deep;
 		}
 
 		.page-title {
 			margin: $font-size ($padding-size * 3);
-			color: $list-title_c;
+			color: $mono-gray;
 		}
 
 		.entry-title {
 			a {
-				color: $article-title_c;
+				color: $sub-deep;
 			}
 		}
 
 		.archive-title {
 			margin: $font-size ($padding-size * 3);
-			color: $list-title_c;
+			color: $mono-gray;
 		}
 
 		.taxonomy-description {
-			margin: 0px ($padding-size * 4);
+			margin: $font-size ($padding-size * 4);
 
 			p {
 				margin: 0;
@@ -577,15 +503,6 @@ POSTS & CONTENT STYLES
 		.category-slug {}   /* style by category (i.e. category-videos) */
 		.tag-slug {}        /* style by tag (i.e. tag-news) */
 
-		/* post meta */
-		.byline {
-			color: $meta-gray;
-			font-style: italic;
-			margin: 0;
-
-			time {}
-		}
-
 		/* entry content */
 		.entry-content {
 			padding: $font-size ($padding-size * 2);
@@ -594,7 +511,7 @@ POSTS & CONTENT STYLES
 				display: block;
 				margin: 1em 0em;
 				height: 3px;
-				background-image: repeating-linear-gradient(to right, $border_c 0%, $border_c (20%/7), transparent (20%/7), transparent (40%/7));
+				background-image: repeating-linear-gradient(to right, $border-color 0%, $border-color (20%/7), transparent (20%/7), transparent (40%/7));
 				border: none;
 			}
 
@@ -605,7 +522,7 @@ POSTS & CONTENT STYLES
 
 			em {
 				font-style: normal;
-				background-color: $main2;
+				background-color: $mono-smoke;
 			}
 
 			strong {
@@ -613,11 +530,11 @@ POSTS & CONTENT STYLES
 			}
 			
 			a {
-				color: $link_c;
+				color: $link-color;
 				text-decoration: none;
 
 				&:hover, &:focus {
-					color: $link-hover_c;
+					color: $link-hover-color;
 				}
 			}
 
@@ -868,7 +785,7 @@ POSTS & CONTENT STYLES
 
 			table {
 				width: 100%;
-				border: 1px solid $border_c;
+				border: 1px solid $border-color;
 				margin: 0 0 $font-size 0;
 				border-collapse: collapse;
 
@@ -879,18 +796,18 @@ POSTS & CONTENT STYLES
 				}
 
 				tr {
-					border-top: 1px solid $table-cell-border_c;
+					border-top: 1px solid $mono-frosty;
 
 					&:first-child {
 						border-top: none;
 					}
 
 					&:nth-child(odd) {
-						background-color: $table-cell-odd_bg;
+						background-color: $mono-white;
 					}
 
 					&:nth-child(even) {
-						background-color: $table-cell-even_bg;
+						background-color: $mono-smoke;
 					}
 				}
 
@@ -908,7 +825,7 @@ POSTS & CONTENT STYLES
 
 				th {
 					padding: 0.25em 0.5em;
-					background-color: $table-cell-head_bg;
+					background-color: $sub-light;
 					font-weight: normal;
 					text-align: center;
 					font-size: ($font-size - 1);
@@ -921,46 +838,45 @@ POSTS & CONTENT STYLES
 				}
 
 				colgroup {
-					border: 1px solid $table-cell-border_c;
+					border: 1px solid $mono-frosty;
 				}
 
 				thead, tbody, tfoot {
-					border: 1px solid $border_c;
+					border: 1px solid $border-color;
 				}
 			}
 
 			blockquote {
 				margin: 0 0 $font-size 0;
 				padding: 1em 2em;
-				// border-left: 3px solid ;
-				background-color: $quote_bg;
+				background-color: $mono-smoke;
 				position: relative;
 				font-size: ($font-size - 1);
 				overflow: hidden;
 
 				&:before {
 					content: "\f10d";
-					font-family: "FontAwesome";
+					font-family: $icon-font;
 					position: absolute;
 					left: 0.5em;
 					top: 0;
-					color: $text_c;
+					color: $mono-silver;
 					font-size: ($font-size * 1.25);
-					opacity: 0.5;
 				}
 				
 				&:after {
 					content: "\f10e";
-					font-family: "FontAwesome";
+					font-family: $icon-font;
 					position: absolute;
 					right: 0.5em;
 					bottom: 0;
-					color: $text_c;
+					color: $mono-silver;
 					font-size: ($font-size * 1.25);
-					opacity: 0.5;
 				}
 
 				p {
+					padding: 0px $padding-size $font-size $padding-size;
+
 					&:last-child {
 						margin-bottom: 0;
 					}
@@ -973,22 +889,22 @@ POSTS & CONTENT STYLES
 
 				&:before {
 					content: "\f10d";
-					font-family: "FontAwesome";
+					font-family: $icon-font;
 					position: relative;
 					bottom: 1em;
 					font-size: ($font-size / 2);
 					padding: 0.5em 0.5em 0.5em 1em;
-					opacity: 0.5;
+					color: $mono-silver;
 				}
 				
 				&:after {
 					content: "\f10e";
-					font-family: "FontAwesome";
+					font-family: $icon-font;
 					position: relative;
 					bottom: 1em;
 					font-size: ($font-size / 2);
 					padding: 0.5em 1em 0.5em 0.5em;
-					opacity: 0.5;
+					color: $mono-silver;
 				}
 			}
 
@@ -1013,7 +929,12 @@ POSTS & CONTENT STYLES
 
 				&:target {
 					a {
-						background-color: $sub;
+						background-color: $sub-light;
+						color: $accent-deep;
+
+						&:hover, &:focus {
+							color: dullen($accent-deep);
+						}
 					}
 				}
 			}
@@ -1027,10 +948,11 @@ POSTS & CONTENT STYLES
 					}
 					&:after {
 						content: "\f148";
-						font-family: "FontAwesome";
+						font-family: $icon-font;
 						position: relative;
 						bottom: 2px;
 						right: 4px;
+						color: $accent-normal;
 					}
 				}
 			}
@@ -1041,7 +963,7 @@ POSTS & CONTENT STYLES
 
 				&:after {
 					content: "\f150";
-					font-family: "FontAwesome";
+					font-family: $icon-font;
 					font-size: ($font-size / 2);
 					opacity: 0.5;
 				}
@@ -1052,8 +974,8 @@ POSTS & CONTENT STYLES
 				font-size: ($font-size - 2);
 				padding: ($font-size - $padding-size);
 				margin: 0 0 $font-size 0;
-				border: 5px solid $code_bg;
-				background-color: $main2;
+				border: 5px solid $sub-light;
+				background-color: $mono-smoke;
 				overflow: hidden;
 
 				& > code {
@@ -1065,8 +987,8 @@ POSTS & CONTENT STYLES
 			*:not(pre) > code {
 				font-family: $monospace;
 				font-size: ($font-size - 2);
-				background-color: $code_bg;
-				color: $code_c;
+				background-color: $sub-light;
+				color: $sub-deep;
 				position: relative;
 				bottom: 1px;
 				padding: 0 $padding-size 1px $padding-size;
@@ -1077,9 +999,9 @@ POSTS & CONTENT STYLES
 				border: none;
 				height: 2px;
 				margin: 1.5em 0;
-				border-top: 1px solid $border_c;
-				border-bottom: 1px solid $border_c;
-				background-image: repeating-linear-gradient(to right, $border_c 0%, $border_c 4%, transparent 4%, transparent 7%, $border_c 7%, $border_c 9%, transparent 9%, transparent 12%);
+				border-top: 1px solid $border-color;
+				border-bottom: 1px solid $border-color;
+				background-image: repeating-linear-gradient(to right, $border-color 0%, $border-color 4%, transparent 4%, transparent 7%, $border-color 7%, $border-color 9%, transparent 9%, transparent 12%);
 			}
 
 			img {
@@ -1115,13 +1037,13 @@ POSTS & CONTENT STYLES
 
 		.wp-caption {
 			max-width: 100%;
-			background: $pict-caption_bg;
+			background: $mono-smoke;
 			padding: ($padding-size * 2);
 			margin: 0 0 $font-size 0;
-			border: 5px solid $pict-caption-border_c;
+			border: 5px solid $accent-deep;
 
 			a {
-				color: $text_c;
+				color: $text-color;
 			}
 
 			/* images inside wp-caption */
@@ -1143,14 +1065,14 @@ POSTS & CONTENT STYLES
 		/* image gallery styles */
 		.gallery {
 			max-width: 100%;
-			background: $pict-caption_bg;
+			background: $mono-smoke;
 			display: flex;
 			flex-wrap: wrap;
 			flex-direction: row;
 			justify-content: space-around;
 			align-items: center;
 			align-content: space-around;
-			border: 5px solid $pict-caption-border_c;
+			border: 5px solid $accent-deep;
 			margin-bottom: $font-size;
 
 			dl {
@@ -1198,8 +1120,8 @@ POSTS & CONTENT STYLES
 
 		a.more-link {
 			display: inline-block;
-			color: $continue-reading_c;
-			background-color: $continue-reading_bg;
+			color: $sub-dark;
+			background-color: $mono-frosty;
 			margin: 1em 0;
 			padding: 1em 2em;
 			font-family: $ui-font;
@@ -1212,13 +1134,13 @@ POSTS & CONTENT STYLES
 					transition: color .1s linear, background-color .1s linear;
 
 			&:hover, &:focus {
-				color: $continue-reading_bg;
-				background-color: $link-hover_c;
+				color: $mono-white;
+				background-color: $accent-normal;
 			}
 
 			&:after {
 				content: '\f178';
-				font-family: 'FontAwesome';
+				font-family: $icon-font;
 				margin-left: 0.5em;
 			}
 		}
@@ -1247,7 +1169,7 @@ PAGE NAVI STYLES
 	}
 
 	a {
-		background-color: $post-nav_bg;
+		background-color: $mono-smoke;
 		padding: 1.5em 2em;
 		display: block;
 		line-height: 1.5;
@@ -1259,8 +1181,8 @@ PAGE NAVI STYLES
 				transition: color .1s linear, background-color .1s linear;
 		
 		&:hover, &:focus {
-			color: $continue-reading_bg;
-			background-color: $link-hover_c;
+			color: $mono-white;
+			background-color: $accent-normal;
 		}
 	}
 
@@ -1269,7 +1191,8 @@ PAGE NAVI STYLES
 		display: block;
 		font-size: 90%;
 		margin-bottom: 0.5em;
-		color: $post-nav_c;
+		color: $sub-dark;
+		letter-spacing: 0.02em;
 	}
 }
 
@@ -1310,7 +1233,7 @@ COMMENT STYLES
 	padding: 0;
 	margin: 0;
 	border-style: dotted;
-	border-color: $border_c;
+	border-color: $border-color;
 	border-width: 0px;
 
 	article {
@@ -1410,39 +1333,26 @@ COMMENT STYLES
 
 	/* general comment classes */
 	&.alt {}
+
+	.comment-meta {
+		 .comment-metadata > a {
+			 color: $mono-silver;
+
+			 &:hover, &:focus {
+				 color: dullen($mono-silver);
+			 }
+		 }
+
+		 .comment-awaiting-moderation {
+			 background-color: $accent-light;
+		 }
+	}
+
 	&.odd {
-		background-color: $comment-odd_bg;
-
-		& > article > .comment-meta {
-			& > .comment-metadata > a {
-				color: $comment-meta-odd_c;
-
-				&:hover, &:focus {
-					color: $comment-meta-active_c;
-				}
-			}
-
-			& > .comment-awaiting-moderation {
-				background-color: $comment-meta-odd_c
-			}
-		}
+		background-color: $mono-white;
 	}
 	&.even {
-		background: $comment-even_bg;
-
-		& > article > .comment-meta {
-			 & > .comment-metadata > a {
-				color: $comment-meta-even_c;
-
-				&:hover, &:focus {
-					color: $comment-meta-active_c;
-				}
-			 }
-
-			 & > .comment-awaiting-moderation {
-				 background-color: $comment-meta-even_c;
-			 }
-		}
+		background: $mono-smoke;
 	}
 	&.parent {
 		padding-bottom: ($padding-size * 2);
@@ -1522,7 +1432,7 @@ COMMENT STYLES
 		}
 
 		a {
-			background-color: $post-nav_bg;
+			background-color: $mono-smoke;
 			padding: 1.5em 2em;
 			display: block;
 			line-height: 1.5;
@@ -1534,8 +1444,8 @@ COMMENT STYLES
 					transition: color .1s linear, background-color .1s linear;
 			
 			&:hover, &:focus {
-				color: $continue-reading_bg;
-				background-color: $link-hover_c;
+				color: $mono-white;
+				background-color: $accent-normal;
 			}
 		}
 
@@ -1544,7 +1454,8 @@ COMMENT STYLES
 			display: block;
 			font-size: 90%;
 			margin-bottom: 0.5em;
-			color: $post-nav_c;
+			color: $sub-dark;
+			letter-spacing: 0.02em;
 		}
 	}
 
@@ -1561,7 +1472,7 @@ COMMENT FORM STYLES
 	clear: both;
 
 	.comment-body + & {
-		border-top: 1px dashed $border_c;
+		border-top: 1px dashed $border-color;
 		padding: ($padding-size * 3);
 	}
 }
@@ -1572,12 +1483,11 @@ COMMENT FORM STYLES
 	}
 
 	.logged-in-as {
-		color: $meta-gray;
-		font-style: italic;
+		color: $mono-silver;
 		margin: 0;
 
 		a {
-			color: $text_c;
+			color: $text-color;
 		}
 	}
 
@@ -1587,7 +1497,7 @@ COMMENT FORM STYLES
 
 	.form-allowed-tags {
 		padding: 1.5em;
-		background-color: $light-gray;
+		background-color: $mono-smoke;
 		font-size: 0.9em;
 	}
 
@@ -1630,7 +1540,7 @@ SIDEBARS & ASIDES
 }
 
 	.widget {
-		background-color: $sidebar-bg;
+		background-color: $mono-smoke;
 		padding: 20px;
 		margin-bottom: 20px;
 
@@ -1639,7 +1549,8 @@ SIDEBARS & ASIDES
 			margin: 0 0 16px 0;
 			padding-bottom: $padding-size;
 			font-family: $ui-font;
-			border-bottom: 3px solid $border_c;
+			border-bottom: 3px solid $border-color;
+			letter-spacing: 0.02em;
 		}
 
 		a {
@@ -1674,10 +1585,10 @@ SIDEBARS & ASIDES
 	}
 
 	.no-widgets {
-		background-color: $white;
+		background-color: $mono-white;
 		padding: 1.5em;
 		text-align: center;
-		border: 1px solid $border_c;
+		border: 1px solid $border-color;
 		border-radius: 2px;
 		margin-bottom: 1.5em;
 	}
@@ -1689,15 +1600,15 @@ SIDEBARS & ASIDES
 
 				&:before {
 					content: '\f0f6';
-					font-family: 'FontAwesome';
+					font-family: $icon-font;
 					margin-left: -27px;
 					margin-right: 8px;
 					font-size: 80%;
-					color: $sidebar-ui_c;
+					color: $mono-silver;
 				}
 
 				.post-date {
-					color: $sidebar-ui_c;
+					color: $mono-silver;
 					display: block;
 					font-size: 80%;
 				}
@@ -1709,12 +1620,12 @@ SIDEBARS & ASIDES
 		a.year-opener {
 			font-family: $ui-font;
 			cursor: pointer;
-			color: $text_c;
+			color: $text-color;
 
 			&:after {
 				content: '\f066';
-				font-family: 'FontAwesome';
-				color: $sidebar-ui_c;
+				font-family: $icon-font;
+				color: $mono-silver;
 				padding: 0.5em;
 			}
 
@@ -1730,11 +1641,11 @@ SIDEBARS & ASIDES
 
 				&:before {
 					content: '\f073';
-					font-family: 'FontAwesome';
+					font-family: $icon-font;
 					margin-left: -27px;
 					margin-right: 8px;
 					font-size: 80%;
-					color: $sidebar-ui_c;
+					color: $mono-silver;
 				}
 			}
 			
@@ -1757,11 +1668,11 @@ SIDEBARS & ASIDES
 
 					&:before {
 						content: '\f133';
-						font-family: 'FontAwesome';
+						font-family: $icon-font;
 						margin-left: -27px;
 						margin-right: 8px;
 						font-size: 80%;
-						color: $sidebar-ui_c;
+						color: $mono-silver;
 					}
 				}
 
@@ -1787,11 +1698,11 @@ SIDEBARS & ASIDES
 
 				&:before {
 					content: '\f114';
-					font-family: 'FontAwesome';
+					font-family: $icon-font;
 					margin-left: -27px;
 					margin-right: 8px;
 					font-size: 80%;
-					color: $sidebar-ui_c;
+					color: $mono-silver;
 				}
 			}
 
@@ -1801,39 +1712,24 @@ SIDEBARS & ASIDES
 		}
 	}
 
-	.widget_tag_cloud {
-		li {
-			margin-left: 27px;
-
-			&:before {
-				content: '\f097';
-				font-family: 'FontAwesome';
-				margin-left: -27px;
-				margin-right: 8px;
-				font-size: 80%;
-				color: $sidebar-ui_c;
-			}
-		}
-	}
-
 	.widget_recent_comments {
 		li {
 			&:before {
 				content: '\f0f6';
-				font-family: 'FontAwesome';
+				font-family: $icon-font;
 				margin-right: 5px;
 				font-size: 80%;
-				color: $sidebar-ui_c;
+				color: $mono-silver;
 			}
 
 			.comment-author-link {
 				margin-left: 10px;
 				&:before {
 					content: '\f007';
-					font-family: 'FontAwesome';
+					font-family: $icon-font;
 					margin-right: 5px;
 					font-size: 80%;
-					color: $sidebar-ui_c;
+					color: $mono-silver;
 				}
 			}
 		}
@@ -1845,8 +1741,8 @@ FOOTER STYLES
 
 .footer {
 	clear: both;
-	color: $footer_c;
-	background-color: $footer_bg;
+	color: $mono-frosty;
+	background-color: $sub-dark;
 }
 
 	.footer-nav {
@@ -1864,7 +1760,7 @@ FOOTER STYLES
 	.footer-links ul li a {
 		display: block;
 		padding: 0 20px;
-		color: $footer_c;
+		color: $mono-frosty;
 		font-size: $font-size;
 		text-decoration: none;
 		line-height: 50px;
@@ -1884,7 +1780,7 @@ FOOTER STYLES
 		line-height: 20px;
 	}
 	.footer-links ul li a:after {
-		font-family: 'FontAwesome';
+		font-family: $icon-font;
 	}
 	.footer-links ul li a:after {
 		content: "\f0d7";
@@ -1904,7 +1800,7 @@ FOOTER STYLES
 
 	.menu-toggle,
 	.footer-links ul li a {
-		color: $footer_c;
+		color: $mono-frosty;
 	}
 	.footer-links ul li > a:hover, 
 	.footer-links ul li:hover > a,
@@ -1915,113 +1811,23 @@ FOOTER STYLES
 	.footer-links ul li.current-menu-ancestor > a,
 	.footer-links ul li.current_page_ancestor > a,
 	.footer-links ul li.current-post-parent > a {
-		color: $footer-active_c;
+		color: brighten($mono-frosty);
 	}
 
 	.copyright {
 		font-family: $ui-font;
 		text-align: center;
+		letter-spacing: 0.02em;
 		
 		a {
-			color: $footer_c;
+			color: $mono-frosty;
 			text-decoration: none;
 
 			&:hover, &:focus {
-				color: $footer-active_c;
+				color: brighten($mono-frosty);
 			}
 		}
 	}
-
-/***
-FORMS
-***/
-select,
-textarea,
-input[type="text"],
-input[type="password"],
-input[type="datetime"],
-input[type="datetime-local"],
-input[type="date"],
-input[type="month"],
-input[type="time"],
-input[type="week"],
-input[type="number"],
-input[type="email"],
-input[type="url"],
-input[type="search"],
-input[type="tel"],
-input[type="color"],
-.form-control {
-	height: 45px;
-	border-color: $border_c;
-	border-width: 2px;
-	border-radius: 0;
-	max-width: none;
-	-webkit-box-shadow: none;
-	   -moz-box-shadow: none;
-			box-shadow: none;
-}
-select {
-	height: 45px;
-	padding: 10px;
-}
-select:focus,
-textarea:focus,
-input[type="text"]:focus,
-input[type="password"]:focus,
-input[type="datetime"]:focus,
-input[type="datetime-local"]:focus,
-input[type="date"]:focus,
-input[type="month"]:focus,
-input[type="time"]:focus,
-input[type="week"]:focus,
-input[type="number"]:focus,
-input[type="email"]:focus,
-input[type="url"]:focus,
-input[type="search"]:focus,
-input[type="tel"]:focus,
-input[type="color"]:focus,
-.form-control:focus {
-	border-color: $border-active_c;
-	-webkit-box-shadow: none;
-	   -moz-box-shadow: none;
-			box-shadow: none;
-}
-.btn,
-button,
-input[type="button"],
-input[type="reset"],
-input[type="submit"] {
-	height: 45px;
-	padding: 7px 17px 5px;
-	color: $top-active_c;
-	font-size: 13px;
-	font-weight: 700;
-	font-family: $sans-serif;
-	text-decoration: none;
-	letter-spacing: 2px;
-	border-radius: 0;
-	background: $top-button_bg;
-}
-input[type="reset"] {
-	color: #333;
-	background: #eee;
-}
-.btn:hover,
-.btn:focus,
-button:hover,
-button:focus,
-input[type="button"]:hover,
-input[type="button"]:focus,
-input[type="submit"]:hover,
-input[type="submit"]:focus {
-	color: $top-active_c;
-}
-input[type="reset"]:hover,
-input[type="reset"]:focus {
-	color: #333;
-	background: #e5e5e5;
-}
 
 /***
 NINJA omatome button

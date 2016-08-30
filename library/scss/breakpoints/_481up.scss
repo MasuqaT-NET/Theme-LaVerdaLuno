@@ -42,17 +42,23 @@ HEADER STYLES
 		top: 50px;
 		left: 0;
 		width: 180px;
-		background: $top-active_c;
+		background: $mono-white;
 		border: none;
 		-webkit-transform: translateZ(0);
 		-webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, .15);
 		   -moz-box-shadow: 0 2px 2px rgba(0, 0, 0, .15);
 				box-shadow: 0 2px 2px rgba(0, 0, 0, .15);
+		
+		& ::selection {
+			background-color: rgba($icon-base, 0.5);
+			color: $icon-background;	
+		}
 	}
 	.menu-bar ul ul ul {
 		position: absolute;
 		top: 0;
 		left: 180px;
+		background-color: $mono-white;
 	}
 	.menu-bar ul li:hover > ul {
 		display: block;
@@ -67,7 +73,7 @@ HEADER STYLES
 	}
 	.menu-bar ul > li > a:hover, 
 	.menu-bar ul > li:hover > a {
-		background-color: $top-active_bg;
+		background-color: dullen($sub-dark);
 	}
 	.menu-bar ul li > a:hover, 
 	.menu-bar ul li:hover > a, 
@@ -76,78 +82,33 @@ HEADER STYLES
 	.menu-bar ul li.current-menu-ancestor > a,
 	.menu-bar ul li.current_page_ancestor > a,
 	.menu-bar ul li.current-post-parent > a {
-		color: $top-active_c;
+		color: brighten($mono-frosty);
 	}
 
 	// customize
+	.menu-bar ul > li > a {
+		letter-spacing: 0.02em;
+	}
 	.menu-bar ul ul li a {
 		padding: 10px 20px;
-		color: $top-active_bg;
+		color: $mono-gray;
+		background-color: $mono-white;
 		font-size: 13px;
 	}
 	.menu-bar ul ul li > a:hover, 
-	.menu-bar ul ul li:hover > a {
-		color: $link_c;
-		background-color: $top-active_c;
+	.menu-bar ul ul li:hover > a,
+	.menu-bar ul ul li > a:focus,
+	.menu-bar ul ul li:focus > a {
+		color: dullen($mono-gray);
+		background-color: dullen($mono-white);
 	}
-	.menu-bar ul ul li:hover > a, 
 	.menu-bar ul ul li.current_page_item > a, 
 	.menu-bar ul ul li.current-menu-item > a,
 	.menu-bar ul ul li.current-menu-ancestor > a,
 	.menu-bar ul ul li.current_page_ancestor > a,
 	.menu-bar ul ul li.current-post-parent > a {
-		color: $link_c;
+		color: $accent-dim;
 	}
-
-/*********************
-NAVIGATION STYLES
-*********************/
-
-.nav {}
-
-	/* .menu is clearfixed inside mixins.scss */
-	.menu {
-		ul {
-			li {
-				a {
-
-					/*
-					you can use hover styles here even though this size
-					has the possibility of being a mobile device.
-					*/
-					&:hover, &:focus {
-
-					}
-				}
-
-				&:first-child {}
-				&:last-child {}
-
-				/*
-				plan your menus and drop-downs wisely.
-				*/
-				ul.sub-menu,
-				ul.children {
-					li {
-						a {
-							&:hover,
-							&:focus {}
-							&:link {}
-						}
-						&:first-child {}
-						&:last-child {}
-					}
-				}
-			} /* end .menu ul li */
-
-			/* highlight current page */
-			li.current-menu-item,
-			li.current_page_item,
-			li.current_page_ancestor {
-				a {}
-			}  /* end current highlighters */
-		} /* end .menu ul */
-	} /* end .menu */
 
 /*********************
 POSTS & CONTENT STYLES
@@ -197,18 +158,23 @@ do they need tweaking?
 		bottom: 50px;
 		left: 0;
 		width: 180px;
-		background: $top-active_c;
+		background: $mono-white;
 		border: none;
 		-webkit-transform: translateZ(0);
 		-webkit-box-shadow: 0 -2px 2px rgba(0, 0, 0, .15);
 		   -moz-box-shadow: 0 -2px 2px rgba(0, 0, 0, .15);
 				box-shadow: 0 -2px 2px rgba(0, 0, 0, .15);
+		
+		& ::selection {
+			background-color: rgba($icon-base, 0.5);
+			color: $icon-background;	
+		}
 	}
 	.footer-links ul ul ul {
 		position: absolute;
 		bottom: 0;
 		left: 180px;
-		background: $top-active_c;
+		background: $mono-white;
 	}
 	.footer-links ul li:hover > ul {
 		display: block;
@@ -223,7 +189,8 @@ do they need tweaking?
 	}
 	.footer-links ul > li > a:hover, 
 	.footer-links ul > li:hover > a {
-		background-color: $top-active_bg;
+		color: brighten($mono-frosty);
+		background-color: dullen($sub-dark);
 	}
 	.footer-links ul li > a:hover, 
 	.footer-links ul li:hover > a, 
@@ -232,27 +199,31 @@ do they need tweaking?
 	.footer-links ul li.current-menu-ancestor > a,
 	.footer-links ul li.current_page_ancestor > a,
 	.footer-links ul li.current-post-parent > a {
-		color: $top-active_c;
+		color: brighten($mono-frosty);
 	}
 
 	// customize
+	.footer-links ul > li > a {
+		letter-spacing: 0.02em;
+	}
+
 	.footer-links ul ul li a {
 		padding: 10px 20px;
-		color: $top-active_bg;
+		color: $mono-gray;
+		background-color: $mono-white;
 		font-size: 13px;
 	}
 	.footer-links ul ul li > a:hover, 
 	.footer-links ul ul li:hover > a {
-		color: $link_c;
-		background-color: $top-active_c;
+		color: dullen($mono-gray);
+		background-color: dullen($mono-white);
 	}
-	.footer-links ul ul li:hover > a, 
 	.footer-links ul ul li.current_page_item > a, 
 	.footer-links ul ul li.current-menu-item > a,
 	.footer-links ul ul li.current-menu-ancestor > a,
 	.footer-links ul ul li.current_page_ancestor > a,
 	.footer-links ul ul li.current-post-parent > a {
-		color: $link_c;
+		color: $accent-dim;
 	}
 
 	.footer-links ul li a:after {

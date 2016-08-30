@@ -66,7 +66,7 @@ HEADER STYLES
 		line-height: 20px;
 	}
 	.menu-bar ul > li > a:hover {
-		background-color: $top-active_bg;
+		background-color: dullen($sub-dark);
 	}
 	.menu-bar ul > li > a:hover,
 	.menu-bar ul li:hover > a, 
@@ -75,7 +75,7 @@ HEADER STYLES
 	.menu-bar ul li.current-menu-ancestor > a,
 	.menu-bar ul li.current_page_ancestor > a,
 	.menu-bar ul li.current-post-parent > a {
-		color: $top-active_c;
+		color: brighten($mono-frosty);
 	}
 	.menu-bar ul ul li a {
 		padding-top: 6px;
@@ -89,10 +89,10 @@ HEADER STYLES
 
 	// customize
 	.menu-bar ul {
-		border-top: 1px solid $top-active_bg;
+		border-top: 1px solid dullen($sub-dark);
 	}
 	.menu-bar ul li {
-		border-bottom: 1px solid $top-active_bg;
+		border-bottom: 1px solid dullen($sub-dark);
 	}
 	.menu-bar ul li a {
 		font-size: 0.85em;
@@ -110,17 +110,17 @@ HEADER STYLES
 
 .footer-links {
 	ul > li > a:hover {
-		color: $footer-active_c;
-		background-color: $footer-active_bg;
+		color: brighten($mono-frosty);
+		background-color: dullen($sub-dark);
 	}
 
 	ul {
 		float: left;
 		width: 100%;
-		border-top: 1px solid $top-active_bg;
+		border-top: 1px solid dullen($sub-dark);
 
 		li {
-			border-bottom: 1px solid $top-active_bg;
+			border-bottom: 1px solid dullen($sub-dark);
 
 			&:last-child {
 				border: none;
@@ -142,7 +142,7 @@ HEADER STYLES
 			&.current-menu-ancestor > a,
 			&.current_page_ancestor > a,
 			&.current-post-parent > a {
-				color: $footer-active_c;
+				color: brighten($mono-frosty);
 			}
 		}
 
