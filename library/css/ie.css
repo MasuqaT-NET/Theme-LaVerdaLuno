@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /******************************************************************
-Site Name:
-Author:
+Site Name: La Verda Luno
+Author: MasuqaT
 
 Stylesheet: IE Stylesheet
 
@@ -19,8 +19,8 @@ understand (what's inside the media queries). We also need to
 import the mixins file so SASS can understand the variables.
 ******************************************************************/
 /******************************************************************
-Site Name:
-Author:
+Site Name: La Verda Luno
+Author: MasuqaT
 
 Stylesheet: Sass Functions
 
@@ -70,8 +70,8 @@ To Unicode
 HSB
 ***/
 /******************************************************************
-Site Name:
-Author:
+Site Name: La Verda Luno
+Author: MasuqaT
 
 Stylesheet: Variables
 
@@ -87,8 +87,8 @@ Need help w/ choosing your colors? Try this site out:
 http://0to255.com/
 *********************/
 /******************************************************************
-Site Name:
-Author:
+Site Name: La Verda Luno
+Author: MasuqaT
 
 Stylesheet: Typography
 
@@ -163,8 +163,8 @@ p {
 }
 
 /******************************************************************
-Site Name:
-Author:
+Site Name: La Verda Luno
+Author: MasuqaT
 
 Stylesheet: Mixins Stylesheet
 
@@ -205,8 +205,8 @@ BOX SIZING
 /* NOTE: value of "padding-box" is only supported in Gecko. So
 probably best not to use it. I mean, were you going to anyway? */
 /******************************************************************
-Site Name:
-Author:
+Site Name: La Verda Luno
+Author: MasuqaT
 
 Stylesheet: IE Grid Styles
 
@@ -219,8 +219,8 @@ whatever you use in here.
 
 ******************************************************************/
 /******************************************************************
-Site Name:
-Author:
+Site Name: La Verda Luno
+Author: MasuqaT
 
 Stylesheet: 481px and Up Stylesheet
 
@@ -503,8 +503,8 @@ do they need tweaking?
 
 /* end .footer-links */
 /******************************************************************
-Site Name:
-Author:
+Site Name: La Verda Luno
+Author: MasuqaT
 
 Stylesheet: Tablet & Small Desktop Stylesheet
 
@@ -567,8 +567,8 @@ mobile. Make sure to double check these!
 
 /* end .footer-links */
 /******************************************************************
-Site Name:
-Author:
+Site Name: La Verda Luno
+Author: MasuqaT
 
 Stylesheet: Desktop Stylsheet
 
@@ -623,9 +623,13 @@ be seen on the Desktop.
   right: 35px;
 }
 
-/**
-Specific decorations for La Verda Luno
-**/
+/******************************************************************
+Site Name: La Verda Luno
+Author: MasuqaT
+
+Stylesheet: Specific decorations for La Verda Luno
+
+******************************************************************/
 /*
 you can call the larger styles if you want, but there's really no need
 */

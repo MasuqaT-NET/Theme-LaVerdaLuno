@@ -1,6 +1,7 @@
 <?php
 /*
 Author: Eddie Machado
+Editor: MasuqaT
 URL: http://themble.com/bones/
 
 This is where you can drop your custom functions or
