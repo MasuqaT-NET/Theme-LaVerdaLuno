@@ -180,3 +180,44 @@ nav.advent-calender {
 		}
 	}
 }
+
+// Series Navigation
+nav.series {
+	background-color: $sub-light;
+	overflow: hidden;
+	padding: ($padding-size * 2) ($padding-size * 3);
+	margin-bottom: $font-size;
+	border: $padding-size solid $sub-dark;
+
+	header {
+		padding: 0;
+		margin-bottom: $padding-size;
+		border: none;
+		text-align: center;
+		font-size: ($font-size + 1);
+		
+		span {
+			margin-left: $font-size;
+		}
+	}
+
+	div.prev {
+		float: left;
+
+		a:before {
+			content: "\f0d9";
+			font-family: $icon-font;
+			margin-right: $padding-size;
+		}
+	}
+
+	div.next {
+		float: right;
+
+		a:after {
+			content: "\f0da";
+			font-family: $icon-font;
+			margin-left: $padding-size;
+		}
+	}
+}

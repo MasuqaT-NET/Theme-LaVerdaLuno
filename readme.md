@@ -50,6 +50,14 @@ Custom styles:
 	<div class="next"><span>4日目</span><a href="http://google.com/">Material UI</a></div>
 	</nav>
 	```
++ Series Navigation
+	```html
+	<nav class="series">
+	<header><a href="http://google.com/">LaVerdaLuno Series</a></header>
+	<div class="prev"><a href="http://google.com/">Metro UI</a></div>
+	<div class="next"><a href="http://google.com/">Material UI</a></div>
+	</nav>
+	```
 
 Using plugins:
 + Akismet
