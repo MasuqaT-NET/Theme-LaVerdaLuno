@@ -2856,7 +2856,7 @@ POSTS & CONTENT STYLES
   background: #f2f2f2;
   padding: 10px;
   margin: 0 0 16px 0;
-  border: 5px solid #52232b;
+  border: 5px solid #523c3f;
   /* images inside wp-caption */
 }
 /* line 1046, ../scss/breakpoints/_base.scss */
@@ -2889,7 +2889,7 @@ POSTS & CONTENT STYLES
   justify-content: space-around;
   align-items: center;
   align-content: space-around;
-  border: 5px solid #52232b;
+  border: 5px solid #523c3f;
   margin-bottom: 16px;
 }
 /* line 1079, ../scss/breakpoints/_base.scss */
