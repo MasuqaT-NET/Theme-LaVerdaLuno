@@ -232,10 +232,10 @@ HSB
     @return hsb-to-rgb(nth($hsb, 1), nth($hsb, 2), $b);
 }
 
-@function brighten($baseColor, $percentage: 10%) {
+@function brighten($baseColor, $percentage) {
     @return adjust-bright($baseColor, $percentage / 1%);
 }
 
-@function dullen($baseColor, $percentage: 10%) {
+@function dullen($baseColor, $percentage) {
     @return brighten($baseColor, -$percentage);
 }

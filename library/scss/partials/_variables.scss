@@ -21,17 +21,11 @@ http://0to255.com/
 $font-size:			16px;
 $padding-size:		5px;
 
-/*
+// color making rule
+// + hover or focus -> dullen a% or brighten a%, a is text -> 12%, a is background or border -> 8%
+// + don't mix color, make new color
+// + remove color definition without color scheme
 
-color making rule
-+ hover or focus -> darken 10% or lighten 10%
-+ don't mix color, make new color
-+ remove color definition without color scheme
-
-*/
-//
-// color scheme
-//
 // mono
 $mono-white:				hsb(0, 0, 100);
 $mono-smoke:				hsb(0, 0, 95);
@@ -68,8 +62,5 @@ $icon-background:			#2C3E50;
 // very common colors
 $text-color:				$mono-dark;
 $link-color:				$accent-normal;
-$link-hover-color:			dullen($link-color);
+$link-hover-color:			dullen($link-color, 12%);
 $border-color:				$mono-silver;
-//
-// end of color scheme
-//

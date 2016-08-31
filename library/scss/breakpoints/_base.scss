@@ -76,7 +76,7 @@ LAYOUT & GRID STYLES
 }
 
 ::selection {
-	background-color: rgba(dullen($icon-base), 0.5);
+	background-color: rgba($icon-base, 0.5);
 	color: $mono-white;
 }
 
@@ -186,13 +186,13 @@ HEADER STYLES
 		height: 50px;
 		float: right;
 		cursor: pointer;
-		color: brighten($mono-frosty);
+		color: brighten($mono-frosty, 12%);
 		text-align: center;
 	}
 	.menu-toggle:hover,
 	.menu-toggle.active {
-		color: brighten($mono-frosty);
-		background: dullen($sub-dark);
+		color: brighten($mono-frosty, 12%);
+		background: dullen($sub-dark, 8%);
 		}
 	.menu-toggle i {
 		padding: 10px 0;
@@ -267,7 +267,7 @@ HEADER STYLES
 	.menu-bar ul li.current-menu-ancestor > a,
 	.menu-bar ul li.current_page_ancestor > a,
 	.menu-bar ul li.current-post-parent > a {
-		color: brighten($mono-frosty);
+		color: brighten($mono-frosty, 12%);
 	}
 
 // top-bar search
@@ -290,7 +290,7 @@ HEADER STYLES
 	.search-toggle:hover,
 	.search-toggle:focus,
 	.search-toggle.active {
-		background: dullen($sub-dark);
+		background: dullen($sub-dark, 8%);
 	}
 	.search-expand {
 		position: absolute;
@@ -306,7 +306,7 @@ HEADER STYLES
 	}
 	.search-expand-inner {
 		padding: 15px;
-		background: dullen($sub-dark);
+		background: dullen($sub-dark, 8%);
 	}
 	.site-search .search-form .search-submit {
 	}
@@ -362,7 +362,7 @@ POSTS & CONTENT STYLES
 		text-decoration: none;
 
 		&:hover, &:focus {
-			color: dullen($mono-silver);
+			color: dullen($mono-silver, 12%);
 		}
 	}
 
@@ -934,7 +934,7 @@ POSTS & CONTENT STYLES
 						color: $accent-deep;
 
 						&:hover, &:focus {
-							color: dullen($accent-deep);
+							color: dullen($accent-deep, 12%);
 						}
 					}
 				}
@@ -1340,7 +1340,7 @@ COMMENT STYLES
 			 color: $mono-silver;
 
 			 &:hover, &:focus {
-				 color: dullen($mono-silver);
+				 color: dullen($mono-silver, 12%);
 			 }
 		 }
 
@@ -1821,7 +1821,7 @@ FOOTER STYLES
 	.footer-links ul li.current-menu-ancestor > a,
 	.footer-links ul li.current_page_ancestor > a,
 	.footer-links ul li.current-post-parent > a {
-		color: brighten($mono-frosty);
+		color: brighten($mono-frosty, 12%);
 	}
 
 	.copyright {
@@ -1834,7 +1834,7 @@ FOOTER STYLES
 			text-decoration: none;
 
 			&:hover, &:focus {
-				color: brighten($mono-frosty);
+				color: brighten($mono-frosty, 12%);
 			}
 		}
 	}
