@@ -717,6 +717,16 @@ section.references ul li:before {
   font-family: "FontAwesome";
 }
 
+/* line 104, ../scss/_additional.scss */
+span.mumble {
+  font-size: 13px;
+  color: #bfbfbf;
+}
+/* line 108, ../scss/_additional.scss */
+.format-status span.mumble {
+  color: gray;
+}
+
 /*
 you can call the larger styles if you want, but there's really no need
 */

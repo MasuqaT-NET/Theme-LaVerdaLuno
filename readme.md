@@ -31,6 +31,10 @@ Custom styles:
 	</ul>
 	</section>
 	```
++ Mumble Span
+	```html
+	ただし、説明引きれがいるです<span class="mumble">表現権は定義明瞭法がさ以下、その利用も例の定義SA</span>には著作いっで。
+	```
 
 Using plugins:
 + Akismet

@@ -99,3 +99,13 @@ section.references {
 		}
 	}
 }
+
+// Mumble Span
+span.mumble {
+	font-size: ($font-size - 3);
+	color: $mono-silver;
+
+	.format-status & {
+		color: $mono-gray;
+	}
+}
