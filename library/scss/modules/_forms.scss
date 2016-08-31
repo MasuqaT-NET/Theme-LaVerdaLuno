@@ -72,14 +72,14 @@ textarea,
   &:focus,
   &:active {
     outline: 0;
-    border-color: dullen($border-color, 8%);
+    border-color: dullen($border-color, 5%);
     -webkit-box-shadow: none;
       -moz-box-shadow: none;
         box-shadow: none;
-    background-color: dullen($mono-white, 8%);
+    background-color: dullen($mono-white, 5%);
 
     &:-webkit-autofill {
-      -webkit-box-shadow: 0 0 0px 1000px dullen($mono-white, 8%) inset;
+      -webkit-box-shadow: 0 0 0px 1000px dullen($mono-white, 5%) inset;
       -webkit-text-fill-color: $text-color;
     }
   } // end hover or focus
@@ -117,7 +117,7 @@ textarea,
 
     &:focus,
     &:active {
-      background-color: brighten($mono-silver, 8%);
+      background-color: brighten($mono-silver, 5%);
     } // end disabled focus
 
   } // end disabled input

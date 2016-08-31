@@ -41,7 +41,7 @@ http://www.youtube.com/watch?v=hwdVpKiJzac
 
   // hovering on the btn
   &:hover, &:focus {
-    color: brighten($mono-frosty, 12%);
+    color: brighten($mono-frosty, 15%);
     text-decoration: none;
     outline: none;
   } // end hover
@@ -65,13 +65,13 @@ and it will create a button dependant on those variables.
 
   &:hover,
   &:focus {
-    background-color: brighten($accent-dim, 8%);
-    color: brighten($mono-frosty, 12%);
+    background-color: brighten($accent-dim, 5%);
+    color: brighten($mono-frosty, 15%);
   } // end hover
 
   &:active {
-    background-color: brighten($accent-dim, 8%);
-    color: brighten($mono-frosty, 12%);
+    background-color: brighten($accent-dim, 5%);
+    color: brighten($mono-frosty, 15%);
   } // end active
 
 } // end blue button
@@ -141,11 +141,11 @@ input[type="button"]:hover,
 input[type="button"]:focus,
 input[type="submit"]:hover,
 input[type="submit"]:focus {
-	color: brighten($mono-frosty, 12%);
-	background-color: dullen($accent-dim, 8%);
+	color: brighten($mono-frosty, 15%);
+	background-color: dullen($accent-dim, 5%);
 }
 input[type="reset"]:hover,
 input[type="reset"]:focus {
-	color: dullen($mono-dark, 12%);
-	background-color: brighten($mono-frosty, 8%);
+	color: dullen($mono-dark, 15%);
+	background-color: brighten($mono-frosty, 5%);
 }

@@ -73,7 +73,7 @@ HEADER STYLES
 	}
 	.menu-bar ul > li > a:hover, 
 	.menu-bar ul > li:hover > a {
-		background-color: dullen($sub-dark, 8%);
+		background-color: dullen($sub-dark, 5%);
 	}
 	.menu-bar ul li > a:hover, 
 	.menu-bar ul li:hover > a, 
@@ -82,7 +82,7 @@ HEADER STYLES
 	.menu-bar ul li.current-menu-ancestor > a,
 	.menu-bar ul li.current_page_ancestor > a,
 	.menu-bar ul li.current-post-parent > a {
-		color: brighten($mono-frosty, 12%);
+		color: brighten($mono-frosty, 15%);
 	}
 
 	// customize
@@ -99,8 +99,8 @@ HEADER STYLES
 	.menu-bar ul ul li:hover > a,
 	.menu-bar ul ul li > a:focus,
 	.menu-bar ul ul li:focus > a {
-		color: dullen($mono-gray, 12%);
-		background-color: dullen($mono-white, 8%);
+		color: dullen($mono-gray, 15%);
+		background-color: dullen($mono-white, 5%);
 	}
 	.menu-bar ul ul li.current_page_item > a, 
 	.menu-bar ul ul li.current-menu-item > a,
@@ -193,8 +193,8 @@ do they need tweaking?
 	}
 	.footer-links ul > li > a:hover, 
 	.footer-links ul > li:hover > a {
-		color: brighten($mono-frosty, 12%);
-		background-color: dullen($sub-dark, 8%);
+		color: brighten($mono-frosty, 15%);
+		background-color: dullen($sub-dark, 5%);
 	}
 	.footer-links ul li > a:hover, 
 	.footer-links ul li:hover > a, 
@@ -203,7 +203,7 @@ do they need tweaking?
 	.footer-links ul li.current-menu-ancestor > a,
 	.footer-links ul li.current_page_ancestor > a,
 	.footer-links ul li.current-post-parent > a {
-		color: brighten($mono-frosty, 12%);
+		color: brighten($mono-frosty, 15%);
 	}
 
 	// customize
@@ -221,8 +221,8 @@ do they need tweaking?
 	.footer-links ul ul li:hover > a,
 	.footer-links ul ul li > a:focus, 
 	.footer-links ul ul li:focus > a {
-		color: dullen($mono-gray, 12%);
-		background-color: dullen($mono-white, 8%);
+		color: dullen($mono-gray, 15%);
+		background-color: dullen($mono-white, 5%);
 	}
 	.footer-links ul ul li.current_page_item > a, 
 	.footer-links ul ul li.current-menu-item > a,

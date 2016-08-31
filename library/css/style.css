@@ -1150,12 +1150,12 @@ and it will create a button dependant on those variables.
 }
 /* line 66, ../scss/modules/_buttons.scss */
 .form-btn:hover, .comment-reply-link:hover, #submit:hover, .form-btn:focus, .comment-reply-link:focus, #submit:focus {
-  background-color: #b24d5e;
+  background-color: #ab495a;
   color: white;
 }
 /* line 72, ../scss/modules/_buttons.scss */
 .form-btn:active, .comment-reply-link:active, #submit:active {
-  background-color: #b24d5e;
+  background-color: #ab495a;
   color: white;
 }
 
@@ -1235,14 +1235,14 @@ input[type="button"]:focus,
 input[type="submit"]:hover,
 input[type="submit"]:focus {
   color: white;
-  background-color: #8a3b48;
+  background-color: #913f4c;
 }
 
 /* line 147, ../scss/modules/_buttons.scss */
 input[type="reset"]:hover,
 input[type="reset"]:focus {
-  color: #212121;
-  background-color: #fafafa;
+  color: #1a1a1a;
+  background-color: #f3f3f3;
 }
 
 /******************************************************************
@@ -1368,11 +1368,11 @@ textarea:active,
 .form-control:focus,
 .form-control:active {
   outline: 0;
-  border-color: #ababab;
+  border-color: #b2b2b2;
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none;
-  background-color: #ebebeb;
+  background-color: #f2f2f2;
 }
 /* line 81, ../scss/modules/_forms.scss */
 input[type="text"]:focus:-webkit-autofill, input[type="text"]:active:-webkit-autofill,
@@ -1410,7 +1410,7 @@ textarea:active:-webkit-autofill,
 .field:active:-webkit-autofill,
 .form-control:focus:-webkit-autofill,
 .form-control:active:-webkit-autofill {
-  -webkit-box-shadow: 0 0 0px 1000px #ebebeb inset;
+  -webkit-box-shadow: 0 0 0px 1000px #f2f2f2 inset;
   -webkit-text-fill-color: #404040;
 }
 /* line 88, ../scss/modules/_forms.scss */
@@ -1611,7 +1611,7 @@ textarea.is-disabled:active,
 .form-control[disabled]:active,
 .form-control.is-disabled:focus,
 .form-control.is-disabled:active {
-  background-color: lightgray;
+  background-color: #cccccc;
 }
 
 /* line 128, ../scss/modules/_forms.scss */
@@ -1757,7 +1757,7 @@ a, a:visited {
 }
 /* line 100, ../scss/breakpoints/_base.scss */
 a:hover, a:focus, a:visited:hover, a:visited:focus {
-  color: #b24d5e;
+  color: #ab4a5a;
 }
 /* line 104, ../scss/breakpoints/_base.scss */
 a:focus, a:visited:focus {
@@ -1855,7 +1855,7 @@ HEADER STYLES
 .menu-toggle:hover,
 .menu-toggle.active {
   color: white;
-  background: #324148;
+  background: #37474f;
 }
 
 /* line 197, ../scss/breakpoints/_base.scss */
@@ -1976,7 +1976,7 @@ HEADER STYLES
 .search-toggle:hover,
 .search-toggle:focus,
 .search-toggle.active {
-  background: #324148;
+  background: #37474f;
 }
 
 /* line 295, ../scss/breakpoints/_base.scss */
@@ -1996,7 +1996,7 @@ HEADER STYLES
 /* line 307, ../scss/breakpoints/_base.scss */
 .search-expand-inner {
   padding: 15px;
-  background: #324148;
+  background: #37474f;
 }
 
 /* line 317, ../scss/breakpoints/_base.scss */
@@ -2057,7 +2057,7 @@ POSTS & CONTENT STYLES
 }
 /* line 364, ../scss/breakpoints/_base.scss */
 .entry-meta a:hover, .entry-meta a:focus {
-  color: #a0a0a0;
+  color: #999999;
 }
 /* line 369, ../scss/breakpoints/_base.scss */
 .entry-meta .fa {
@@ -2223,7 +2223,7 @@ POSTS & CONTENT STYLES
 }
 /* line 537, ../scss/breakpoints/_base.scss */
 .entry-content a:hover, .entry-content a:focus {
-  color: #b24d5e;
+  color: #ab4a5a;
 }
 /* line 542, ../scss/breakpoints/_base.scss */
 .entry-content h1, .entry-content h2, .entry-content h3, .entry-content h4, .entry-content h5, .entry-content h6 {
@@ -2761,7 +2761,7 @@ POSTS & CONTENT STYLES
 }
 /* line 936, ../scss/breakpoints/_base.scss */
 .entry-content sup[id|="fnref"]:target a:hover, .entry-content sup[id|="fnref"]:target a:focus {
-  color: #33161b;
+  color: #2c1317;
 }
 /* line 943, ../scss/breakpoints/_base.scss */
 .entry-content div.footnotes {
@@ -3115,7 +3115,7 @@ COMMENT STYLES
 }
 /* line 1342, ../scss/breakpoints/_base.scss */
 .comment .comment-meta .comment-metadata > a:hover, .comment .comment-meta .comment-metadata > a:focus {
-  color: #a0a0a0;
+  color: #999999;
 }
 /* line 1347, ../scss/breakpoints/_base.scss */
 .comment .comment-meta .comment-awaiting-moderation {
@@ -3690,7 +3690,7 @@ NINJA omatome button
 
   /* line 68, ../scss/breakpoints/_mini.scss */
   .menu-bar ul > li > a:hover {
-    background-color: #324148;
+    background-color: #37474f;
   }
 
   /* line 71, ../scss/breakpoints/_mini.scss */
@@ -3719,12 +3719,12 @@ NINJA omatome button
 
   /* line 91, ../scss/breakpoints/_mini.scss */
   .menu-bar ul {
-    border-top: 1px solid #324148;
+    border-top: 1px solid #37474f;
   }
 
   /* line 94, ../scss/breakpoints/_mini.scss */
   .menu-bar ul li {
-    border-bottom: 1px solid #324148;
+    border-bottom: 1px solid #37474f;
   }
 
   /* line 97, ../scss/breakpoints/_mini.scss */
@@ -3748,17 +3748,17 @@ NINJA omatome button
   /* line 112, ../scss/breakpoints/_mini.scss */
   .footer-links ul > li > a:hover {
     color: white;
-    background-color: #324148;
+    background-color: #37474f;
   }
   /* line 117, ../scss/breakpoints/_mini.scss */
   .footer-links ul {
     float: left;
     width: 100%;
-    border-top: 1px solid #324148;
+    border-top: 1px solid #37474f;
   }
   /* line 122, ../scss/breakpoints/_mini.scss */
   .footer-links ul li {
-    border-bottom: 1px solid #324148;
+    border-bottom: 1px solid #37474f;
   }
   /* line 125, ../scss/breakpoints/_mini.scss */
   .footer-links ul li:last-child {
@@ -3887,7 +3887,7 @@ tweeners.
   /* line 74, ../scss/breakpoints/_481up.scss */
   .menu-bar ul > li > a:hover,
   .menu-bar ul > li:hover > a {
-    background-color: #324148;
+    background-color: #37474f;
   }
 
   /* line 78, ../scss/breakpoints/_481up.scss */
@@ -3919,8 +3919,8 @@ tweeners.
   .menu-bar ul ul li:hover > a,
   .menu-bar ul ul li > a:focus,
   .menu-bar ul ul li:focus > a {
-    color: #616161;
-    background-color: #ebebeb;
+    color: #5a5a5a;
+    background-color: #f2f2f2;
   }
 
   /* line 105, ../scss/breakpoints/_481up.scss */
@@ -4032,7 +4032,7 @@ tweeners.
   .footer-links ul > li > a:hover,
   .footer-links ul > li:hover > a {
     color: white;
-    background-color: #324148;
+    background-color: #37474f;
   }
 
   /* line 199, ../scss/breakpoints/_481up.scss */
@@ -4064,8 +4064,8 @@ tweeners.
   .footer-links ul ul li:hover > a,
   .footer-links ul ul li > a:focus,
   .footer-links ul ul li:focus > a {
-    color: #616161;
-    background-color: #ebebeb;
+    color: #5a5a5a;
+    background-color: #f2f2f2;
   }
 
   /* line 227, ../scss/breakpoints/_481up.scss */

@@ -301,7 +301,7 @@ HEADER STYLES
 /* line 74, ../scss/breakpoints/_481up.scss */
 .menu-bar ul > li > a:hover,
 .menu-bar ul > li:hover > a {
-  background-color: #324148;
+  background-color: #37474f;
 }
 
 /* line 78, ../scss/breakpoints/_481up.scss */
@@ -333,8 +333,8 @@ HEADER STYLES
 .menu-bar ul ul li:hover > a,
 .menu-bar ul ul li > a:focus,
 .menu-bar ul ul li:focus > a {
-  color: #616161;
-  background-color: #ebebeb;
+  color: #5a5a5a;
+  background-color: #f2f2f2;
 }
 
 /* line 105, ../scss/breakpoints/_481up.scss */
@@ -446,7 +446,7 @@ do they need tweaking?
 .footer-links ul > li > a:hover,
 .footer-links ul > li:hover > a {
   color: white;
-  background-color: #324148;
+  background-color: #37474f;
 }
 
 /* line 199, ../scss/breakpoints/_481up.scss */
@@ -478,8 +478,8 @@ do they need tweaking?
 .footer-links ul ul li:hover > a,
 .footer-links ul ul li > a:focus,
 .footer-links ul ul li:focus > a {
-  color: #616161;
-  background-color: #ebebeb;
+  color: #5a5a5a;
+  background-color: #f2f2f2;
 }
 
 /* line 227, ../scss/breakpoints/_481up.scss */
