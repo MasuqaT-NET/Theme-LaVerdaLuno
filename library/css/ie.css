@@ -751,7 +751,12 @@ nav.advent-calender {
   margin-bottom: 16px;
   border: 5px solid #52232b;
 }
-/* line 137, ../scss/_additional.scss */
+/* line 138, ../scss/_additional.scss */
+nav.advent-calender a[target="_blank"]:after {
+  content: "";
+  position: static;
+}
+/* line 144, ../scss/_additional.scss */
 nav.advent-calender header {
   padding: 0;
   margin-bottom: 5px;
@@ -759,42 +764,42 @@ nav.advent-calender header {
   text-align: center;
   font-size: 17px;
 }
-/* line 144, ../scss/_additional.scss */
+/* line 151, ../scss/_additional.scss */
 nav.advent-calender header span {
   margin-left: 16px;
 }
-/* line 149, ../scss/_additional.scss */
+/* line 156, ../scss/_additional.scss */
 nav.advent-calender div.prev {
   float: left;
 }
-/* line 152, ../scss/_additional.scss */
+/* line 159, ../scss/_additional.scss */
 nav.advent-calender div.prev:before {
   content: "\f190";
   font-family: "FontAwesome";
   margin-right: 5px;
 }
-/* line 159, ../scss/_additional.scss */
+/* line 166, ../scss/_additional.scss */
 nav.advent-calender div.prev span:after {
   content: ":";
   margin-right: 5px;
 }
-/* line 166, ../scss/_additional.scss */
+/* line 173, ../scss/_additional.scss */
 nav.advent-calender div.next {
   float: right;
 }
-/* line 170, ../scss/_additional.scss */
+/* line 177, ../scss/_additional.scss */
 nav.advent-calender div.next span:after {
   content: ":";
   margin-right: 5px;
 }
-/* line 176, ../scss/_additional.scss */
+/* line 183, ../scss/_additional.scss */
 nav.advent-calender div.next:after {
   content: "\f18e";
   font-family: "FontAwesome";
   margin-left: 5px;
 }
 
-/* line 185, ../scss/_additional.scss */
+/* line 192, ../scss/_additional.scss */
 nav.series {
   background-color: #9fcde3;
   overflow: hidden;
@@ -802,7 +807,12 @@ nav.series {
   margin-bottom: 16px;
   border: 5px solid #40535c;
 }
-/* line 192, ../scss/_additional.scss */
+/* line 200, ../scss/_additional.scss */
+nav.series a[target="_blank"]:after {
+  content: "";
+  position: static;
+}
+/* line 206, ../scss/_additional.scss */
 nav.series header {
   padding: 0;
   margin-bottom: 5px;
@@ -810,28 +820,30 @@ nav.series header {
   text-align: center;
   font-size: 17px;
 }
-/* line 199, ../scss/_additional.scss */
+/* line 213, ../scss/_additional.scss */
 nav.series header span {
   margin-left: 16px;
 }
-/* line 204, ../scss/_additional.scss */
+/* line 218, ../scss/_additional.scss */
 nav.series div.prev {
   float: left;
 }
-/* line 207, ../scss/_additional.scss */
+/* line 221, ../scss/_additional.scss */
 nav.series div.prev a:before {
   content: "\f0d9";
   font-family: "FontAwesome";
+  font-size: 16px;
   margin-right: 5px;
 }
-/* line 214, ../scss/_additional.scss */
+/* line 229, ../scss/_additional.scss */
 nav.series div.next {
   float: right;
 }
-/* line 217, ../scss/_additional.scss */
+/* line 232, ../scss/_additional.scss */
 nav.series div.next a:after {
   content: "\f0da";
   font-family: "FontAwesome";
+  font-size: 16px;
   margin-left: 5px;
 }
 

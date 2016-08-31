@@ -134,6 +134,13 @@ nav.advent-calender {
 	margin-bottom: $font-size;
 	border: $padding-size solid $accent-deep;
 
+	a[target="_blank"] {
+		&:after {
+			content: "";
+			position: static;
+		}
+	}
+
 	header {
 		padding: 0;
 		margin-bottom: $padding-size;
@@ -189,6 +196,13 @@ nav.series {
 	margin-bottom: $font-size;
 	border: $padding-size solid $sub-dark;
 
+	a[target="_blank"] {
+		&:after {
+			content: "";
+			position: static;
+		}
+	}
+
 	header {
 		padding: 0;
 		margin-bottom: $padding-size;
@@ -207,6 +221,7 @@ nav.series {
 		a:before {
 			content: "\f0d9";
 			font-family: $icon-font;
+			font-size: $font-size;
 			margin-right: $padding-size;
 		}
 	}
@@ -217,6 +232,7 @@ nav.series {
 		a:after {
 			content: "\f0da";
 			font-family: $icon-font;
+			font-size: $font-size;
 			margin-left: $padding-size;
 		}
 	}

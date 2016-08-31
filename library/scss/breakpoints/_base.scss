@@ -118,6 +118,17 @@ a, a:visited {
 		*/
 		-webkit-tap-highlight-color : rgba( 0, 0, 0, 0.3 );
 	}
+
+	&[target="_blank"] {
+		&:after {
+			content: "\f08e";
+			font-family: $icon-font;
+			font-size: ($font-size / 2);
+			position: relative;
+			bottom: ($font-size / 4);
+			margin-left: 2px;
+		}
+	}
 }
 
 /******************************************************************

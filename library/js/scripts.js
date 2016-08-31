@@ -363,8 +363,6 @@ function navbar_event() {
 
 $(function() {
   $(window).on("load", function() {
-    console.debug("loaded");
-
     // 忍者おまとめボタン
     $(".ninja_onebutton_output_responsive").children().each(function() {
       targetize($(this));
@@ -390,6 +388,28 @@ $(function() {
       }
       timer = setTimeout(navbar_event, 200);
     });
-  }); // end of on 'load''
+  }); // end of on 'load'
 });
 
+/////////////////////////////////
+// target="_blank" 自動付加
+/////////////////////////////////
+
+$(function() {
+  $(window).on("load", function() {
+    $("#main").find(".entry-content a").each(function() {
+      var elem = $(this); 
+      var url = elem.attr("href");
+      
+      if(url.startsWith("#") || url.startsWith("javascript:") || elem.attr("target")
+          // ignore list
+          || elem.hasClass("more-link") // continue reading
+          || elem.hasClass("fancybox")  // image, gallary
+        ) {
+        return;
+      } else {
+        $(this).attr("target", "_blank");
+      }
+    });
+  }); // end of on 'load'
+})
