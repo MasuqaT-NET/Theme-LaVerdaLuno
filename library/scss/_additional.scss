@@ -109,3 +109,19 @@ span.mumble {
 		color: $mono-gray;
 	}
 }
+
+// Old Information Caution
+section.oldinfo {
+	margin-bottom: $font-size;
+	background-color: $mono-smoke;
+	border: 5px solid $accent-normal;
+	padding: 0 ($padding-size * 3);
+	overflow: hidden;
+
+	h1 {
+		font-size: 2em;
+		font-weight: bold;
+		margin: 0.75em 0 0.5em 0;
+		color: $sub-dark;
+	}
+}

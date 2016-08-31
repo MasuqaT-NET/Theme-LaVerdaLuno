@@ -35,6 +35,13 @@ Custom styles:
 	```html
 	ただし、説明引きれがいるです<span class="mumble">表現権は定義明瞭法がさ以下、その利用も例の定義SA</span>には著作いっで。
 	```
++ Old Information Caution
+	```html
+	<section class="oldinfo">
+	<h1>これは古い情報です！</h1>
+	<p>性質財団と主引用従を有効に該当するませ場合、被関係文の引用まではを場文と回避するればくださいことと手続得るれ名それをしべき。</p>
+	</section>
+	```
 
 Using plugins:
 + Akismet

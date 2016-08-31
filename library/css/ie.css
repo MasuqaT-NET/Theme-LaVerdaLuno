@@ -727,6 +727,22 @@ span.mumble {
   color: gray;
 }
 
+/* line 114, ../scss/_additional.scss */
+section.oldinfo {
+  margin-bottom: 16px;
+  background-color: #f2f2f2;
+  border: 5px solid #d15a6e;
+  padding: 0 15px;
+  overflow: hidden;
+}
+/* line 121, ../scss/_additional.scss */
+section.oldinfo h1 {
+  font-size: 2em;
+  font-weight: bold;
+  margin: 0.75em 0 0.5em 0;
+  color: #40535c;
+}
+
 /*
 you can call the larger styles if you want, but there's really no need
 */
