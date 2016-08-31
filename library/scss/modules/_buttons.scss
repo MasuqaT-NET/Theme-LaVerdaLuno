@@ -92,7 +92,7 @@ input[type="submit"] {
 	border: 1px solid transparent;
   border-radius: 0;
 	white-space: nowrap;
-	padding: $padding-size ($padding-size * 3 + 2);
+	padding: ($padding-size + 2) ($padding-size * 3 + 2) $padding-size;
 	font-size: ($font-size - 2);
 	line-height: 1.5;
   color: $mono-frosty;
