@@ -65,10 +65,10 @@ Using plugins:
 + Easy FancyBox
 + Google XML Sitemaps
 + JP Markdown
-+ MathJax-Latex
-+ SyntxHighlighter Evolved
++ MathJax-LaTex
++ SyntaxHighlighter Evolved
 + Slim Maintenance Mode
-+ WP File Manager
++ File Manager (by mndpsingh287)
 + WP Pusher
 
 Considered widgets:
