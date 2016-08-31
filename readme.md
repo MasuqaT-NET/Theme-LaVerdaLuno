@@ -8,6 +8,19 @@ Base: Bones designed by Eddie Machado
 Inspired by Flato
 [http://themememe.com/flato]()
 
+Custom styles:
++ Gorgeous Blockquote
+	```html
+	<blockquote class="gorgeous">
+	<header><h1>タイトル</h1>サブタイトル</header>
+	<div>
+	<p>記事者前記は、対象・記事が避ける理事は要件ませでことに書籍をでき以下で、編集の方針でする点を記事という、否にも短い記事のコンテンツでしませます。</p>
+	<p>その条件の映画について、米国の明示者性や、本要求物(GFDLコンテンツプロジェクト情報目的License商業権利)の充足社権としてプライバシー著作執筆のことん、参考を適法あるますものを区別するばいるん。</p>
+	</div>
+	<footer>引用:<a href="http://google.com/" target="_blank">引用元</a></footer>
+	</blockquote>
+	```
+
 Using plugins:
 + Akismet
 + All In One SEO Pack 

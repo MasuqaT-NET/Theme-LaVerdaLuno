@@ -4484,3 +4484,68 @@ Author: MasuqaT
 Stylesheet: Specific decorations for La Verda Luno
 
 ******************************************************************/
+/* line 10, ../scss/_additional.scss */
+blockquote.gorgeous {
+  background: #e6e6e6;
+}
+/* line 13, ../scss/_additional.scss */
+blockquote.gorgeous:before {
+  display: none;
+}
+/* line 17, ../scss/_additional.scss */
+blockquote.gorgeous:after {
+  content: "\f10e";
+  font-family: "FontAwesome";
+  position: absolute;
+  right: 0.25em;
+  top: -0.125em;
+  color: #f2f2f2;
+  font-size: 64px;
+}
+/* line 27, ../scss/_additional.scss */
+blockquote.gorgeous header {
+  padding: 0;
+  border: none;
+  margin-bottom: 1em;
+}
+/* line 32, ../scss/_additional.scss */
+blockquote.gorgeous header h1 {
+  margin: 0;
+  display: inline-block;
+  font-size: 2em;
+  font-weight: bold;
+}
+/* line 38, ../scss/_additional.scss */
+blockquote.gorgeous header h1:before {
+  content: "\f0a4";
+  font-family: "FontAwesome";
+  font-size: 0.75em;
+  position: relative;
+  bottom: 2px;
+  margin-right: 5px;
+}
+/* line 49, ../scss/_additional.scss */
+blockquote.gorgeous header p {
+  display: inline-block;
+  font-size: 16px;
+  position: relative;
+  top: 0.25em;
+}
+/* line 63, ../scss/_additional.scss */
+blockquote.gorgeous footer {
+  padding: 0;
+  border: none;
+  margin-top: 1em;
+  text-align: right;
+}
+/* line 69, ../scss/_additional.scss */
+blockquote.gorgeous footer:before {
+  content: "";
+  height: 1px;
+  background-color: #404040;
+  display: inline-block;
+  width: 3.5em;
+  position: relative;
+  bottom: 5px;
+  margin-right: 2px;
+}

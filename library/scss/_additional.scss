@@ -5,3 +5,76 @@ Author: MasuqaT
 Stylesheet: Specific decorations for La Verda Luno
 
 ******************************************************************/
+
+// Gorgeous Blockquote
+blockquote.gorgeous {
+	background: $mono-frosty;
+
+	&:before {
+		display: none;
+	}
+
+	&:after {
+		content: "\f10e";
+		font-family: $icon-font;
+		position: absolute;
+		right: 0.25em;
+		top: -0.125em;
+		color: $mono-smoke;
+		font-size: ($font-size * 4);
+	}
+
+	header {
+		padding: 0;
+		border: none;
+		margin-bottom: 1em;
+
+		h1 {
+			margin: 0;
+			display: inline-block;
+			font-size: 2em;
+			font-weight: bold;
+
+			&:before {
+				content: "\f0a4";
+				font-family: $icon-font;
+				font-size: 0.75em;
+				position: relative;
+				bottom: 2px;
+				margin-right: $padding-size;
+
+			}
+		}
+
+		p {
+			display: inline-block;
+			font-size: $font-size;
+			position: relative;
+			top: 0.25em;
+		}
+	}
+
+	div {
+		p {
+			
+		}
+	}
+
+	footer {
+		padding: 0;
+		border: none;
+		margin-top: 1em;
+		text-align: right;
+
+		&:before{
+			content: "";
+			height: 1px;
+			background-color: $text-color;
+			display: inline-block;
+			width: 3.5em;
+			position: relative;
+			bottom: 5px;
+			margin-right: 2px;
+		}
+	}
+}
