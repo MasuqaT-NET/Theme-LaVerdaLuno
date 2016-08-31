@@ -1153,17 +1153,17 @@ and it will create a button dependant on those variables.
 */
 /* line 61, ../scss/modules/_buttons.scss */
 .form-btn, .comment-reply-link, #submit {
-  background-color: #bf705c;
+  background-color: #9e4453;
   color: #e6e6e6;
 }
 /* line 66, ../scss/modules/_buttons.scss */
 .form-btn:hover, .comment-reply-link:hover, #submit:hover, .form-btn:focus, .comment-reply-link:focus, #submit:focus {
-  background-color: #d97f68;
+  background-color: #b84f60;
   color: white;
 }
 /* line 72, ../scss/modules/_buttons.scss */
 .form-btn:active, .comment-reply-link:active, #submit:active {
-  background-color: #d97f68;
+  background-color: #b84f60;
   color: white;
 }
 
@@ -1188,7 +1188,7 @@ input[type="submit"] {
   font-size: 14px;
   line-height: 1.5;
   color: #e6e6e6;
-  background-color: #bf705c;
+  background-color: #9e4453;
   font-family: YuGothicSet, sans-serif;
   text-decoration: none;
   letter-spacing: 0.02em;
@@ -1243,7 +1243,7 @@ input[type="button"]:focus,
 input[type="submit"]:hover,
 input[type="submit"]:focus {
   color: white;
-  background-color: #a66150;
+  background-color: #853946;
 }
 
 /* line 147, ../scss/modules/_buttons.scss */
@@ -1457,13 +1457,13 @@ textarea.is-invalid,
 .field.is-invalid,
 .form-control.error,
 .form-control.is-invalid {
-  color: #734337;
-  border-color: #f28e74;
+  color: #52232b;
+  border-color: #d15a6e;
   background-color: white;
   background-position: 99% center;
   background-repeat: no-repeat;
   background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAWCAYAAADEtGw7AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo2NDM0NDREQkYwNEIxMUUyOTI4REZGQTEzMzA2MDcyNiIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo2NDM0NDREQ0YwNEIxMUUyOTI4REZGQTEzMzA2MDcyNiI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjQ3ODRGRkE2RjA0QTExRTI5MjhERkZBMTMzMDYwNzI2IiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjY0MzQ0NERBRjA0QjExRTI5MjhERkZBMTMzMDYwNzI2Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+U8iT5wAAAedJREFUeNqk1U9I02Ecx/HtV3aIFAc1hcRDUoGXRAq0oNLA2CrsEFmHbikZu0iQYIFGYAiegkCpLipBxPpDEBMUzB0EhSG2LhG7hMR2GviPgUTvB57Bw8P3+U23B16HPX8+e/b8nt93wezZSMCnhXETF3AcB5BDCnH8Dq98ExcGHcFn8Ah3cdDni+fxnPDv9oAnTB7CKu6VCFXtChZy56LxUjt+jfuB8toSOth9wd7xWAWhqrUjYR/FRTwWJm+iIPT/w7bQf5ljiZnBg45dtKFX6H+LU8gIY8OEV6vgTkStwXWE8BPTGDHGPqNPz2mCfSOOYkA99TvCt1bhGPL68zMcwmncMuape10jrI+q4BbHi/FLn31S9z2x5tRhTc+1W506ipM+T3oRD4X+8+qtc4SqFvL0z/Fr14S+Szjis8bz9Lvvaq8cwS/wwGfdlqfPSWqTiFlX77o13u9Ym1PBs8JAytpRoy44X9Ft9E/gvbA+rYKn8NcaaMVc8UHgBw4b9/iqUQZ6hOAJFbyDcUflmsEX4a6+wTtHGfhAIUqa1U29Zc2BytouThD8x6xuN5CtMPi2CrXLZkZf/HyZoRFCP7n+QVR4PV7uI/AjGghN7OU/r1ilnqILtfpNC+o6vIFljBKYlhb/F2AAgaBsWR5wRiIAAAAASUVORK5CYII=);
-  outline-color: #f28e74;
+  outline-color: #d15a6e;
 }
 /* line 100, ../scss/modules/_forms.scss */
 input[type="text"].success, input[type="text"].is-valid,
@@ -1758,14 +1758,14 @@ LINK STYLES
 *********************/
 /* line 96, ../scss/breakpoints/_base.scss */
 a, a:visited {
-  color: #f28e74;
+  color: #d15a6e;
   /* on hover */
   /* on click */
   /* mobile tap color */
 }
 /* line 100, ../scss/breakpoints/_base.scss */
 a:hover, a:focus, a:visited:hover, a:visited:focus {
-  color: #d97f68;
+  color: #b84f61;
 }
 /* line 104, ../scss/breakpoints/_base.scss */
 a:focus, a:visited:focus {
@@ -1834,7 +1834,7 @@ HEADER STYLES
 *********************/
 /* line 170, ../scss/breakpoints/_base.scss */
 .site-top {
-  background-color: #464b59;
+  background-color: #40535c;
 }
 /* line 173, ../scss/breakpoints/_base.scss */
 .site-top > div.wrap {
@@ -1863,7 +1863,7 @@ HEADER STYLES
 .menu-toggle:hover,
 .menu-toggle.active {
   color: white;
-  background: #323640;
+  background: #2e3c43;
 }
 
 /* line 197, ../scss/breakpoints/_base.scss */
@@ -1976,7 +1976,7 @@ HEADER STYLES
   font-size: 18px;
   text-decoration: none;
   line-height: 50px;
-  background: #bf705c;
+  background: #9e4453;
   z-index: 999;
 }
 
@@ -1984,7 +1984,7 @@ HEADER STYLES
 .search-toggle:hover,
 .search-toggle:focus,
 .search-toggle.active {
-  background: #323640;
+  background: #2e3c43;
 }
 
 /* line 295, ../scss/breakpoints/_base.scss */
@@ -1994,7 +1994,7 @@ HEADER STYLES
   right: 15px;
   width: 330px;
   display: none;
-  background: #464b59;
+  background: #40535c;
   z-index: 999;
   -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.01);
   -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.01);
@@ -2004,7 +2004,7 @@ HEADER STYLES
 /* line 307, ../scss/breakpoints/_base.scss */
 .search-expand-inner {
   padding: 15px;
-  background: #323640;
+  background: #2e3c43;
 }
 
 /* line 317, ../scss/breakpoints/_base.scss */
@@ -2033,7 +2033,7 @@ HEADER STYLES
 
 /* line 334, ../scss/breakpoints/_base.scss */
 .header {
-  background-color: #c5d3fc;
+  background-color: #9fcde3;
 }
 
 /* line 338, ../scss/breakpoints/_base.scss */
@@ -2152,7 +2152,7 @@ POSTS & CONTENT STYLES
 
 /* line 469, ../scss/breakpoints/_base.scss */
 .single-title {
-  color: #374673;
+  color: #254a5c;
 }
 
 /* line 473, ../scss/breakpoints/_base.scss */
@@ -2163,7 +2163,7 @@ POSTS & CONTENT STYLES
 
 /* line 479, ../scss/breakpoints/_base.scss */
 .entry-title a {
-  color: #374673;
+  color: #254a5c;
 }
 
 /* line 484, ../scss/breakpoints/_base.scss */
@@ -2226,12 +2226,12 @@ POSTS & CONTENT STYLES
 }
 /* line 533, ../scss/breakpoints/_base.scss */
 .entry-content a {
-  color: #f28e74;
+  color: #d15a6e;
   text-decoration: none;
 }
 /* line 537, ../scss/breakpoints/_base.scss */
 .entry-content a:hover, .entry-content a:focus {
-  color: #d97f68;
+  color: #b84f61;
 }
 /* line 542, ../scss/breakpoints/_base.scss */
 .entry-content h1, .entry-content h2, .entry-content h3, .entry-content h4, .entry-content h5, .entry-content h6 {
@@ -2669,7 +2669,7 @@ POSTS & CONTENT STYLES
 /* line 827, ../scss/breakpoints/_base.scss */
 .entry-content table th {
   padding: 0.25em 0.5em;
-  background-color: #c5d3fc;
+  background-color: #9fcde3;
   font-weight: normal;
   text-align: center;
   font-size: 15px;
@@ -2764,12 +2764,12 @@ POSTS & CONTENT STYLES
 }
 /* line 932, ../scss/breakpoints/_base.scss */
 .entry-content sup[id|="fnref"]:target a {
-  background-color: #c5d3fc;
-  color: #734337;
+  background-color: #9fcde3;
+  color: #52232b;
 }
 /* line 936, ../scss/breakpoints/_base.scss */
 .entry-content sup[id|="fnref"]:target a:hover, .entry-content sup[id|="fnref"]:target a:focus {
-  color: #5a342b;
+  color: #39181e;
 }
 /* line 943, ../scss/breakpoints/_base.scss */
 .entry-content div.footnotes {
@@ -2786,7 +2786,7 @@ POSTS & CONTENT STYLES
   position: relative;
   bottom: 2px;
   right: 4px;
-  color: #f28e74;
+  color: #d15a6e;
 }
 /* line 961, ../scss/breakpoints/_base.scss */
 .entry-content abbr {
@@ -2806,7 +2806,7 @@ POSTS & CONTENT STYLES
   font-size: 14px;
   padding: 11px;
   margin: 0 0 16px 0;
-  border: 5px solid #c5d3fc;
+  border: 5px solid #9fcde3;
   background-color: #f2f2f2;
   overflow: hidden;
 }
@@ -2819,8 +2819,8 @@ POSTS & CONTENT STYLES
 .entry-content *:not(pre) > code {
   font-family: Monaco, "Consolas", "Bitstream Vera Sans Mono", "Courier New", Courier, monospace;
   font-size: 14px;
-  background-color: #c5d3fc;
-  color: #374673;
+  background-color: #9fcde3;
+  color: #254a5c;
   position: relative;
   bottom: 1px;
   padding: 0 5px 1px 5px;
@@ -2864,7 +2864,7 @@ POSTS & CONTENT STYLES
   background: #f2f2f2;
   padding: 10px;
   margin: 0 0 16px 0;
-  border: 5px solid #734337;
+  border: 5px solid #52232b;
   /* images inside wp-caption */
 }
 /* line 1046, ../scss/breakpoints/_base.scss */
@@ -2897,7 +2897,7 @@ POSTS & CONTENT STYLES
   justify-content: space-around;
   align-items: center;
   align-content: space-around;
-  border: 5px solid #734337;
+  border: 5px solid #52232b;
   margin-bottom: 16px;
 }
 /* line 1079, ../scss/breakpoints/_base.scss */
@@ -2939,7 +2939,7 @@ POSTS & CONTENT STYLES
 /* line 1122, ../scss/breakpoints/_base.scss */
 a.more-link {
   display: inline-block;
-  color: #464b59;
+  color: #40535c;
   background-color: #e6e6e6;
   margin: 1em 0;
   padding: 1em 2em;
@@ -2955,7 +2955,7 @@ a.more-link {
 /* line 1137, ../scss/breakpoints/_base.scss */
 a.more-link:hover, a.more-link:focus {
   color: white;
-  background-color: #f28e74;
+  background-color: #d15a6e;
 }
 /* line 1142, ../scss/breakpoints/_base.scss */
 a.more-link:after {
@@ -3004,7 +3004,7 @@ PAGE NAVI STYLES
 /* line 1184, ../scss/breakpoints/_base.scss */
 #nav-below a:hover, #nav-below a:focus {
   color: white;
-  background-color: #f28e74;
+  background-color: #d15a6e;
 }
 /* line 1190, ../scss/breakpoints/_base.scss */
 #nav-below .meta-nav {
@@ -3012,7 +3012,7 @@ PAGE NAVI STYLES
   display: block;
   font-size: 90%;
   margin-bottom: 0.5em;
-  color: #464b59;
+  color: #40535c;
   letter-spacing: 0.02em;
 }
 
@@ -3127,7 +3127,7 @@ COMMENT STYLES
 }
 /* line 1347, ../scss/breakpoints/_base.scss */
 .comment .comment-meta .comment-awaiting-moderation {
-  background-color: #f5cabf;
+  background-color: #d99ea8;
 }
 /* line 1352, ../scss/breakpoints/_base.scss */
 .comment.odd {
@@ -3204,7 +3204,7 @@ COMMENT STYLES
 /* line 1447, ../scss/breakpoints/_base.scss */
 .comment-navigation a:hover, .comment-navigation a:focus {
   color: white;
-  background-color: #f28e74;
+  background-color: #d15a6e;
 }
 /* line 1453, ../scss/breakpoints/_base.scss */
 .comment-navigation .meta-nav {
@@ -3212,7 +3212,7 @@ COMMENT STYLES
   display: block;
   font-size: 90%;
   margin-bottom: 0.5em;
-  color: #464b59;
+  color: #40535c;
   letter-spacing: 0.02em;
 }
 
@@ -3487,7 +3487,7 @@ FOOTER STYLES
 .footer {
   clear: both;
   color: #e6e6e6;
-  background-color: #464b59;
+  background-color: #40535c;
 }
 
 /* line 1758, ../scss/breakpoints/_base.scss */
@@ -3698,7 +3698,7 @@ NINJA omatome button
 
   /* line 68, ../scss/breakpoints/_mini.scss */
   .menu-bar ul > li > a:hover {
-    background-color: #323640;
+    background-color: #2e3c43;
   }
 
   /* line 71, ../scss/breakpoints/_mini.scss */
@@ -3727,12 +3727,12 @@ NINJA omatome button
 
   /* line 91, ../scss/breakpoints/_mini.scss */
   .menu-bar ul {
-    border-top: 1px solid #323640;
+    border-top: 1px solid #2e3c43;
   }
 
   /* line 94, ../scss/breakpoints/_mini.scss */
   .menu-bar ul li {
-    border-bottom: 1px solid #323640;
+    border-bottom: 1px solid #2e3c43;
   }
 
   /* line 97, ../scss/breakpoints/_mini.scss */
@@ -3756,17 +3756,17 @@ NINJA omatome button
   /* line 112, ../scss/breakpoints/_mini.scss */
   .footer-links ul > li > a:hover {
     color: white;
-    background-color: #323640;
+    background-color: #2e3c43;
   }
   /* line 117, ../scss/breakpoints/_mini.scss */
   .footer-links ul {
     float: left;
     width: 100%;
-    border-top: 1px solid #323640;
+    border-top: 1px solid #2e3c43;
   }
   /* line 122, ../scss/breakpoints/_mini.scss */
   .footer-links ul li {
-    border-bottom: 1px solid #323640;
+    border-bottom: 1px solid #2e3c43;
   }
   /* line 125, ../scss/breakpoints/_mini.scss */
   .footer-links ul li:last-child {
@@ -3895,7 +3895,7 @@ tweeners.
   /* line 74, ../scss/breakpoints/_481up.scss */
   .menu-bar ul > li > a:hover,
   .menu-bar ul > li:hover > a {
-    background-color: #323640;
+    background-color: #2e3c43;
   }
 
   /* line 78, ../scss/breakpoints/_481up.scss */
@@ -3937,7 +3937,7 @@ tweeners.
   .menu-bar ul ul li.current-menu-ancestor > a,
   .menu-bar ul ul li.current_page_ancestor > a,
   .menu-bar ul ul li.current-post-parent > a {
-    color: #bf705c;
+    color: #9e4453;
   }
 
   /* line 113, ../scss/breakpoints/_481up.scss */
@@ -4040,7 +4040,7 @@ tweeners.
   .footer-links ul > li > a:hover,
   .footer-links ul > li:hover > a {
     color: white;
-    background-color: #323640;
+    background-color: #2e3c43;
   }
 
   /* line 199, ../scss/breakpoints/_481up.scss */
@@ -4082,7 +4082,7 @@ tweeners.
   .footer-links ul ul li.current-menu-ancestor > a,
   .footer-links ul ul li.current_page_ancestor > a,
   .footer-links ul ul li.current-post-parent > a {
-    color: #bf705c;
+    color: #9e4453;
   }
 
   /* line 235, ../scss/breakpoints/_481up.scss */

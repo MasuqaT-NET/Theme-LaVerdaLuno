@@ -309,7 +309,7 @@ HEADER STYLES
 /* line 74, ../scss/breakpoints/_481up.scss */
 .menu-bar ul > li > a:hover,
 .menu-bar ul > li:hover > a {
-  background-color: #323640;
+  background-color: #2e3c43;
 }
 
 /* line 78, ../scss/breakpoints/_481up.scss */
@@ -351,7 +351,7 @@ HEADER STYLES
 .menu-bar ul ul li.current-menu-ancestor > a,
 .menu-bar ul ul li.current_page_ancestor > a,
 .menu-bar ul ul li.current-post-parent > a {
-  color: #bf705c;
+  color: #9e4453;
 }
 
 /* line 113, ../scss/breakpoints/_481up.scss */
@@ -454,7 +454,7 @@ do they need tweaking?
 .footer-links ul > li > a:hover,
 .footer-links ul > li:hover > a {
   color: white;
-  background-color: #323640;
+  background-color: #2e3c43;
 }
 
 /* line 199, ../scss/breakpoints/_481up.scss */
@@ -496,7 +496,7 @@ do they need tweaking?
 .footer-links ul ul li.current-menu-ancestor > a,
 .footer-links ul ul li.current_page_ancestor > a,
 .footer-links ul ul li.current-post-parent > a {
-  color: #bf705c;
+  color: #9e4453;
 }
 
 /* line 235, ../scss/breakpoints/_481up.scss */
