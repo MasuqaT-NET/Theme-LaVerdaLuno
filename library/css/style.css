@@ -3594,16 +3594,20 @@ FOOTER STYLES
 .copyright a:hover, .copyright a:focus {
   color: white;
 }
+/* line 1851, ../scss/breakpoints/_base.scss */
+.copyright a:after {
+  display: none;
+}
 
 /***
 NINJA omatome button
 ***/
-/* line 1856, ../scss/breakpoints/_base.scss */
+/* line 1860, ../scss/breakpoints/_base.scss */
 .ninja_onebutton {
   min-height: 29.0938px;
 }
 
-/* line 1861, ../scss/breakpoints/_base.scss */
+/* line 1865, ../scss/breakpoints/_base.scss */
 .ninja_onebutton_output_responsive div, .ninja_onebutton_output_responsive a {
   opacity: 0.25;
   -webkit-transition: opacity .1s linear;
@@ -3612,7 +3616,7 @@ NINJA omatome button
   -o-transition: opacity .1s linear;
   transition: opacity .1s linear;
 }
-/* line 1869, ../scss/breakpoints/_base.scss */
+/* line 1873, ../scss/breakpoints/_base.scss */
 .ninja_onebutton_output_responsive div:hover, .ninja_onebutton_output_responsive div:focus, .ninja_onebutton_output_responsive a:hover, .ninja_onebutton_output_responsive a:focus {
   opacity: 1.0;
 }

@@ -1847,6 +1847,10 @@ FOOTER STYLES
 			&:hover, &:focus {
 				color: brighten($mono-frosty, 15%);
 			}
+
+			&:after {
+				display: none;
+			}
 		}
 	}
 
