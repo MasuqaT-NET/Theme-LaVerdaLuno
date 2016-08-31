@@ -20,6 +20,17 @@ Custom styles:
 	<footer>引用:<a href="http://google.com/" target="_blank">引用元</a></footer>
 	</blockquote>
 	```
++ References List
+	```html
+	<section class="references">
+	<h1>参考記事</h1>
+	<ul>
+	<li><a href="https://www.google.co.jp/">Google</a></li>
+	<li><a href="https://www.microsoft.com/ja-jp/">Microsoft</a></li>
+	<li><a href="http://www.apple.com/jp/">Apple</a></li>
+	</ul>
+	</section>
+	```
 
 Using plugins:
 + Akismet

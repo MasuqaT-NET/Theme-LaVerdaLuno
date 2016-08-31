@@ -78,3 +78,24 @@ blockquote.gorgeous {
 		}
 	}
 }
+
+// References List
+section.references {
+	margin-bottom: $font-size;
+
+	h1 {
+		font-size: 2em;
+		font-weight: bold;
+		margin: 0.75em 0 0.5em 0;
+		color: $sub-dark;
+	}
+
+	ul {
+		margin-left: $padding-size;
+
+		li:before {
+			content: "\f00c";
+			font-family: $icon-font;
+		}
+	}
+}

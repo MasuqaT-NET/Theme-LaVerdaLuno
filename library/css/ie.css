@@ -696,6 +696,27 @@ blockquote.gorgeous footer:before {
   margin-right: 2px;
 }
 
+/* line 83, ../scss/_additional.scss */
+section.references {
+  margin-bottom: 16px;
+}
+/* line 86, ../scss/_additional.scss */
+section.references h1 {
+  font-size: 2em;
+  font-weight: bold;
+  margin: 0.75em 0 0.5em 0;
+  color: #40535c;
+}
+/* line 93, ../scss/_additional.scss */
+section.references ul {
+  margin-left: 5px;
+}
+/* line 96, ../scss/_additional.scss */
+section.references ul li:before {
+  content: "\f00c";
+  font-family: "FontAwesome";
+}
+
 /*
 you can call the larger styles if you want, but there's really no need
 */
