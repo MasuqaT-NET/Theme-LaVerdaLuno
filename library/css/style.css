@@ -2713,7 +2713,7 @@ POSTS & CONTENT STYLES
 }
 /* line 878, ../scss/breakpoints/_base.scss */
 .entry-content blockquote p {
-  padding: 0px 5px 16px 5px;
+  margin: 0px 5px 16px 5px;
 }
 /* line 881, ../scss/breakpoints/_base.scss */
 .entry-content blockquote p:last-child {
@@ -2721,7 +2721,7 @@ POSTS & CONTENT STYLES
 }
 /* line 887, ../scss/breakpoints/_base.scss */
 .entry-content q {
-  background-color: #F7F7F7;
+  background-color: #f2f2f2;
   font-size: 15px;
 }
 /* line 891, ../scss/breakpoints/_base.scss */
@@ -2907,7 +2907,7 @@ POSTS & CONTENT STYLES
 }
 /* line 1083, ../scss/breakpoints/_base.scss */
 .gallery dl a {
-  color: #323944;
+  color: #404040;
 }
 /* line 1086, ../scss/breakpoints/_base.scss */
 .gallery dl a img {

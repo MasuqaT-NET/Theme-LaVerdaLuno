@@ -876,7 +876,7 @@ POSTS & CONTENT STYLES
 				}
 
 				p {
-					padding: 0px $padding-size $font-size $padding-size;
+					margin: 0px $padding-size $font-size $padding-size;
 
 					&:last-child {
 						margin-bottom: 0;
@@ -885,7 +885,7 @@ POSTS & CONTENT STYLES
 			}
 
 			q {
-				background-color: $quote_bg;
+				background-color: $mono-smoke;
 				font-size: ($font-size - 1);
 
 				&:before {
@@ -1081,7 +1081,7 @@ POSTS & CONTENT STYLES
 				padding: ($padding-size * 2);
 
 				a {
-					color: $text_c;
+					color: $text-color;
 
 					img {
 						margin-bottom: 0;
