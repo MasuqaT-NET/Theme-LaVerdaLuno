@@ -42,6 +42,14 @@ Custom styles:
 	<p>性質財団と主引用従を有効に該当するませ場合、被関係文の引用まではを場文と回避するればくださいことと手続得るれ名それをしべき。</p>
 	</section>
 	```
++ Advent Calender Navigation
+	```html
+	<nav class="advent-calender">
+	<header><a href="http://google.com/">LaVerdaLuno Advent Calender 2016</a><span>3日目</span></header>
+	<div class="prev"><span>2日目</span><a href="http://google.com/">Metro UI</a></div>
+	<div class="next"><span>4日目</span><a href="http://google.com/">Material UI</a></div>
+	</nav>
+	```
 
 Using plugins:
 + Akismet

@@ -743,6 +743,57 @@ section.oldinfo h1 {
   color: #40535c;
 }
 
+/* line 130, ../scss/_additional.scss */
+nav.advent-calender {
+  background-color: #9fcde3;
+  overflow: hidden;
+  padding: 10px 15px;
+  margin-bottom: 16px;
+  border: 5px solid #40535c;
+}
+/* line 137, ../scss/_additional.scss */
+nav.advent-calender header {
+  padding: 0;
+  margin-bottom: 5px;
+  border: none;
+  text-align: center;
+  font-size: 17px;
+}
+/* line 144, ../scss/_additional.scss */
+nav.advent-calender header span {
+  margin-left: 16px;
+}
+/* line 149, ../scss/_additional.scss */
+nav.advent-calender div.prev {
+  float: left;
+}
+/* line 152, ../scss/_additional.scss */
+nav.advent-calender div.prev:before {
+  content: "\f190";
+  font-family: "FontAwesome";
+  margin-right: 5px;
+}
+/* line 159, ../scss/_additional.scss */
+nav.advent-calender div.prev span:after {
+  content: ":";
+  margin-right: 5px;
+}
+/* line 166, ../scss/_additional.scss */
+nav.advent-calender div.next {
+  float: right;
+}
+/* line 170, ../scss/_additional.scss */
+nav.advent-calender div.next span:after {
+  content: ":";
+  margin-right: 5px;
+}
+/* line 176, ../scss/_additional.scss */
+nav.advent-calender div.next:after {
+  content: "\f18e";
+  font-family: "FontAwesome";
+  margin-left: 5px;
+}
+
 /*
 you can call the larger styles if you want, but there's really no need
 */

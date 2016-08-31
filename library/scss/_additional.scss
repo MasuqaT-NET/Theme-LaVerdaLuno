@@ -114,7 +114,7 @@ span.mumble {
 section.oldinfo {
 	margin-bottom: $font-size;
 	background-color: $mono-smoke;
-	border: 5px solid $accent-normal;
+	border: $padding-size solid $accent-normal;
 	padding: 0 ($padding-size * 3);
 	overflow: hidden;
 
@@ -123,5 +123,60 @@ section.oldinfo {
 		font-weight: bold;
 		margin: 0.75em 0 0.5em 0;
 		color: $sub-dark;
+	}
+}
+
+// Advent Calender Navigation
+nav.advent-calender {
+	background-color: $sub-light;
+	overflow: hidden;
+	padding: ($padding-size * 2) ($padding-size * 3);
+	margin-bottom: $font-size;
+	border: $padding-size solid $sub-dark;
+
+	header {
+		padding: 0;
+		margin-bottom: $padding-size;
+		border: none;
+		text-align: center;
+		font-size: ($font-size + 1);
+		
+		span {
+			margin-left: $font-size;
+		}
+	}
+
+	div.prev {
+		float: left;
+
+		&:before {
+			content: "\f190";
+			font-family: $icon-font;
+			margin-right: $padding-size;
+		}
+
+		span {
+			&:after {
+				content: ":";
+				margin-right: $padding-size;
+			}
+		}
+	}
+
+	div.next {
+		float: right;
+
+		span {
+			&:after {
+				content: ":";
+				margin-right: $padding-size;
+			}
+		}
+
+		&:after {
+			content: "\f18e";
+			font-family: $icon-font;
+			margin-left: $padding-size;
+		}
 	}
 }
