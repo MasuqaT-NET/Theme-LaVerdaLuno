@@ -20,15 +20,19 @@ though, go for it.
 
   a, a:visited {
     color: #444 !important;
-    text-decoration: underline;
+    text-decoration: none;
 
     // show links on printed pages
     &:after {
+      font-size: $font-size;
+      font-weight: normal;
       content: " (" attr(href) ")";
     }
 
     // show title too
     abbr[title]:after {
+      font-size: $font-size;
+      font-weight: normal;
       content: " (" attr(title) ")";
     }
   }
@@ -76,5 +80,83 @@ though, go for it.
     .wp-prev-next,
     .respond-form,
     nav {
+      display: none;
+    }
+
+    div.site-search {
+      display: none;
+    }
+
+    #logo a {
+      &:after {
+        display: none;
+      }
+    }
+
+    p.entry-meta {
+      a:after {
+        display: none;
+      }
+    }
+
+    a.fancybox.image:after {
+      display: none;
+    }
+
+    .entry-content {
+      a.more-link {
+        display: none;
+      }
+
+      em {
+        text-decoration: underline;  
+      }
+
+      pre {
+        border-color: $mono-frosty;
+      }
+
+      hr {
+        height: 0;
+        border-top: none;
+        border-bottom: 2px solid $mono-silver;
+      }
+      
+      div.footnotes a[href|="#fnref"]:after {
+        display: none;
+      }
+    }
+
+    div.ninja_onebutton {
+      display: none;
+    }
+
+    section.commentlist {
+      border: 1px dotted $border-color;
+    }
+
+    div.comment-metadata {
+      a:after {
+        display: none;
+      }
+
+      span.edit-link {
+        display: none;
+      }
+    }
+
+    div.reply {
+      display: none;
+    }
+
+    #respond {
+      display: none;
+    }
+
+    .copyright a:after {
+      display: none;
+    }
+
+    #fancybox-close {
       display: none;
     }

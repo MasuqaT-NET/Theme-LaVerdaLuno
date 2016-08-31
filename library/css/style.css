@@ -4328,41 +4328,45 @@ be set to display none.
   /* line 21, ../scss/partials/_print.scss */
   a, a:visited {
     color: #444 !important;
-    text-decoration: underline;
+    text-decoration: none;
   }
   /* line 26, ../scss/partials/_print.scss */
   a:after, a:visited:after {
+    font-size: 16px;
+    font-weight: normal;
     content: " (" attr(href) ")";
   }
-  /* line 31, ../scss/partials/_print.scss */
+  /* line 33, ../scss/partials/_print.scss */
   a abbr[title]:after, a:visited abbr[title]:after {
+    font-size: 16px;
+    font-weight: normal;
     content: " (" attr(title) ")";
   }
 
-  /* line 36, ../scss/partials/_print.scss */
+  /* line 40, ../scss/partials/_print.scss */
   .ir a:after,
   a[href^="javascript:"]:after,
   a[href^="#"]:after {
     content: "";
   }
 
-  /* line 42, ../scss/partials/_print.scss */
+  /* line 46, ../scss/partials/_print.scss */
   pre, blockquote {
     border: 1px solid #999;
     page-break-inside: avoid;
   }
 
-  /* line 47, ../scss/partials/_print.scss */
+  /* line 51, ../scss/partials/_print.scss */
   thead {
     display: table-header-group;
   }
 
-  /* line 51, ../scss/partials/_print.scss */
+  /* line 55, ../scss/partials/_print.scss */
   tr, img {
     page-break-inside: avoid;
   }
 
-  /* line 55, ../scss/partials/_print.scss */
+  /* line 59, ../scss/partials/_print.scss */
   img {
     max-width: 100% !important;
   }
@@ -4370,24 +4374,106 @@ be set to display none.
   @page {
     margin: 0.5cm;
   }
-  /* line 63, ../scss/partials/_print.scss */
+  /* line 67, ../scss/partials/_print.scss */
   p, h2, h3 {
     orphans: 3;
     widows: 3;
   }
 
-  /* line 68, ../scss/partials/_print.scss */
+  /* line 72, ../scss/partials/_print.scss */
   h2,
   h3 {
     page-break-after: avoid;
   }
 
-  /* line 74, ../scss/partials/_print.scss */
+  /* line 78, ../scss/partials/_print.scss */
   .sidebar,
   .page-navigation,
   .wp-prev-next,
   .respond-form,
   nav {
+    display: none;
+  }
+
+  /* line 86, ../scss/partials/_print.scss */
+  div.site-search {
+    display: none;
+  }
+
+  /* line 91, ../scss/partials/_print.scss */
+  #logo a:after {
+    display: none;
+  }
+
+  /* line 97, ../scss/partials/_print.scss */
+  p.entry-meta a:after {
+    display: none;
+  }
+
+  /* line 102, ../scss/partials/_print.scss */
+  a.fancybox.image:after {
+    display: none;
+  }
+
+  /* line 107, ../scss/partials/_print.scss */
+  .entry-content a.more-link {
+    display: none;
+  }
+  /* line 111, ../scss/partials/_print.scss */
+  .entry-content em {
+    text-decoration: underline;
+  }
+  /* line 115, ../scss/partials/_print.scss */
+  .entry-content pre {
+    border-color: #e6e6e6;
+  }
+  /* line 119, ../scss/partials/_print.scss */
+  .entry-content hr {
+    height: 0;
+    border-top: none;
+    border-bottom: 2px solid #bfbfbf;
+  }
+  /* line 125, ../scss/partials/_print.scss */
+  .entry-content div.footnotes a[href|="#fnref"]:after {
+    display: none;
+  }
+
+  /* line 130, ../scss/partials/_print.scss */
+  div.ninja_onebutton {
+    display: none;
+  }
+
+  /* line 134, ../scss/partials/_print.scss */
+  section.commentlist {
+    border: 1px dotted #bfbfbf;
+  }
+
+  /* line 139, ../scss/partials/_print.scss */
+  div.comment-metadata a:after {
+    display: none;
+  }
+  /* line 143, ../scss/partials/_print.scss */
+  div.comment-metadata span.edit-link {
+    display: none;
+  }
+
+  /* line 148, ../scss/partials/_print.scss */
+  div.reply {
+    display: none;
+  }
+
+  /* line 152, ../scss/partials/_print.scss */
+  #respond {
+    display: none;
+  }
+
+  /* line 156, ../scss/partials/_print.scss */
+  .copyright a:after {
+    display: none;
+  }
+
+  /* line 160, ../scss/partials/_print.scss */
+  #fancybox-close {
     display: none;
   }
 }
