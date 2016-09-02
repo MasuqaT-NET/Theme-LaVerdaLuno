@@ -142,5 +142,13 @@ Note:
 We should make the folder "categories" on "uploads" directory.  
 Blog which uses this theme should be placed as domain like http://hoge.org/ or http://blog.hoge.org/ etc.
 
+```xml
+<remove fileExtension=".svg"/>
+<mimeMap fileExtension=".svg" mimeType="image/svg+xml"/>
+<mimeMap fileExtension=".json" mimeType="application/json"/>
+<mimeMap fileExtension=".ico" mimeType="image/x-icon"/>
+<mimeMap fileExtension=".mp4" mimeType="video/mp4"/>
+```
+
 Todo:
 + make format style except 'standard', 'status' and 'aside'.
