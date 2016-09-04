@@ -473,7 +473,6 @@ POSTS & CONTENT STYLES
 		.page-title,
 		.entry-title,
 		.archive-title {
-			font-weight: bold;
 			margin: 0;
 		}
 
@@ -484,6 +483,7 @@ POSTS & CONTENT STYLES
 		.page-title {
 			margin: $font-size ($padding-size * 3);
 			color: $mono-gray;
+			font-family: $ui-font;
 		}
 
 		.entry-title {
@@ -495,10 +495,15 @@ POSTS & CONTENT STYLES
 		.archive-title {
 			margin: $font-size ($padding-size * 3);
 			color: $mono-gray;
+			
+			& > span {
+				font-family: $ui-font;
+			}
 		}
 
 		.taxonomy-description {
 			margin: $font-size ($padding-size * 4);
+			font-size: ($font-size - 1);
 
 			p {
 				margin: 0;

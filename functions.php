@@ -279,4 +279,24 @@ function rss_thumbnail($content) {
 add_filter( 'the_excerpt_rss', 'rss_thumbnail');
 add_filter( 'the_content_feed', 'rss_thumbnail');
 
+function custom_archive_title($title) {
+  if(is_category()) {
+    return 'Category: ' . single_cat_title('', false);
+  }
+  if(is_tag()) {
+    return 'Tag: ' . single_tag_title('', false);
+  }
+  if(is_month()) {
+    return 'Month: ' . get_the_time("Y/m");
+  }
+  if(is_year()) {
+    return 'Year: ' . get_the_time("Y");
+  }
+  if(is_date()) { // not care about is_time();
+    return 'Date: ' . get_the_time("Y/m/d");
+  }
+  return $title;
+}
+add_filter('get_the_archive_title', 'custom_archive_title', 10);
+
 /* DON'T DELETE THIS CLOSING TAG */ ?>
