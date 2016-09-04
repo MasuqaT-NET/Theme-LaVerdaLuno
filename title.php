@@ -1,0 +1,1 @@
+<title><?php bloginfo('name'); ?> | <?php bloginfo('description'); ?></title>

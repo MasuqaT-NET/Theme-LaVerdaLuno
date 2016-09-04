@@ -11,8 +11,8 @@
 		<?php // force Internet Explorer to use the latest rendering engine available ?>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-		<title><?php bloginfo('name'); ?> | <?php bloginfo('description'); ?></title>
-
+		<?php get_template_part('title'); ?>
+		
 		<?php // mobile meta (hooray!) ?>
 		<meta name="HandheldFriendly" content="True">
 		<meta name="MobileOptimized" content="320">
