@@ -1,6 +1,6 @@
 /******************************************************************
-Site Name:
-Author:
+Site Name: La Verda Luno
+Author: MasuqaT
 
 Stylesheet: TinyMCE Editor
 
@@ -14,6 +14,7 @@ http://codex.wordpress.org/Editor_Style
 
 /* Wrap the entire post style inside the TinyMCE selector, as suggested
 here http://codex.wordpress.org/Function_Reference/add_editor_style */
+/*
 body#tinymce.wp-editor {
 
 	// normalize: http://necolas.github.io/normalize.css/
@@ -32,25 +33,25 @@ body#tinymce.wp-editor {
 	@import "partials/mixins";
 
 	width: 731px;
-	font-family: $lato;
+	font-family: $sans-serif;
 	font-size: 100%;
 	line-height: 1.5;
-	color: $text-color;
+	color: $text_c;
   -webkit-font-smoothing: antialiased;
 
-  /*********************
-	LINK STYLES
-	*********************/
+  //*********************
+  //	LINK STYLES
+  //*********************
 
 	a, a:visited {
-		color: $link-color;
+		color: $link-c;
 
-		/* on hover */
+		// on hover
 		&:hover, &:focus {
-			color: $link-hover;
+			color: $link-hover_c;
 		}
 
-		/* on click */
+		// on click
 		&:active {
 
 		}
@@ -61,9 +62,9 @@ body#tinymce.wp-editor {
 		}
 	}
 
-	/******************************************************************
-	H1, H2, H3, H4, H5 STYLES
-	******************************************************************/
+	//******************************************************************
+	// H1, H2, H3, H4, H5 STYLES
+	//******************************************************************
 
 	h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
 		text-rendering: optimizelegibility;
@@ -188,15 +189,15 @@ body#tinymce.wp-editor {
 			border-radius: 3px;
 		}
 
-		/*********************
-		LARGER MOBILE DEVICES
-		This is for devices like the Galaxy Note or something that's
-		larger than an iPhone but smaller than a tablet. Let's call them
-		tweeners.
-		*********************/
+		//*********************
+		// LARGER MOBILE DEVICES
+		// This is for devices like the Galaxy Note or something that's
+		// larger than an iPhone but smaller than a tablet. Let's call them
+		// tweeners.
+		//*********************
 		@media only screen and (min-width: 481px) {
 
-			/* at this larger size, we can start to align images */
+			// at this larger size, we can start to align images
 			.alignleft, img.alignleft {
 				margin-right: 1.5em;
 				display: inline;
@@ -218,4 +219,4 @@ body#tinymce.wp-editor {
 
 
 }
-
+*/

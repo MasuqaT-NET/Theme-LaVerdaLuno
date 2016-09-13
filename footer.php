@@ -18,7 +18,7 @@
 						)); ?>
 					</nav>
 
-					<p class="source-org copyright">&copy; <?php echo date('Y'); ?> <?php bloginfo( 'name' ); ?>.</p>
+					<p class="source-org copyright">&copy; 2012-<?php echo date('Y'); ?> <a href="http://masuqat.net/" target="_blank">MasuqaT.NET</a></p>
 
 				</div>
 

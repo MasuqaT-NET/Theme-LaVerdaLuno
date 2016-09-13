@@ -28,3 +28,7 @@ output_style = :expanded
 
 # don't touch this
 preferred_syntax = :scss
+
+
+#########
+Encoding.default_external = 'utf-8'

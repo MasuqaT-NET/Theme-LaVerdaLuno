@@ -1,6 +1,6 @@
 /******************************************************************
-Site Name:
-Author:
+Site Name: La Verda Luno
+Author: MasuqaT
 
 Stylesheet: Base Mobile Stylesheet
 
@@ -16,11 +16,11 @@ GENERAL STYLES
 *********************/
 
 body {
-	font-family: $lato;
-	font-size: 100%;
+	font-family: $sans-serif;
+	font-size: $font-size;
 	line-height: 1.5;
 	color: $text-color;
-	background-color: $gray;
+	background-color: $mono-white;
   	-webkit-font-smoothing: antialiased;
   	-moz-osx-font-smoothing: grayscale;
 }
@@ -75,6 +75,20 @@ LAYOUT & GRID STYLES
 	margin: 0 auto;
 }
 
+::selection {
+	background-color: rgba($icon-base, 0.5);
+	color: $mono-white;
+}
+
+#inner-content ::selection {
+	background-color: rgba($icon-base, 0.5);
+	color: $icon-background;	
+}
+
+:focus {
+	outline: 2px solid $icon-base;
+}
+
 /*********************
 LINK STYLES
 *********************/
@@ -84,12 +98,15 @@ a, a:visited {
 
 	/* on hover */
 	&:hover, &:focus {
-		color: $link-hover;
+		color: $link-hover-color;
+	}
+
+	&:focus {
+		outline: 2px solid $icon-base;
 	}
 
 	/* on click */
 	&:active {
-
 	}
 
 	/* mobile tap color */
@@ -100,6 +117,17 @@ a, a:visited {
 		for mobile devices.
 		*/
 		-webkit-tap-highlight-color : rgba( 0, 0, 0, 0.3 );
+	}
+
+	&[target="_blank"] {
+		&:after {
+			content: "\f08e";
+			font-family: $icon-font;
+			font-size: ($font-size / 2);
+			position: relative;
+			bottom: ($font-size / 4);
+			margin-left: 2px;
+		}
 	}
 }
 
@@ -144,152 +172,343 @@ h4, .h4 {
 h5, .h5 {
 	font-size: 0.846em;
 	line-height: 2.09em;
-	text-transform: uppercase;
-	letter-spacing: 2px;
 }
 
 /*********************
 HEADER STYLES
 *********************/
 
+.site-top {
+	background-color: $sub-dark;
+
+	& > div.wrap {
+		position: relative;
+	}
+}
+
+	.site-menu {
+		font-family: $ui-font;
+		position: relative;
+		z-index: 99;
+	}
+	.menu-toggle {
+		display: none;
+		width: 60px;
+		height: 50px;
+		float: right;
+		cursor: pointer;
+		color: brighten($mono-frosty, 15%);
+		text-align: center;
+	}
+	.menu-toggle:hover,
+	.menu-toggle.active {
+		color: brighten($mono-frosty, 15%);
+		background: dullen($sub-dark, 5%);
+		}
+	.menu-toggle i {
+		padding: 10px 0;
+		font-size: 28px;
+	}
+	.menu-text {
+		display: none;
+		float: right;
+		padding: 13px 20px;
+		font-size: $font-size;
+		line-height: 1.5em;
+	}
+	.menu-bar ul {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+	.menu-bar ul li {
+		position: relative;
+		}
+	.menu-bar ul li a {
+		display: block;
+		padding: 0 20px;
+		color: $mono-frosty;
+		font-size: $font-size;
+		text-decoration: none;
+		line-height: 50px;
+		-webkit-transition: color .1s linear, background-color .1s linear;
+		-moz-transition: color .1s linear, background-color .1s linear;
+			-ms-transition: color .1s linear, background-color .1s linear;
+			-o-transition: color .1s linear, background-color .1s linear;
+				transition: color .1s linear, background-color .1s linear;
+		
+		&:hover, &:focus {
+			text-decoration: none;
+		}
+	}
+	.menu-bar ul ul li a {
+		padding: 8px 20px;
+		font-size: 90%;
+		line-height: 20px;
+	}
+	.menu-bar ul li a:after {
+		font-family: $icon-font;
+	}
+	.menu-bar ul li a:after {
+		content: "\f0d7";
+		float: none;
+		margin-left: 6px;
+		opacity: 0.5;
+	}
+	.menu-bar ul ul li a:after {
+		content: "\f0da";
+		float: right;
+		margin-left: 0;
+	}
+	.menu-bar ul li a:only-child:after {
+		content: "";
+		margin: 0;
+	}
+
+	.menu-toggle,
+	.menu-bar ul li a {
+		color: $mono-frosty;
+	}
+	.menu-bar ul li > a:hover, 
+	.menu-bar ul li:hover > a, 
+	.menu-bar ul li > a:focus,
+	.menu-bar ul li:focus > a,
+	.menu-bar ul li.current_page_item > a, 
+	.menu-bar ul li.current-menu-item > a,
+	.menu-bar ul li.current-menu-ancestor > a,
+	.menu-bar ul li.current_page_ancestor > a,
+	.menu-bar ul li.current-post-parent > a {
+		color: brighten($mono-frosty, 15%);
+	}
+
+// top-bar search
+.site-search {}
+
+	.search-toggle {
+		position: absolute;
+		top: 0;
+		right: 15px;
+		display: block;
+		padding: 0 20px;
+		cursor: pointer;
+		color: $mono-frosty;
+		font-size: 18px;
+		text-decoration: none;
+		line-height: 50px;
+		background: $accent-dim;
+		z-index: 999;
+	}
+	.search-toggle:hover,
+	.search-toggle:focus,
+	.search-toggle.active {
+		background: dullen($sub-dark, 5%);
+	}
+	.search-expand {
+		position: absolute;
+		top: 50px;
+		right: 15px;
+		width: 330px;
+		display: none;
+		background: $sub-dark;
+		z-index: 999;
+		-webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, .01);
+		-moz-box-shadow: 0 1px 0 rgba(255, 255, 255, .01);
+				box-shadow: 0 1px 0 rgba(255, 255, 255, .01);
+	}
+	.search-expand-inner {
+		padding: 15px;
+		background: dullen($sub-dark, 5%);
+	}
+	.site-search .search-form .search-submit {
+	}
+	.site-search .search-form .search-submit:hover,
+	.site-search .search-form .search-submit:focus {
+	}
+
+	.search-form {
+		padding-right: 53px;
+		position: relative;
+	}
+	.search-form .form-group {
+		margin: 0;
+	}
+	.search-form .form-submit {
+		top: 0;
+		right: 0;
+		position: absolute;
+	}
+	.search-form .fa-search {
+		font-size: 18px;
+		line-height: 1;
+	}
+
 .header {
-	background-color: $black;
+	background-color: $sub-light;
 }
 
 	#logo {
-		margin: 0.75em 0;
+		margin: 0 0;
+		font-family: $logo-font;
+		font-size: 72px;
 
 		a {
-			color: $white;
+			color: $mono-white;
+			display: inline-block;
 		}
 	}
-
-/*********************
-NAVIGATION STYLES
-*********************/
-
-/*
-all navs have a .nav class applied via
-the wp_menu function; this is so we can
-easily write one group of styles for
-the navs on the site so our css is cleaner
-and more scalable.
-*/
-
-.nav {
-	border-bottom: 0;
-	margin: 0;
-
-	li {
-
-		a {
-			display: block;
-			color: $white;
-			text-decoration: none;
-			padding: 0.75em;
-
-			/*
-			remember this is for mobile ONLY, so there's no need
-			to even declare hover styles here, you can do it in
-			the style.scss file where it's relevant. We want to
-			keep this file as small as possible!
-			*/
-			&:hover, &:focus {
-
-			}
-		}
-
-		&:first-child {}
-
-		&:last-child {}
-
-		/*
-		so you really have to rethink your dropdowns for mobile.
-		you don't want to have it expand too much because the
-		screen is so small. How you manage your menu should
-		depend on the project. Here's some great info on it:
-		http://www.alistapart.com/articles/organizing-mobile/
-		*/
-		ul.sub-menu,
-		ul.children {
-
-			li {
-
-				a {
-					padding-left: 30px;
-
-					&:hover,
-					&:focus {}
-
-					&:link {}
-
-				}
-
-				&:first-child {}
-
-				&:last-child {}
-
-			}
-
-		}
-
-	} /* end .menu li */
-
-	/* highlight current page */
-	li.current-menu-item,
-	li.current_page_item,
-	li.current_page_ancestor {
-
-		a {}
-
-	}  /* end current highlighters */
-
-} /* end .nav */
-
 
 /*********************
 POSTS & CONTENT STYLES
 *********************/
 
+.entry-meta {
+	font-family: $ui-font;
+	font-size: 80%;
+	color: $mono-silver;
+	margin: 0.75em 0 0 0.25em;
+
+
+	a {
+		color: $mono-silver;
+		text-decoration: none;
+
+		&:hover, &:focus {
+			color: dullen($mono-silver, 15%);
+		}
+	}
+
+	.fa {
+		margin-right: 0.5em;
+	}
+
+	span {
+		margin-right: 1.5em;
+	}
+}
+
 #content {
-	margin-top: 1.5em;
+	// margin-top: 1.5em;
 }
 
 		.hentry {
-			background-color: $white;
-			border-radius: 3px;
-			margin-bottom: 1.5em;
-			border: 1px solid $border-color;
+			padding: 0;
+			border-bottom: 2px solid $border-color;
 
 			header {
-				border-bottom: 1px solid $light-gray;
-				padding: 1.5em;
+				border-bottom: 1px dashed $border-color;
+				padding: ($font-size * 2) $padding-size;
 			}
 
 			footer {
-				padding: 1.5em;
-				border-top: 1px solid $light-gray;
+				border-top: 1px dashed $border-color;
+				padding: ($font-size * 2) $padding-size;
+				// margin-top: -$font-size;
 
 				p {
 					margin: 0;
 				}
 			}
 
+			&:first-of-type {
+				// margin: -1em 0 0 0;
+				&:not(:first-child) {
+					border-top: 2px solid $border-color;
+				}
+			}
+
+			&:first-child {			// when on index, single etc...
+				// margin: -2.0em 0 0 0;
+			}
+
+			&:last-of-type {
+				// border-bottom: none;
+				// padding-bottom: 0;
+			}
+
+			&:only-of-type {
+				border-bottom: none;
+			}
+
 		} /* end .hentry */
+
+		/* formats */
+		.format-standard {
+
+		}
+
+		.format-status {
+			background-color: $mono-smoke;
+		}
+
+		.format-aside {
+			background-color: $mono-smoke;
+			border-left: 1px dashed $border-color;
+			border-right: 1px dashed $border-color;
+			padding: inherit ($padding-size * 2 - 1);
+
+			header, footer {
+				background-color: $mono-smoke;
+			}
+
+			section {
+				background-color: $mono-white;
+				border: inherit ($padding-size * 2 - 1);
+
+				& > *:last-child {
+					margin-bottom: 0;
+				}
+			}
+			
+			#nav-below, #comments {
+				background-color: $mono-white;
+			}
+
+			&:only-of-type {
+				border-bottom: 1px dashed $border-color;
+			}
+		}
+		/* formats */
 
 		.single-title,
 		.page-title,
-		.entry-title {
+		.entry-title,
+		.archive-title {
 			margin: 0;
 		}
 
-		.single-title {}
+		.single-title {
+			color: $sub-deep;
+		}
 
-		.page-title {}
+		.page-title {
+			margin: $font-size ($padding-size * 3);
+			color: $mono-gray;
+			font-family: $ui-font;
+		}
 
-		.entry-title {}
+		.entry-title {
+			a {
+				color: $sub-deep;
+			}
+		}
 
-		.archive-title {}
+		.archive-title {
+			margin: $font-size ($padding-size * 3);
+			color: $mono-gray;
+			
+			& > span {
+				font-family: $ui-font;
+			}
+		}
+
+		.taxonomy-description {
+			margin: $font-size ($padding-size * 4);
+			font-size: ($font-size - 1);
+
+			p {
+				margin: 0;
+			}
+		}
 
 		/* want to style individual post classes? Booya! */
 		.post-id {}         /* post by id (i.e. post-3) */
@@ -301,109 +520,509 @@ POSTS & CONTENT STYLES
 		.category-slug {}   /* style by category (i.e. category-videos) */
 		.tag-slug {}        /* style by tag (i.e. tag-news) */
 
-		/* post meta */
-		.byline {
-			color: $meta-gray;
-			font-style: italic;
-			margin: 0;
-
-			time {}
-		}
-
 		/* entry content */
 		.entry-content {
-			padding: 1.5em 1.5em 0;
+			padding: $font-size ($padding-size * 2);
 
-			p {
-				margin: 0 0 1.5em;
+			span[id|="more"] {
+				display: block;
+				margin: 1em 0em;
+				height: 3px;
+				background-image: repeating-linear-gradient(to right, $border-color 0%, $border-color (20%/7), transparent (20%/7), transparent (40%/7));
+				border: none;
 			}
 
+			p {
+				margin: 0 0 $font-size 0;
+				overflow: hidden;
+			}
+
+			em {
+				font-style: normal;
+				background-color: $mono-smoke;
+			}
+
+			strong {
+				font-weight: bold;
+			}
+			
+			a {
+				color: $link-color;
+				text-decoration: none;
+
+				&:hover, &:focus {
+					color: $link-hover-color;
+				}
+			}
+
+			h1, h2, h3, h4, h5, h6 {
+				font-weight: normal;
+				margin: 1.25em 0 0.75em 0;
+				text-transform: none;
+				letter-spacing: normal;
+				line-height: 1em;
+			}
+
+			/* f(x)=ae^bx, f(0)=40px, f(7)=16px */
+			h1 {
+				font-size: 35px;
+			}
+
+			h2 {
+				font-size: 31px;
+			}
+
+			h3 {
+				font-size: 27px;
+			}
+
+			h4 {
+				font-size: 24px;
+			}
+
+			h5 {
+				font-size: 21px;
+			}
+
+			h6 {
+				font-size: 18px;
+			}
 
 			ul, ol, table, dl {}
 
-			ul, ol {
+			ul, ol, dl {
+				margin: 0 0 $font-size 0;
 
-				li {}
+				li, dd {
+					ul, ol, dl {
+						margin: 0 0 0 1em;
+
+						dt {
+							font-size: ($font-size - 1);
+						}
+
+						li, dd {
+							font-size: ($font-size - 1);
+
+							ul, ol, dl {
+								margin: 0 0 0 1em;
+
+								dt {
+									font-size: ($font-size - 2);
+								}
+
+								li, dd {
+									font-size: ($font-size - 2);
+
+									
+								}
+							}
+						}
+					}
+				}
 
 			}
 
 			ul {
+				// 「その他記号と矢印」 U+2B00
+				// list-style: "⬥" outside;
 
-				li {}
+				& > li {
+					list-style-position: outside;
+					text-indent: -0.75em;
+					margin-left: 1.5em;
+
+					&:not(:first-of-type) {
+						margin-top: 0.5em;
+					}
+					
+					&:before {
+						content: "\2b25";
+						display: inline-block;
+						width: 0.75em;
+					}
+
+					ul {
+						// list-style: "⬦" outside;
+
+						& > li {
+							list-style-position: outside;
+							text-indent: -0.75em;
+							margin-left: 1.5em;
+
+							&:not(:first-of-type) {
+								margin-top: 0.5em;
+							}
+							
+							&:before {
+								content: "\2b26";
+								display: inline-block;
+								width: 0.75em;
+							}
+
+							ul {
+								// list-style: "⬦" outside;
+
+								& > li {
+									list-style-position: outside;
+									text-indent: -0.75em;
+									margin-left: 1.5em;
+
+									&:not(:first-of-type) {
+										margin-top: 0.5em;
+									}
+									
+									&:before {
+										content: "\2b2a";
+										display: inline-block;
+										width: 0.75em;
+									}
+								}
+							}
+						}
+					}
+				}
 
 			}
 
 			ol {
+				// 「囲み英数字」 U+2460
+				// list-style: symbols("⑴" "⑵" "⑶" "⑷" "⑸" "⑹" "⑺" "⑻" "⑼" "⑽" "⑾" "⑿" "⒀" "⒁" "⒂" "⒃" "⒄" "⒅" "⒆" "⒇") outside;
+				// counter-reset: ordList;
 
-				li {}
+				& > li {
+					list-style-position: outside;
+					// counter-increment: ordList;
+					text-indent: -0.75em;
+					margin-left: 1.5em;
 
+					&:not(:first-of-type) {
+						margin-top: 0.5em;
+					}
+
+					&:before {
+						// content: counter(ordList) ".";
+						display: inline-block;
+						width: 0.75em;
+					}
+
+					@for $i from 1 through 20 {
+						&:nth-of-type(#{$i}) {
+							&:before {
+								content: to-unicode($i - 1 + 9332); // 0x2474=>"⑴"
+							}
+						}
+					}
+
+					ol {
+						// list-style: symbols("⒜" "⒝" "⒞" "⒟" "⒠" "⒡" "⒢" "⒣" "⒤" "⒥" "⒦" "⒧" "⒨" "⒩" "⒪" "⒫" "⒬" "⒭" "⒮" "⒯" "⒰" "⒱" "⒲" "⒳" "⒴" "⒵") outside;
+						// counter-reset: ordList;
+
+						& > li {
+							list-style-position: outside;
+							// counter-increment: ordList;
+							text-indent: -0.75em;
+							margin-left: 1.5em;
+
+							&:not(:first-of-type) {
+								margin-top: 0.5em;
+							}
+							
+							&:before {
+								// content: counter(ordList) "?";
+								display: inline-block;
+								width: 0.75em;
+							}
+
+							@for $i from 1 through 27 {
+								&:nth-of-type(#{$i}) {
+									&:before {
+										content: to-unicode($i - 1 + 9372); // 0x249c=>"⒜"
+									}
+								}
+							}
+
+							ol {
+								& > li {
+									list-style-position: outside;
+									// counter-increment: ordList;
+									text-indent: -0.75em;
+									margin-left: 1.5em;
+
+									&:not(:first-of-type) {
+										margin-top: 0.5em;
+									}
+									
+									&:before {
+										// content: counter(ordList) "?";
+										display: inline-block;
+										width: 0.75em;
+									}
+
+									@for $i from 1 through 10 {
+										&:nth-of-type(#{$i}) {
+											&:before {
+												content: to-unicode($i - 1 + 12832); // 0x3220=>"㈠"
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+
+			}
+
+			dl {
+				text-indent: 0;
+
+				margin: 0 0 $font-size 0;
+
+				dt {
+					letter-spacing: 1px;
+
+					&:not(:first-of-type) {
+						margin-top: $font-size;
+					}
+				}
+
+				dd {
+					margin-left: 1.5em;
+				}
+
+				dl {
+					dt {}
+
+					dd {
+						// margin-left: 0;
+					}
+				}
 			}
 
 			table {
 				width: 100%;
-				border: 1px solid $gray;
-				margin-bottom: 1.5em;
+				border: 1px solid $border-color;
+				margin: 0 0 $font-size 0;
+				border-collapse: collapse;
 
 				caption {
-					margin: 0 0 7px;
-					font-size: 0.75em;
-					color: $meta-gray;
-					text-transform: uppercase;
+					margin-bottom: 0.25em;
 					letter-spacing: 1px;
+					font-size: ($font-size - 2);
 				}
-			}
 
-			tr {
-				border-bottom: 1px solid $gray;
+				tr {
+					border-top: 1px solid $mono-frosty;
 
-				&:nth-child(even) {
-					background-color: $light-gray;
+					&:first-child {
+						border-top: none;
+					}
+
+					&:nth-child(odd) {
+						background-color: $mono-white;
+					}
+
+					&:nth-child(even) {
+						background-color: $mono-smoke;
+					}
 				}
-			}
 
-			td {
-				padding: 7px;
-				border-right: 1px solid $gray;
+				td {
+					text-align: center;
+					padding: 0.5em;
+					font-size: ($font-size - 1);
+					
+					// border-right: 1px solid $gray;
 
-				&:last-child {
-					border-right: 0;
+					&:last-child {
+						// border-right: 0;
+					}
 				}
-			}
 
-			th {
-				background-color: $light-gray;
-				border-bottom: 1px solid $gray;
-				border-right: 1px solid $gray;
+				th {
+					padding: 0.25em 0.5em;
+					background-color: $sub-light;
+					font-weight: normal;
+					text-align: center;
+					font-size: ($font-size - 1);
+					// border-bottom: 1px solid $gray;
+					// border-right: 1px solid $gray;
 
-				&:last-child {
-					border-right: 0;
+					&:last-child {
+						// border-right: 0;
+					}
+				}
+
+				colgroup {
+					border: 1px solid $mono-frosty;
+				}
+
+				thead, tbody, tfoot {
+					border: 1px solid $border-color;
 				}
 			}
 
 			blockquote {
-				margin: 0 0 1.5em 0.75em;
-				padding: 0 0 0 0.75em;
-				border-left: 3px solid $blue;
-				font-style: italic;
-				color: $meta-gray;
+				margin: 0 0 $font-size 0;
+				padding: 1em 2em;
+				background-color: $mono-smoke;
+				position: relative;
+				font-size: ($font-size - 1);
+				overflow: hidden;
 
-				&:before {}
+				&:before {
+					content: "\f10d";
+					font-family: $icon-font;
+					position: absolute;
+					left: 0.5em;
+					top: 0;
+					color: $mono-silver;
+					font-size: ($font-size * 1.25);
+				}
+				
+				&:after {
+					content: "\f10e";
+					font-family: $icon-font;
+					position: absolute;
+					right: 0.5em;
+					bottom: 0;
+					color: $mono-silver;
+					font-size: ($font-size * 1.25);
+				}
 
+				p {
+					margin: 0px $padding-size $font-size $padding-size;
+
+					&:last-child {
+						margin-bottom: 0;
+					}
+				}
 			}
 
-			dl {}
+			q {
+				background-color: $mono-smoke;
+				font-size: ($font-size - 1);
 
-			dt {}
+				&:before {
+					content: "\f10d";
+					font-family: $icon-font;
+					position: relative;
+					bottom: 1em;
+					font-size: ($font-size / 2);
+					padding: 0.5em 0.5em 0.5em 1em;
+					color: $mono-silver;
+				}
+				
+				&:after {
+					content: "\f10e";
+					font-family: $icon-font;
+					position: relative;
+					bottom: 1em;
+					font-size: ($font-size / 2);
+					padding: 0.5em 1em 0.5em 0.5em;
+					color: $mono-silver;
+				}
+			}
 
-			dd {
-				margin-left: 0;
-				font-size: 0.9em;
-				color: #787878;
-				margin-bottom: 1.5em;
+			cite {
+				font-style: normal;
+				text-decoration: underline;
+			}
+
+			sup[id|="fnref"] {
+				& > a {
+					margin-right: $padding-size;
+					font-size: ($font-size / 2);
+
+					&:before {
+						content: "[";
+					}
+
+					&:after {
+						content: "]";
+					}
+				}
+
+				&:target {
+					a {
+						background-color: $sub-light;
+						color: $accent-deep;
+
+						&:hover, &:focus {
+							color: dullen($accent-deep, 15%);
+						}
+					}
+				}
+			}
+
+			div.footnotes {
+				font-size: ($font-size - 2);
+
+				a[href|="#fnref"]{
+					& > img:only-child {
+						display: none !important;
+					}
+					&:after {
+						content: "\f148";
+						font-family: $icon-font;
+						position: relative;
+						bottom: 2px;
+						right: 4px;
+						color: $accent-normal;
+					}
+				}
+			}
+
+			abbr {
+				border: none;
+				margin-right: $padding-size;
+
+				&:after {
+					content: "\f150";
+					font-family: $icon-font;
+					font-size: ($font-size / 2);
+					opacity: 0.5;
+				}
+			}
+
+			pre {
+				font-family: $monospace;
+				font-size: ($font-size - 2);
+				padding: ($font-size - $padding-size);
+				margin: 0 0 $font-size 0;
+				border: 5px solid $sub-light;
+				background-color: $mono-smoke;
+				overflow: hidden;
+
+				& > code {
+					font-family: $monospace;
+					font-size: ($font-size - 2);
+				}
+			}
+
+			*:not(pre) > code {
+				font-family: $monospace;
+				font-size: ($font-size - 2);
+				background-color: $sub-light;
+				color: $sub-deep;
+				position: relative;
+				bottom: 1px;
+				padding: 0 $padding-size 1px $padding-size;
+				margin: 0 2.5px;
+			}
+
+			hr {
+				border: none;
+				height: 2px;
+				margin: 1.5em 0;
+				border-top: 1px solid $border-color;
+				border-bottom: 1px solid $border-color;
+				background-image: repeating-linear-gradient(to right, $border-color 0%, $border-color 4%, transparent 4%, transparent 7%, $border-color 7%, $border-color 9%, transparent 9%, transparent 12%);
 			}
 
 			img {
-				margin: 0 0 1.5em 0;
+				margin: 0 0 $font-size 0;
 				max-width: 100%;
 				height: auto;
 			}
@@ -426,22 +1045,23 @@ POSTS & CONTENT STYLES
 				max-width: 100%;
 				height: auto;
 			}
-
-			pre {
-				background: $black;
-				color: $light-gray;
-				font-size: 0.9em;
-				padding: 1.5em;
-				margin: 0 0 1.5em;
-				border-radius: 3px;
-			}
-
 		} /* end .entry-content */
+
+		#fancybox-title {
+			font-family: $sans-serif;
+			font-weight: bold;
+		}
 
 		.wp-caption {
 			max-width: 100%;
-			background: #eee;
-			padding: 5px;
+			background: $mono-smoke;
+			padding: ($padding-size * 2);
+			margin: 0 0 $font-size 0;
+			border: 5px solid $accent-dark;
+
+			a {
+				color: $text-color;
+			}
 
 			/* images inside wp-caption */
 			img {
@@ -451,28 +1071,51 @@ POSTS & CONTENT STYLES
 			}
 
 			p.wp-caption-text {
-				font-size: 0.85em;
-				margin: 4px 0 7px;
+				font-size: 1em;
+				margin: 5px 0;
 				text-align: center;
+				font-size: ($font-size - 2);
 			}
 
 		} /* end .wp-caption */
 
 		/* image gallery styles */
 		.gallery {
+			max-width: 100%;
+			background: $mono-smoke;
+			display: flex;
+			flex-wrap: wrap;
+			flex-direction: row;
+			justify-content: space-around;
+			align-items: center;
+			align-content: space-around;
+			border: 5px solid $accent-dark;
+			margin-bottom: $font-size;
 
 			dl {
+				margin-bottom: 0;
+				padding: ($padding-size * 2);
 
-				a {}
+				a {
+					color: $text-color;
 
-				img {}
+					img {
+						margin-bottom: 0;
+					}
+				}
 
+				dt {}
+
+				dd {
+					margin: 0;
+					text-align: center;
+					font-size: ($font-size - 2);
+				}
 			}
 
-			dt {}
-
-			dd {}
-
+			& > br {
+				display: none;
+			}
 		} /* end .gallery */
 
 		/* gallery caption styles */
@@ -483,6 +1126,42 @@ POSTS & CONTENT STYLES
 		.size-medium {}
 		.size-thumbnail {}
 
+		.wp-video {
+			margin: 0 auto $font-size auto;
+
+		}
+
+		.wp-audio-shortcode {
+			margin-bottom: $font-size;
+		}
+
+		a.more-link {
+			display: inline-block;
+			color: $sub-dark;
+			background-color: $mono-frosty;
+			margin: 1em 0;
+			padding: 1em 2em;
+			font-family: $ui-font;
+			text-decoration: none;
+			font-size: 90%;
+			-webkit-transition: color .1s linear, background-color .1s linear;
+			-moz-transition: color .1s linear, background-color .1s linear;
+				-ms-transition: color .1s linear, background-color .1s linear;
+				-o-transition: color .1s linear, background-color .1s linear;
+					transition: color .1s linear, background-color .1s linear;
+
+			&:hover, &:focus {
+				color: $mono-white;
+				background-color: $accent-normal;
+			}
+
+			&:after {
+				content: '\f178';
+				font-family: $icon-font;
+				margin-left: 0.5em;
+			}
+		}
+
 	// the tag output
 	.tags {
 		margin: 0;
@@ -491,76 +1170,48 @@ POSTS & CONTENT STYLES
 /******************************************************************
 PAGE NAVI STYLES
 ******************************************************************/
+#nav-below {
+	margin-top: 40px;
 
-.pagination,
-.wp-prev-next {
-	margin: 1.5em 0;
+	.nav-previous {
+		width: 50%;
+		float: left;
+		text-align: left;
+	}
+
+	.nav-next {
+		width: 50%;
+		float: right;
+		text-align: right;
+	}
+
+	a {
+		background-color: $mono-smoke;
+		padding: 1.5em 2em;
+		display: block;
+		line-height: 1.5;
+		text-decoration: none;
+		-webkit-transition: color .1s linear, background-color .1s linear;
+		-moz-transition: color .1s linear, background-color .1s linear;
+			-ms-transition: color .1s linear, background-color .1s linear;
+			-o-transition: color .1s linear, background-color .1s linear;
+				transition: color .1s linear, background-color .1s linear;
+		
+		&:hover, &:focus {
+			color: $mono-white;
+			background-color: $accent-normal;
+		}
+	}
+
+	.meta-nav {
+		font-family: $ui-font;
+		display: block;
+		font-size: 90%;
+		margin-bottom: 0.5em;
+		color: $sub-dark;
+		letter-spacing: 0.02em;
+	}
 }
-	.pagination{
-    text-align: center;
-
-    ul {
-      display: inline-block;
-      background-color: $white;
-      white-space: nowrap;
-      padding: 0;
-      clear: both;
-      border-radius: 3px;
-    }
-
-    li {
-      padding: 0;
-      margin: 0;
-      float: left;
-      display: inline;
-      overflow: hidden;
-      border-right: 1px solid $gray;
-    }
-
-    a, span {
-      margin: 0;
-      text-decoration: none;
-      padding: 0;
-      line-height: 1em;
-      font-size: 1em;
-      font-weight: normal;
-      padding: 0.75em;
-      min-width: 1em;
-      display: block;
-      color: $blue;
-
-      &:hover, &:focus {
-      	background-color: $blue;
-      	color: $white;
-      }
-    }
-
-    .current{
-    	cursor: default;
-    	color: $text-color;
-
-    	&:hover, &:focus {
-    		background-color: $white;
-    		color: $text-color;
-    	}
-    }
-
-  } /* end .bones_page_navi */
-
-	/* fallback previous & next links */
-	.wp-prev-next {
-
-		ul {}
-
-		.prev-link {
-			float: left;
-		}
-
-		.next-link {
-			float: right;
-		}
-
-	} /* end .wp-prev-next */
 
 /******************************************************************
 COMMENT STYLES
@@ -568,9 +1219,9 @@ COMMENT STYLES
 
 /* h3 comment title */
 #comments-title {
-	padding: 0.75em;
-	margin: 0;
-	border-top: 1px solid $light-gray;
+	padding: 0 5px;
+	margin: 40px 0 20px 0;
+	font-family: $ui-font;
 
 	/* number of comments span */
 	span {}
@@ -588,7 +1239,7 @@ COMMENT STYLES
 
 
 .commentlist {
-	margin: 0;
+	margin: 0 0 40px 0;
 	list-style-type: none;
 }
 
@@ -596,11 +1247,18 @@ COMMENT STYLES
 	position: relative;
 	clear: both;
 	overflow: hidden;
-	padding: 1.5em;
-	border-bottom: 1px solid $light-gray;
+	padding: 0;
+	margin: 0;
+	border-style: dotted;
+	border-color: $border-color;
+	border-width: 0px;
+
+	article {
+		padding: ($padding-size * 2) 0 0 ($padding-size * 2);
+	}
 
 	.comment-author {
-		padding: 7px;
+		// padding: 7px;
 		border: 0;
 	}
 
@@ -608,27 +1266,12 @@ COMMENT STYLES
 	.vcard {
 		margin-left: 50px;
 
-		cite.fn {
-			font-weight: 700;
+		b.fn {
 			font-style: normal;
+			font-weight: normal;
 
-			a.url {}
-
-		}
-
-		time {
-			display: block;
-			font-size: 0.9em;
-			font-style: italic;
-
-			a {
-				color: $meta-gray;
+			a.url {
 				text-decoration: none;
-
-				&:hover {
-					text-decoration: underline;
-				}
-
 			}
 
 		}
@@ -637,11 +1280,20 @@ COMMENT STYLES
 
 		.avatar {
 			position: absolute;
-			left: 16px;
-			border-radius: 50%;
+			left: ($padding-size) * 2;
 		}
 
 	} /* end .commentlist .vcard */
+
+	.comment-metadata {
+		margin-left: 50px;
+
+		a {
+			display: block;
+			font-size: 80%;
+			text-decoration: none;
+		}
+	}
 
 	&:last-child {
 		margin-bottom: 0;
@@ -666,18 +1318,29 @@ COMMENT STYLES
 
 
 	&[class*=depth-] {
-		margin-top: 1.1em;
+		// margin-top: 1.1em;
 	}
 
 	&.depth-1 {
-		margin-left: 0;
-		margin-top: 0;
+		border-bottom-width: 1px;
+
+		&:first-of-type {
+			margin-top: ($padding-size * 2);
+		}
+
+		&:last-child {
+			border-bottom-width: 0px;
+		}
 	}
 
 	&:not(.depth-1) {
-		margin-top: 0;
-		margin-left: 7px;
-		padding: 7px;
+		margin-left: ($padding-size * 2);
+		border-top-width: 1px;
+		border-left-width: 1px;
+
+		&:last-child {
+			border-bottom-width: 1px;
+		}
 	}
 
 	&.depth-2 {}
@@ -687,13 +1350,30 @@ COMMENT STYLES
 
 	/* general comment classes */
 	&.alt {}
+
+	.comment-meta {
+		 .comment-metadata > a {
+			 color: $mono-silver;
+
+			 &:hover, &:focus {
+				 color: dullen($mono-silver, 15%);
+			 }
+		 }
+
+		 .comment-awaiting-moderation {
+			 background-color: $accent-light;
+		 }
+	}
+
 	&.odd {
-		background-color: $white;
+		background-color: $mono-white;
 	}
 	&.even {
-		background: $light-gray;
+		background: $mono-smoke;
 	}
-	&.parent {}
+	&.parent {
+		padding-bottom: ($padding-size * 2);
+	}
 	&.comment {}
 	&.children {}
 	&.pingback {}
@@ -704,9 +1384,6 @@ COMMENT STYLES
 	&.thread-odd {}
 	&.thread-even {}
 }
-
-
-
 
 	/* comment meta */
 	.comment-meta {
@@ -721,22 +1398,26 @@ COMMENT STYLES
 
 	}
 
-	/* comment content */
-	.comment_content {
+	.comment-meta .comment-awaiting-moderation {
+		padding: $padding-size;
+		margin: $padding-size;
+	}
 
-		p {
-			margin: 0.7335em 0 1.5em;
-			font-size: 1em;
-			line-height: 1.5em;
-		}
+	/* comment content */
+	.comment-content {
+
+		margin: 0 $padding-size;
+
+		p {}
 
 	} /* end .commentlist .comment_content */
 
 	/* comment reply link */
 	.comment-reply-link {
-		@extend .blue-btn;
-		font-size: 0.9em;
+		@extend .form-btn;
+		font-size: 1em;
 		float: right;
+		margin: 0 ($padding-size * 4) ($padding-size * 2)  $padding-size;
 
 		&:hover,
 		&:focus {
@@ -747,9 +1428,52 @@ COMMENT STYLES
 	/* edit comment link */
 	.comment-edit-link {
 		font-style: italic;
-		margin: 0 7px;
+		// margin: 0 7px;
 		text-decoration: none;
-		font-size: 0.9em;
+		// font-size: 0.9em;
+	}
+
+	.comment-navigation {
+		margin-bottom: 20px;
+
+		.comment-nav-prev {
+			width: 50%;
+			float: left;
+			text-align: left;
+		}
+
+		.comment-nav-next {
+			width: 50%;
+			float: right;
+			text-align: right;
+		}
+
+		a {
+			background-color: $mono-smoke;
+			padding: 1.5em 2em;
+			display: block;
+			line-height: 1.5;
+			text-decoration: none;
+			-webkit-transition: color .1s linear, background-color .1s linear;
+			-moz-transition: color .1s linear, background-color .1s linear;
+				-ms-transition: color .1s linear, background-color .1s linear;
+				-o-transition: color .1s linear, background-color .1s linear;
+					transition: color .1s linear, background-color .1s linear;
+			
+			&:hover, &:focus {
+				color: $mono-white;
+				background-color: $accent-normal;
+			}
+		}
+
+		.meta-nav {
+			font-family: $ui-font;
+			display: block;
+			font-size: 90%;
+			margin-bottom: 0.5em;
+			color: $sub-dark;
+			letter-spacing: 0.02em;
+		}
 	}
 
 
@@ -760,17 +1484,23 @@ COMMENT FORM STYLES
 
 .comment-respond {
 	@extend .cf;
-	padding: 1.5em;
-	border-top: 1px solid $light-gray;
+	padding: 0 5px;
+	margin-top: 20px;
+	clear: both;
+
+	.comment-body + & {
+		border-top: 1px dashed $border-color;
+		padding: ($padding-size * 3);
+	}
 }
 
 	#reply-title {
 		margin: 0;
+		font-size: 1.5em;
 	}
 
 	.logged-in-as {
-		color: $meta-gray;
-		font-style: italic;
+		color: $mono-silver;
 		margin: 0;
 
 		a {
@@ -784,13 +1514,13 @@ COMMENT FORM STYLES
 
 	.form-allowed-tags {
 		padding: 1.5em;
-		background-color: $light-gray;
+		background-color: $mono-smoke;
 		font-size: 0.9em;
 	}
 
 	/* comment submit button */
 	#submit {
-		@extend .blue-btn;
+		@extend .form-btn;
 		float: right;
 		font-size: 1em;
 	}
@@ -822,19 +1552,43 @@ COMMENT FORM STYLES
 SIDEBARS & ASIDES
 *********************/
 
-.sidebar {}
-
-	.widgettitle {}
+.sidebar {
+	margin: 40px 0 20px 0;
+}
 
 	.widget {
+		background-color: $mono-smoke;
+		padding: 20px;
+		margin-bottom: 20px;
+
+		.widgettitle {
+			font-size: 1.5em;
+			margin: 0 0 16px 0;
+			padding-bottom: $padding-size;
+			font-family: $ui-font;
+			border-bottom: 3px solid $border-color;
+			letter-spacing: 0.02em;
+		}
+
+		a {
+			text-decoration: none;
+		}
+
+		& > *:last-child {
+			margin: 0 $padding-size;
+		}
 
 		ul {
-
 			li {
+				margin: 0.5em 0;
 
-				&:first-child {}
+				&:first-child {
+					margin-top: 0;
+				}
 
-				&:last-child {}
+				&:last-child {
+					margin-bottom: 0;
+				}
 
 				a {}
 
@@ -848,12 +1602,163 @@ SIDEBARS & ASIDES
 	}
 
 	.no-widgets {
-		background-color: $white;
+		background-color: $mono-white;
 		padding: 1.5em;
 		text-align: center;
 		border: 1px solid $border-color;
-		border-radius: 2px;
+		border-radius: 0;
 		margin-bottom: 1.5em;
+	}
+
+	.widget_recent_entries {
+		ul {
+			li {
+				margin-left: 27px;
+
+				&:before {
+					content: '\f0f6';
+					font-family: $icon-font;
+					margin-left: -27px;
+					margin-right: 8px;
+					font-size: 80%;
+					color: $mono-silver;
+				}
+
+				.post-date {
+					color: $mono-silver;
+					display: block;
+					font-size: 80%;
+				}
+			}
+		}
+	}
+
+	.widget_archive {
+		a.year-opener {
+			font-family: $ui-font;
+			cursor: pointer;
+			color: $text-color;
+
+			&:after {
+				content: '\f066';
+				font-family: $icon-font;
+				color: $mono-silver;
+				padding: 0.5em;
+			}
+
+			&:focus {
+				outline: none;
+
+				&:after {
+					outline: 2px solid $icon-base;
+					outline-offset: -0.25em;
+				}
+			}
+
+			&.closed:after {
+				content: '\f065';
+			}
+		}
+		
+		ul.years {
+			li {
+				margin-bottom: 0;
+				margin-left: 27px;
+
+				&:before {
+					content: '\f073';
+					font-family: $icon-font;
+					margin-left: -27px;
+					margin-right: 8px;
+					font-size: 80%;
+					color: $mono-silver;
+				}
+			}
+			
+			ul.month {
+				-webkit-transition: opacity .1s linear;
+				-moz-transition: opacity .1s linear;
+					-ms-transition: opacity .1s linear;
+					-o-transition: opacity .1s linear;
+						transition: opacity .1s linear;
+				
+				margin: 0.25em 0 1em 1em;
+
+				li {
+					font-family: $ui-font;
+					margin-left: 10px;
+
+					a {
+						font-family: $sans-serif;
+					}
+
+					&:before {
+						content: '\f133';
+						font-family: $icon-font;
+						margin-left: -27px;
+						margin-right: 8px;
+						font-size: 80%;
+						color: $mono-silver;
+					}
+				}
+
+				&.hide {
+					margin: 0;
+					height: 0;
+					opacity: 0;
+					visibility: hidden;
+				}
+			}
+		}
+	}
+
+	.widget_categories {
+		ul {
+			li {
+				font-family: $ui-font;
+				margin-left: 27px;
+
+				a {
+					font-family: $sans-serif;
+				}
+
+				&:before {
+					content: '\f114';
+					font-family: $icon-font;
+					margin-left: -27px;
+					margin-right: 8px;
+					font-size: 80%;
+					color: $mono-silver;
+				}
+			}
+
+			.children {
+				margin-top: $padding-size;
+			}
+		}
+	}
+
+	.widget_recent_comments {
+		li {
+			&:before {
+				content: '\f0f6';
+				font-family: $icon-font;
+				margin-right: 5px;
+				font-size: 80%;
+				color: $mono-silver;
+			}
+
+			.comment-author-link {
+				margin-left: 10px;
+				&:before {
+					content: '\f007';
+					font-family: $icon-font;
+					margin-right: 5px;
+					font-size: 80%;
+					color: $mono-silver;
+				}
+			}
+		}
 	}
 
 /*********************
@@ -862,28 +1767,116 @@ FOOTER STYLES
 
 .footer {
 	clear: both;
-	background-color: $black;
-	color: $light-gray;
+	color: $mono-frosty;
+	background-color: $sub-dark;
 }
 
-	/*
-	if you checked out the link above:
-	http://www.alistapart.com/articles/organizing-mobile/
-	you'll want to style the footer nav
-	a bit more in-depth. Remember to keep
-	it simple because you'll have to
-	override these styles for the desktop
-	view.
-	*/
-	.footer-links {
+	.footer-nav {
+		font-family: $ui-font;
+	}
 
-		ul {
-
-			li {}
-
+	.footer-links ul {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+	.footer-links ul li {
+		position: relative;
 		}
+	.footer-links ul li a {
+		display: block;
+		padding: 0 20px;
+		color: $mono-frosty;
+		font-size: $font-size;
+		text-decoration: none;
+		line-height: 50px;
+		-webkit-transition: color .1s linear, background-color .1s linear;
+		-moz-transition: color .1s linear, background-color .1s linear;
+			-ms-transition: color .1s linear, background-color .1s linear;
+			-o-transition: color .1s linear, background-color .1s linear;
+				transition: color .1s linear, background-color .1s linear;
+		
+		&:hover, &:focus {
+			text-decoration: none;
+		}
+	}
+	.footer-links ul ul li a {
+		padding: 8px 20px;
+		font-size: 90%;
+		line-height: 20px;
+	}
+	.footer-links ul li a:after {
+		font-family: $icon-font;
+	}
+	.footer-links ul li a:after {
+		content: "\f0d7";
+		float: none;
+		margin-left: 6px;
+		opacity: 0.5;
+	}
+	.footer-links ul ul li a:after {
+		content: "\f0da";
+		float: right;
+		margin-left: 0;
+	}
+	.footer-links ul li a:only-child:after {
+		content: "";
+		margin: 0;
+	}
 
-	} /* end .footer-links */
+	.menu-toggle,
+	.footer-links ul li a {
+		color: $mono-frosty;
+	}
+	.footer-links ul li > a:hover, 
+	.footer-links ul li:hover > a,
+	.footer-links ul li > a:focus,
+	.footer-links ul li:focus > a, 
+	.footer-links ul li.current_page_item > a, 
+	.footer-links ul li.current-menu-item > a,
+	.footer-links ul li.current-menu-ancestor > a,
+	.footer-links ul li.current_page_ancestor > a,
+	.footer-links ul li.current-post-parent > a {
+		color: brighten($mono-frosty, 15%);
+	}
 
+	.copyright {
+		font-family: $ui-font;
+		text-align: center;
+		letter-spacing: 0.02em;
+		
+		a {
+			color: $mono-frosty;
+			text-decoration: none;
 
-	.copyright {}
+			&:hover, &:focus {
+				color: brighten($mono-frosty, 15%);
+			}
+
+			&:after {
+				display: none;
+			}
+		}
+	}
+
+/***
+NINJA omatome button
+***/
+.ninja_onebutton {
+	min-height: 29.0938px;
+}
+
+.ninja_onebutton_output_responsive {
+	div, a {
+		opacity: 0.25;
+		-webkit-transition: opacity .1s linear;
+		-moz-transition: opacity .1s linear;
+			-ms-transition: opacity .1s linear;
+			-o-transition: opacity .1s linear;
+				transition: opacity .1s linear;
+
+		&:hover, &:focus {
+			opacity: 1.0;
+		}
+	}
+}

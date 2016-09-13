@@ -4,7 +4,7 @@
 
 				<div id="inner-content" class="wrap cf">
 
-					<main id="main" class="m-all t-2of3 d-5of7 cf" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
+					<main id="main" class="m-all t-all d-5of7 cf" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
 
 						<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
@@ -25,6 +25,15 @@
 								get_template_part( 'post-formats/format', get_post_format() );
 							?>
 
+							<?php if(is_single()) { ?>
+								<nav id="nav-below" class="cf post-navigation" role="navigation">
+									<?php previous_post_link('<div class="nav-previous">%link</div>', '<span class="meta-nav"><i class="fa fa-chevron-left"></i> Previous Article</span> %title'); ?>
+									<?php next_post_link('<div class="nav-next">%link</div>', '<span class="meta-nav">Next Article <i class="fa fa-chevron-right"></i></span> %title'); ?>
+								</nav>
+							<?php } ?>
+
+							<?php comments_template(); ?>
+
 						<?php endwhile; ?>
 
 						<?php else : ?>
@@ -37,7 +46,7 @@
 										<p><?php _e( 'Uh Oh. Something is missing. Try double checking things.', 'bonestheme' ); ?></p>
 									</section>
 									<footer class="article-footer">
-											<p><?php _e( 'This is the error message in the single.php template.', 'bonestheme' ); ?></p>
+										<!--	<p><?php _e( 'This is the error message in the single.php template.', 'bonestheme' ); ?></p>	-->
 									</footer>
 							</article>
 

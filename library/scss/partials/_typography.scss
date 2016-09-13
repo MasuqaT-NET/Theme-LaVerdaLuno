@@ -1,6 +1,6 @@
 /******************************************************************
-Site Name:
-Author:
+Site Name: La Verda Luno
+Author: MasuqaT
 
 Stylesheet: Typography
 
@@ -47,16 +47,31 @@ https://github.com/devinhunt/typebase.css
 I've edited it a bit, but it's a nice starting point.
 */
 
+@font-face {
+  font-family: "YuGothicSet";
+  font-weight: 500;
+  font-style: normal;
+  src:  local("Yu Gothic Medium"), local("YuGothic Medium"),
+        local("Yu Gothic"), local("YuGothic"),
+        local("游ゴシック"), local("游ゴシック体");
+}
+@font-face {
+  font-family: "YuGothicSet";
+  font-weight: 700;
+  font-style: normal;
+  src:  local("Yu Gothic Bold"), local("YuGothic Bold"),
+        local("Yu Gothic"), local("YuGothic"),
+        local("游ゴシック"), local("游ゴシック体");
+}
 
 // font stacks
-$sans-serif:        "Helvetica Neue", Helvetica, Arial, sans-serif;
-$serif:             "Georgia", Cambria, Times New Roman, Times, serif;
+$sans-serif:        YuGothicSet, sans-serif;
+$serif:             serif;
+$monospace:         Monaco, "Consolas", "Bitstream Vera Sans Mono", "Courier New", Courier, monospace;
 
-/*
- i imported this one in the functions file so bones would look sweet.
- don't forget to remove it for your site.
-*/
-$lato:              'Lato', $sans-serif;
+$logo-font:         'Ribeye Marrow', cursive;
+$ui-font:           'Open Sans', sans-serif;
+$icon-font:         'FontAwesome';
 
 /*
 some nice typographical defaults
@@ -75,10 +90,10 @@ p {
    -webkit-hyphenate-after: 3;
            hyphenate-lines: 3;
   // enabling fancy ligatures when available
-  -webkit-font-feature-settings: "liga", "dlig";
-   -moz-font-feature-settings: "liga=1, dlig=1";
-      -ms-font-feature-settings: "liga", "dlig";
-       -o-font-feature-settings: "liga", "dlig";
-          font-feature-settings: "liga", "dlig";
+  -webkit-font-feature-settings: "liga";
+   -moz-font-feature-settings: "liga=1";
+      -ms-font-feature-settings: "liga";
+       -o-font-feature-settings: "liga";
+          font-feature-settings: "liga";
 }
 

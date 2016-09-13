@@ -1,0 +1,52 @@
+/******************************************************************
+Site Name: La Verda Luno
+Author: MasuqaT
+
+Stylesheet: Desktop Stylsheet
+
+This is the desktop size. It's larger than an iPad so it will only
+be seen on the Desktop.
+
+******************************************************************/
+
+.wrap {
+  width: 1200px;
+}
+
+#main {
+  width: 760px;
+  padding-right: 0px;
+  margin: 0 30px 40px 20px;
+}
+
+#sidebar1 {
+  width: 360px;
+}
+
+.site-top > * {
+  padding-left: 30px;
+}
+
+.hentry {
+  &:first-child {
+    margin-top: 40px;
+  }
+}
+
+.format-aside {
+  &:first-child {
+    border-top: 1px dashed $border-color;
+  }
+}
+
+.header > * {
+  padding-left: 30px;
+}
+
+.footer > * {
+  padding-left: 30px;
+}
+
+.search-toggle, .search-expand {
+  right: 35px;
+}

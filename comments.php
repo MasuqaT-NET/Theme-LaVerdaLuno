@@ -11,20 +11,20 @@ if ( post_password_required() ) {
 ?>
 
 <?php // You can start editing here. ?>
-
+<div id="comments">
   <?php if ( have_comments() ) : ?>
 
-    <h3 id="comments-title" class="h2"><?php comments_number( __( '<span>No</span> Comments', 'bonestheme' ), __( '<span>One</span> Comment', 'bonestheme' ), __( '<span>%</span> Comments', 'bonestheme' ) );?></h3>
+    <h3 id="comments-title" class="h2"><?php comments_number('0 Comments', '1 Comment', '% Comments');?></h3>
 
     <section class="commentlist">
       <?php
         wp_list_comments( array(
-          'style'             => 'div',
+          'style'             => 'ul', //'div',
           'short_ping'        => true,
           'avatar_size'       => 40,
-          'callback'          => 'bones_comments',
+          'callback'          => '', //'bones_comments',
           'type'              => 'all',
-          'reply_text'        => __('Reply', 'bonestheme'),
+          'reply_text'        => 'Reply',
           'page'              => '',
           'per_page'          => '',
           'reverse_top_level' => null,
@@ -33,10 +33,20 @@ if ( post_password_required() ) {
       ?>
     </section>
 
-    <?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : ?>
-    	<nav class="navigation comment-navigation" role="navigation">
-      	<div class="comment-nav-prev"><?php previous_comments_link( __( '&larr; Previous Comments', 'bonestheme' ) ); ?></div>
-      	<div class="comment-nav-next"><?php next_comments_link( __( 'More Comments &rarr;', 'bonestheme' ) ); ?></div>
+    <?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) :
+              global $cpage;
+              if( $cpage == '') {
+                $latest_comment = get_comments( array('number' => 1, 'post_id' => get_the_ID(), 'status' => 'approve') );
+                if( $latest_comment ) foreach ($latest_comment as $c) {
+                  $current_num = get_page_of_comment($c->comment_ID);
+                }
+              } else {
+                $current_num = $cpage;
+              }
+    ?>
+    	<nav class="cf navigation comment-navigation" role="navigation">
+      	<div class="comment-nav-prev"><?php previous_comments_link('<span class="meta-nav"><i class="fa fa-chevron-left"></i> Older Comments</span> Page ' . ($current_num - 1)); ?></div>
+      	<div class="comment-nav-next"><?php next_comments_link('<span class="meta-nav">Newer Comments <i class="fa fa-chevron-right"></i></span> Page ' . ($current_num + 1)); ?></div>
     	</nav>
     <?php endif; ?>
 
@@ -46,5 +56,5 @@ if ( post_password_required() ) {
 
   <?php endif; ?>
 
-  <?php comment_form(); ?>
-
+  <?php comment_form(array('label_submit'=>'Post Comment')); ?>
+</div>

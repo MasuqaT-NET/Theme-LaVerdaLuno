@@ -1,6 +1,6 @@
 /******************************************************************
-Site Name:
-Author:
+Site Name: La Verda Luno
+Author: MasuqaT
 
 Stylesheet: 481px and Up Stylesheet
 
@@ -22,56 +22,97 @@ anymore, so just be aware that if you drop
 them in here, they won't work.
 */
 
-
 /*********************
-NAVIGATION STYLES
+HEADER STYLES
 *********************/
 
-.nav {}
+.header {}
 
-	/* .menu is clearfixed inside mixins.scss */
-	.menu {
-		ul {
-			li {
-				a {
+	#logo {}
 
-					/*
-					you can use hover styles here even though this size
-					has the possibility of being a mobile device.
-					*/
-					&:hover, &:focus {
+	.menu-bar {
+		height: auto!important;
+	}
+	.menu-bar ul {
+		font-size: 0;
+	}
+	.menu-bar ul ul {
+		display: none;
+		position: absolute;
+		top: 50px;
+		left: 0;
+		width: 180px;
+		background: $mono-white;
+		border: none;
+		-webkit-transform: translateZ(0);
+		-webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, .15);
+		   -moz-box-shadow: 0 2px 2px rgba(0, 0, 0, .15);
+				box-shadow: 0 2px 2px rgba(0, 0, 0, .15);
+		
+		& ::selection {
+			background-color: rgba($icon-base, 0.5);
+			color: $icon-background;	
+		}
+	}
+	.menu-bar ul ul ul {
+		position: absolute;
+		top: 0;
+		left: 180px;
+		background-color: $mono-white;
+	}
+	.menu-bar ul li:hover > ul {
+		display: block;
+	}
+	.menu-bar > ul > li {
+		display: inline-block;
+	}
+	.menu-bar ul ul li {
+		display: block;
+		padding: 0;
+		border-right: none;
+	}
+	.menu-bar ul > li > a:hover, 
+	.menu-bar ul > li:hover > a {
+		background-color: dullen($sub-dark, 5%);
+	}
+	.menu-bar ul li > a:hover, 
+	.menu-bar ul li:hover > a, 
+	.menu-bar ul li.current_page_item > a, 
+	.menu-bar ul li.current-menu-item > a,
+	.menu-bar ul li.current-menu-ancestor > a,
+	.menu-bar ul li.current_page_ancestor > a,
+	.menu-bar ul li.current-post-parent > a {
+		color: brighten($mono-frosty, 15%);
+	}
 
-					}
-				}
-
-				&:first-child {}
-				&:last-child {}
-
-				/*
-				plan your menus and drop-downs wisely.
-				*/
-				ul.sub-menu,
-				ul.children {
-					li {
-						a {
-							&:hover,
-							&:focus {}
-							&:link {}
-						}
-						&:first-child {}
-						&:last-child {}
-					}
-				}
-			} /* end .menu ul li */
-
-			/* highlight current page */
-			li.current-menu-item,
-			li.current_page_item,
-			li.current_page_ancestor {
-				a {}
-			}  /* end current highlighters */
-		} /* end .menu ul */
-	} /* end .menu */
+	// customize
+	.menu-bar ul > li > a {
+		letter-spacing: 0.02em;
+	}
+	.menu-bar ul ul li a {
+		padding: 10px 20px;
+		color: $mono-gray;
+		background-color: $mono-white;
+		font-size: 13px;
+	}
+	.menu-bar ul ul li > a:hover, 
+	.menu-bar ul ul li:hover > a,
+	.menu-bar ul ul li > a:focus,
+	.menu-bar ul ul li:focus > a {
+		color: dullen($mono-gray, 15%);
+		background-color: dullen($mono-white, 5%);
+	}
+	.menu-bar ul ul li.current_page_item > a, 
+	.menu-bar ul ul li.current-menu-item > a,
+	.menu-bar ul ul li.current-menu-ancestor > a,
+	.menu-bar ul ul li.current_page_ancestor > a,
+	.menu-bar ul ul li.current-post-parent > a {
+		color: $accent-dim;
+	}
+	
+	.menu-bar li.jqhover > ul {
+		display: block;
+	}
 
 /*********************
 POSTS & CONTENT STYLES
@@ -109,9 +150,93 @@ FOOTER STYLES
 check your menus here. do they look good?
 do they need tweaking?
 */
-.footer-links {
-	ul {
-		li {}
+	.footer-links {
+		height: auto!important;
 	}
-} /* end .footer-links */
+	.footer-links ul {
+		font-size: 0;
+	}
+	.footer-links ul ul {
+		display: none;
+		position: absolute;
+		bottom: 50px;
+		left: 0;
+		width: 180px;
+		background: $mono-white;
+		border: none;
+		-webkit-transform: translateZ(0);
+		-webkit-box-shadow: 0 -2px 2px rgba(0, 0, 0, .15);
+		   -moz-box-shadow: 0 -2px 2px rgba(0, 0, 0, .15);
+				box-shadow: 0 -2px 2px rgba(0, 0, 0, .15);
+		
+		& ::selection {
+			background-color: rgba($icon-base, 0.5);
+			color: $icon-background;	
+		}
+	}
+	.footer-links ul ul ul {
+		position: absolute;
+		bottom: 0;
+		left: 180px;
+		background: $mono-white;
+	}
+	.footer-links ul li:hover > ul {
+		display: block;
+	}
+	.footer-links > ul > li {
+		display: inline-block;
+	}
+	.footer-links ul ul li {
+		display: block;
+		padding: 0;
+		border-right: none;
+	}
+	.footer-links ul > li > a:hover, 
+	.footer-links ul > li:hover > a {
+		color: brighten($mono-frosty, 15%);
+		background-color: dullen($sub-dark, 5%);
+	}
+	.footer-links ul li > a:hover, 
+	.footer-links ul li:hover > a, 
+	.footer-links ul li.current_page_item > a, 
+	.footer-links ul li.current-menu-item > a,
+	.footer-links ul li.current-menu-ancestor > a,
+	.footer-links ul li.current_page_ancestor > a,
+	.footer-links ul li.current-post-parent > a {
+		color: brighten($mono-frosty, 15%);
+	}
 
+	// customize
+	.footer-links ul > li > a {
+		letter-spacing: 0.02em;
+	}
+
+	.footer-links ul ul li a {
+		padding: 10px 20px;
+		color: $mono-gray;
+		background-color: $mono-white;
+		font-size: 13px;
+	}
+	.footer-links ul ul li > a:hover, 
+	.footer-links ul ul li:hover > a,
+	.footer-links ul ul li > a:focus, 
+	.footer-links ul ul li:focus > a {
+		color: dullen($mono-gray, 15%);
+		background-color: dullen($mono-white, 5%);
+	}
+	.footer-links ul ul li.current_page_item > a, 
+	.footer-links ul ul li.current-menu-item > a,
+	.footer-links ul ul li.current-menu-ancestor > a,
+	.footer-links ul ul li.current_page_ancestor > a,
+	.footer-links ul ul li.current-post-parent > a {
+		color: $accent-dim;
+	}
+
+	.footer-links ul li a:after {
+		content: "\f0d8";
+	}
+		
+	.footer-links li.jqhover > ul {
+		display: block;
+	}
+/* end .footer-links */

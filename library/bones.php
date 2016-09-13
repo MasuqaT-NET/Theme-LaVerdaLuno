@@ -6,6 +6,7 @@ any custom functions, it's best to put them
 in the functions.php file.
 
 Developed by: Eddie Machado
+Edited by; MasuqaT
 URL: http://themble.com/bones/
 
   - head cleanup (remove rsd, uri links, junk css, ect)
@@ -155,7 +156,10 @@ function bones_scripts_and_styles() {
 		*/
 		wp_enqueue_script( 'jquery' );
 		wp_enqueue_script( 'bones-js' );
-
+		
+		// FontAwesome
+		wp_register_script( 'font-awesome', 'https://use.fontawesome.com/e919dbe040.js', false);
+		wp_enqueue_script( 'font-awesome' );
 	}
 }
 
@@ -172,6 +176,7 @@ function bones_theme_support() {
 	// default thumb size
 	set_post_thumbnail_size(125, 125, true);
 
+	/*
 	// wp custom background (thx to @bransonwerner for update)
 	add_theme_support( 'custom-background',
 	    array(
@@ -182,6 +187,7 @@ function bones_theme_support() {
 	    'admin-preview-callback' => ''
 	    )
 	);
+	*/
 
 	// rss thingy
 	add_theme_support('automatic-feed-links');
@@ -259,25 +265,24 @@ function bones_related_posts() {
 PAGE NAVI
 *********************/
 
-// Numeric Page Navi (built into the theme by default)
+// Page Navi (built into the theme by default)
 function bones_page_navi() {
   global $wp_query;
   $bignum = 999999999;
-  if ( $wp_query->max_num_pages <= 1 )
+  if ( $wp_query->max_num_pages <= 1 ) {
     return;
-  echo '<nav class="pagination">';
-  echo paginate_links( array(
-    'base'         => str_replace( $bignum, '%#%', esc_url( get_pagenum_link($bignum) ) ),
-    'format'       => '',
-    'current'      => max( 1, get_query_var('paged') ),
-    'total'        => $wp_query->max_num_pages,
-    'prev_text'    => '&larr;',
-    'next_text'    => '&rarr;',
-    'type'         => 'list',
-    'end_size'     => 3,
-    'mid_size'     => 3
-  ) );
-  echo '</nav>';
+  }
+  $current_num = max(1, get_query_var('paged'));
+  ?>
+  <nav id="nav-below" class="cf post-navigation" role="navigation">
+  <?php if ( get_next_posts_link() ) : ?>
+    <div class="nav-previous"><?php next_posts_link('<span class="meta-nav"><i class="fa fa-chevron-left"></i> Previous Articles</span> Page ' . ($current_num + 1)); ?></div>
+  <?php endif;
+  if ( get_previous_posts_link() ) : ?>
+    <div class="nav-next"><?php previous_posts_link('<span class="meta-nav">Next Articles <i class="fa fa-chevron-right"></i></span> Page' . ($current_num - 1)); ?></div>
+  <?php endif; ?>
+  </nav>
+  <?php
 } /* end page navi */
 
 /*********************

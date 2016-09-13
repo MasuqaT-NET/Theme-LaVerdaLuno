@@ -1,6 +1,6 @@
 /******************************************************************
-Site Name:
-Author:
+Site Name: La Verda Luno
+Author: MasuqaT
 
 Stylesheet: IE Stylesheet
 
@@ -20,6 +20,7 @@ understand (what's inside the media queries). We also need to
 import the mixins file so SASS can understand the variables.
 ******************************************************************/
 
+@import "partials/functions"; // import functions
 @import "partials/variables"; // import variables
 @import "partials/typography"; // import typography
 @import "partials/mixins"; // import mixins
@@ -28,7 +29,10 @@ import the mixins file so SASS can understand the variables.
 // import everything inside media queries
 @import "breakpoints/481up";
 @import "breakpoints/768up";
-@import "breakpoints/1030up";
+@import "breakpoints/1200up";
+
+// specific decorations for La Verda Luno
+@import "additional";
 
 /*
 you can call the larger styles if you want, but there's really no need

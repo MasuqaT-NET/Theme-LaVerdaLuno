@@ -1,6 +1,7 @@
+@charset "UTF-8";
 /******************************************************************
-Site Name:
-Author:
+Site Name: La Verda Luno
+Author: MasuqaT
 
 Stylesheet: IE Stylesheet
 
@@ -18,8 +19,59 @@ understand (what's inside the media queries). We also need to
 import the mixins file so SASS can understand the variables.
 ******************************************************************/
 /******************************************************************
-Site Name:
-Author:
+Site Name: La Verda Luno
+Author: MasuqaT
+
+Stylesheet: Sass Functions
+
+You can do a lot of really cool things in Sass. Functions help you
+make repeated actions a lot easier. They are really similar to mixins,
+but can be used for so much more.
+
+Anyway, keep them all in here so it's easier to find when you're
+looking for one.
+
+For more info on functions, go here:
+http://sass-lang.com/documentation/Sass/Script/Functions.html
+
+******************************************************************/
+/*********************
+COLOR FUNCTIONS
+These are helpful when you're working
+with shadows and such things. It's essentially
+a quicker way to write RGBA.
+
+Example:
+box-shadow: 0 0 4px black(0.3);
+compiles to:
+box-shadow: 0 0 4px rgba(0,0,0,0.3);
+*********************/
+/*********************
+RESPONSIVE HELPER FUNCTION
+If you're creating a responsive site, then
+you've probably already read
+Responsive Web Design: http://www.abookapart.com/products/responsive-web-design
+
+Here's a nice little helper function for calculating
+target / context
+as mentioned in that book.
+
+Example:
+width: cp(650px, 1000px);
+or
+width: calc-percent(650px, 1000px);
+both compile to:
+width: 65%;
+*********************/
+/***
+To Unicode
+***/
+/***
+HSB
+***/
+/******************************************************************
+Site Name: La Verda Luno
+Author: MasuqaT
 
 Stylesheet: Variables
 
@@ -34,14 +86,85 @@ COLORS
 Need help w/ choosing your colors? Try this site out:
 http://0to255.com/
 *********************/
-/*
-Here's a great tutorial on how to
-use color variables properly:
-http://sachagreif.com/sass-color-variables/
-*/
 /******************************************************************
-Site Name:
-Author:
+Site Name: La Verda Luno
+Author: MasuqaT
+
+Stylesheet: Typography
+
+Need to import a font or set of icons for your site? Drop them in
+here or just use this to establish your typographical grid. Or not.
+Do whatever you want to...GOSH!
+
+Helpful Articles:
+http://trentwalton.com/2012/06/19/fluid-type/
+http://ia.net/blog/responsive-typography-the-basics/
+http://alistapart.com/column/responsive-typography-is-a-physical-discipline
+
+******************************************************************/
+/*********************
+FONT FACE (IN YOUR FACE)
+*********************/
+/*  To embed your own fonts, use this syntax
+  and place your fonts inside the
+  library/fonts folder. For more information
+  on embedding fonts, go to:
+  http://www.fontsquirrel.com/
+  Be sure to remove the comment brackets.
+*/
+/*  @font-face {
+      font-family: 'Font Name';
+      src: url('library/fonts/font-name.eot');
+      src: url('library/fonts/font-name.eot?#iefix') format('embedded-opentype'),
+             url('library/fonts/font-name.woff') format('woff'),
+             url('library/fonts/font-name.ttf') format('truetype'),
+             url('library/fonts/font-name.svg#font-name') format('svg');
+      font-weight: normal;
+      font-style: normal;
+  }
+*/
+/*
+The following is based of Typebase:
+https://github.com/devinhunt/typebase.css
+I've edited it a bit, but it's a nice starting point.
+*/
+@font-face {
+  font-family: "YuGothicSet";
+  font-weight: 500;
+  font-style: normal;
+  src: local("Yu Gothic Medium"), local("YuGothic Medium"), local("Yu Gothic"), local("YuGothic"), local("游ゴシック"), local("游ゴシック体");
+}
+@font-face {
+  font-family: "YuGothicSet";
+  font-weight: 700;
+  font-style: normal;
+  src: local("Yu Gothic Bold"), local("YuGothic Bold"), local("Yu Gothic"), local("YuGothic"), local("游ゴシック"), local("游ゴシック体");
+}
+/*
+some nice typographical defaults
+more here: http://www.newnet-soft.com/blog/csstypography
+*/
+/* line 80, ../scss/partials/_typography.scss */
+p {
+  -ms-word-wrap: break-word;
+  word-break: break-word;
+  word-wrap: break-word;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  hyphens: auto;
+  -webkit-hyphenate-before: 2;
+  -webkit-hyphenate-after: 3;
+  hyphenate-lines: 3;
+  -webkit-font-feature-settings: "liga";
+  -moz-font-feature-settings: "liga=1";
+  -ms-font-feature-settings: "liga";
+  -o-font-feature-settings: "liga";
+  font-feature-settings: "liga";
+}
+
+/******************************************************************
+Site Name: La Verda Luno
+Author: MasuqaT
 
 Stylesheet: Mixins Stylesheet
 
@@ -82,8 +205,8 @@ BOX SIZING
 /* NOTE: value of "padding-box" is only supported in Gecko. So
 probably best not to use it. I mean, were you going to anyway? */
 /******************************************************************
-Site Name:
-Author:
+Site Name: La Verda Luno
+Author: MasuqaT
 
 Stylesheet: IE Grid Styles
 
@@ -96,8 +219,8 @@ whatever you use in here.
 
 ******************************************************************/
 /******************************************************************
-Site Name:
-Author:
+Site Name: La Verda Luno
+Author: MasuqaT
 
 Stylesheet: 481px and Up Stylesheet
 
@@ -118,45 +241,143 @@ anymore, so just be aware that if you drop
 them in here, they won't work.
 */
 /*********************
-NAVIGATION STYLES
+HEADER STYLES
 *********************/
-/* .menu is clearfixed inside mixins.scss */
-.menu {
-  /* end .menu ul */ }
-  .menu ul {
-    /* end .menu ul li */
-    /* highlight current page */
-    /* end current highlighters */ }
-    .menu ul li {
-      /*
-      plan your menus and drop-downs wisely.
-      */ }
-      .menu ul li a {
-        /*
-        you can use hover styles here even though this size
-        has the possibility of being a mobile device.
-        */ }
+/* line 33, ../scss/breakpoints/_481up.scss */
+.menu-bar {
+  height: auto !important;
+}
 
-/* end .menu */
+/* line 36, ../scss/breakpoints/_481up.scss */
+.menu-bar ul {
+  font-size: 0;
+}
+
+/* line 39, ../scss/breakpoints/_481up.scss */
+.menu-bar ul ul {
+  display: none;
+  position: absolute;
+  top: 50px;
+  left: 0;
+  width: 180px;
+  background: white;
+  border: none;
+  -webkit-transform: translateZ(0);
+  -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.15);
+}
+/* line 52, ../scss/breakpoints/_481up.scss */
+.menu-bar ul ul ::selection {
+  background-color: rgba(174, 240, 90, 0.5);
+  color: #2C3E50;
+}
+
+/* line 57, ../scss/breakpoints/_481up.scss */
+.menu-bar ul ul ul {
+  position: absolute;
+  top: 0;
+  left: 180px;
+  background-color: white;
+}
+
+/* line 63, ../scss/breakpoints/_481up.scss */
+.menu-bar ul li:hover > ul {
+  display: block;
+}
+
+/* line 66, ../scss/breakpoints/_481up.scss */
+.menu-bar > ul > li {
+  display: inline-block;
+}
+
+/* line 69, ../scss/breakpoints/_481up.scss */
+.menu-bar ul ul li {
+  display: block;
+  padding: 0;
+  border-right: none;
+}
+
+/* line 74, ../scss/breakpoints/_481up.scss */
+.menu-bar ul > li > a:hover,
+.menu-bar ul > li:hover > a {
+  background-color: #37474f;
+}
+
+/* line 78, ../scss/breakpoints/_481up.scss */
+.menu-bar ul li > a:hover,
+.menu-bar ul li:hover > a,
+.menu-bar ul li.current_page_item > a,
+.menu-bar ul li.current-menu-item > a,
+.menu-bar ul li.current-menu-ancestor > a,
+.menu-bar ul li.current_page_ancestor > a,
+.menu-bar ul li.current-post-parent > a {
+  color: white;
+}
+
+/* line 89, ../scss/breakpoints/_481up.scss */
+.menu-bar ul > li > a {
+  letter-spacing: 0.02em;
+}
+
+/* line 92, ../scss/breakpoints/_481up.scss */
+.menu-bar ul ul li a {
+  padding: 10px 20px;
+  color: gray;
+  background-color: white;
+  font-size: 13px;
+}
+
+/* line 98, ../scss/breakpoints/_481up.scss */
+.menu-bar ul ul li > a:hover,
+.menu-bar ul ul li:hover > a,
+.menu-bar ul ul li > a:focus,
+.menu-bar ul ul li:focus > a {
+  color: #5a5a5a;
+  background-color: #f2f2f2;
+}
+
+/* line 105, ../scss/breakpoints/_481up.scss */
+.menu-bar ul ul li.current_page_item > a,
+.menu-bar ul ul li.current-menu-item > a,
+.menu-bar ul ul li.current-menu-ancestor > a,
+.menu-bar ul ul li.current_page_ancestor > a,
+.menu-bar ul ul li.current-post-parent > a {
+  color: #9e4453;
+}
+
+/* line 113, ../scss/breakpoints/_481up.scss */
+.menu-bar li.jqhover > ul {
+  display: block;
+}
+
 /*********************
 POSTS & CONTENT STYLES
 *********************/
 /* entry content */
+/* line 122, ../scss/breakpoints/_481up.scss */
 .entry-content {
-  /* at this larger size, we can start to align images */ }
-  .entry-content .alignleft, .entry-content img.alignleft {
-    margin-right: 1.5em;
-    display: inline;
-    float: left; }
-  .entry-content .alignright, .entry-content img.alignright {
-    margin-left: 1.5em;
-    display: inline;
-    float: right; }
-  .entry-content .aligncenter, .entry-content img.aligncenter {
-    margin-right: auto;
-    margin-left: auto;
-    display: block;
-    clear: both; }
+  /* at this larger size, we can start to align images */
+}
+/* line 126, ../scss/breakpoints/_481up.scss */
+.entry-content .alignleft, .entry-content img.alignleft {
+  margin-right: 1.5em;
+  display: inline;
+  float: left;
+}
+/* line 131, ../scss/breakpoints/_481up.scss */
+.entry-content .alignright, .entry-content img.alignright {
+  margin-left: 1.5em;
+  display: inline;
+  float: right;
+}
+/* line 136, ../scss/breakpoints/_481up.scss */
+.entry-content .aligncenter, .entry-content img.aligncenter {
+  margin-right: auto;
+  margin-left: auto;
+  display: block;
+  clear: both;
+}
 
 /* end .entry-content */
 /*********************
@@ -166,10 +387,124 @@ FOOTER STYLES
 check your menus here. do they look good?
 do they need tweaking?
 */
+/* line 153, ../scss/breakpoints/_481up.scss */
+.footer-links {
+  height: auto !important;
+}
+
+/* line 156, ../scss/breakpoints/_481up.scss */
+.footer-links ul {
+  font-size: 0;
+}
+
+/* line 159, ../scss/breakpoints/_481up.scss */
+.footer-links ul ul {
+  display: none;
+  position: absolute;
+  bottom: 50px;
+  left: 0;
+  width: 180px;
+  background: white;
+  border: none;
+  -webkit-transform: translateZ(0);
+  -webkit-box-shadow: 0 -2px 2px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0 -2px 2px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 -2px 2px rgba(0, 0, 0, 0.15);
+}
+/* line 172, ../scss/breakpoints/_481up.scss */
+.footer-links ul ul ::selection {
+  background-color: rgba(174, 240, 90, 0.5);
+  color: #2C3E50;
+}
+
+/* line 177, ../scss/breakpoints/_481up.scss */
+.footer-links ul ul ul {
+  position: absolute;
+  bottom: 0;
+  left: 180px;
+  background: white;
+}
+
+/* line 183, ../scss/breakpoints/_481up.scss */
+.footer-links ul li:hover > ul {
+  display: block;
+}
+
+/* line 186, ../scss/breakpoints/_481up.scss */
+.footer-links > ul > li {
+  display: inline-block;
+}
+
+/* line 189, ../scss/breakpoints/_481up.scss */
+.footer-links ul ul li {
+  display: block;
+  padding: 0;
+  border-right: none;
+}
+
+/* line 194, ../scss/breakpoints/_481up.scss */
+.footer-links ul > li > a:hover,
+.footer-links ul > li:hover > a {
+  color: white;
+  background-color: #37474f;
+}
+
+/* line 199, ../scss/breakpoints/_481up.scss */
+.footer-links ul li > a:hover,
+.footer-links ul li:hover > a,
+.footer-links ul li.current_page_item > a,
+.footer-links ul li.current-menu-item > a,
+.footer-links ul li.current-menu-ancestor > a,
+.footer-links ul li.current_page_ancestor > a,
+.footer-links ul li.current-post-parent > a {
+  color: white;
+}
+
+/* line 210, ../scss/breakpoints/_481up.scss */
+.footer-links ul > li > a {
+  letter-spacing: 0.02em;
+}
+
+/* line 214, ../scss/breakpoints/_481up.scss */
+.footer-links ul ul li a {
+  padding: 10px 20px;
+  color: gray;
+  background-color: white;
+  font-size: 13px;
+}
+
+/* line 220, ../scss/breakpoints/_481up.scss */
+.footer-links ul ul li > a:hover,
+.footer-links ul ul li:hover > a,
+.footer-links ul ul li > a:focus,
+.footer-links ul ul li:focus > a {
+  color: #5a5a5a;
+  background-color: #f2f2f2;
+}
+
+/* line 227, ../scss/breakpoints/_481up.scss */
+.footer-links ul ul li.current_page_item > a,
+.footer-links ul ul li.current-menu-item > a,
+.footer-links ul ul li.current-menu-ancestor > a,
+.footer-links ul ul li.current_page_ancestor > a,
+.footer-links ul ul li.current-post-parent > a {
+  color: #9e4453;
+}
+
+/* line 235, ../scss/breakpoints/_481up.scss */
+.footer-links ul li a:after {
+  content: "\f0d8";
+}
+
+/* line 239, ../scss/breakpoints/_481up.scss */
+.footer-links li.jqhover > ul {
+  display: block;
+}
+
 /* end .footer-links */
 /******************************************************************
-Site Name:
-Author:
+Site Name: La Verda Luno
+Author: MasuqaT
 
 Stylesheet: Tablet & Small Desktop Stylesheet
 
@@ -186,90 +521,21 @@ GENERAL STYLES
 /*********************
 LAYOUT & GRID STYLES
 *********************/
+/* line 26, ../scss/breakpoints/_768up.scss */
 .wrap {
-  width: 760px; }
+  width: 760px;
+}
 
 /*********************
 HEADER STYLES
 *********************/
 /*********************
-NAVIGATION STYLES
-*********************/
-.nav {
-  border: 0;
-  /* end .menu ul li */
-  /* highlight current page */
-  /* end current highlighters */ }
-  .nav ul {
-    margin-top: 0; }
-  .nav li {
-    float: left;
-    position: relative;
-    /*
-    plan your menus and drop-downs wisely.
-    */
-    /* showing sub-menus */ }
-    .nav li a {
-      border-bottom: 0;
-      /*
-      you can use hover styles here even though this size
-      has the possibility of being a mobile device.
-      */ }
-      .nav li a:hover, .nav li a:focus {
-        color: white;
-        text-decoration: underline; }
-    .nav li ul.sub-menu,
-    .nav li ul.children {
-      margin-top: 0;
-      border: 1px solid #ccc;
-      border-top: 0;
-      position: absolute;
-      overflow: hidden;
-      visibility: hidden;
-      z-index: 8999;
-      /* highlight sub-menu current page */ }
-      .nav li ul.sub-menu li,
-      .nav li ul.children li {
-        /*
-        if you need to go deeper, go nuts
-        just remember deeper menus suck
-        for usability. k, bai.
-        */ }
-        .nav li ul.sub-menu li a,
-        .nav li ul.children li a {
-          padding-left: 10px;
-          border-right: 0;
-          display: block;
-          width: 180px;
-          border-bottom: 1px solid #ccc; }
-        .nav li ul.sub-menu li:last-child a,
-        .nav li ul.children li:last-child a {
-          border-bottom: 0; }
-    .nav li:hover ul {
-      top: auto;
-      overflow: visible;
-      visibility: visible; }
-
-/* end .nav */
-/*********************
 SIDEBARS & ASIDES
 *********************/
-.sidebar {
-  margin-top: 2.2em; }
-
-.widgettitle {
-  border-bottom: 2px solid #444;
-  margin-bottom: 0.75em; }
-
-.widget {
-  padding: 0 10px;
-  margin: 2.2em 0; }
-  .widget ul li {
-    margin-bottom: 0.75em;
-    /* deep nesting */ }
-    .widget ul li ul {
-      margin-top: 0.75em;
-      padding-left: 1em; }
+/* line 54, ../scss/breakpoints/_768up.scss */
+.widget ul li {
+  /* deep nesting */
+}
 
 /* links widget */
 /* meta widget */
@@ -290,17 +556,19 @@ you'll probably need to do quite a bit
 of overriding here if you styled them for
 mobile. Make sure to double check these!
 */
+/* line 170, ../scss/breakpoints/_768up.scss */
 .footer-links ul li {
   /*
   be careful with the depth of your menus.
   it's very rare to have multi-depth menus in
   the footer.
-  */ }
+  */
+}
 
 /* end .footer-links */
 /******************************************************************
-Site Name:
-Author:
+Site Name: La Verda Luno
+Author: MasuqaT
 
 Stylesheet: Desktop Stylsheet
 
@@ -308,8 +576,276 @@ This is the desktop size. It's larger than an iPad so it will only
 be seen on the Desktop.
 
 ******************************************************************/
+/* line 12, ../scss/breakpoints/_1200up.scss */
 .wrap {
-  width: 1040px; }
+  width: 1200px;
+}
+
+/* line 16, ../scss/breakpoints/_1200up.scss */
+#main {
+  width: 760px;
+  padding-right: 0px;
+  margin: 0 30px 40px 20px;
+}
+
+/* line 22, ../scss/breakpoints/_1200up.scss */
+#sidebar1 {
+  width: 360px;
+}
+
+/* line 26, ../scss/breakpoints/_1200up.scss */
+.site-top > * {
+  padding-left: 30px;
+}
+
+/* line 31, ../scss/breakpoints/_1200up.scss */
+.hentry:first-child {
+  margin-top: 40px;
+}
+
+/* line 37, ../scss/breakpoints/_1200up.scss */
+.format-aside:first-child {
+  border-top: 1px dashed #bfbfbf;
+}
+
+/* line 42, ../scss/breakpoints/_1200up.scss */
+.header > * {
+  padding-left: 30px;
+}
+
+/* line 46, ../scss/breakpoints/_1200up.scss */
+.footer > * {
+  padding-left: 30px;
+}
+
+/* line 50, ../scss/breakpoints/_1200up.scss */
+.search-toggle, .search-expand {
+  right: 35px;
+}
+
+/******************************************************************
+Site Name: La Verda Luno
+Author: MasuqaT
+
+Stylesheet: Specific decorations for La Verda Luno
+
+******************************************************************/
+/* line 10, ../scss/_additional.scss */
+blockquote.gorgeous {
+  background: #e6e6e6;
+}
+/* line 13, ../scss/_additional.scss */
+blockquote.gorgeous:before {
+  display: none;
+}
+/* line 17, ../scss/_additional.scss */
+blockquote.gorgeous:after {
+  content: "\f10e";
+  font-family: "FontAwesome";
+  position: absolute;
+  right: 0.25em;
+  top: -0.125em;
+  color: #f2f2f2;
+  font-size: 64px;
+}
+/* line 27, ../scss/_additional.scss */
+blockquote.gorgeous header {
+  padding: 0;
+  border: none;
+  margin-bottom: 1em;
+}
+/* line 32, ../scss/_additional.scss */
+blockquote.gorgeous header h1 {
+  margin: 0;
+  display: inline-block;
+  font-size: 2em;
+  font-weight: bold;
+}
+/* line 38, ../scss/_additional.scss */
+blockquote.gorgeous header h1:before {
+  content: "\f0a4";
+  font-family: "FontAwesome";
+  font-size: 0.75em;
+  position: relative;
+  bottom: 2px;
+  margin-right: 5px;
+}
+/* line 49, ../scss/_additional.scss */
+blockquote.gorgeous header p {
+  display: inline-block;
+  font-size: 16px;
+  position: relative;
+  top: 0.25em;
+}
+/* line 63, ../scss/_additional.scss */
+blockquote.gorgeous footer {
+  padding: 0;
+  border: none;
+  margin-top: 1em;
+  text-align: right;
+}
+/* line 69, ../scss/_additional.scss */
+blockquote.gorgeous footer:before {
+  content: "";
+  height: 1px;
+  background-color: #404040;
+  display: inline-block;
+  width: 3.5em;
+  position: relative;
+  bottom: 5px;
+  margin-right: 2px;
+}
+
+/* line 83, ../scss/_additional.scss */
+section.references {
+  margin-bottom: 16px;
+}
+/* line 86, ../scss/_additional.scss */
+section.references h1 {
+  font-size: 2em;
+  font-weight: bold;
+  margin: 0.75em 0 0.5em 0;
+  color: #40535c;
+}
+/* line 93, ../scss/_additional.scss */
+section.references ul {
+  margin-left: 5px;
+}
+/* line 96, ../scss/_additional.scss */
+section.references ul li:before {
+  content: "\f00c";
+  font-family: "FontAwesome";
+}
+
+/* line 104, ../scss/_additional.scss */
+span.mumble {
+  font-size: 13px;
+  color: #bfbfbf;
+}
+/* line 108, ../scss/_additional.scss */
+.format-status span.mumble {
+  color: gray;
+}
+
+/* line 114, ../scss/_additional.scss */
+section.oldinfo {
+  margin-bottom: 16px;
+  background-color: #f2f2f2;
+  border: 5px solid #d15a6e;
+  padding: 0 15px;
+  overflow: hidden;
+}
+/* line 121, ../scss/_additional.scss */
+section.oldinfo h1 {
+  font-size: 2em;
+  font-weight: bold;
+  margin: 0.75em 0 0.5em 0;
+  color: #40535c;
+}
+
+/* line 130, ../scss/_additional.scss */
+nav.advent-calender {
+  background-color: #9fcde3;
+  overflow: hidden;
+  padding: 10px 15px;
+  margin-bottom: 16px;
+  border: 5px solid #52232b;
+}
+/* line 138, ../scss/_additional.scss */
+nav.advent-calender a[target="_blank"]:after {
+  content: "";
+  position: static;
+}
+/* line 144, ../scss/_additional.scss */
+nav.advent-calender header {
+  padding: 0;
+  margin-bottom: 5px;
+  border: none;
+  text-align: center;
+  font-size: 17px;
+}
+/* line 151, ../scss/_additional.scss */
+nav.advent-calender header span {
+  margin-left: 16px;
+}
+/* line 156, ../scss/_additional.scss */
+nav.advent-calender div.prev {
+  float: left;
+}
+/* line 159, ../scss/_additional.scss */
+nav.advent-calender div.prev:before {
+  content: "\f190";
+  font-family: "FontAwesome";
+  margin-right: 5px;
+}
+/* line 166, ../scss/_additional.scss */
+nav.advent-calender div.prev span:after {
+  content: ":";
+  margin-right: 5px;
+}
+/* line 173, ../scss/_additional.scss */
+nav.advent-calender div.next {
+  float: right;
+}
+/* line 177, ../scss/_additional.scss */
+nav.advent-calender div.next span:after {
+  content: ":";
+  margin-right: 5px;
+}
+/* line 183, ../scss/_additional.scss */
+nav.advent-calender div.next:after {
+  content: "\f18e";
+  font-family: "FontAwesome";
+  margin-left: 5px;
+}
+
+/* line 192, ../scss/_additional.scss */
+nav.series {
+  background-color: #9fcde3;
+  overflow: hidden;
+  padding: 10px 15px;
+  margin-bottom: 16px;
+  border: 5px solid #40535c;
+}
+/* line 200, ../scss/_additional.scss */
+nav.series a[target="_blank"]:after {
+  content: "";
+  position: static;
+}
+/* line 206, ../scss/_additional.scss */
+nav.series header {
+  padding: 0;
+  margin-bottom: 5px;
+  border: none;
+  text-align: center;
+  font-size: 17px;
+}
+/* line 213, ../scss/_additional.scss */
+nav.series header span {
+  margin-left: 16px;
+}
+/* line 218, ../scss/_additional.scss */
+nav.series div.prev {
+  float: left;
+}
+/* line 221, ../scss/_additional.scss */
+nav.series div.prev a:before {
+  content: "\f0d9";
+  font-family: "FontAwesome";
+  font-size: 16px;
+  margin-right: 5px;
+}
+/* line 229, ../scss/_additional.scss */
+nav.series div.next {
+  float: right;
+}
+/* line 232, ../scss/_additional.scss */
+nav.series div.next a:after {
+  content: "\f0da";
+  font-family: "FontAwesome";
+  font-size: 16px;
+  margin-left: 5px;
+}
 
 /*
 you can call the larger styles if you want, but there's really no need

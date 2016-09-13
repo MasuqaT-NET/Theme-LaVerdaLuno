@@ -1,6 +1,6 @@
 /******************************************************************
-Site Name:
-Author:
+Site Name: La Verda Luno
+Author: MasuqaT
 
 Stylesheet: Variables
 
@@ -17,35 +17,50 @@ Need help w/ choosing your colors? Try this site out:
 http://0to255.com/
 *********************/
 
-$alert-yellow:      #ebe16f;
-$alert-red:         #fbe3e4;
-$alert-green:       #e6efc2;
-$alert-blue:        #d5edf8;
+// sizes
+$font-size:			16px;
+$padding-size:		5px;
 
-$black:             #323944;
-$white:             #fff;
+// color making rule
+// + hover or focus -> dullen a% or brighten a%, a is text -> 15%, a is background or border -> 5%
+// + don't mix color, make new color
+// + remove color definition without color scheme
 
-$light-gray:        #f8f9fa;
-$gray:              #eaedf2;
-$text-color:        #5c6b80;
-$meta-gray:         #9fa6b4;
+// mono
+$mono-white:				hsb(0, 0, 100);
+$mono-smoke:				hsb(0, 0, 95);
+$mono-frosty:				hsb(0, 0, 90);
+$mono-silver:				hsb(0, 0, 75);
+$mono-gray:					hsb(0, 0, 50);
+$mono-dark:					hsb(0, 0, 25);
 
-$tan:               #eceee5;
+// sub: #7393f2 on triad
+$sub-origin:				#58B2DC; // "空"						#7393f2
+$sub:					 	hsb(hue($sub-origin), 100, 100);
 
-$green:             #7dd667;
+$sub-normal:				hsb(hue($sub), 60, 86);				// hsb(hue($sub), 52, 95);
+$sub-deep:					hsb(hue($sub), 60, 36);				// hsb(hue($sub), 52, 45);
+$sub-light:					hsb(hue($sub), 30, 89);				// hsb(hue($sub), 22, 99);
+$sub-dark:					hsb(hue($sub), 30, 36);				// hsb(hue($sub), 22, 35);
+$sub-dim:					hsb(hue($sub), 60, 66);				// hsb(hue($sub), 52, 75);
 
-$bones-pink:        #000000;//#f01d4f;
-$blue:              #2980b9;
+// accent: #bd5034 on triad
+$accent-origin:				#D05A6E; // "今様"					#bd5034;
+$accent:					hsb(hue($accent-origin), 100, 100);
 
-$link-color:        $bones-pink;
-$link-hover:        darken($link-color, 9%);
+$accent-normal:				hsb(hue($accent), 57, 82);			// hsb(hue($accent), 52, 95);
+$accent-deep:				hsb(hue($accent), 57, 32);			// hsb(hue($accent), 52, 45);
+$accent-light:				hsb(hue($accent), 27, 85);			// hsb(hue($accent), 22, 96);
+$accent-dark:				hsb(hue($accent), 27, 32);			// hsb(hue($accent), 22, 45);
+$accent-dim:				hsb(hue($accent), 57, 62);			// hsb(hue($accent), 52, 75);
 
-$border-color:      #ccc;
-$disabled-gray:     #cfcfcf;
+// colors
+$icon-base:					#AEF05A;
+$icon-pattern:				#81D813;
+$icon-background:			#2C3E50;
 
-
-/*
-Here's a great tutorial on how to
-use color variables properly:
-http://sachagreif.com/sass-color-variables/
-*/
+// very common colors
+$text-color:				$mono-dark;
+$link-color:				$accent-normal;
+$link-hover-color:			dullen($link-color, 15%);
+$border-color:				$mono-silver;

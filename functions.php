@@ -1,6 +1,7 @@
 <?php
 /*
 Author: Eddie Machado
+Editor: MasuqaT
 URL: http://themble.com/bones/
 
 This is where you can drop your custom functions or
@@ -158,10 +159,10 @@ function bones_register_sidebars() {
 		'id' => 'sidebar1',
 		'name' => __( 'Sidebar 1', 'bonestheme' ),
 		'description' => __( 'The first (primary) sidebar.', 'bonestheme' ),
-		'before_widget' => '<div id="%1$s" class="widget %2$s">',
-		'after_widget' => '</div>',
-		'before_title' => '<h4 class="widgettitle">',
-		'after_title' => '</h4>',
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget' => '</aside>',
+		'before_title' => '<h1 class="widgettitle">',
+		'after_title' => '</h1>',
 	));
 
 	/*
@@ -192,7 +193,7 @@ function bones_register_sidebars() {
 
 
 /************* COMMENT LAYOUT *********************/
-
+/*
 // Comment Layout
 function bones_comments( $comment, $args, $depth ) {
    $GLOBALS['comment'] = $comment; ?>
@@ -200,10 +201,8 @@ function bones_comments( $comment, $args, $depth ) {
     <article  class="cf">
       <header class="comment-author vcard">
         <?php
-        /*
-          this is the new responsive optimized comment image. It used the new HTML5 data-attribute to display comment gravatars on larger screens only. What this means is that on larger posts, mobile sites don't have a ton of requests for comment images. This makes load time incredibly fast! If you'd like to change it back, just replace it with the regular wordpress gravatar call:
-          echo get_avatar($comment,$size='32',$default='<path_to_url>' );
-        */
+        //  this is the new responsive optimized comment image. It used the new HTML5 data-attribute to display comment gravatars on larger screens only. What this means is that on larger posts, mobile sites don't have a ton of requests for comment images. This makes load time incredibly fast! If //  you'd like to change it back, just replace it with the regular wordpress gravatar call:
+        //  echo get_avatar($comment,$size='32',$default='<path_to_url>' );
         ?>
         <?php // custom gravatar call ?>
         <?php
@@ -229,7 +228,7 @@ function bones_comments( $comment, $args, $depth ) {
   <?php // </li> is added by WordPress automatically ?>
 <?php
 } // don't remove this bracket!
-
+*/
 
 /*
 This is a modification of a function found in the
@@ -239,9 +238,65 @@ can replace these fonts, change it in your scss files
 and be up and running in seconds.
 */
 function bones_fonts() {
-  wp_enqueue_style('googleFonts', '//fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic');
+  wp_enqueue_style('googleFonts', 'https://fonts.googleapis.com/css?family=Ribeye+Marrow|Open+Sans');
 }
 
 add_action('wp_enqueue_scripts', 'bones_fonts');
+
+
+function register_jquery() {
+  if (!is_admin() && $GLOBALS['pagenow'] != 'wp-login.php') {
+    // comment out the next two lines to load the local copy of jQuery
+    wp_deregister_script('jquery');
+    // Easy FancyBox doesn't work on jQuery 3...
+    wp_register_script('jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js', false);
+    wp_enqueue_script('jquery');
+  }
+}
+add_action( 'wp_enqueue_scripts', 'register_jquery' );
+
+//RSSフィードにアイキャッチ画像を追加
+function rss_thumbnail($content) {
+  global $post;
+  $format = get_post_format($post->ID);
+  if ($format == '' or $format == 'aside') {
+    if (has_post_thumbnail($post->ID)) :
+      $content = '<div>' . get_the_post_thumbnail($post->ID, 'thumbnail') . '</div>' . $content;
+    else :
+      $category = get_the_category();
+      $dir =  wp_upload_dir();
+      $eyecatch_png_dir = $dir['basedir'] . '/categories/' . $category[0]->slug . '.png';
+      if (file_exists($eyecatch_png_dir)) {
+        $eyecatch_url = $dir['baseurl'] . '/categories/' . $category[0]->slug . '.png';
+      } else {
+        $eyecatch_url = get_template_directory_uri() . '/library/images/nothumb.png';
+      }
+      $content = '<img src="' . $eyecatch_url . '" width="150" height="150" class="alignright wp-post-image" alt="default" />' . $content;
+    endif;
+  }
+  return $content;
+}
+add_filter( 'the_excerpt_rss', 'rss_thumbnail');
+add_filter( 'the_content_feed', 'rss_thumbnail');
+
+function custom_archive_title($title) {
+  if(is_category()) {
+    return 'Category: ' . single_cat_title('', false);
+  }
+  if(is_tag()) {
+    return 'Tag: ' . single_tag_title('', false);
+  }
+  if(is_month()) {
+    return 'Month: ' . get_the_time("Y/m");
+  }
+  if(is_year()) {
+    return 'Year: ' . get_the_time("Y");
+  }
+  if(is_date()) { // not care about is_time();
+    return 'Date: ' . get_the_time("Y/m/d");
+  }
+  return $title;
+}
+add_filter('get_the_archive_title', 'custom_archive_title', 10);
 
 /* DON'T DELETE THIS CLOSING TAG */ ?>
